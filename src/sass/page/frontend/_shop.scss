@@ -1,0 +1,200 @@
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    
+}
+
+main{
+    padding: 20px 20px;
+}
+
+.banner{
+    margin-bottom: 20px;
+}
+
+//作者banner
+$animation-time: 0.4s;
+/* the app - a beer menu / ordering app */
+#menu {
+    margin: 0 auto;
+    display: flex;
+    height: 360px;
+    width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow:
+        4vh 7vh 14vh -6vh rgba(0,0,0,0.35),
+        -4vh 7vh 14vh -6vh rgba(0,0,0,0.35);
+}
+
+.panel:nth-child(1){
+    background-image: url(/src/img/Shop/authors/Picasso.png);
+      
+}
+.panel:nth-child(2){
+    background-image: url(/src/img/Shop/authors/Monet.jpg);
+      
+}
+.panel:nth-child(3){
+    background-image: url(/src/img/Shop/authors/vanGogh.jpg);
+      
+}
+.panel:nth-child(4){
+    background-image: url(/src/img/Shop/authors/DaVinci.jpg);
+      
+}
+
+/* info panels for each beer */
+.panel {
+  position: relative;
+  flex-grow: 1;
+  transition: all $animation-time ease;
+  transition-delay: 0s;
+ 
+  background-size: cover;
+  background-position: center center;
+      //留著 未來顏色字體可以用到
+  /* each panel has its own color scheme */
+//   @for $i from 1 through 4 {
+//     &:nth-of-type(#{$i}) {
+//       z-index: 10 - $i;
+//     //   background:
+//     //     radial-gradient(circle at top left,
+//     //     nth($colors, $i+1), nth($colors, $i+1),
+//     //     darken(nth($colors, $i+1), 8%));
+//       filter: drop-shadow(0 0 1vh darken(nth($colors, $i+2), 20%));
+//       h1, h2, h3 {
+//         color: nth($colors, $i+2);
+//       }
+      
+//     }
+//   }
+}
+
+/* panels get larger and show more info when you hover over them */
+.panel:hover {
+  flex-grow: 2;
+  .name {
+    left: 15vh;
+    margin-top: -3.75vh;
+  }
+  .type {
+    left: 15vh;
+    margin-top: 1.75vh;
+    font-size: 2.5vh;
+  }
+  .abv {
+    margin-top: 1.25vh;
+  }
+  svg {
+    opacity: 1;
+    transition-delay: $animation-time;
+  }
+}
+
+//作者list
+.author-list{
+    width: 900px;
+    margin: 40px auto;
+    border-bottom: 1px solid $darkbrown1;
+    
+}
+
+h6{
+    font-size: $h6;
+}
+
+.author-content{
+    // font-size: 16px;
+    margin: 40px 0px;
+    position: relative;
+    display: flex;
+    
+    list-style: none;
+    
+}
+
+//違元素的線
+.author-content:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 65%;
+    height: 1px;
+    background-color: $darkbrown1;
+}
+
+
+.author-content li{
+    height: 22px;
+    line-height: 20px;
+    flex-grow: 1;
+    text-align: center !important; 
+    letter-spacing: 5px;
+    overflow: hidden;
+}
+
+.author-content a {
+    overflow: hidden;
+    outline: none;
+    color: $darkbrown1;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+   
+}
+
+.author-content a:hover,
+.author-content a:focus {
+    outline: none;
+}
+
+
+
+
+.author-content a span {
+    position: relative;
+    display: inline-block;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.author-content a span::before {
+    position: absolute;
+    top: 110%;
+    left: 9%;
+    content: attr(data-hover);
+    font-weight: 700;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+
+    
+}
+
+.author-content a:hover span,
+.author-content a:focus span {
+    -webkit-transform: translateY(-117%);
+    -moz-transform: translateY(-117%);
+    transform: translateY(-117%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
