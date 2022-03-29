@@ -1,0 +1,98 @@
+// 套件連結
+// @import '/node_modules/bootstrap/scss/bootstrap.scss'; //待解決
+
+@import './vendor/bootstrap.min';
+// @import './vendor/jquery.multiscroll';
+// @import './vendor/fullpage';
+
+
+// 共用區
+@import './base/reset';
+@import './base/var';
+@import './layout/header';
+@import './layout/footer';
+// @import './layout/login';
+// @import './layout/nav';
+// @import './layout/RWD';
+
+
+
+
+
+//前台頁面
+@import './page/frontend/checkout';
+@import './page/frontend/index';
+
+
+
+//後台頁面
+
+
+
+
+
+
+body{
+    font-family: $fontSerif, $fontNoserif, $englishFont;
+    font-weight: map-get($fontWeight, bold);
+    background-color: $beidge1;
+
+    .wrapper{
+        h1{
+            font-size: $h1;
+            font-weight: map-get($fontWeight, medium);
+        }
+        
+        h2{
+            font-size: $h2;
+            font-weight: map-get($fontWeight, medium);
+
+        }
+        
+        h3{
+            font-size: $h3;
+            font-weight: map-get($fontWeight, medium);
+
+        }
+        
+        h4{
+            font-size: $h4;
+            font-weight: map-get($fontWeight, medium);
+
+        }
+        
+        h5{
+            font-size: $h5;
+            font-weight: map-get($fontWeight, medium);
+
+        }
+        
+        h6{
+            font-size: $h6;
+            font-weight: map-get($fontWeight, medium);
+
+        }
+        
+        
+        p{
+            font-size: $p;
+            font-weight: map-get($fontWeight, medium);
+        }
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

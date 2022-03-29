@@ -1,0 +1,19 @@
+div.container{
+    border: 1px solid red;
+  }
+  div.container div.col, div.col-5, div.col-6{
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid blue;
+  }
+
+  div.row{
+    border: 1px solid green;
+  }
+  div.col-md-6{
+    border: 1px solid blue;
+  }
+  
+  div.col-md-4, div.col-md-8{
+    border: 1px solid orange;
+  }

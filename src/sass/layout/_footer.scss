@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Noto+Serif+TC:wght@300;400;500;600;700;900&display=swap");
+
+        // * {
+        //     box-sizing: border-box;
+        //     margin: 0;
+        //     padding: 0;
+        //     font-family: "Cinzel", "Noto Serif TC", serif;
+        // }
+        
+
+        footer {
+            background-color: #353231;
+            color: #EEEAE2;
+            display: flex;
+            height: 500px;
+        }
+
+        footer i {
+            color: #EEEAE2;
+            font-size: 16px;
+            transition: .5s;
+        }
+
+        footer i:hover {
+            color: #AB8A49;
+        }
+
+        footer img {
+            transition: .5s;
+        }
+
+        footer img:hover {
+            filter: sepia(1);
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #EEEAE2;
+        }
+
+        .footer {
+            margin: 0 120px;
+            margin-top: 50px;
+        }
+
+
+        .footer_logo {
+            height: 150px;
+        }
+
+        .footer_logo img {
+            height: 50px;
+            margin-bottom: 100px;
+        }
+
+        .left {
+            /* width: 600px; */
+            margin-bottom: 100px;
+        }
+
+        footer ul {
+            display: flex;
+        }
+
+        footer li {
+            list-style: none;
+            margin-right: 20px;
+        }
+
+        footer p {
+            font-size: 12px;
+            line-height: 2;
+        }
+
+        .right {
+            display: flex;
+            margin-left: 580px;
+        }
+
+        .right p {
+            letter-spacing: 1.2px;
+            line-height: 3;
+        }
+
+        .gallery_address {
+            margin-left: 50px;
+        }
+
+        .copyright {
+            display: flex;
+            border-top: 1px solid #EEEAE2;
+
+        }
+
+        .right h6 {
+
+            letter-spacing: 2px;
+        }
+
+        .copyright p {
+            margin-top: 30px;
+        }
+
+        #c1 {
+            margin-left: 565px;
+        }
+
+        #c2 {
+            margin-left: 50px;
+        }
+
+        .copyright_reference {
+            margin-top: 15px;
+            letter-spacing: 2px;
+        }
+
+        #c3 {
+            letter-spacing: 1px;
+        }
+
+        .footer_top {
+            display: flex;
+        }

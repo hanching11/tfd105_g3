@@ -1,0 +1,65 @@
+url,homepage到時候專案建好要改package jason
+
+終端機terminal > Git bash
+終端機cls畫面雜亂指令清除
+
+origin #本地數據庫
+
+start a working area (see also: git help tutorial)
+$ git clone <url> #複製遠端數據庫的專案下載到本地 Clone a repository into a new directory
+$ git init #在本地端建立數據庫 Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+$ git add . #將本地端數據庫「全部」推送至暫存區 Add file contents to the index
+
+grow, mark and tweak your common history
+$ git branch <branch> #建立分支 List, create, or delete branches
+$ git commit -m "註解" #送到暫存區並加上註解 Record changes to the repository
+$ git merge <branch>  讓所在分支抓到指定分支上更新的commit/Join two or more development histories together
+rebase    Reapply commits on top of another base tip
+$ git reset --hard HEAD~1 #數字表示移動到HEAD後面第幾個（在這個模式下，不管是工作目錄以及暫存區的檔案都會丟掉。）Reset current HEAD to the specified state
+$ git reset --soft HEAD~1 #數字表示移動到HEAD後面第幾個（這個模式下的reset，工作目錄跟暫存區的檔案都不會被丟掉，所以看起來就只有HEAD的移動而已。也因此，Commit拆出來的檔案會直接放在暫存區。）
+switch    Switch branches
+
+collaborate (see also: git help workflows)
+fetch     Download objects and refs from another repository
+$ git pull <remote> <branch> #下載同步更新
+$ git push <origin> <branch> #本地資料推送更新到遠端數據庫
+
+pull 不要用reset, 要用revert
+push 用reset
+$ git remote add <url> #在本地數據庫上添加遠端數據庫的網址
+$ git remote #查看遠端數據庫列表
+$ git remote -v #查看遠端數據庫列表（包含網址）
+$ git log  查看commit 狀態
+$ git checkout <branch> #將所在分支 (head) 移動到指定分支
+$ git checkout HEAD~1 #數字表示移動到HEAD後面第幾個（把目前的HEAD移到指定的commit上，並且把目前的狀態變成當時commit的樣子，但是不會移動任何分支（也就是分支都停在原來的地方，只有 HEAD 移動而已）。因此，整個歷史紀錄看起來並沒有什麼變化，只是HEAD暫時移到某個地方而已。）
+$ git checkout -b <branch>  在checkout 的分支上建立新分支
+__________________________________________________
+開專案repository（create a new repository [owner master ] public）
+分享專案（Settings > Collaborators > Add people）
+branch dev（）
+dev pull master（讓組員能看見遠端分支）
+
+Settings Pages（發布分享網址）
+settings > branches可以調整預設分支
+master merge dev
+專案上線git push master
+md檔換行兩個空格
+
+
+RWD
+img max-width
+table overflow:auto;(比較好，放大卷軸會消失) | overflow:scroll(放大卷軸依舊存在)
+
+用系統管理員開vscode沒有壓縮開發用壓縮上線用
+
+有的按鈕不會觸發鍵盤事件
+
+sql 布林值設bit1/烏鴉腳一對多
+
+小遊戲用亂數洗順序
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" 
+integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" 
+crossorigin="anonymous">

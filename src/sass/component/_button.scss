@@ -1,0 +1,192 @@
+/* From cssbuttons.io */
+.buyTicket {
+    background-color: transparent;
+    border: 2px solid #000;
+    // border-radius: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    // float: right;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 1.25em 2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+
+    &::before{
+        content: " ";
+        width: 1.5625rem;
+        height: 2px;
+        background: black;
+        top: 50%;
+        left: 1.5em;
+        position: absolute;
+        transform: translateY(-50%);
+        transform-origin: center;
+        transition: background 0.3s linear, width 0.3s linear;
+    }
+
+    .text{
+        font-size: 1.125em;
+        line-height: 1.33333em;
+        padding-left: 2em;
+        display: block;
+        text-align: left;
+        transition: all 0.3s ease-in-out;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: black;
+    }
+
+    .top-key{
+        height: 2px;
+        width: 1.5625rem;
+        top: -2px;
+        left: 0.625rem;
+        position: absolute;
+        background: #e8e8e8;
+        transition: width 0.5s ease-out, left 0.3s ease-out;
+    }
+
+    .bottom-key-1{
+        height: 2px;
+        width: 1.5625rem;
+        right: 1.875rem;
+        bottom: -2px;
+        position: absolute;
+        background: #e8e8e8;
+        transition: width 0.5s ease-out, right 0.3s ease-out;
+    }
+
+    .bottom-key-2{
+        height: 2px;
+        width: 0.625rem;
+        right: 0.625rem;
+        bottom: -2px;
+        position: absolute;
+        background: #e8e8e8;
+        transition: width 0.5s ease-out, right 0.3s ease-out;
+    }
+
+    &:hover{
+        color: white;
+        background: black;
+
+        &::before{
+            width: 0.9375rem;
+            background: white;
+        }
+
+        .text{
+            color: white;
+            padding-left: 1.5em;
+        }
+
+        .top-key{
+            left: -2px;
+            width: 0px;
+        }
+
+        .bottom-key-1,.fancy:hover .bottom-key-2 {
+            right: 0;
+            width: 0;
+        }
+    }
+}
+
+/* From cssbuttons.io */
+
+// .exampleClass {
+//     padding: 12px 24px;
+//     background-color: white;
+//     border-radius: 6px;
+//     position: relative;
+//     overflow: hidden;
+// }
+
+// .exampleClass span {
+//     color: black;
+//     position: relative;
+//     z-index: 1;
+//     transition: color 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+
+// 	&::before {
+// 		content: '';
+// 		position: absolute;
+// 		top: 50%;
+// 		left: 0;
+// 		border-radius: 6px;
+// 		transform: translate(-100%, -50%);
+// 		width: 100%;
+// 		height: 100%;
+// 		background-color: hsl(244, 63%, 69%);
+// 		transition: transform 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+// 	}
+
+// 	&:hover {
+// 		span {
+// 			color: white;
+// 		}
+
+// 		&:before {
+// 			transform: translate(0, -50%);
+// 		}
+// 	}
+// }
+
+
+.defaultBtn {
+    padding: 12px 24px;
+    background-color: white;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.defaultBtn span {
+    color: black;
+    position: relative;
+    z-index: 1;
+    transition: color 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+}
+
+.defaultBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 6px;
+    transform: translate(-100%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: hsl(244, 63%, 69%);
+    transition: transform 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+
+    opacity: 0;
+}
+
+.defaultBtn:hover span {
+    color: white;
+}
+
+.defaultBtn:hover::before {
+    transform: translate(0, -50%);
+
+    animation-name: show;
+    animation-duration: 1s;
+    opacity: 1;
+}
+
+@keyframes show{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}

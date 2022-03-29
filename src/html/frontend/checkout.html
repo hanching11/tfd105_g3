@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include('./../../layout/head.html')
+    </head>
+
+<body>
+ 
+  <div class="wrapper_checkout">
+    @@include('./../../layout/header.html')
+    <!-- sm 以上範圍，三欄均分 -->
+    <!-- 設定某欄佔幾欄 -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+        <div class="col">
+          1
+        </div>
+          付款方式
+        </div>
+        <div class="col">1</div>
+        <div class="col">1</div>
+        <div class="col">1</div>
+      </div>
+
+      <div class="row">
+    
+        <div class="col-md-6">
+          第一欄
+          
+        </div>
+        
+        <div class="col-md-6">
+          第二欄
+          
+          <div class="row">
+            <div class="col-md-4">巢狀內層左欄</div>
+            <div class="col-md-8">巢狀內層右欄</div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>    
+    @@include('./../../layout/footer.html')
+  </div>
+   
+</body>
+</html>
+
