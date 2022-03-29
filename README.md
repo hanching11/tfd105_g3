@@ -1,6 +1,7 @@
 ## 為專案安裝套件及進行開發
         ·打開VScode，左下角點擊安裝套件
-        ·點擊開發，即可開始製作各自頁面
+        ·點擊開發，即可開始製作各自頁面，每次進行開發 都要按左下角 開發
+         開啟監控及打包套件(不要使用watch sass，會有衝突問題)
         ·CTRL + C 結束開發
 
 * 開發小提醒: 
@@ -19,25 +20,49 @@
                  |frontEnd       前台
                  |backEnd        後台
         | img                    放置圖片區
-        | js                     JS彙整區
+        | js                     JS檔案區(自己網頁使用的JS)
+                 |Vendors        JS套件區(放套件的地方)
         | layout                 共用的html區
 
         | sass    style.scss     各自的scss，也務必記得從這裡匯入。
                  |base           基底環境scss   如 字形變數、Reset/normalize
                  |component
                  |layout         放共用的scss區 (會員彈窗、header、footer之區域)
-                 |vendor         功能程式碼整合
+                 |vendor         功能程式碼整合(套件需要的CSS放這裡)
                  |page           自己頁面的scss區
-                        |frontend
-                        |backend
+                        |frontend前台
+                        |backend 後台
                 
                 
 
 *有些資料夾裡有放example.副檔名，是因為資料夾沒放檔案，會顯示不出來。
 ## 各自頁面html規範 (參考index.html)
-* 自己的頁面要在外層加一層頁面的 div class
-<div class="wrapper_index">   <!-- <class="wrapper"> 改成 <div class="wrapper_index">  -->
-</div>
+*因為每個頁面都會引入head 所以自己的title放在自己的html就好 以下為例子
+(如果有自己的CSS掛件或是CDN 請放在head.html 並且註解目的好做分類整理)
+<head>
+    @@include('./../../layout/head.html')
+    <title>Shop</title>
+</head>
+
+*body的部分就是在div中引入 header footer 以下為例子
+<body>
+        <!-- 自己的頁面要在外層加一層頁面的 div class -->
+        <div class="wrapper_index">
+        <!-- 引入header -->
+        @@include('./../../layout/header.html')
+        <section class>
+          <!-- 首頁 -->
+          <h1 class="h1">文字文字文字文字</h1>
+        </section>
+        <!-- 引入footer -->
+        @@include('./../../layout/footer.html')
+    </div>
+
+<!-- 引入JS的東西 直接放在body裡 JS檔放在JS資料夾 套件放在JS的vendors-->
+    @@include('./../../js/member.js')
+
+</body>
+
 
 
 ## git commit規範:
