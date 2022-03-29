@@ -37,6 +37,11 @@
 </div>
 
 
+## git commit規範:
+add: 負責頁面名稱.副檔名 ex. index.html, index.scss
+edit: 負責頁面名稱,修改區塊,細部撰述
+comment(註解):  遇到衝突的程式碼 註解，並通知大家。
+delete: 負責頁面名稱
 
 
 
@@ -49,6 +54,5 @@
 
 *如果有衝突要先解，解完後”git commit > push” (at dev) 通常是同一隻檔案做新刪修才會發生。
 
-git commit規範:
-可以google參考git commit message規範，大同小異，中英文皆可
-開頭請簡述功能或是修改區塊，再敘述細部狀況
+
+
