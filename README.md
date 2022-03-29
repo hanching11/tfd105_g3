@@ -5,8 +5,6 @@
         ·CTRL + C 結束開發
 
 ## 開發小提醒: 
-        ·每次進行開發 都要按左下角 開發
-         開啟監控及打包套件(不要使用watch sass，會有衝突問題)
         ·在dist資料夾開啟live server才是最終畫面
         ·沒有畫面很可能是style.scss的連接沒設好，或是打包時出現問題注意看終端機~
         ·如果可以盡量用sass法輸入，但要用css也沒差
@@ -40,6 +38,7 @@
 ## 各自頁面html規範 (參考index.html)
 *因為每個頁面都會引入head 所以自己的title放在自己的html就好 以下為例子
 (如果有自己的CSS掛件或是CDN 請放在head.html 並且註解目的好做分類整理)
+
 <head>
     @@include('./../../layout/head.html')
     <title>Shop</title>
@@ -67,10 +66,10 @@
 
 
 ## git commit規範:
-add: 負責頁面名稱.副檔名 ex. index.html, index.scss
-edit: 負責頁面名稱,修改區塊,細部撰述
-comment(註解):  遇到衝突的程式碼 註解，並通知大家。
-delete: 負責頁面名稱
+·add: 負責頁面名稱.副檔名 ex. index.html, index.scss
+·edit: 負責頁面名稱,修改區塊,細部撰述
+·comment(註解):  遇到衝突的程式碼 註解，並通知大家。
+·delete: 負責頁面名稱
 
 
 
