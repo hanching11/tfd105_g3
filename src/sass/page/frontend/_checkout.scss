@@ -2,7 +2,7 @@ div.container{
     color: $darkbrown1;
     border: 1px solid red;
     padding: 0 120px;
-  }
+ 
   div.container div.col{
 
     position: relative;
@@ -45,9 +45,17 @@ div.container{
     border: 2px solid green;
   }
   div.col-md-6{
+
     border: 1px solid blue;
   }
   
   div.col-md-4, div.col-md-8{
     border: 1px solid orange;
   }
+  
+  p{
+    // font-size: $p;
+    // letter-spacing: $letterSpacing1;
+  }
+
+}
