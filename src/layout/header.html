@@ -1,12 +1,18 @@
+<link rel="stylesheet" href="../sass/layout/_header.scss">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="shortcut icon" href="../img/logo_icon.png">
+<link rel="stylesheet" href="https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Ashopping_cart%3A">
+<title>KUANG_YUAN</title>
+
 <header>
     <div class="header">
-        <a href=""><img src="/src/img/logo.png" alt=""></a>
+        <a href=""><img src="../img/logo.png" alt=""></a>
     </div>
     <div class="navbar">
         <div class="nav">
             <ul>
-                <li><a href=""><i class="fa-solid fa-user"></i></a></li>
-                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-user head_icon"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping head_icon"></i></a></li>
             </ul>
             <nav>
                 <!-- <a href=""><img src="./logo.png" alt=""></a> -->
@@ -15,8 +21,46 @@
                         <span class="hamburger-inner"></span>
                     </span>
                 </button>
+                <div class="nav-list">
+                    <ul class="nav_top">
+                        <ol><a href="">首頁</a></ol>
+                        <ol><a href="">關於畫廊</a></ol>
+                        <ol><a href="">線上畫廊</a></ol>
+                        <ol><a href="">當今展覽</a></ol>
+                        <ol><a href="">藝術體驗</a><i class="fas fa-plus-square"></i>
+                            <li><a href="">拼圖遊戲</a></li>
+                            <li><a href="">心理測驗</a></li>
+                        </ol>
+                        <ol><a href="">商品總覽</a></ol>
+                        <ol><a href="">會員中心</a><i class="fas fa-plus-square"></i>
+                            <li><a href="">註冊/登入</a></li>
+                            <li><a href="">訂單查詢</a></li>
+                        </ol>
+                    </ul>
+                </div>
             </nav>
         </div>
-
     </div>
 </header>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        // var btn_hamburger = document.getElementsByClassName("hamburger")[0];
+        // btn_hamburger.addEventListener("click", function () {
+        //     this.classList.toggle("is-active");
+        // });
+
+    });
+    $("button.hamburger").on("click", function () {
+        $(this).toggleClass("is-active");
+        $(".nav-list").toggleClass("on");
+    });
+
+    $("fa-plus-square").on("click", function () {
+        $(this).toggleClass("is-active");
+        $(".nav-list > ol > li").toggleClass("on");
+    });
+
+</script>
