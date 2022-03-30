@@ -1,49 +1,136 @@
 
-// @import"/src/sass/base/var";
+$max-width:100%;
+$lineheight:1.6;
+$letter-space:5px;
+$img_width_height:100%;
+$margin:20px;
+$border-radius:25px;
 
-$max-width:1440px;
-$margin-bottom: 20px;
 
 
-section{
-    // font-size: $fontWeight;
-    font-family: $fontNoserif,$fontSerif,$englishFont;
-};
+@mixin h3{ font-size: $h3;
+    // font-weight: $fontWeight;
+    letter-spacing: $letter-space ;
     
-div{
-    max-width: $max-width;
-    max-height: 580px;
-    margin-bottom: $margin-bottom;
+}
 
-    img{
-        width: auto;
-        height: auto;
-    }
+@mixin  p {
 
-};
+    font-size: $p * 1.6;
+    // font-weight: $fontWeight ;
+    letter-spacing: $letter-space;
+    margin-bottom: $margin;
+    
+}
 
-div.the_new{
-  
-    height: 500px;
 
-    h3{
-        font-size: $h3;
-        // font-weight: $fontWeight;
+.wrapper_index{
+    line-height: $lineheight;
+
+    section{
+        // font-size: $fontWeight;
+        font-family: $fontNoserif,$fontSerif,$englishFont;
+    
+        .top{
+            max-width: $max-width;
+            max-height: 580px;
+            margin-bottom: $margin;
+    
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    
+        .the_new{
+      
+            margin: $margin * 5;
+            margin-bottom: $margin;
+    
+           h3{
+               @include h3;
+            }
+    
+           p{
+               @include p;
+            }
+            .new_work{
+                width: $max-width;   
+                     
+                
+                div.row{                    
+                    margin-bottom: $margin * 2;
+                }
+                // div{
+                //      max-height: 200px;
+                
+                     
+
+                //     img{
+                //         width: $img_width_height;
+                //         height: $img_width_height;
+                //         border-radius: $border-radius;
+                        
+                //     }
+
+                // }
+
+                div{
+                    // border: solid 1px black;
+                    //  max-height: 200px;
+                         border: none;
+                    .col-lg-3 img ,.col-lg-4 img,.col-lg-5 img,.col-lg-6 img,.col-lg-7 img,.col-lg-8 img{
+                        // border: solid 2px black;
+                        object-fit: cover;
+                        width: $max-width;
+                    }
+
+                    .img-fluid{
+                        // border: solid 1px black;
+                        height: 200px;
+                        border-radius: $border-radius;
+                    }
+
+                }
+
+                
+                
+
+            }
+        };
+    
     };
 
-    p{
-        font-size: $p * 1.6;
-        // font-weight: map-get($fontWeight,bold) ;
-        // font-weight: $lightWeight;
+    .exhibition{
+        
+        background-image: url(/src/img/index/Rectangle\ 4067.jpg);
+        margin-top: $margin * 5;
+        margin-bottom: $margin * 5;
 
+        
+
+        h3{
+            @include h3;
+            color: $white;
+            margin-left: $margin * 6;
+            margin-right: $margin * 6;
+
+            
+        }
+        p{
+            @include p;
+            color: $white;
+            margin-left: $margin * 6;
+            margin-right: $margin * 6;
+
+        }
+
+        h3:first-child{
+            border-top: 1px solid $white ;
+        }
+        
+
+        
     }
 
-};
-
-.new_work{
-    width: $max-width;
-    height: 600px;
-    background-color: aqua;
-};
-
-
+}
