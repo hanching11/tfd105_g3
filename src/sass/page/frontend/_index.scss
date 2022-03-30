@@ -1,11 +1,27 @@
 
 $max-width:100%;
-$margin-bottom: 20px;
 $lineheight:1.6;
 $letter-space:5px;
 $img_width_height:100%;
 $margin:20px;
 $border-radius:25px;
+
+
+
+@mixin h3{ font-size: $h3;
+    // font-weight: $fontWeight;
+    letter-spacing: $letter-space ;
+    
+}
+
+@mixin  p {
+
+    font-size: $p * 1.6;
+    // font-weight: $fontWeight ;
+    letter-spacing: $letter-space;
+    margin-bottom: $margin;
+    
+}
 
 
 .wrapper_index{
@@ -18,7 +34,7 @@ $border-radius:25px;
         .top{
             max-width: $max-width;
             max-height: 580px;
-            margin-bottom: $margin-bottom;
+            margin-bottom: $margin;
     
             img{
                 width: 100%;
@@ -28,40 +44,55 @@ $border-radius:25px;
     
         .the_new{
       
-            max-height: 500px;
-            margin: $margin * 4;
+            margin: $margin * 5;
+            margin-bottom: $margin;
     
-            h3{
-                font-size: $h3;
-                // font-weight: $fontWeight;
-                letter-spacing: $letter-space ;
+           h3{
+               @include h3;
             }
     
-            p{
-                font-size: $p * 1.6;
-                // font-weight: $fontWeight ;
-                letter-spacing: $letter-space;
-                margin-bottom: $margin-bottom;
+           p{
+               @include p;
             }
             .new_work{
-                width: $max-width;            
+                width: $max-width;   
+                     
                 
-                div.row{
-                    border: none;
-                    
-
+                div.row{                    
+                    margin-bottom: $margin * 2;
                 }
-                div{
-                    // max-height: 200px;
+                // div{
+                //      max-height: 200px;
+                
+                     
 
-                    img{
-                        width: $img_width_height;
-                        // height: $img_width_height;
-                        border-radius: $border-radius;
+                //     img{
+                //         width: $img_width_height;
+                //         height: $img_width_height;
+                //         border-radius: $border-radius;
                         
+                //     }
+
+                // }
+
+                div{
+                    // border: solid 1px black;
+                    //  max-height: 200px;
+                         border: none;
+                    .col-lg-3 img ,.col-lg-4 img,.col-lg-5 img,.col-lg-6 img,.col-lg-7 img,.col-lg-8 img{
+                        // border: solid 2px black;
+                        object-fit: cover;
+                        width: $max-width;
+                    }
+
+                    .img-fluid{
+                        // border: solid 1px black;
+                        height: 200px;
+                        border-radius: $border-radius;
                     }
 
                 }
+
                 
                 
 
@@ -69,5 +100,37 @@ $border-radius:25px;
         };
     
     };
+
+    .exhibition{
+        
+        background-image: url(/src/img/index/Rectangle\ 4067.jpg);
+        margin-top: $margin * 5;
+        margin-bottom: $margin * 5;
+
+        
+
+        h3{
+            @include h3;
+            color: $white;
+            margin-left: $margin * 6;
+            margin-right: $margin * 6;
+
+            
+        }
+        p{
+            @include p;
+            color: $white;
+            margin-left: $margin * 6;
+            margin-right: $margin * 6;
+
+        }
+
+        h3:first-child{
+            border-top: 1px solid $white ;
+        }
+        
+
+        
+    }
 
 }
