@@ -1,0 +1,130 @@
+$line-height: 1.6;
+
+.wrapper_onlinegallery{
+
+    // 模組
+    .onlinegallery_content{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-wrap: wrap;
+        position: relative;
+        // margin: 20px 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .gallery_years{
+        font-size: $h2;
+        // text-align:center;
+        position:absolute;
+        left: 38%;
+        top: 10%;
+        letter-spacing: .1em;
+    }
+
+    .gallery_pic img{
+        width: 330px;
+        // margin: auto; 
+        border-radius: 30px;
+        margin-bottom: 65px;
+    }
+    
+    .gallery_text{
+        width: 35%;
+        margin-left: 70px;
+        line-height: $line-height;
+    } 
+
+    .gallery_text h1{
+        font-size: $h3;
+        color: $coffeebrown;
+        margin-bottom: 20px;
+        margin-top: 50px;
+    }
+
+    .gallery_text p{
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+
+    .onlinegallery_content a{
+        background-color: $darkbrown2;
+        width: 120px;
+        height: 40px;
+        display: block;
+        border-radius: 40px;
+        text-decoration:none;
+        text-align: center;
+        line-height: 1.6;
+        padding-top: 7px;
+        font-weight: map-get($fontWeight, medium);
+        color: $beidge1;
+    }
+
+    
+    //dot
+    #fp-nav ul li a span, .fp-slidesNav ul li a span{
+        background: #C3BDB3;
+    }
+
+
+    //深色版
+    .dark{
+        background-color: #363433;
+    }
+
+    .renaissance p, .post-impressionism p{
+        color: $beidge1;
+    }
+
+    
+    /* ---------scroll animation-5--------- */
+    .scroll-line{
+        position: fixed;
+        left: 45.5%;
+        top: 70%;
+        transform: translate(45.5%);
+        z-index: 1;
+    }
+    .scroll-down-line{
+        width: 1px;
+        height: 300px;
+        position: relative;
+        background: transparent;
+        animation: scrollDown5 2s ease infinite;
+        border-radius: 100%;
+        margin: 0 auto;
+    }
+        .scroll-down-line:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 300%;
+            background: linear-gradient(transparent, #AB8A49 , transparent);
+        
+    }
+
+    @keyframes scrollDown5{
+        0%{
+            transform-origin: top;
+            transform: scaleY(0);
+        }
+        45%{
+            transform-origin: top;
+            transform: scaleY(1);
+        }
+        55%{
+            transform-origin: bottom;
+            transform: scaleY(1);
+        }
+        100%{
+            transform-origin: bottom;
+            transform: scaleY(0);
+        }
+    } 
+    
+}
