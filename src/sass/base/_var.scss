@@ -12,12 +12,17 @@ $beidge2: #E3DED4;
 
 
 //文字樣式
-$fontWeight: (
-    'bold': 700,
-    'medium': 500, 
-    'regular': 400, 
-    'light': 300 
-);
+$boldWeight: 700;
+$mediumWeight: 500;
+$regularWeight: 400;
+$lightWeight: 300;
+
+// $fontWeight: (
+//     'bold': 700,
+//     'medium': 500, 
+//     'regular': 400, 
+//     'light': 300 
+// );
 
 $h1: 4.125rem;//66px
 $h2: 3.5rem;//56px

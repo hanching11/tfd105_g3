@@ -34,49 +34,37 @@
 // 這邊是預設區，要變動請告知。
 body{
     font-family: $fontSerif, $fontNoserif, $englishFont;
-    font-weight: map-get($fontWeight, bold);
+    font-weight: $mediumWeight; //預設
     background-color: $beidge1;
 
     .wrapper{
         h1{
             font-size: $h1;
-            font-weight: map-get($fontWeight, medium);
         }
         
         h2{
             font-size: $h2;
-            font-weight: map-get($fontWeight, medium);
-
         }
         
         h3{
             font-size: $h3;
-            font-weight: map-get($fontWeight, medium);
-
         }
         
         h4{
             font-size: $h4;
-            font-weight: map-get($fontWeight, medium);
-
         }
         
         h5{
             font-size: $h5;
-            font-weight: map-get($fontWeight, medium);
-
         }
         
         h6{
             font-size: $h6;
-            font-weight: map-get($fontWeight, medium);
-
         }
         
         
         p{
             font-size: $p;
-            font-weight: map-get($fontWeight, medium);
         }
     }
    
