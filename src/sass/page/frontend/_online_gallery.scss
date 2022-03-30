@@ -23,11 +23,6 @@ $line-height: 1.6;
         top: 10%;
         letter-spacing: .1em;
     }
-    
-    .fp-tableCell{
-    width: 0;
-    
-    }
 
     .gallery_pic img{
         width: 330px;
@@ -51,12 +46,27 @@ $line-height: 1.6;
 
     .gallery_text p{
         font-size: 14px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
+
+    .onlinegallery_content a{
+        background-color: $darkbrown2;
+        width: 120px;
+        height: 40px;
+        display: block;
+        border-radius: 40px;
+        text-decoration:none;
+        text-align: center;
+        line-height: 1.6;
+        padding-top: 7px;
+        font-weight: map-get($fontWeight, medium);
+        color: $beidge1;
+    }
+
     
     //dot
     #fp-nav ul li a span, .fp-slidesNav ul li a span{
-        background: #353231;
+        background: #C3BDB3;
     }
 
 
@@ -116,4 +126,5 @@ $line-height: 1.6;
             transform: scaleY(0);
         }
     } 
+    
 }
