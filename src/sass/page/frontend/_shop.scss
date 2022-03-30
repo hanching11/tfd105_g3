@@ -229,79 +229,119 @@ h6{
 }
 
 .single-product:hover .part-1::before {
-		transform: scale(1.2,1.2) rotate(5deg);
+		transform: scale(1.1,1.1) rotate(0deg);
 }
 
 #product-1 .part-1::before {
-    background: url("https://i.ibb.co/L8Nrb7p/1.jpg") no-repeat center;
+    background: url("/src/img/Shop/products/D/p1.png") no-repeat center;
     background-size: cover;
 		transition: all 0.3s;
 }
 
 #product-2 .part-1::before {
-    background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center;
+    background: url("/src/img/Shop/products/D/p2.png") no-repeat center;
     background-size: cover;
 }
 
 #product-3 .part-1::before {
-    background: url("https://i.ibb.co/L8Nrb7p/1.jpg") no-repeat center;
+    background: url("/src/img/Shop/products/D/p3.png") no-repeat center;
     background-size: cover;
 }
 
 #product-4 .part-1::before {
-    background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center;
+    background: url("/src/img/Shop/products/D/p4.png") no-repeat center;
     background-size: cover;
 }
 
+#product-5 .part-1::before {
+    background: url("/src/img/Shop/products/D/p5.png") no-repeat center;
+    background-size: cover;
+}
+
+#product-6 .part-1::before {
+    background: url("/src/img/Shop/products/D/p6.png") no-repeat center;
+    background-size: cover;
+}
+
+#product-7 .part-1::before {
+    background: url("/src/img/Shop/products/D/p7.png") no-repeat center;
+    background-size: cover;
+}
+
+#product-8 .part-1::before {
+    background: url("/src/img/Shop/products/D/p8.png") no-repeat center;
+    background-size: cover;
+}
+
+#product-9 .part-1::before {
+    background: url("/src/img/Shop/products/D/p9.png") no-repeat center;
+    background-size: cover;
+}
+
+#product-10 .part-1::before {
+    background: url("/src/img/Shop/products/D/p4.png") no-repeat center;
+    background-size: cover;
+}
+
+#product-11 .part-1::before {
+    background: url("/src/img/Shop/products/D/p4.png") no-repeat center;
+    background-size: cover;
+}
+
+#product-12 .part-1::before {
+    background: url("/src/img/Shop/products/D/p4.png") no-repeat center;
+    background-size: cover;
+}
 .single-product .part-1 .discount,
 .single-product .part-1 .new {
     position: absolute;
     top: 15px;
     left: 20px;
     color: #ffffff;
-    background-color: #fe302f;
+    background-color: $coffeebrown;
     padding: 2px 8px;
     text-transform: uppercase;
     font-size: 0.85rem;
+    display: none;
 }
 
 .single-product .part-1 .new {
     left: 0;
-    background-color: #444444;
+    background-color: $darkbrown1;
 }
 
-.single-product .part-1 ul {
-    position: absolute;
-    bottom: -41px;
-    left: 20px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    opacity: 0;
-    transition: bottom 0.5s, opacity 0.5s;
-}
+// .single-product .part-1 ul {
+//     position: absolute;
+//     bottom: -41px;
+//     left: 20px;
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+//     opacity: 0;
+//     transition: bottom 0.5s, opacity 0.5s;
+// }
 
-.single-product:hover .part-1 ul {
-    bottom: 30px;
-    opacity: 1;
-}
+// .single-product:hover .part-1 ul {
+//     bottom: 30px;
+//     opacity: 1;
+// }
 
-.single-product .part-1 ul li {
-    display: inline-block;
-    margin-right: 4px;
-}
+// .single-product .part-1 ul li {
+//     display: inline-block;
+//     margin-right: 4px;
+// }
 
-.single-product .part-1 ul li a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    background-color: #ffffff;
-    color: #444444;
-    text-align: center;
-    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
-    transition: color 0.2s;
-}
+// .single-product .part-1 ul li a {
+//     display: inline-block;
+//     width: 40px;
+//     height: 40px;
+//     line-height: 40px;
+//     background-color: #ffffff;
+//     color: #444444;
+//     text-align: center;
+//     box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+//     transition: color 0.2s;
+// }
 
 .single-product .part-1 ul li a:hover {
     color: #fe302f;
@@ -320,13 +360,15 @@ h6{
 
 .single-product .part-2 h3 {
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .single-product .part-2 .buy-now {
+    color: $darkbrown1;
     position: relative;
     padding: 0 7px;
     margin-left: 80px;
-    opacity: 0.6;
+    // opacity: 0.6;
     border: none;
     background: none;
 }
