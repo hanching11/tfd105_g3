@@ -12,10 +12,10 @@
     }
 
     // light
-    // .bg-img img:nth-child(2)
-    //   {
-        
-    // }
+    .bg-img img:nth-child(2)
+      {
+        z-index: 9;
+    }
     
     // 主標
     .onlinegallery_exhibition_title{
@@ -42,6 +42,7 @@
     .painting{
         width: 100%;
         height: 400px;
+        pointer-events: none;
     }
     
       //frame
