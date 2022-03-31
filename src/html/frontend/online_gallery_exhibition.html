@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     @@include('./../../layout/head.html')
     <title>Online Gallery Exhibition| 光緣畫廊 | KUANG YUAN</title>
 </head>
@@ -19,19 +20,89 @@
 
         <!-- background-image -->
         <div class="bg-img">
-            <img src="../../img/online_gallery/exhibition/renaissance/renaissance_bg.jpg">
+            <!-- bg -->
+            <img src="../../img/online_gallery/exhibition/renaissance/renaissance_bg.jpg" clsaa="bg">
+
+            <!-- shadow -->
+            <img src="../../img/online_gallery/exhibition/light.png">
 
             <!-- title -->
             <div class="onlinegallery_exhibition_title">
                 <a href="">
-                    <h6><i class="fa-solid fa-book-open"></i> 返回藝術流派</h6>
+                    <p><i class="fa-solid fa-book-open"></i> 返回藝術流派</p>
                 </a>
-
-                <h5>文藝復興｜1300年 - 1700年</h5>
+                <h6>文藝復興 ｜ 1300年～1700年</h6>
             </div>
-        </div>
-    </div>
 
+            <!-- painting swiper-->
+            <div class="painting">
+
+                <h4 id="center-without-loop">Center without loop</h4>
+                <div class="nonloop owl-carousel">
+                  <div class="item">
+                    <h4>1</h4>
+                  </div>
+                  <div class="item">
+                    <h4>2</h4>
+                  </div>
+                  <div class="item">
+                    <h4>3</h4>
+                  </div>
+                  <div class="item">
+                    <h4>4</h4>
+                  </div>
+                  <div class="item">
+                    <h4>5</h4>
+                  </div>
+                  <div class="item">
+                    <h4>6</h4>
+                  </div>
+                  <div class="item">
+                    <h4>7</h4>
+                  </div>
+                  <div class="item">
+                    <h4>8</h4>
+                  </div>
+                  <div class="item">
+                    <h4>9</h4>
+                  </div>
+                  <div class="item">
+                    <h4>10</h4>
+                  </div>
+                  <div class="item">
+                    <h4>11</h4>
+                  </div>
+                  <div class="item">
+                    <h4>12</h4>
+                  </div>
+                </div>
+
+
+            </div><!-- panting end -->
+        </div> <!-- background-image end-->
+
+       
+
+    </div> <!-- </div> wrapper_end -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script>
+        // owl-carousel
+        $(document).ready(function(){
+              $('.nonloop').owlCarousel({
+                center: true,
+                items: 2,
+                loop: false,
+                margin: 10,
+                responsive: {
+                  600: {
+                    items: 4
+                  }
+                }
+              });
+            });
+    </script>
 </body>
 
 </html>
