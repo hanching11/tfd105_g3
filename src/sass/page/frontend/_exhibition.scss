@@ -1,0 +1,145 @@
+$fontSerif:'Noto Serif TC';
+
+$darkbrown1: #353231;
+$beidge1: #EEEAE2;
+$white: #FFFFFF;
+
+$darkbrown2: #786B54;
+$coffeebrown: #AB8A49;
+$lightgray: #C3BDB3;
+$beidge2: #E3DED4;
+
+
+.wrapper_exhibition{
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    #s1{
+        background-image: url(../../../../src/img/exhibition/f1-back.png);
+        position: relative;
+    
+    }
+    
+    #s2{
+        background-image: url(../../../../src/img/exhibition/f2-back.png);
+    }
+    
+    #s3{
+        background-image: url(../../../../src/img/exhibition/f3-baack.png);
+        background-size: cover;
+    }
+    
+    
+    #s1 .pic1 .f1-1{
+        width: 580px;
+        height: 640px;
+        position: absolute;
+        top: 12%;
+        left: 7%;
+    
+    }
+    
+    #s1 .pic1 .f1-2{
+        position: absolute;
+        top: 12%;
+        right: 23%;
+    
+    }
+    
+    
+    #s1 .pic1 .f1-3{
+        position: absolute;
+        top: 42%;
+        right: 8%;
+    }
+    
+    #s1 .pic1 .f1-4{
+        position: absolute;
+        top: 47%;
+        right: 33%;
+    }
+    
+    
+    #s1 .pic1 .f1-h1{
+        position: absolute;
+        top: 32%;
+        right: 32%;
+        /* border: 1px solid black; */
+        width: 470px;
+    }
+    
+    #s1 .pic1 .f1-h1 h1{
+        color: #ffffff;
+        font-size: 65px;
+        position: absolute;
+        top: 18%;
+        right: 38%;
+        font-family: $fontSerif;
+        font-weight: bold;
+        
+    }
+    
+    #s1 .pic1 .f1-p p{
+        color: #ffffff;
+        position: absolute;
+        bottom: 2%;
+        right: 14%;
+        font-size: 30px;
+        line-height: 1.6;
+        font-weight: bold;
+    }
+    
+    #s1 .pic1 .dear{
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        z-index: 2;
+    }
+    
+    #s1 .pic1 .dear h2{
+        font-size: 52px;
+        color: #ffffff;
+        font-family: $fontSerif;
+        font-weight: bold;
+    }
+    
+    #s2{
+        position: relative;
+    }
+    
+    #s2 .f2-banner{
+        position: absolute;
+        top: 15%;
+        left: 7%;
+    }
+    
+    #s2 .f2-main{
+        display: flex;
+        /* height: 100%; */
+    }
+    
+    #s2 .f2-main p{
+        position: absolute;
+        bottom: 10%;
+        right: 25%;
+        font-family: $fontSerif;
+    }
+
+    #s2 h2{
+        color: $coffeebrown;
+        font-size: 32px;
+    }
+
+
+
+
+
+
+
+
+
+    
+}
