@@ -79,6 +79,9 @@ function sassstyle() {
    return src('./src/sass/*.scss')
       .pipe(sourcemaps.init())
       .pipe(sass.sync().on('error', sass.logError))
+      .pipe(autoprefixer({
+         cascade: false
+      }))
       // .pipe(sass.sync({
       //    outputStyle: 'compressed'  //gulp sass 內建壓縮
       // }).on('error', sass.logError))
@@ -109,7 +112,6 @@ function watchall(){
    watch(['src/sass/*.scss' , 'src/sass/**/*.scss' , 'src/sass/**/**/*.scss'] , sassstyle);
    
 }
-
 exports.w = watchall
 
 
@@ -117,14 +119,14 @@ const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
 function browser(done) {
-   // browserSync.init({
-      //  server: {
-      //      baseDir: ["./dist", "./dist/html/frontend", "./dist/css","./dist/img",],
-      //      index: ["checkout.html","index.html", ],
-      //  },
-      //  port: 3000
+   browserSync.init({
+       server: {
+           baseDir: ["./dist", "./dist/html/frontend", "./dist/css","./dist/img",],
+           index: ["checkout.html","index.html", ],
+       },
+       port: 3000
       
-   // });
+   });
    watch(['src/html/*.html' , 'src/html/**/*.html' , 'src/layout/*.html' ,] , includeHTML).on('change' , reload);
    watch(['src/sass/*.scss' , 'src/sass/**/*.scss' , 'src/sass/**/**/*.scss'] , sassstyle).on('change' , reload);
    watch(['src/js/*.js' , 'src/js/**/*.js'] , minijs).on('change' , reload);
@@ -132,4 +134,59 @@ function browser(done) {
    done();
 }
 
-exports.default = series(parallel(includeHTML ,sassstyle, minijs ,package),browser)
+const autoprefixer = require('gulp-autoprefixer');
+
+// css加上前綴 解決跨瀏覽器的問題
+function auto_css(){
+    return src('src/css/*.css')
+    .pipe(autoprefixer({
+        cascade: false
+    })).pipe(dest('dist'));
+}
+
+exports.autoprefix = auto_css
+
+
+
+// 圖片壓縮
+const imagemin = require('gulp-imagemin');
+function min_images(){
+    return src(['src/img/*.*', 'src/img/**/*.*'])
+    .pipe(imagemin(
+
+        [imagemin.mozjpeg({quality: 50, progressive: true})]
+        ))
+    .pipe(dest('dist/img'))
+}
+exports.mini_img = min_images
+
+
+// js 瀏覽器適應 babel es6 -> es5
+const babel = require('gulp-babel');
+function babel5() {
+    return src(['src/js/*.js', 'src/js/**/*.js'])
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(uglify())
+        .pipe(dest('dist/js'));
+}
+exports.es5 = babel5
+
+
+
+// 清除舊檔案 dist 刪除舊檔案，再換成新檔案
+const clean = require('gulp-clean');
+
+function clear() {
+  return src('dist' ,{ read: false ,allowEmpty: true })//不去讀檔案結構，增加刪除效率  / allowEmpty : 允許刪除空的檔案
+  .pipe(clean({force: true})); //強制刪除檔案 
+}
+exports.cls = clear
+
+
+// dev開發
+exports.default = series(parallel(includeHTML ,sassstyle, minijs ,package, auto_css),browser)
+
+// 上線壓縮打包用
+exports.online = series (clear, parallel(includeHTML, sassstyle, babel5, min_images,))

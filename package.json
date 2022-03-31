@@ -1,27 +1,29 @@
 {
-  "name": "tfd105_g4",
+  "name": "tfd105_g3",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "安裝套件": "npm install",
-    "開發": "gulp"
+    "開發": "gulp",
+    "上線打包": "gulp online"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cynthia151699/tfd105_g4.git"
+    "url": "git+https://github.com/hanching11/tfd105_g3.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cynthia151699/tfd105_g4/issues"
+    "url": "https://github.com/hanching11/tfd105_g3/issues"
   },
-  "homepage": "https://github.com/cynthia151699/tfd105_g4#readme",
+  "homepage": "https://github.com/hanching11/tfd105_g3#readme",
   "devDependencies": {
     "browser-sync": "^2.27.9",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.3.0",
@@ -29,7 +31,12 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.49.9"
+    "sass": "^1.49.9",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/core": "^7.17.8"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",
