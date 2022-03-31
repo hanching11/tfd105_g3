@@ -7,15 +7,16 @@
     .bg-img>img{
         width: 100%;
         height: 100%;
-        z-index: -1;
+        z-index: -99;
         position: fixed;
     }
 
     // light
-    .bg-img img:nth-child(2)
-      {
-        z-index: 9;
-    }
+    // .bg-img img:nth-child(2)
+    //   {
+    //     z-index: 9;
+    //     margin: 0 auto;
+    // }
     
     // 主標
     .onlinegallery_exhibition_title{
@@ -42,7 +43,6 @@
     .painting{
         width: 100%;
         height: 400px;
-        pointer-events: none;
     }
     
       //frame
