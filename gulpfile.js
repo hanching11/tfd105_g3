@@ -117,12 +117,12 @@ const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
 function browser(done) {
-   // browserSync.init({
-      //  server: {
-      //      baseDir: ["./dist", "./dist/html/frontend", "./dist/css","./dist/img",],
-      //      index: ["checkout.html","index.html", ],
-      //  },
-      //  port: 3000
+   browserSync.init({
+       server: {
+           baseDir: ["./dist", "./dist/html/frontend", "./dist/css","./dist/img",],
+           index: ["checkout.html","index.html", ],
+       },
+       port: 3000
       
    // });
    watch(['src/html/*.html' , 'src/html/**/*.html' , 'src/layout/*.html' ,] , includeHTML).on('change' , reload);
