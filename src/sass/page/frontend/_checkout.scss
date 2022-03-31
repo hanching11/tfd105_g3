@@ -1,8 +1,9 @@
-.wrapper_checkout{
-div.container{
+
+div.wrapper_checkout{
+ 
+  div.container{
     color: $darkbrown1;
-    border: 1px solid red;
-    padding: 0 120px;
+   
     
    
  
@@ -16,7 +17,7 @@ div.container{
   
     font-size: 1rem;
     text-align: center;
-    border: 1px solid blue;
+    border: 2px solid blue;
 
     .col::before{
       
@@ -98,4 +99,8 @@ div.container{
   }
   
 }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ching
