@@ -1,4 +1,3 @@
-
 $max-width:100%;
 $lineheight:1.6;
 $letter-space:5px;
@@ -9,92 +8,101 @@ $padding:20px;
 
 
 
-@mixin h3{ font-size: $h3;
+@mixin h3 {
+    font-size: $h3;
     // font-weight: $fontWeight;
-    letter-spacing: $letter-space ;
+    letter-spacing: $letter-space;
     font-family: $englishFont;
-    
+
 }
 
-@mixin  p {
+@mixin p {
 
     font-size: $p * 1.6;
     // font-weight: $fontWeight ;
     letter-spacing: $letter-space;
     margin-bottom: $margin;
-    
+
 }
 
 @mixin title_m {
 
     margin-left: $margin * 6;
     margin-right: $margin * 6;
-    
+
 }
 
 
-.wrapper_index{
+.wrapper_index {
     line-height: $lineheight;
 
-    section{
+    section {
         // font-size: $fontWeight;
-        font-family: $fontNoserif,$fontSerif,$englishFont;
-    
-        .top{
+        font-family: $fontNoserif, $fontSerif, $englishFont;
+
+        .top {
             max-width: $max-width;
             max-height: 580px;
             margin-bottom: $margin;
-    
-            img{
+
+            img {
                 width: 100%;
                 height: 100%;
             }
         }
-    
-        .the_new{
-      
+
+        .the_new {
+
             margin: $margin * 5;
             margin-bottom: $margin;
-    
-           h3{
-               @include h3;
+
+            h3 {
+                @include h3;
             }
-    
-           p{
-               @include p;
+
+            p {
+                @include p;
             }
-            .new_work{
-                width: $max-width;   
-                     
-                
-                div.row{                    
+
+            .new_work {
+                width: $max-width;
+
+
+                div.row {
                     margin-bottom: $margin * 2;
                 }
+
                 // div{
                 //      max-height: 200px;
-                
-                     
+
+
 
                 //     img{
                 //         width: $img_width_height;
                 //         height: $img_width_height;
                 //         border-radius: $border-radius;
-                        
+
                 //     }
 
                 // }
 
-                div{
+                div {
                     // border: solid 1px black;
                     //  max-height: 200px;
-                         border: none;
-                    .col-lg-3 img ,.col-lg-4 img,.col-lg-5 img,.col-lg-6 img,.col-lg-7 img,.col-lg-8 img{
+                    border: none;
+
+                    .col-lg-3 img,
+                    .col-lg-4 img,
+                    .col-lg-5 img,
+                    .col-lg-6 img,
+                    .col-lg-7 img,
+                    .col-lg-8 img {
                         // border: solid 2px black;
                         object-fit: cover;
                         width: $max-width;
                     }
 
-                    .img-fluid{
+                    .img-fluid {
                         // border: solid 1px black;
                         height: 200px;
                         border-radius: $border-radius;
@@ -102,91 +110,98 @@ $padding:20px;
 
                 }
 
-                
-                
+
+
 
             }
-        };
-    
-    };
+        }
 
-    .exhibition{
-        
+        ;
+
+    }
+
+    ;
+
+    .exhibition {
+
         background-image: url(/src/img/index/Rectangle\ 4067.jpg);
         margin-top: $margin * 5;
-        margin-bottom: $margin * 5;        
+        margin-bottom: $margin * 5;
 
-        h3{
+        h3 {
             @include h3;
             color: $white;
-            @include title_m ;
+            @include title_m;
 
 
-            
+
         }
-        p{
+
+        p {
             @include p;
             color: $white;
             @include title_m;
 
         }
 
-        h3:first-child{
-            border-top: 1px solid $white ;
+        h3:first-child {
+            border-top: 1px solid $white;
         }
 
-        .r1{
+        .r1 {
             padding: $padding + 10px;
         }
-        
-        div .col-lg-6{
-            max-width:600px;
+
+        div .col-lg-6 {
+            max-width: 600px;
             max-height: 434px;
             background-color: aliceblue;
             border-radius: $border-radius;
-            margin:$margin - 15px;
+            margin: $margin - 15px;
             padding: $padding * 2;
 
-            
-            img{
+
+            img {
                 max-width: 160px;
                 border-radius: 50%;
             }
 
-            .text_box{
+            .text_box {
                 padding-left: $padding * 2;
-                
-                
-                .clock{
+
+
+                .clock {
                     max-width: 23px;
                     float: left;
                     margin-right: $margin - 10px;
                     margin-bottom: $margin;
-                    
+
                 }
+
                 p {
-                    @include p ;
+                    @include p;
                     color: $darkbrown2;
                     margin: 0;
                     margin-bottom: $margin;
-                    
-    
-                
-                   
+
+
+
+
                 }
-                .p1{
+
+                .p1 {
                     color: black;
                     letter-spacing: $letter-space - 2;
                 }
 
                 a {
-                   
-                    
-                   text-decoration: none;
 
-                    .p2{
-                        background-color:$coffeebrown;
-                        width:91px ;
+
+                    text-decoration: none;
+
+                    .p2 {
+                        background-color: $coffeebrown;
+                        width: 91px;
                         height: 30px;
                         font-size: $p * 1.4;
                         color: $white;
@@ -195,195 +210,250 @@ $padding:20px;
                         letter-spacing: 0;
                         margin-top: $margin * 2;
                         margin-left: $margin * 11 + 5px;
-                        
+
 
 
                     }
                 }
 
-        
+
             }
 
-            .box_img{
+            .box_img {
                 width: $img_width_height;
                 margin: 0;
                 padding: 0;
                 margin-top: $margin;
-                
-                img{
+
+                img {
                     border-radius: 0;
                     width: $img_width_height;
 
-                    
-                }
-                .col-lg-12{
-                    max-width: 94px;
-                    max-height: 53px;
-                   
+
                 }
 
-                .col-lg-4{
+                .col-lg-12 {
+                    max-width: 94px;
+                    max-height: 53px;
+
+                }
+
+                .col-lg-4 {
                     max-width: 160px;
                     max-height: 127px;
                 }
 
-                .col-lg-4,.col-lg-2,.col-lg-12,.col-lg-2{
+                .col-lg-4,
+                .col-lg-2,
+                .col-lg-12,
+                .col-lg-2 {
                     margin: 0;
                     padding: 0;
                     margin-right: $margin - 8px;
                 }
-                
-                .box1{
+
+                .box1 {
                     margin: 0;
                     max-width: 76px;
                     height: 127px;
 
                 }
-                .box2{
+
+                .box2 {
                     margin-top: $margin;
                 }
 
-                
-            
-            };
 
-            .box_img1{
+
+            }
+
+            ;
+
+            .box_img1 {
                 margin: 0;
                 padding: 0;
                 margin-top: $margin;
-                
-        
-                img{
+
+
+                img {
                     border-radius: 0;
                     width: $img_width_height;
-                    
 
-                    
+
+
                 }
-                .col-lg-12{
+
+                .col-lg-12 {
                     max-width: 94px;
                     max-height: 53px;
-                
+
                 }
 
-                .box2{
+                .box2 {
                     padding-top: $padding;
                 }
 
-                .col-lg-4{
+                .col-lg-4 {
                     max-width: 160px;
                     max-height: 127px;
                 }
-                .col-lg-2,.col-lg-3,.col-lg-2,.col-lg-2,.col-lg-12{
+
+                .col-lg-2,
+                .col-lg-3,
+                .col-lg-2,
+                .col-lg-2,
+                .col-lg-12 {
                     padding: 0;
                     margin: 0;
                     margin-right: $margin - 10px;
 
                 }
-    
 
 
-                .box3{
+
+                .box3 {
                     max-width: 125px;
                     max-height: 62px;
-                }    
+                }
 
-                .box4{
+                .box4 {
                     max-width: 100px;
                     max-height: 128px;
                     width: $img_width_height;
 
-                    
-                }
-                
-                .box5-{
-                        max-width: 61px;
-                        max-height: 50px;
-                    }
-                .box5{
-                        max-width: 61px;
-                        max-height: 50px;
+
                 }
 
-                .box5-1{
+                .box5- {
+                    max-width: 61px;
+                    max-height: 50px;
+                }
+
+                .box5 {
+                    max-width: 61px;
+                    max-height: 50px;
+                }
+
+                .box5-1 {
                     margin-top: $margin;
                 }
 
-                .box6{
-                        max-width: 100px;
-                        max-height: 128px;
-                        width: $img_width_height;
+                .box6 {
+                    max-width: 100px;
+                    max-height: 128px;
+                    width: $img_width_height;
 
                 }
-                .box7{
-                        max-width: 121px;
-                        max-height: 128px;
-                        margin: 0;
+
+                .box7 {
+                    max-width: 121px;
+                    max-height: 128px;
+                    margin: 0;
 
                 }
 
             }
 
-    
-            
-    
-            
+
+
+
+
         }
 
-         
-        
-    };
-
-    .recommendation{
 
 
-        h3{
+    }
+
+    ;
+
+    .recommendation {
+
+
+        h3 {
             @include h3;
             color: $coffeebrown;
             @include title_m;
         }
 
-        p{
+        p {
             @include p;
             color: $lightgray;
             @include title_m;
         }
 
-        .row{
+        .row {
             // width: $img_width_height;
-           margin: $margin;
-           margin-left: $margin *2;
-           margin-right: $margin *2;
-            
-            button{
-                background:none;
+            margin: $margin;
+            margin-left: $margin *2;
+            margin-right: $margin *2;
+
+            button {
+                background: none;
                 border: none;
                 padding-top: $padding * 8;
                 padding-bottom: $padding * 8;
 
-                img{
+                img {
                     width: $img_width_height;
                 }
             }
-    
+
             .re_box {
-          
+
                 max-width: 322px;
                 max-height: 463px;
 
-                img{
+                img {
                     width: $img_width_height;
                     border-radius: $border-radius;
                 }
 
             }
-            
-            
-           
+
+
+
 
         }
 
-       
+
+    };
+
+    .login{
+        background-image: url(/src/img/index/Rectangle\ 8.jpg);
+        margin-top: $margin  * 4;
+        margin-bottom: $margin * 4;
+        div{
+            margin: 0 auto;
+            padding: 0 auto;
+            max-width: 300px;
+            padding-top: $padding * 5;
+            padding-bottom: $padding * 5;
+
+        }
+        a{
+            color: $white;
+            text-decoration: none;
+            text-align: center;
+
+            h2{
+                @include h3;
+                font-size: $h2;
+                
+                
+            }
+            img{
+                max-width: 313px;
+                max-height: 20px;
+                width: $img_width_height;
+
+            }
+
+            p{
+                @include p;
+                margin-top: $margin;
+            }
+        }
+
     };
 
 }
