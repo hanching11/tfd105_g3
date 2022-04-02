@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" href="/dist/css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+<!-- header -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="shortcut icon" href="/src/img/logo_icon.png">
+    <link rel="stylesheet"href="https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Ashopping_cart%3A">
+    
+<!-- for shop -->
+    <!-- 上滑 -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />  
+    <!-- 熱門商品輪播 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+    
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+
+    </head>
+
+<body>
+ 
+  <div class="wrapper_checkout">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="shortcut icon" href="/src/img/logo_icon.png">
+<link rel="stylesheet" href="https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Ashopping_cart%3A">
+<title>光緣畫廊 | KUANG YUAN</title>
+
+<header>
+        <div class="wrapper_header">
+            <a href=""><img src="/src/img/logo.png" alt=""></a>
+        
+        <div class="navbar">
+            <div class="nav">
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-user head_icon"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-cart-shopping head_icon"></i></a></li>
+                </ul>
+                <nav>
+                    <button class="hamburger hamburger--squeeze" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                    <div class="nav-list">
+                        <ul class="nav_top">
+                            <ol><a href="">首頁</a></ol>
+                            <ol><a href="">關於畫廊</a></ol>
+                            <ol><a href="">線上畫廊</a></ol>
+                            <ol><a href="">當今展覽</a></ol>
+                            <ol class="sub-nav"><a href="">藝術體驗</a><i class="fas fa-plus-square"></i>
+                                <li><a href="">拼圖遊戲</a></li>
+                                <li><a href="">心理測驗</a></li>
+                            </ol>
+                            <ol><a href="">商品總覽</a></ol>
+                            <ol class="sub-nav2"><a href="">會員中心</a><i class="fas fa-plus-square"></i>
+                                <li><a href="">註冊/登入</a></li>
+                                <li><a href="">訂單查詢</a></li>
+                            </ol>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    });
+    $("button.hamburger").on("click", function () {
+        $(this).toggleClass("is-active");
+        $(".nav-list").toggleClass("on");
+    });
+
+    $(".sub-nav").on("click", function () {
+        $(".sub-nav > li").toggle();
+    });
+
+    $(".sub-nav2").on("click", function () {
+        $(".sub-nav2 > li").toggle();
+    });
+
+</script>
+    <!-- sm 以上範圍，三欄均分 -->
+    <!-- 設定某欄佔幾欄 -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="col -num">
+            1
+          </div>
+          付款方式
+        </div>
+        <div class="col">
+          <div class="col -num">
+            2
+          </div>
+          付款方式
+        </div>
+        <div class="col">
+          <div class="col -num">
+            3
+          </div>
+          付款方式
+        </div>
+        <div class="col">
+          <div class="col -four -num">
+            4
+          </div>
+          付款方式
+        </div>
+      </div>
+
+      <div class="row">
+  
+        <div class="col-md-6">
+          購物清單
+          <div class="row">
+            <div class="col-md-6">巢狀內層左欄</div>
+            <div class="col">
+              巢狀內層右欄
+            </div>
+          </div>
+          
+
+         
+        </div>
+        
+        <div class="col-md-6">
+          商品小計
+          <div class="row">
+            <ul>
+            
+              <li>
+                <ol>小計</ol>
+                <ol>1000</ol>
+
+              </li>
+              <li>
+                <ol>運費</ol>
+                <ol>1000</ol>
+              </li>
+              <li>
+                <ol>訂單總計</ol>
+                <ol>1000</ol>
+              </li>
+                <input type="text" name="saleCode" id="saleCode" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入折扣碼" onfocus="this.placeholder='輸入折扣碼'" onblur="this.placeholder='輸入折扣碼'" size="25"/>
+                <button type="submit" class="useCode">兌換</button>
+            </ul>
+            
+          </div>
+          <!-- <div class="row">
+            小計
+          </div>
+          <div class="row">
+            小計
+          </div> -->
+          
+          <div class="row">
+            <div class="col-md-4">巢狀內層左欄</div>
+            <div class="col-md-8">巢狀內層右欄</div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>    
+    
+  </div>
+   
+</body>
+</html>
+

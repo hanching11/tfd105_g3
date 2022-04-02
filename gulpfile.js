@@ -8,7 +8,7 @@ const {
 
 // 搬檔案
 function package() {
-   return src(['src/img/*.*', 'src/img/**/*.*']).pipe(dest('dist/img'))
+   return src('src/img/*.*').pipe(dest('dist/img'))
 }
 const rename = require('gulp-rename');
 
@@ -96,19 +96,19 @@ exports.s = sassstyle;
 const fileinclude = require('gulp-file-include');
 
 function includeHTML() {
-   return src(['./src/html/*.html' , './src/html/**/*.html'])
+   return src(['src/*.html'])
        .pipe(fileinclude({
            prefix: '@@',
            basepath: '@file'
        }))
-       .pipe(dest('./dist/html'));
+       .pipe(dest('./dist'));
 }
 
 exports.html = includeHTML;
 
 
 function watchall(){
-   watch(['src/html/*.html' , 'src/html/**/*.html' , 'src/layout/*.html' ,] , includeHTML);
+   watch(['src/*.html', 'src/layout/*.html'] , includeHTML);
    watch(['src/sass/*.scss' , 'src/sass/**/*.scss' , 'src/sass/**/**/*.scss'] , sassstyle);
    
 }
@@ -119,15 +119,15 @@ const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
 function browser(done) {
-   browserSync.init({
-       server: {
-           baseDir: ["./dist", "./dist/html/frontend", "./dist/css","./dist/img",],
-           index: ["checkout.html","index.html", ],
-       },
-       port: 3000
+   // browserSync.init({
+   //     server: {
+   //         baseDir: "./dist",
+   //         index: "index.html"
+   //     },
+   //     port: 3000
       
-   });
-   watch(['src/html/*.html' , 'src/html/**/*.html' , 'src/layout/*.html' ,] , includeHTML).on('change' , reload);
+   // });
+   watch(['src/*.html' , 'src/layout/*.html' ,] , includeHTML).on('change' , reload);
    watch(['src/sass/*.scss' , 'src/sass/**/*.scss' , 'src/sass/**/**/*.scss'] , sassstyle).on('change' , reload);
    watch(['src/js/*.js' , 'src/js/**/*.js'] , minijs).on('change' , reload);
    watch(['src/img/*.*' ,  'src/img/**/*.*'] , package).on('change' , reload);
