@@ -1,4 +1,4 @@
-header {
+.wrapper_header {
     * {
         box-sizing: border-box;
         margin: 0;
@@ -15,7 +15,7 @@ header {
         color: #353231;
     }
 
-    header {
+    .header_bac {
         background-color: #353231;
         color: #eeeae2;
         display: flex;
@@ -50,6 +50,7 @@ header {
 
     header a {
         text-decoration: none;
+        text-align: left;
         color: #eeeae2;
     }
 
