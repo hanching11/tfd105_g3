@@ -1,0 +1,189 @@
+.wrapper_product_info{
+    *,
+    *:after,
+    *::before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    // body {
+
+    // }
+
+    // 暫時header
+    header{
+        width: 100%;
+        height: 70%;  
+        background-color: $darkbrown1;
+    }
+
+    // .fot-logo{
+    //     max-width: 1200px;
+
+    // }
+
+    .for-logo{
+        width: 50px;
+        margin: 0 auto;
+        // justify-items: center;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%,-50%);
+    }
+
+    .for-logo img{
+        width: 50px;
+    }
+
+    .closing{
+        border: none;
+        background: none;
+        color: $beidge1;
+
+        position: absolute;
+        top: 12px;
+        right: 15px;
+    }
+
+
+    // 本體
+    .artwork_detail_main{
+        padding: 20px 20px;
+        // width: 1200px;
+    }
+
+    .draginner{
+        width: 100%;
+    }
+
+    .content-upper{
+        display: flex;
+    }
+
+    .image_container{
+        width: 50%;
+        height: 600px;
+        position: relative;
+        background-color: $darkbrown2;
+    }
+
+    .image_inner{
+        // padding: 20px;
+        // margin-left: 50px;
+        
+
+    }
+
+    .image_inner img{
+        max-width: 400px;
+        max-height: 400px;
+        // min-width: 200px;
+        width: 100%;
+        // height: 100%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .content_container{
+        width: 50%;
+        max-height: 600px;
+        background-color: $beidge2;
+    }
+
+    .content{
+        padding: 100px;
+    }
+
+    .content h4{
+        font-size: $h4;
+        padding-bottom: 30px;
+    }
+
+    .store_item_add_container h4{
+        font-size: 16px;
+        display: inline-block;
+    }
+
+    .store_item_add_to_cart {
+        color: $darkbrown1;
+        font-size: 16px;
+        border: none;
+        background: none;
+    }
+
+    .links-panel{
+        margin-bottom: 30px;    
+    }
+
+    .artists{
+        color: $darkbrown1;
+        text-decoration: none;
+    }
+
+
+    .content_below{
+        max-height: 600px;
+        width: 100%;
+    }
+
+    .area_wrapper{
+        height: 320px;
+        
+        display: flex;
+        
+
+    }
+
+    .left-item{
+        background-color: $beidge2;
+        width: 50%;
+        padding: 30px;
+        position: relative;
+
+
+    }
+
+    .right-item{
+        background-color: $lightgray;
+        width: 50%;
+        padding: 30px;
+        position: relative;
+
+        
+    }
+
+    .area_wrapper img{
+        max-width: 500px;
+        // max-height: 400px;
+        // min-width: 200px;
+        width: 100%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
