@@ -1,0 +1,165 @@
+.wrapper_pazzle_choice{
+    *,
+    *:after,
+    *::before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    // padding: 20px 20px;
+    
+    
+    .page-content{
+        background-image: url(/src/img/Puzzle/choice/background/mona.png);
+        background-size: cover;
+        width: 100%;
+        height: 1200px;
+    }
+
+    .puzzle_name{
+        padding-top: 100px;
+    }
+
+    .puzzle_title h1{
+        font-size: $h1;
+        color: $beidge1;
+        width: 505px;
+        margin: 0 auto;
+    }
+
+    .puzzle_subtitle{
+        font-size: 24px;
+        color: $beidge1;
+        width: 195px;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+
+    .puzzle_choice{
+        width: 880px;
+        margin: 50px auto;
+    }
+
+    .btn-group{
+        width: 880px;
+        // margin: 0 auto;
+        // display: flex;
+        // flex-grow: 1;
+
+    }
+
+    .btnn{
+        border-radius: 25px;
+        display: block;
+        background: transparent;
+        border: none;
+        border:5px solid transparent;
+        // padding: 5px;
+        margin: 0;
+        margin-right: 50px;
+        padding: 0;
+
+
+    }
+
+    .btn-group button.active{ 
+        border-radius: 25px;
+        // background-color: $coffeebrown !important; 
+        color: $darkbrown1;
+        // outline: none !important;
+        border: 5px solid $coffeebrown;
+        // padding: 2px;
+
+    }
+
+    // .btn:focus {
+    //     outline: none !important;
+    //   }
+
+    .button_content{
+
+    }
+    //
+    .choice-slide {
+        // margin: 0 50px;
+        // margin-bottom: 120px;
+        width: 250px;
+        
+    
+    }
+    
+    .choice-slide .part-1 {
+        position: relative;
+        height: 350px;
+        // max-height: 290px;
+        // margin-bottom: 20px;
+        overflow: hidden;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        
+    }
+    
+    .choice-slide .part-1::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transition: all 0.3s;
+    }
+    
+    .choice-slide:hover .part-1::before {
+            transform: scale(1.1,1.1) rotate(0deg);
+    }
+
+    #pc1 .part-1 {
+        background: url("/src/img/Puzzle/choice/for-choice/scream.png") no-repeat center;
+        background-size: cover;
+            transition: all 0.3s;
+    }
+
+    #pc2 .part-1 {
+        background: url("/src/img/Puzzle/choice/for-choice/mona.png") no-repeat center;
+        background-size: cover;
+            transition: all 0.3s;
+    }
+
+    #pc3 .part-1{
+        background: url("/src/img/Puzzle/choice/for-choice/flower.png") no-repeat center;
+        background-size: cover;
+            transition: all 0.3s;
+    }
+    //
+
+    .part-2{
+        height: 80px;
+        background-color: #EFEFEF;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .part-2 h4{
+        font-size: 24px;
+        line-height: 75px;
+    }
+
+    .submit-blt{
+        width: 130px;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+
+    .submit-blt .blt{
+        width: 130px;
+        height: 55px;
+        border: 1px solid #FFF;
+        background: $coffeebrown;
+        color: $beidge1;
+        border-radius: 25px;
+        font-size: 20px;
+    }
+}
