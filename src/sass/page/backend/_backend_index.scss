@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .wrapper {
     .header {
         display: flex;
@@ -7,6 +8,60 @@
             margin: 0 50px;
                 img {
                     width: 100%;
+=======
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+        width: 50px;
+        margin: 0 20px;
+            img {
+                width: 100%;
+                margin: 20px 0;
+            }
+    }
+    .con_h6 {
+       margin: -10px 20px 0 0;
+       padding: 0 40px;
+        h2{
+           
+            padding: 0 45px;
+        
+        }
+    }
+
+    
+}
+//  left-side ------------
+
+// ------------------------------
+section .sideLeft {
+    display: flex;
+    flex-direction: column;
+
+}   .content_left {
+    margin: 0 20px;
+    background-color: black;
+    width: 180px;
+    text-align: center;
+}           h2 {
+                color: #fff;
+}
+    .side_left {
+        display: block;
+        width: 200px;
+}           ul {
+            // background-color: black;
+        }           
+                ol {
+>>>>>>> ciaoli
                     margin: 20px 0;
                 }
         }
