@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./layout/head.html')
+    <link rel="stylesheet" href="/src/sass/style.css">
+    <link rel="stylesheet" href="/src/sass/page/frontend/_psychol_test.scss">
+    <title>Online Gallery Exhibition| 光緣畫廊 | KUANG YUAN</title>
+    <style>
+        /* 心理測驗的部分 */
+        .psychol_test_wrapper section {
+            background-color: #EEEAE2;
+            color: #353231;
+        }
+
+
+        .psychol_title h1 {
+            font-size: 1.5rem;
+            letter-spacing: 1rem;
+            line-height: 5;
+            margin-left: 6%;
+        }
+
+        /* 心理測驗題目 */
+        .test_q1 {
+            text-align: center;
+        }
+
+        .question_img img {
+            height: 400px;
+            border-radius: 25px;
+            border: 1px solid #353231;
+            margin-bottom: 50px;
+        }
+
+        .option {
+            display: flex;
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        .test_question ul {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .option button {
+            width: 25px;
+            height: 25px;
+            border-radius: 25px;
+            border: 1px solid #353231;
+            background-color: #C3BDB3;
+            cursor: pointer;
+            transition: .5s;
+        }
+
+        .option button:hover {
+            background-color: #AB8A49;
+        }
+
+        .test_question h3 {
+            font-size: 1.2rem;
+            letter-spacing: 5px;
+        }
+
+        .question {
+            display: inline-flex;
+            text-align: center;
+        }
+
+        .question_img img {
+            margin-top: 20px;
+        }
+
+        .previous_arrow img {
+            margin-right: 50px;
+            margin-top: 400px;
+            transform: rotatey(-180deg);
+        }
+
+        .next_arrow img {
+            margin-left: 50px;
+            margin-top: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 心理測驗內容 -->
+    @@include('layout/header.html')
+    <section class="psychol_test_wrapper" id="bac">
+
+        <!-- 心理測驗內容 -->
+        <section>
+            <div class="psychol_title ">
+                <h1>心理測驗</h1>
+            </div>
+
+            <div class="test_q1">
+
+                <div class="question">
+                    <div class="previous_arrow">
+                        <a href="/dist/psychol_test_q3.html"><img src="/src/img/checkout/arrow1.svg"
+                                alt=""></a>
+                    </div>
+                    <div class="question_img">
+                        <img src="/src/img/psychol_test/Q4.jpg" alt="">
+                    </div>
+                    <div class="next_arrow">
+                        <a href="/dist/psychol_test_q5.html"><img src="/src/img/checkout/arrow1.svg"
+                                alt=""></a>
+                    </div>
+                </div>
+
+                <div class="test_question">
+                    <h3>Q4. 你是一個精力無窮、風格多變的人? </h3>
+                    <ul class="option">
+                        <li><button id="b1"></button> &nbsp;&nbsp;&nbsp;&nbsp;是</li>
+                        <li><button id="b1"></button> &nbsp;&nbsp;&nbsp;&nbsp;否</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </section>
+    @@include('layout/footer.html')
+
+</body>
+
+</html>
