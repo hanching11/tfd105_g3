@@ -140,13 +140,18 @@ $padding:20px;
         margin-top: $margin * 5;
         margin-bottom: $margin * 5;
 
+        // .title{
+
+        //     border-top: 1px solid $white;
+        //     margin-top: $margin;  
+            
+        // } //線顯示不出來
+
         h3 {
             @include h3;
             color: $white;
             @include title_m;
             
-
-
 
         }
 
@@ -156,10 +161,8 @@ $padding:20px;
             @include title_m;
 
         }
+        
 
-        h3:first-child {
-            border-top: 1px solid $white;
-        }
 
         .r1 {
             padding: $padding + 10px;
@@ -277,6 +280,7 @@ $padding:20px;
                 .box2 {
                     margin-top: $margin;
                 }
+               
 
 
 
@@ -369,17 +373,28 @@ $padding:20px;
 
             }
 
+            
+
 
 
 
 
         }
 
+        .Kuang{
+            // border-bottom: 1px solid $white;
+      
+
+            .Kuang1 {
+                margin-left: $margin * 37;
+    
+            }
+        }
+       
+        
 
 
-    }
-
-    ;
+    };
 
     .recommendation {
 
