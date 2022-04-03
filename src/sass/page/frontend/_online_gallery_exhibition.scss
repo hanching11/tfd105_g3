@@ -11,12 +11,11 @@
         position: fixed;
     }
 
-    // light
-    // .bg-img img:nth-child(2)
-    //   {
-    //     z-index: 99;
-    //     margin: 0 auto;
-    // }
+    .bg-img img:nth-child(2)
+      {
+        z-index: 99;
+        pointer-events: none;
+    }
     
     // 主標
     .onlinegallery_exhibition_title{
