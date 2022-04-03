@@ -13,6 +13,7 @@ $padding:20px;
     // font-weight: $fontWeight;
     letter-spacing: $letter-space;
     font-family: $englishFont;
+    font-weight: $regularWeight;
 
 }
 
@@ -22,6 +23,7 @@ $padding:20px;
     // font-weight: $fontWeight ;
     letter-spacing: $letter-space;
     margin-bottom: $margin;
+    font-weight: $boldWeight;
 
 }
 
@@ -32,6 +34,12 @@ $padding:20px;
 
 }
 
+@mixin text_overflow {
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;  
+    
+}
 
 .wrapper_index {
     line-height: $lineheight;
@@ -58,10 +66,14 @@ $padding:20px;
 
             h3 {
                 @include h3;
+                color: $coffeebrown;
+
             }
 
             p {
                 @include p;
+                color: $lightgray;
+
             }
 
             .new_work {
@@ -132,6 +144,7 @@ $padding:20px;
             @include h3;
             color: $white;
             @include title_m;
+            
 
 
 
@@ -183,6 +196,7 @@ $padding:20px;
                     color: $darkbrown2;
                     margin: 0;
                     margin-bottom: $margin;
+                    font-weight: $lightWeight;
 
 
 
@@ -210,6 +224,7 @@ $padding:20px;
                         letter-spacing: 0;
                         margin-top: $margin * 2;
                         margin-left: $margin * 11 + 5px;
+                        font-weight: $boldWeight;
 
 
 
@@ -455,5 +470,95 @@ $padding:20px;
         }
 
     };
+
+    .product_description{
+
+        h3{
+            @include h3;
+            @include title_m;
+            color: $coffeebrown;
+            
+        }
+        p{
+            @include p;
+            @include title_m;
+            color: $lightgray;
+            @include text_overflow;
+      
+
+        }
+
+        .row {
+
+            margin: $margin;         
+
+            .col-lg-1{
+                padding: 0;
+                width: auto;
+                height: auto;
+            }
+
+            button {
+                background: none;
+                border: none;
+                padding-top: $padding * 8;
+                padding-bottom: $padding * 8;
+                
+
+                img {
+                    width: $img_width_height;
+                }
+            }
+
+            .pd_box {
+
+                max-width: 320px;
+                max-height: 441px;
+                border: 1px solid $lightgray;
+                padding-top: $padding - 8px;
+                padding-bottom: $padding - 8px;
+                text-align: center;
+                margin: $margin - 16px;
+                
+
+                img {
+                    max-width: 365px;
+                    max-height: 282px;
+                    width: $img_width_height;
+                   
+                }
+
+                a{
+                    text-decoration: none;
+                }
+
+                p{
+                    font-size: $p + 0.1;
+                    margin: 0;
+                    padding: 0;
+                    font-weight: $boldWeight;
+                    color: $coffeebrown;
+                    letter-spacing: $letter-space - 3.3px;
+                    margin-top: $margin;  
+                    margin-bottom: $margin - 10px;                    
+                }
+                .text{
+                    font-size: $p - 0.5;
+                    font-weight: $lightWeight;
+                    color: black;
+                    margin: 0;
+                    padding: 0;
+                    margin: 0 $margin + 5px $margin - 10px $margin + 5px ;
+
+                }
+            
+            }
+
+        }
+
+
+        
+    };
+
 
 }
