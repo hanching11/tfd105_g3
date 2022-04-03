@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./layout/head.html')
+    <link rel="stylesheet" href="/src/sass/style.css">
+    <link rel="stylesheet" href="/src/sass/page/frontend/_psychol_test.scss">
+    <title>Online Gallery Exhibition| 光緣畫廊 | KUANG YUAN</title>
+    <style>
+        /* 心理測驗的部分 */
+        .pt_result {
+            font-family: "Cinzel", "Noto Serif TC", serif;
+            background-color: rgba(0, 0, 0, 0.6);
+            background-blend-mode: multiply;
+            background-image: url('/src/img/psychol_test/A3.jpg');
+            background-size: cover;
+            background-position: center center;
+            color: #EEEAE2;
+        }
+
+        .psychol_test_content {
+            text-align: center;
+            line-height: 3;
+        }
+
+        .psychol_title h1 {
+            font-size: 1.5rem;
+            letter-spacing: 1rem;
+            line-height: 5;
+            margin-left: 6%;
+        }
+
+        /* 心理測驗結果 */
+        .test_result {
+            text-align: center;
+            display: flex;
+            margin-top: 30px;
+        }
+
+        .artist_name h2 {
+            font-size: 1.5rem;
+            letter-spacing: 3px;
+            line-height: 3;
+        }
+
+        .artist_name p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .artwork {
+            margin-left: 15%;
+            margin-bottom: 100px;
+        }
+
+        .result_right {
+            display: block;
+            text-align: left;
+            margin: 0 auto;
+        }
+
+        .artist h2 {
+            font-size: 2rem;
+            letter-spacing: 5px;
+            line-height: 3;
+            color: #C3BDB3;
+        }
+
+        .artist_introduce {
+            width: 500px;
+            line-height: 2.2;
+        }
+
+        .artist_introduce p {
+            font-weight: normal;
+        }
+
+        .painting img {
+            height: 280px;
+            border-radius: 25px;
+            border: 1px solid #EEEAE2;
+            margin: 0 auto;
+            transition: 1s;
+        }
+
+        .painting img:hover {
+            transform: rotatey(180deg);
+            filter: sepia(.5);
+            border: 1px solid #AB8A49;
+        }
+
+        .recommend {
+            margin-top: 15%;
+            text-align: right;
+        }
+
+        .recommend a {
+            color: #EEEAE2;
+            font-weight: bold;
+            font-size: 1rem;
+            letter-spacing: 5px;
+            transition: .5s;
+        }
+
+        .recommend a:hover {
+            color: #C3BDB3;
+            letter-spacing: 8px;
+            filter: sepia(.5);
+        }
+
+        .recommend img:hover {
+            filter: sepia(.5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 心理測驗結果 -->
+    <!-- @@include('layout/header.html') -->
+    <section class="pt_result">
+        <div class="psychol_title ">
+            <h1>心理測驗 | 測驗結果</h1>
+        </div>
+
+        <div class="test_result">
+            <div class="artwork">
+                <div class="painting">
+                    <img src="/src/img/psychol_test/A3.jpg" alt="">
+                </div>
+                <div class="artist_name">
+                    <h2>Claude Monet</h2>
+                    <p>Stack of Wheat</p>
+                </div>
+            </div>
+
+            <div class="result_right">
+                <div class="artist">
+                    <h2>C. Claude Monet</h2>
+                </div>
+                <div class="artist_introduce">
+                    <p>
+                        莫內是印象派最具代表性的大畫家，而印象派 ( Impressionnisme ) 名稱的由來，就是從莫內的這幅油畫標題「印象．日出」中的「印象」一詞而來。印象主義可說是歐洲繪畫史的一次大革命，對近代繪畫的發展有相當深遠的影響。印象主義畫家吸取當時科學上的光學理論，認為色是在光的照射下而產生的，在不同時間、環境、氣候等客觀條件下，受不同光的變化而有各種不同色彩。透過寫生，發現過去一般不被注意的色彩現象，從而在繪畫色彩上引起了重大的革新。
+                    </p>
+                </div>
+                <div class="recommend">
+                    <a href="">前往推薦商品! <img src="/src/img/checkout/arrow1.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('layout/footer.html')
+
+</body>
+
+</html>
