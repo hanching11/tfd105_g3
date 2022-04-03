@@ -8,7 +8,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Owl Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     @@include('./layout/head.html')
     <title>Online Gallery Exhibition| 光緣畫廊 | KUANG YUAN</title>
@@ -58,7 +60,24 @@
                         </div>
                     </div>
 
+                    <!-- pic02 -->
+                    <div class="item" id="star">
+                        <div class="c-gallery__photo">
+                            <div class="c-photo c-photo--gallery is-black">
+                                <div class="c-photo__wrapper">
+                                    <div class="c-photo__frame">
+                                        <div class="c-photo__inner">
+                                            <img src="../src/img/online_gallery/pic02.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-photo__shadow-01"></div>
+                                <div class="c-photo__shadow-02"></div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- pic03 -->
                     <div class="item">
                         <div class="c-gallery__photo">
                             <div class="c-photo c-photo--gallery is-black">
@@ -75,24 +94,8 @@
                         </div>
                     </div>
 
-                    <div class="item">
-                        <div class="c-gallery__photo">
-                            <div class="c-photo c-photo--gallery is-black">
-                                <div class="c-photo__wrapper">
-                                    <div class="c-photo__frame">
-                                        <div class="c-photo__inner">
-                                            <img src="../src/img/online_gallery/pic02.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="c-photo__shadow-01"></div>
-                                <div class="c-photo__shadow-02"></div>
-                            </div>
-                        </div>
-                    </div>
 
-
-                    <div class="item">
+                    <!-- <div class="item">
                         <h4>4</h4>
                     </div>
                     <div class="item">
@@ -118,26 +121,39 @@
                     </div>
                     <div class="item">
                         <h4>12</h4>
-                    </div>
+                    </div> -->
 
                 </div><!-- owl-carousel end -->
             </div><!-- panting end -->
         </div> <!-- background-image end-->
     </div> <!-- </div> wrapper_end -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         // owl-carousel
         $(document).ready(function () {
             $('.nonloop').owlCarousel({
                 center: true,
-                items: 2,
+                mouseDrag: true,
+                items: 3,
+                // startPosition:star,
                 loop: false,
                 margin: 200,
                 responsive: {
+                    480: {
+                        items: 1
+                    },
+
                     600: {
-                        items: 4
+                        items: 3
+                    },
+
+                    768 : {
+                        items: 3
                     }
+
                 }
             });
         });
