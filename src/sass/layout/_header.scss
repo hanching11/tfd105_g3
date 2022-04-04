@@ -48,13 +48,13 @@
         filter: sepia(1);
     }
 
-   a {
+    .header_bac a {
         text-decoration: none;
         text-align: left;
         color: #eeeae2;
     }
 
-    ul {
+    header_bac ul {
         display: flex;
     }
 
@@ -291,7 +291,7 @@
     ::-webkit-scrollbar-thumb:hover {
         background: #e3ded4;
     }
-    .nav-list ol{
+    .nav-list ol {
         text-align: left;
     }
 
@@ -325,4 +325,5 @@
     .on {
         display: inline-block !important;
     }
+  
 }
