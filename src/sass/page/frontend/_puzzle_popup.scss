@@ -11,7 +11,68 @@
 
     // }
     
-    main{
-        padding: 20px 20px;
+    .page-content{
+        width: 500px;
+        height: 300px;
+        border-radius: 25px;
+        padding: 20px;
+        margin: 0 auto;
+        border: 1px solid #000;
+
+        position: relative;
     }
+
+    .closing{
+        border: none;
+        background: none;
+        color: $beidge1;
+
+        position: absolute;
+        top: 12px;
+        right: 20px;
+    }
+
+    .pop-title h5{
+        width: 130px;
+        margin: 20px auto;
+        font-size: 24px;
+        color: $coffeebrown;
+
+    }
+
+    .pop-content p{
+        font-size: 18px;
+        width: 210px;
+        margin: 40px auto;
+    }
+
+
+    .coupon-info{
+        width: 270px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .blk{
+        width: 150px;
+        height: 60px;
+        background-color: #FFF;
+        border: 1px solid #000;
+        text-align: center;
+        line-height: 60px;
+        // display: inline-block;
+    }
+
+    .sent-blt{
+        width: 95px;
+        height: 60px;
+        border: none;
+        background: #000;
+        color: $beidge1;
+
+    }
+
+
+
 }
