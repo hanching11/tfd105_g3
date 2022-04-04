@@ -22,31 +22,31 @@
                 <aside class="side_left">
                     <ul>
                         <ol>
-                            <a href="./b_member.html">會員管理</a>
+                            <a href="#">會員管理</a>
                         </ol>
                         <ol>
-                            <a href="./b_order.html">訂單管理</a>
+                            <a href="../dist/b_order.html">訂單管理</a>
                         </ol>
                         <ol>
-                            <a href="#">商品管理</a>
+                            <a href="../dist/b_product.html">商品管理</a>
                         </ol>
                         <ol>
-                            <a href="./b_item_exhibits.html">展品管理</a>
+                            <a href="../dist/b_item_exhibits.html">展品管理</a>
                         </ol>
                         <ol>
-                            <a href="./b_discount.html">折扣碼管理</a>
+                            <a href="../dist/b_discount.html">折扣碼管理</a>
                         </ol>
                     </ul>
                 </aside>
             </div>
             <div class="sideRight">
-                <div class="channel">
+                <div class="channel ju_between">
                     <div class="fs-6">
                         <h6>會員管理</h6>
                     </div>   
                     <ul class="list_co btn-group" role="group">
                         <li>
-                            <button type="button" class="btn btn-primary">停權</button>
+                            <button type="button" class="btn btn-danger">停權</button>
                         </li>
                     </ul>
                 </div>
@@ -128,13 +128,13 @@
                     </form>
                         
                 </div>
-                  <div class="modal-footer">
+                <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
                     <button type="button" class="btn btn-primary">完成</button>
-                  </div>
                 </div>
-              </div>
-            </div></section>
+            </div>
+        </div>
+        </section>
         <!-- 編輯與查看視窗 -->
         <section>  
             <!-- Modal -->
@@ -142,35 +142,11 @@
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h6 class="modal-title" id="exampleModalLabel">編輯商品</h6>
+                            <h6 class="modal-title" id="exampleModalLabel">會員編輯</h6>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            商品編號:12345
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">名稱</label>
-                                    <input type="text" name="name" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="artist">藝術家</label>
-                                    <input type="text" name="artist" class="form-control">
-                                </div>
-                                <div class="form-group edit_lay">
-                                    <label for="price">價格</label>
-                                    <input type="text" name="price" class="form-control">
-                                    <label for="count">數量</label>
-                                    <input type="text" name="count" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="illustrate">產品說明</label>
-                                    <input name="illustrate" type="text" class="form-control">
-                                </div>
-                            </form>
-                            <form runat="server">
-                                <input accept="image/*" type='file' id="imgInp" multiple="multiple" />
-                                <img id="blah" src="#" alt="your image" />
-                            </form>
+
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>

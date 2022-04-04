@@ -1,7 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         @@include('./layout/head.html')
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
         <title>光緣畫廊 | KUANG YUAN</title>
     </head>
 <body>
@@ -14,33 +16,153 @@
                 <h6>登出</h6>
             </div>
         </div>
-            <section class="sideLeft">
-                <div class="content_left">
-                    <div class="left_ti">
-                        <h6 class="wd-bord">後臺管理</h6>
-                        <aside class="side_left">
-                            <ul class="ba_bk">
-                                <ol>
-                                    <a href="#">會員管理</a>
-                                </ol>
-                                <ol>
-                                    <a href="#">訂單管理</a>
-                                </ol>
-                                <ol>
-                                    <a href="#">商品管理</a>
-                                </ol>
-                                <ol>
-                                    <a href="#">展品管理</a>
-                                </ol>
-                                <ol>
-                                    <a href="#">折扣碼管理</a>
-                                </ol>
-                            </ul>
-                        </aside>
+        <section class="sideLeft">
+            <div class="content_left">
+                <h6 class="wd-bord">後臺管理</h6>
+                <aside class="side_left">
+                    <ul>
+                        <ol>
+                            <a href="../dist/b_member.html">會員管理</a>
+                        </ol>
+                        <ol>
+                            <a href="#">訂單管理</a>
+                        </ol>
+                        <ol>
+                            <a href="../dist/b_product.html">商品管理</a>
+                        </ol>
+                        <ol>
+                            <a href="../dist/b_item_exhibits.html">展品管理</a>
+                        </ol>
+                        <ol>
+                            <a href="../dist/b_discount.html">折扣碼管理</a>
+                        </ol>
+                    </ul>
+                </aside>
+            </div>
+            <div class="sideRight">
+                <div class="channel ju_between">
+                    <div class="fs-6">
+                        <h6>訂單管理</h6>
+                    </div>   
+                    <ul class="list_co btn-group" role="group">
+                        <li>
+                            <button type="button" class="btn btn-danger fs-6 pa_d">取消訂單</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="table_product">
+                    <table class="table  align-middle table-striped">
+                        <thead>
+                            <tr class="table_color">
+                                <th scope="col">#</th>
+                                <th scope="col">訂單編號</th>
+                                <th scope="col">商品編號</th>
+                                <th scope="col">付款人帳號</th>
+                                <th scope="col">價格</th>
+                                <th scope="col">數量</th>
+                                <th scope="col">付款方式</th>
+                                <th scope="col">地址</th>
+                                <th scope="col">訂單狀態</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        </label>
+                                    </div>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>abc123</td>
+                                    <td>399</td>
+                                    <td>3</td>
+                                    <td>信用卡</td>
+                                    <td>台北市大安區</td>
+                                    <td>準備中</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary pa_d" data-bs-toggle="modal" data-bs-target="#orderModal">
+                                            編輯與查看
+                                        </button>
+                                    </td>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>                 
+        </section>
+        <section>  
+            <!-- order---Modal -->
+            <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h6 class="modal-title" id="exampleModalLabel">訂單編輯</h6>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="order_editNumber"></label>
+                                    <input type="text" id="order_editNumber" name="number" class="form-control" placeholder="訂單編號">
+                                </div>
+                                <div class="form-group">
+                                    <label for="order_editAccount"></label>
+                                    <input type="text" id="order_editAccount" name="account" class="form-control" placeholder="付款人帳號">
+                                </div>
+                                <div class="form-group">
+                                    <label for="order_pro_number"></label>
+                                    <input type="text" id="order_pro_number" name="number" class="form-control" placeholder="商品編號">
+                                </div>
+                                <div class="form-group">
+                                    <label for="order_pro_number"></label>
+                                    <input type="text" id="order_pro_number" name="number" class="form-control" placeholder="價格">
+                                    <label for="order_pro_number"></label>
+                                    <input type="text" id="order_pro_number" name="number" class="form-control" placeholder="數量">
+                                </div>
+                                <div class="form-group">
+                                    <label for="order_editAddress"></label>
+                                    <input type="text" id="order_editAddress" name="address" class="form-control" placeholder="地址">
+                                </div>
+                                <div class="form-group">
+                                    <label for="order_editPay"></label>
+                                    <input type="text" id="order_editPay" name="pay" class="form-control" placeholder="付款方式">
+                                </div>
+                                <div class="form-group horiz">
+                                    訂單狀態
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">準備中
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">待出貨
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">已出貨
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary">完成</button>
+                        </div>
                     </div>
-                </div>      
-            </section>
-    </div>
-</div>
+                </div>
+            </div>
+        </section>
+    </div>      
+    <script>
+        imgInp.onchange = evt => {
+            const [file] = imgInp.files
+            if (file) {
+                blah.src = URL.createObjectURL(file)
+            }
+        }
+    </script>
 </body>
 </html> 
