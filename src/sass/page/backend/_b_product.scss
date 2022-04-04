@@ -25,6 +25,12 @@
         img {
             display: block;
             width: 100%;
+            padding: 10px;
         }
-    
+
+    // 編輯查看視窗
+    .edit_lay {
+        display: flex;
+    }
+     
 }
