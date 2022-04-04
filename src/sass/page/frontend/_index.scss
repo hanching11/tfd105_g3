@@ -748,6 +748,7 @@ $media_p:$p+0.8;
                     .rwd-1,.rwd-2 {
                         margin: $margin + 10px;
 
+
                     }
 
                     .rwd-1 {
@@ -757,16 +758,19 @@ $media_p:$p+0.8;
                         margin: 0 auto;
 
                     }
-                }
 
+                    
+                }
                 .rwdbg {
-                    background-image: url(/src/img/index/Rectangle\ 4067-1.jpg);
-                    width: 391px;
-                    border-radius: $border-radius;
-                    margin: 0 auto !important;
-                    margin-top: $margin * 4 !important;
-
+                        background-image: url(/src/img/index/Rectangle\ 4067-1.jpg);
+                        width: 391px;
+                        border-radius: $border-radius;
+                        margin: 0 auto !important;
+                        margin-top: $margin * 4 !important;
+    
                 }
+
+              
 
             };
 
