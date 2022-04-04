@@ -3,8 +3,12 @@
 
 <head>
 
-    @@include('./layout/head.html')
+    <!-- @@include('./layout/head.html') -->
     <title>當今展覽</title>
+    <link rel="stylesheet" href="../dist/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
+    <script src="https://unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
+    <script src="https://unpkg.com/fullpage.js/vendors/scrolloverflow.min.js"></script>
     
 
 </head>
@@ -50,57 +54,193 @@
 
             </div>
             <div class="section" id="s2">
-                <h2>
-                    梵谷 | Vincent Willem van Gogh
-                </h2>
+                <div class="f2">
+                    <h2>
+                        梵&ensp;谷 | V i n c e n t &ensp;W i l l e m &ensp;v a n &ensp;G o g h
+                    </h2>
+                </div>
+
                 <div class="f2-main">
-                    <img src="./img/exhibition//f2-banner.png" alt="" class="f2-banner">
-                    <p>
-                        梵谷生於1853年於布拉邦省的小鎮赫崙桑得
-                        <br>
-                        從小深受法國藝術氣息薰陶
-                        <br>
-                        搬到普羅旺斯省的亞耳城以後
-                        <br>
-                        梵谷藉由作畫來紓解他內心裡的矛盾
-                        <br>
-                        以平衡他在真實生活中所遭受到的挫折
-                        <br>
-                        此時的畫作產量也漸漸增多
-                        <br>
-                        梵谷最被人為稱道的就是對於光與顏色的處理
-                        <br>
-                        由於他的筆觸相當的重
-                        <br>
-                        所以常常在畫布上留下一層厚厚的顏料
-                        <br>
-                        但是他一生從未因他的作品而致富
-                        <br>
-                        梵谷死於1890年 享年只有37歲。
-                    </p>
+                    <ul>
+                        <li>
+                            <img src="./img/exhibition/f2-banner.png" alt="" class="f2-banner">
+                        </li>
+                        <li>
+                            <div class="born">
+                                <p>
+                                    梵谷生於1853年於布拉邦省的小鎮赫崙桑得
+                                    <br>
+                                    從小深受法國藝術氣息薰陶
+                                    <br>
+                                    搬到普羅旺斯省的亞耳城以後
+                                    <br>
+                                    梵谷藉由作畫來紓解他內心裡的矛盾
+                                    <br>
+                                    以平衡他在真實生活中所遭受到的挫折
+                                    <br>
+                                    此時的畫作產量也漸漸增多
+                                    <br>
+                                    梵谷最被人為稱道的就是對於光與顏色的處理
+                                    <br>
+                                    由於他的筆觸相當的重
+                                    <br>
+                                    所以常常在畫布上留下一層厚厚的顏料
+                                    <br>
+                                    但是他一生從未因他的作品而致富
+                                    <br>
+                                    梵谷死於1890年 享年只有37歲。
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+
+
                 </div>
 
             </div>
+
             <div class="section" id="s3">
+                <p>
+                    剛開始學習繪畫的梵谷
+                    <br>
+                    風格流派是現實主義派
+                    <br>
+                    並非後來聞名的後印象派
+                    <br>
+                    繪畫的對象也都是身邊是人事物
+                    <br>
+                    因畫作本身較低明度 不符合當時主流
+                    <br>
+                    所以畫作一直賣不出去
+                    <br>
+                    於是梵谷去找了做畫家的表兄安東·莫夫
+                    <br>
+                    安東建議梵谷開始練習炭筆和粉彩畫
+                    <br>
+                    雖然梵谷不是很願意
+                    <br>
+                    但也的確為梵谷打下扎實的繪畫基礎
+
+                </p>
+
+
+            </div>
+
+
+            <div class="section" id="s4">
+                <div class="s4_first">
+                    <img src="./img/exhibition/f4-1.png" alt="" class="pic">
+                    <div class="first_intro">
+                        <img src="./img/exhibition/f4-1-1.png" alt="">
+                        <p>
+                            西元1883年 梵谷搬往尼嫩
+                            <br>
+                            在尼嫩時梵谷完全埋首於繪畫中
+                            <br>
+                            他的創作速度很快
+                            <br>
+                            主題多是織布者和村舍
+                            <br>
+                            巴黎的畫商開始對他的作品產生興趣
+                            <br>
+                            梵谷決定用他的第一幅主要的作品
+                            <br>
+                            《吃馬鈴薯的人》和幾幅農民肖像參展
+                            <br>
+                            梵谷在油畫商盧爾斯在海牙的展覽櫥窗
+                            <br>
+                            首次展出了他的作品
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="s4_second">
+                    <div class="second_intro">
+                        <img src="./img/exhibition/f4-2-1.png" alt="" class="border">
+                        <p>
+                            在尼嫩的兩年間
+                            <br>
+                            梵谷創作了超過200幅油畫
+                            <br>
+                            《草帽與菸斗的靜物畫》
+                            <br>
+                            以及另一幅同時期的畫作
+                            <br>
+                            《砂鍋與木屐的靜物畫》
+                            <br>
+                            都充分表現了梵谷畫技的熟練
+                            <br>
+                            二幅畫皆展露了平穩、嚴密的筆觸與色彩
+                            <br>
+                            細緻變化的特色
+                        </p>
+
+                    </div>
+                    <img src="./img/exhibition/f4-2.png" alt="" class="pic"  id="hatpic">
+
+                </div>
+
+                <div class="s4_third">
+                    <div class="third_intro">
+                        <img src="./img/exhibition/f4-3-1.png" alt="" class="third_border">
+                        <p>
+                            梵谷於1886年3月搬往巴黎，於4月至5月間在費爾南德·柯羅蒙的畫室就學，在這裡他結識了許多志同道合的好友並且舉辦了
+                            <br>
+                            兩場點彩畫派和新印象派畫展，這是這兩派作品最早的公共展出
+                            <br>
+                            後來梵谷在一間畫廊看到阿道夫·蒙蒂塞利繪製的肖像畫後，梵谷開始在他的調色盤中添加更加明亮的顏料
+                            <br>
+                            筆觸也變得更加大膽起來
+
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+            <div class="section" id="s5">
                 <p>123</p>
                 <div class="cover3"></div>
 
+
             </div>
+
+
         </div>
         <!-- @@include('./layout/footer.html') -->
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
       
 
 
 
-        <script>
-            $(document).ready(function () {
-                $('#fullpage').fullpage();
+    <script>
+        $(document).ready(function () {
+            $('#fullpage').fullpage();
+        });
+
+
+        new fullpage('#fullpage', {
+                scrollOverflow: true,
+                normalScrollElements: '.scrollable-content'
             });
 
-        </script>
+      
+    </script>
+
 
 
 </body>

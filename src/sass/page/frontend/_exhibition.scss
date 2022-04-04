@@ -113,7 +113,7 @@ $beidge2: #E3DED4;
     #s2 .f2-banner{
         position: absolute;
         top: 15%;
-        left: 7%;
+        left: 8%;
     }
     
     #s2 .f2-main{
@@ -131,8 +131,155 @@ $beidge2: #E3DED4;
     #s2 h2{
         color: $coffeebrown;
         font-size: 32px;
+        font-weight: bold;
+        position: absolute;
+        top: 19%;
+        left:39%;
     }
 
+    // #s2 .f2-main .born{
+    //     position: absolute;
+    //     top: 30%;
+    //     left: 48%;
+
+    // }
+
+
+
+
+    #s2 .f2-main p{
+        color: #cccccc;
+        font-size: 18px;
+        line-height: 2.2;
+        font-family: $fontSerif;
+        padding: 20px;
+        // border: 1px solid black;
+        position: absolute;
+        top: 30%;
+        left: 53%;
+        width: 500px;
+    }
+
+    #s3 p{
+        color: #FFFFFF;
+        font-size: 18px;
+        line-height: 2.0;
+        font-family: $fontSerif;
+        padding: 30px;
+        position: absolute;
+        bottom: 3%;
+        right: 9%;
+        border: 1px solid #FFFFFF;
+        border-radius: 5px;
+
+    }
+
+
+    #s4{
+        background-image: url(../../../../src/img/exhibition/K\ .png);
+        background-repeat: no-repeat;
+        text-align: center;
+        position: relative;
+    }
+
+
+    #s4 .s4_first{
+        display: flex;
+        margin-left: 80px;
+        padding-top: 40px;
+    }
+
+
+
+
+    #s4 .s4_first .first_intro img{
+        position: absolute;
+        top: 4%;
+        right: 11%;
+    }
+
+    #s4 .s4_first .first_intro p{
+        font-size: 18px;
+        line-height: 2.0;
+        font-family: $fontSerif;
+        color: $darkbrown1;
+        font-weight: bold;
+        text-align: left;
+        position: absolute;
+        top: 8%;
+        right: 19%;
+
+
+    }
+
+
+    #s4 .s4_second{
+        display: flex;
+    }
+
+
+    #s4 .s4_second .second_intro{
+        // padding-top: 40px;
+        margin-left: 70px;
+    
+    }
+
+    #hatpic{
+        margin-top: 40px;
+        
+    }
+
+    #s4 .s4_second .second_intro img{
+        // position: absolute;
+        margin-top: 70px;
+        margin-right: 40px;
+      
+
+    }
+
+   
+
+    #s4 .s4_second .second_intro p{
+        position: absolute;
+        top: 48%;
+        left: 10%;
+        text-align: left;
+        font-size: 18px;
+        line-height: 2.0;
+        font-family: $fontSerif;
+        color: $darkbrown1;
+        font-weight: bold;
+
+    }
+
+
+    #s4 .pic{
+        height: 460px;
+        border-radius: 10px;
+    }
+
+
+    #s4 .s4_third .third_intro img{
+        margin-top: 60px;
+    }
+
+
+    #s4 .s4_third .third_intro p{
+        text-align: left;
+        font-size: 18px;
+        line-height: 2.0;
+        font-family: $fontSerif;
+        color: $darkbrown1;
+        font-weight: bold;
+        position: absolute;
+        top: 86%;
+        left: 17%;
+
+    }
+
+
+
+   
 
 
 
