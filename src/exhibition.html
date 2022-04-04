@@ -7,13 +7,17 @@
     <title>當今展覽</title>
     <link rel="stylesheet" href="../dist/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css"
+        rel="external nofollow">
+    <!-- <link rel=" stylesheet" href="https: //cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.3/css/swiper.css;"> -->
     <script src="https://unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
     <script src="https://unpkg.com/fullpage.js/vendors/scrolloverflow.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+
 
 </head>
 
-<body> 
+<body>
     <div class="wrapper_exhibition">
         <!-- @@include('./layout/header.html') -->
         <div id="fullpage">
@@ -179,7 +183,7 @@
                         </p>
 
                     </div>
-                    <img src="./img/exhibition/f4-2.png" alt="" class="pic"  id="hatpic">
+                    <img src="./img/exhibition/f4-2.png" alt="" class="pic" id="hatpic">
 
                 </div>
 
@@ -197,6 +201,26 @@
 
                         </p>
                     </div>
+
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./img/exhibition/f4-3-2.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/exhibition/f4-3-2.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/exhibition/f4-3-4.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/exhibition/f4-3-5.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/exhibition/f4-3-6.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/exhibition/f4-3-7.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/exhibition/f4-3-8.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/exhibition/f4-3-9.png" alt=""></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <!-- <div class="swiper-pagination"></div> -->
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+
 
 
                 </div>
@@ -223,7 +247,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
-      
+
+
 
 
 
@@ -234,11 +259,39 @@
 
 
         new fullpage('#fullpage', {
-                scrollOverflow: true,
-                normalScrollElements: '.scrollable-content'
-            });
+            scrollOverflow: true,
+            normalScrollElements: '.scrollable-content'
+        });
 
-      
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            slidesPerGroup: 2,
+            slidesPerColumn: 3,
+            spaceBetween: 1,
+            slidesPerColumnFill: 'column',
+        });
+
+
+
+
+
     </script>
 
 
