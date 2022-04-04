@@ -1,0 +1,78 @@
+.psychol_test_wrapper #bac {
+       /* 心理測驗題目 */
+       .psychol_test_wrapper section {
+        background-color: #eeeae2;
+        color: #353231;
+
+    }
+
+    .psychol_title h1 {
+        font-size: 1.5rem;
+        letter-spacing: 1rem;
+        line-height: 5;
+        margin-left: 6%;
+    }
+
+    .test_q1 {
+        text-align: center;
+    }
+
+    .question_img img {
+        height: 400px;
+        border-radius: 25px;
+        border: 1px solid #353231;
+        margin-bottom: 50px;
+    }
+
+    .option {
+        display: flex;
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .test_question ul {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .option button {
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+        border: 1px solid #353231;
+        background-color: #c3bdb3;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    .option button:hover {
+        background-color: #ab8a49;
+    }
+
+    .test_question h3 {
+        font-size: 1.2rem;
+        letter-spacing: 5px;
+    }
+
+    .question {
+        display: inline-flex;
+        text-align: center;
+    }
+
+    .question_img img {
+        margin-top: 20px;
+    }
+
+    .previous_arrow img {
+        margin-right: 50px;
+        margin-top: 400px;
+        transform: rotatey(-180deg);
+    }
+
+    .next_arrow img {
+        margin-left: 50px;
+        margin-top: 400px;
+    }
+}
