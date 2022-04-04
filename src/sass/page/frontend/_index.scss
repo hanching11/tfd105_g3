@@ -5,7 +5,7 @@ $img_width_height:100%;
 $margin:20px;
 $border-radius:25px;
 $padding:20px;
-$media_p:$p + 0.8;
+$media_p:$p+0.8;
 
 
 
@@ -36,22 +36,23 @@ $media_p:$p + 0.8;
 }
 
 @mixin text_overflow {
-    overflow:hidden;
+    overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;  
-    
+    text-overflow: ellipsis;
+
 }
 
-@mixin media_h6 { 
+@mixin media_h6 {
     font-size: $h6 !important;
-    letter-spacing: 0 !important ;
-    
+    letter-spacing: 0 !important;
+
 }
 
-@mixin media { //區塊變數
+@mixin media {
+    //區塊變數
     margin: 0 !important;
-     text-align: center;
-    
+    text-align: center;
+
 }
 
 
@@ -149,7 +150,7 @@ $media_p:$p + 0.8;
     ;
 
 
-  
+
 
     .exhibition {
 
@@ -161,14 +162,14 @@ $media_p:$p + 0.8;
 
         //     border-top: 1px solid $white;
         //     margin-top: $margin;  
-            
+
         // } //線顯示不出來
 
         h3 {
             @include h3;
             color: $white;
             @include title_m;
-            
+
 
         }
 
@@ -178,7 +179,7 @@ $media_p:$p + 0.8;
             @include title_m;
 
         }
-        
+
 
 
         .r1 {
@@ -187,7 +188,8 @@ $media_p:$p + 0.8;
 
         div .col-lg-6 {
             max-width: 600px;
-            max-height: 434px;
+            // max-height: 434px;
+            height: auto;
             background-color: aliceblue;
             border-radius: $border-radius;
             margin: $margin - 15px;
@@ -297,7 +299,7 @@ $media_p:$p + 0.8;
                 .box2 {
                     margin-top: $margin;
                 }
-               
+
 
 
 
@@ -390,7 +392,7 @@ $media_p:$p + 0.8;
 
             }
 
-            
+
 
 
 
@@ -398,20 +400,22 @@ $media_p:$p + 0.8;
 
         }
 
-        .Kuang{
+        .Kuang {
             // border-bottom: 1px solid $white;
-      
+
 
             .Kuang1 {
                 margin-left: $margin * 37;
-    
+
             }
         }
-       
-        
 
 
-    };
+
+
+    }
+
+    ;
 
     .recommendation {
 
@@ -463,13 +467,16 @@ $media_p:$p + 0.8;
         }
 
 
-    };
+    }
 
-    .login{
+    ;
+
+    .login {
         background-image: url(/src/img/index/Rectangle\ 8.jpg);
-        margin-top: $margin  * 4;
+        margin-top: $margin * 4;
         margin-bottom: $margin * 4;
-        div{
+
+        div {
             margin: 0 auto;
             padding: 0 auto;
             max-width: 300px;
@@ -477,54 +484,59 @@ $media_p:$p + 0.8;
             padding-bottom: $padding * 5;
 
         }
-        a{
+
+        a {
             color: $white;
             text-decoration: none;
             text-align: center;
 
-            h2{
+            h2 {
                 @include h3;
                 font-size: $h2;
-                
-                
+
+
             }
-            img{
+
+            img {
                 max-width: 313px;
                 max-height: 20px;
                 width: $img_width_height;
 
             }
 
-            p{
+            p {
                 @include p;
                 margin-top: $margin;
             }
         }
 
-    };
+    }
 
-    .product_description{
+    ;
 
-        h3{
+    .product_description {
+
+        h3 {
             @include h3;
             @include title_m;
             color: $coffeebrown;
-            
+
         }
-        p{
+
+        p {
             @include p;
             @include title_m;
             color: $lightgray;
             @include text_overflow;
-      
+
 
         }
 
         .row {
 
-            margin: $margin;         
+            margin: $margin;
 
-            .col-lg-1{
+            .col-lg-1 {
                 padding: 0;
                 width: auto;
                 height: auto;
@@ -535,7 +547,7 @@ $media_p:$p + 0.8;
                 border: none;
                 padding-top: $padding * 8;
                 padding-bottom: $padding * 8;
-                
+
 
                 img {
                     width: $img_width_height;
@@ -551,65 +563,70 @@ $media_p:$p + 0.8;
                 padding-bottom: $padding - 8px;
                 text-align: center;
                 margin: $margin - 16px;
-                
+
 
                 img {
                     max-width: 365px;
                     max-height: 282px;
                     width: $img_width_height;
-                   
+
                 }
 
-                a{
+                a {
                     text-decoration: none;
                 }
 
-                p{
+                p {
                     font-size: $p + 0.1;
                     margin: 0;
                     padding: 0;
                     font-weight: $boldWeight;
                     color: $coffeebrown;
                     letter-spacing: $letter-space - 3.3px;
-                    margin-top: $margin;  
-                    margin-bottom: $margin - 10px;                    
+                    margin-top: $margin;
+                    margin-bottom: $margin - 10px;
                 }
-                .text{
+
+                .text {
                     font-size: $p - 0.5;
                     font-weight: $lightWeight;
                     color: black;
                     margin: 0;
                     padding: 0;
-                    margin: 0 $margin + 5px $margin - 10px $margin + 5px ;
+                    margin: 0 $margin + 5px $margin - 10px $margin + 5px;
 
                 }
-            
+
             }
 
         }
 
 
-        
-    };
+
+    }
+
+    ;
 
 
-    @media all and(max-width: 575.98px){
-        .wrapper_index{
+    @media all and(max-width: 575.98px) {
+        .wrapper_index {
             margin: 0;
             padding: 0;
-            
 
-        }    
 
-        @media screen and (max-width: 575.98px){
-            .the_new{
+        }
+
+        @media screen and (max-width: 575.98px) {
+            .the_new {
                 margin: 0 !important;
                 text-align: center;
+
                 h3 {
-                   @include media_h6;
-                    
+                    @include media_h6;
+
                 }
-                .row{
+
+                .row {
                     margin: $margin;
                     // .col-xs-12 .rwd1,.col-xs-12 .rwd4{
                     //     min-height: 163px;
@@ -622,34 +639,75 @@ $media_p:$p + 0.8;
                     // }
                 }
 
-                .phonenone{
+                .phonenone {
                     display: none;
                 }
-        
-            }  
 
-            .exhibition{
+            }
+
+            .exhibition {
                 @include media;
+                height: auto;
+               
 
                 h3 {
                     @include media_h6;
-                    margin: 0;                     
-                 }
+                    margin: 0;
+                }
 
-                 p{
-                     margin: 0;
-                 }
+                p {
+                    margin: 0;
+                }
 
-                 .col-lg-6{
-                     min-width: 250px;
-                 }
-                
+                .text_box{
+                    margin: 0 ;
+                    padding: 0 !important;
+                    text-align: center;
+
+                    img{
+                        width: 13px;
+                        margin: 0;
+                        margin-left: $margin * 2;  
+                          
+                    }
+                    p{
+                        font-size: $p !important;
+                    }
+                    .p1{
+                        font-size: $p + 0.25 !important;
+
+                    }
+                     
+                    a .p2{
+                        margin: 0;
+                        padding: 0;
+                        margin-top: 100px;
+                        display: none;
+                    }
+                }
+
+                .box_img{
+                    // height: auto;
+
+                    .col-xs-12{
+                        width: auto;
+                        
+                    }
+
+                    // img{
+                    //     // width: 300px;
+                    //     // width: $img_width_height;
+                    // }
+                }
+
             }
-    
-        }
-    };
 
-   
- 
+        }
+    }
+
+    ;
+
+
+
 
 }
