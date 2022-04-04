@@ -1,0 +1,372 @@
+.wrapper_puzzle{
+    *,
+    *:after,
+    *::before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    body {
+    }
+    
+    // main{
+    //     padding: 20px 20px;
+    // }
+
+    .page-content{
+        background-image: url(/src/img/Puzzle/choice/background/mona.png);
+        background-size: cover;
+        width: 100%;
+        height: 800px;
+        
+    }
+
+    .puzzle_name{
+        // padding-top: 100px;
+    }
+
+    .puzzle_title h1{
+        font-size: $h1;
+        color: $beidge1;
+        width: 505px;
+        margin: 0 auto;
+    }
+
+    //switch button
+    // body { margin: 0 auto; }
+    .switch_button{
+        .can-toggle{
+            width: 200px;
+            margin: 50px auto;
+        }
+    
+        @mixin can-toggle-branding(
+        $can-toggle-off-color: #E3DED4, 
+        $can-toggle-on-color: #AB8A49,
+        $can-toggle-inactive-text: rgba(white, 0.5),
+        $can-toggle-transition: cubic-bezier(0,1,0.5,1)
+        ) {
+        
+        input[type="checkbox"] {
+            
+            &[disabled] ~ label {
+            color: rgba($can-toggle-off-color, 0.5);
+            }
+            
+            &:focus ~ label, &:hover ~ label {
+            .can-toggle__switch {
+                background-color: $can-toggle-off-color;
+                &:after { color: darken($can-toggle-off-color, 10%); }
+            }
+            }
+            &:hover ~label { color: darken($can-toggle-off-color, 5%); }
+            &:checked {
+            ~ label {
+                &:hover { color: darken($can-toggle-on-color, 3%); }
+                
+                .can-toggle__switch {
+                background-color: lighten($can-toggle-on-color, 5%);
+                &:after { color: darken($can-toggle-on-color, 5%); }
+                }
+            }
+            
+            &:focus, &:hover {
+                ~ label {
+                .can-toggle__switch {
+                    background-color: $can-toggle-on-color;
+                    &:after { color: darken($can-toggle-on-color, 10%); }
+                }
+                } 
+            }
+            }
+        }
+        
+        label {
+            
+            .can-toggle__label-text { flex: 1; }
+            
+            .can-toggle__switch {
+            transition: background-color 0.3s $can-toggle-transition;
+            background: lighten($can-toggle-off-color, 5%);
+            &:before { color: $can-toggle-inactive-text; }
+            &:after {
+                // Autoprefixer choked here, so making the prefixes explicit
+                -webkit-transition: -webkit-transform 0.3s $can-toggle-transition;
+                transition: transform 0.3s $can-toggle-transition;
+                color: $can-toggle-off-color; 
+            }
+            }
+            
+        }
+        }
+    
+        @mixin can-toggle-appearance 
+        ( 
+        $can-toggle-width: 200px,
+        $can-toggle-height: 36px,
+        $can-toggle-border-radius: 4px,
+        $can-toggle-offset: 2px,
+        $can-toggle-label-font-size: 14px,
+        $can-toggle-switch-font-size: 12px,
+        $can-toggle-shadow: 0 3px 3px rgba(black, 0.4)
+        ){
+        $can-toggle-switch-width: 100px;
+        
+        input[type="checkbox"] {
+    
+            &:focus ~ label, &:hover ~ label {
+            .can-toggle__switch {
+                &:after { box-shadow: $can-toggle-shadow; } 
+            }
+            }
+            
+            &:checked {
+            ~ label {
+                .can-toggle__switch {
+                &:after { transform: translate3d($can-toggle-width - ($can-toggle-switch-width + $can-toggle-offset),0,0); }  
+                }
+            }
+            &:focus, &:hover {
+                ~ label {
+                .can-toggle__switch { &:after { box-shadow: $can-toggle-shadow; } }
+                } 
+            }
+            }
+        }
+        
+        label {
+            font-size: $can-toggle-label-font-size;
+            
+            .can-toggle__switch {
+            height: $can-toggle-height;
+            flex: 0 0 $can-toggle-width;
+            border-radius: $can-toggle-border-radius;
+            
+            &:before {
+                left: 100px;
+                font-size: $can-toggle-switch-font-size; 
+                line-height: $can-toggle-height;
+                width: 100px;
+                padding: 0 12px;
+            }
+            
+            &:after {
+                top: $can-toggle-offset; left: $can-toggle-offset;
+                border-radius: 25px;
+                width: $can-toggle-switch-width - $can-toggle-offset; 
+                line-height: $can-toggle-height - ($can-toggle-offset*2);
+                font-size: $can-toggle-switch-font-size;
+            }
+            
+            &:hover {
+                &:after { box-shadow: $can-toggle-shadow; }
+            }
+            } 
+        }
+        }
+    
+    
+    
+        .can-toggle {
+        position: relative;
+        *, *:before, *:after { box-sizing: border-box; }
+        //overflow: hidden;
+        
+        input[type="checkbox"] {
+            opacity: 0;
+            position: absolute;
+            top: 0; left: 0;
+            
+            &[disabled] ~ label {
+            pointer-events: none;
+            .can-toggle__switch { opacity: 0.4; }
+            }
+            
+            &:checked {
+            ~ label {
+                
+                .can-toggle__switch {
+                
+                &:before {
+                    content: attr(data-unchecked);
+                    left: 0;
+                }
+                
+                &:after {
+                    content: attr(data-checked);
+                }  
+                }
+            }
+            
+            &:focus, &:hover {
+                ~ label {
+                } 
+            }
+            }
+        }
+        
+        label {
+            user-select: none;
+            position: relative;
+            display: flex;
+            align-items: center;
+            
+            .can-toggle__label-text { 
+            flex: 1;
+            padding-left: 32px;
+            }
+            
+            .can-toggle__switch {
+            position: relative;
+            
+            &:before {
+                content: attr(data-checked);
+                position: absolute;
+                top: 0;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            
+            &:after {
+                content: attr(data-unchecked);
+                position: absolute;
+                z-index: 5;
+                text-transform: uppercase;
+                text-align: center;
+                background: #AB8A49;
+                transform: translate3d(0,0,0);
+            }
+    
+            }
+            
+        }
+        
+        // Default values for .can-toggle class
+        @include can-toggle-branding; 
+        @include can-toggle-appearance; 
+        
+        
+        &.demo-rebrand-2 {
+            @include can-toggle-branding
+            (
+            #E3DED4,  // Off state color
+            #E3DED4,  // On state color
+            rgba(#AB8A49, 0.7),  // Off state text color
+            cubic-bezier(0.860, 0.000, 0.070, 1.000)  // Transition timing function
+            );
+            @include can-toggle-appearance
+            (
+            200px, // Toggle width
+            50px,  // Toggle height
+            60px,   // Toggle border radius
+            2px,   // Offset (distance btw switch and box)
+            13px,  // Label font size
+            13px,  // Switch font size
+            0 4px 4px rgba(black, 0.4) // Switch shadow on hover/focus
+            ); 
+    
+            }
+    
+        
+        }
+
+    }
+
+    
+
+    //puzzle area 拼圖區
+
+    .puzzle_area{
+        width: 300px;
+        height: 300px;
+    }
+
+    .puzzle-putting{
+        width: 300px;
+        height: 300px;
+        // margin-left: 200px;
+        //超級拼圖//
+      body { 
+        // margin: 0;
+        // padding:0;
+        // border: none;
+      }
+      #forPuzzle {
+        border:none;
+        left:0px;
+        top:0px;
+        width: 600px;
+        // margin-left: 200px;
+        // padding-right: 200px;
+      }
+      #divmenu {
+        position:absolute;
+        top:5px;
+        left:15px;
+        width:0px;
+        height:0px;
+        cursor:default;
+        z-index:50001;
+        border-radius:5px;
+      }
+      #divmenu.open {
+        width:120px;
+        height:100px;
+        background-color:rgba(255,255,180,0.7);
+        z-index:50001;
+      }
+  
+      #divmenu .title {
+          font-family: Verdana, "Bitstream Vera Sans", "Lucida Sans", sans-serif;
+        font-weight:bold;
+        font-size:15px;
+        position:absolute;
+        top:0px;
+        left:30px;
+        color:blue;
+        background-color:rgba(255,255,180,0.7);
+        padding:5px;
+        border-radius:5px;
+      }
+  
+      #divmenu .line {
+          font-family: Verdana, "Bitstream Vera Sans", "Lucida Sans", sans-serif;
+        font-weight:bold;
+        font-size:15px;
+        text-align:center;
+        position:absolute;
+        width:100px;
+        left:5px;
+        color:blue;
+        padding:5px;
+        display:none;
+        border-radius:5px;
+      }
+  
+      #divmenu.open .line {
+        display:block;
+      }
+      #divmenu.open .line:hover {
+        background-color: rgba(255,230,90,1);
+        cursor:pointer;
+      }
+
+
+    //超級拼圖結束//
+
+    }
+
+    .puzzle_frame {
+        // background-image: url(./../../../img/Puzzle/game/frame_for_puzzle.png);
+        width: 400px;
+        display: block;
+    }
+
+    
+
+
+
+
+}
+
