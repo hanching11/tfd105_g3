@@ -11,6 +11,8 @@
             position: relative;
             background-color: #EEEAE2;
             color: #353231;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
 
@@ -37,15 +39,15 @@
             margin-bottom: 50px;
         }
 
-        .title h3{
+        .title h3 {
             font-size: 2.75rem;
             color: #786B54;
             margin: 50px 0 20px 0;
             letter-spacing: .4rem;
-            font-weight:bold;
+            font-weight: bold;
         }
 
-        .title p{
+        .title p {
             font-size: 18px;
             color: #353231;
             letter-spacing: .2;
@@ -132,9 +134,9 @@
             margin: 0;
             color: #EEEAE2;
         }
-        
+
         /* 錯誤訊息 */
-        #msg{
+        #msg {
             text-align: center;
             margin: 0 auto;
             padding: 10px;
@@ -175,15 +177,15 @@
             width: 300px;
         }
 
-       
+
 
         #confirm {
             width: 150px;
             height: 40px;
             border-radius: 30px;
             margin: 0 auto
-        } 
-        
+        }
+
         /* 遮罩 */
         .mask {
             position: fixed;
@@ -195,6 +197,48 @@
             height: 100%;
 
             display: none;
+        }
+
+        @media screen and (max-width: 575.98px) {
+            .form_content{
+                width: 250px;
+            }
+
+            .form-group {
+                display: block;
+                margin: 0 auto;
+                text-align: left;
+                height: 80px;
+                box-sizing: border-box;
+                margin: 0;
+            }
+
+            .form-group label {
+                line-height: 1.6;
+            }
+
+            #tab_inner input {
+               width: 100%;
+            }
+
+            #join_btn, #login_btn{
+                margin-left: 25px;
+            }
+
+
+        }
+
+
+
+        @media screen and (min-width: 576px) and (max-width: 767.9px) {}
+
+        @media screen and (min-width: 768px) and (max-width: 991.8px) {}
+
+        @media screen and (min-width: 992px) and (max-width: 1199.8px) {}
+
+        @media screen and (min-width: 1200px) and (max-width: 1399.8px) {}
+
+        @media screen and (min-width: 1400px) {}
         }
     </style>
 
