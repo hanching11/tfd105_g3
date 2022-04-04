@@ -20,17 +20,23 @@
 
 
 //前台頁面
-@import './page/frontend/checkout';
 @import './page/frontend/index';
 @import './page/frontend/shop';
 @import './page/frontend/online_gallery';
 @import './page/frontend/_online_gallery_exhibition';
 @import './page/frontend/exhibition';
 
+// 結帳區
+@import './page/frontend/checkout1';
+@import './page/frontend/checkout2';
+@import './page/frontend/checkout4';
+
+
+
 
 
 //後台頁面
-@import './page/backend/_backend_index';
+// @import './page/backend/_backend';
 
 
 
