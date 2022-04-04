@@ -7,13 +7,14 @@
     <!-- bootstrap -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    
 
     
 </head>
 <body>
     <div class="wrapper_shop">
         <!-- header -->
-        @@include('./layout/header.html')
+        <!-- @@include('./layout/header.html') -->
         
         
         <main class="page-content">
@@ -233,11 +234,139 @@
                 </div>
             </section>
             
-            <section class="popular-products">
+            <section class="hot-products">
+                <div class="hp-title">
+                        <h4>熱門商品</h4>
+                </div>
+                <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" id="hp1">
+                                <div class="part-1">
+                                    <!-- <span class="discount">15% off</span> -->
+                                        
+                                </div>
+                                <div class="part-2">
+                                    <h3 class="product-title">救世主 ｜ 複製畫</h3>
+                                    <h4 class="product-price">$49.99</h4>
+                                    <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="hp2">
+                                <div class="part-1">
+                                    
+                                        
+                                </div>
+                                <div class="part-2">
+                                    <h3 class="product-title"> 天使報喜 ｜ 複製畫</h3>
+                                    <h4 class="product-price">$49.99</h4>
+                                    <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="hp3">
+                                <div class="part-1">
+                                    
+                                        
+                                </div>
+                                <div class="part-2">
+                                    <h3 class="product-title"> 天使報喜 ｜ 複製畫</h3>
+                                    <h4 class="product-price">$49.99</h4>
+                                    <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="hp4">
+                                <div class="part-1">
+                                    
+                                        
+                                </div>
+                                <div class="part-2">
+                                    <h3 class="product-title"> 天使報喜 ｜ 複製畫</h3>
+                                    <h4 class="product-price">$49.99</h4>
+                                    <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="hp5">
+                                <div class="part-1">
+                                    
+                                        
+                                </div>
+                                <div class="part-2">
+                                    <h3 class="product-title"> 天使報喜 ｜ 複製畫</h3>
+                                    <h4 class="product-price">$49.99</h4>
+                                    <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="hp6">
+                                <div class="part-1">
+                                    
+                                        
+                                </div>
+                                <div class="part-2">
+                                    <h3 class="product-title"> 天使報喜 ｜ 複製畫</h3>
+                                    <h4 class="product-price">$49.99</h4>
+                                    <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="hp7">
+                                <div class="part-1">
+                                    
+                                        
+                                </div>
+                                <div class="part-2">
+                                    <h3 class="product-title"> 天使報喜 ｜ 複製畫</h3>
+                                    <h4 class="product-price">$49.99</h4>
+                                    <button class="buy-now">Buy Now</button>
+                                </div>
+                            </div>
+                            
+                        
+                        </div>
+                
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prevone"></div>
+                        <div class="swiper-button-nextone"></div>
+                </div>
 
+                <div class="for-line"></div>
+                        
+                    
+                        
             </section>
 
             <section class="contect-blk">
+                <!-- display: flex;
+                flex-wrap: wrap;
+                align-content: space-between; -->
+                
+                <div class="left-side">
+                        <div class="contect-title">
+                                <h4>聯絡我們</h4>
+                        </div>
+                        <div class="contect-content">
+                                <h7 class="cc-title">實體藝廊</h7>
+                                <br>
+                                <div class="cca">Adress Adress Adress</div>
+                                <br>
+                                <div class="cca">00-123456789</div>
+                                <br>
+                                <div class="cca">garelly@gmail.com</div>
+                                <br>
+                        </div>  
+                </div>
+
+                <div class="right-side">
+                        <div class="text-box" >
+                                <input type="text" class="text-content" placeholder="您想對我們說什麼?" >
+                        </div>
+
+                        <div class="info-box">
+                                <input type="text" class="text-name" placeholder="您的大名">
+                                <input type="text" class="text-email" placeholder="您的電子郵件">
+
+                        </div>
+
+                        <button class="content-blt" value="送出訊息">送出訊息</button>
+                </div> 
 
             </section>
 
@@ -246,18 +375,19 @@
         
 
         <!-- footer-->
-        @@include('./layout/footer.html')
+        <!-- @@include('./layout/footer.html') -->
     </div>
     
-    <!-- 上滑 -->
-    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
-    <!-- 熱門商品輪播 -->
-    <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
-
-  
-     @@include('./js/shop.js')
-   
     
+    <!-- 上滑 -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- 熱門商品輪播 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+  
+    <script src="../dist/js/shop.min.js"></script>
+
    
    
 </body>
