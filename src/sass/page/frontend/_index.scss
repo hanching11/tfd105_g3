@@ -55,6 +55,21 @@ $media_p:$p+0.8;
 
 }
 
+@mixin media_button_p2 {
+    background-color: $coffeebrown;
+    width: 91px;
+    height: 30px;
+    font-size: $p * 1.4;
+    color: $white;
+    border-radius: $border-radius;
+    text-align: center;
+    letter-spacing: 0;
+    margin-top: $margin * 2;
+    margin-left: $margin * 11 + 5px;
+    font-weight: $boldWeight;
+    
+}
+
 
 .wrapper_index {
     line-height: $lineheight;
@@ -236,17 +251,7 @@ $media_p:$p+0.8;
                     text-decoration: none;
 
                     .p2 {
-                        background-color: $coffeebrown;
-                        width: 91px;
-                        height: 30px;
-                        font-size: $p * 1.4;
-                        color: $white;
-                        border-radius: $border-radius;
-                        text-align: center;
-                        letter-spacing: 0;
-                        margin-top: $margin * 2;
-                        margin-left: $margin * 11 + 5px;
-                        font-weight: $boldWeight;
+                        @include media_button_p2 ;
 
 
 
@@ -652,11 +657,17 @@ $media_p:$p+0.8;
 
                 h3 {
                     @include media_h6;
-                    margin: 0;
+                    margin: 0 auto;
+                    padding-top: $padding;
+                    border-bottom: 1px solid $white;
+                    width: 300px;
+
                 }
 
-                p {
-                    margin: 0;
+                .col-lg-4{
+                    img{
+                        margin-bottom: $margin;
+                    }
                 }
 
                 .text_box{
@@ -666,38 +677,51 @@ $media_p:$p+0.8;
 
                     img{
                         width: 13px;
-                        margin: 0;
-                        margin-left: $margin * 2;  
+                        margin: 0 !important;
+                        margin-left: $margin * 3 !important;
                           
                     }
                     p{
                         font-size: $p !important;
+                        margin-right: $margin * 2 !important;
                     }
                     .p1{
                         font-size: $p + 0.25 !important;
-
+                        margin: 0 auto !important;
                     }
                      
                     a .p2{
                         margin: 0;
                         padding: 0;
                         margin-top: 100px;
-                        display: none;
+                        // display: none;
                     }
                 }
 
                 .box_img{
-                    // height: auto;
+
+                    margin-top: $margin * 2;
 
                     .col-xs-12{
                         width: auto;
                         
                     }
+                   
+                }
 
-                    // img{
-                    //     // width: 300px;
-                    //     // width: $img_width_height;
-                    // }
+                a {
+
+
+                    text-decoration: none;
+
+
+                    .p2 {
+                        @include media_button_p2 ;
+                        margin: 0 auto;
+                        margin-top: $margin * 2;
+
+
+                    }
                 }
 
             }
