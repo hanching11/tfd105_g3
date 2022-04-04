@@ -24,18 +24,31 @@
 @import './page/frontend/index';
 @import './page/frontend/shop';
 @import './page/frontend/product_info';
-// @import './page/frontend/puzzle';
+@import './page/frontend/puzzle';
 @import './page/frontend/puzzle_choice';
-// @import './page/frontend/puzzle_popup';
+@import './page/frontend/puzzle_popup';
 @import './page/frontend/online_gallery';
 @import './page/frontend/_online_gallery_exhibition';
 @import './page/frontend/exhibition';
 
 
 
+<<<<<<< HEAD
 //後台頁面
 // @import './page/backend/_backend_index';
+<<<<<<< HEAD
 // @import './page/backend/_backend_index';
+=======
+=======
+=======
+//後台共用
+>>>>>>> origin/dev
+@import './page/backend/_backend_index';
+>>>>>>> ciaoli
+>>>>>>> ciaoli
+
+//後臺頁面
+@import './page/backend/_b_product';
 
 
 
