@@ -2,17 +2,19 @@
 <html lang="en">
 
 <head>
-    @@include('./layout/head.html')
+    <!-- @@include('./layout/head.html') -->
     <link rel="stylesheet" href="/src/sass/style.css">
     <link rel="stylesheet" href="/src/sass/page/frontend/_psychol_test.scss">
+    <link rel="stylesheet" href="/src/sass/page/frontend/_psychol_test_q1.scss">
+    <link rel="stylesheet" href="/dist/css/style.css">
     <title>Online Gallery Exhibition| 光緣畫廊 | KUANG YUAN</title>
     <style>
-        /* 心理測驗的部分 */
+        /* 心理測驗題目 */
         .psychol_test_wrapper section {
-            background-color: #EEEAE2;
+            background-color: #eeeae2;
             color: #353231;
-        }
 
+        }
 
         .psychol_title h1 {
             font-size: 1.5rem;
@@ -21,7 +23,6 @@
             margin-left: 6%;
         }
 
-        /* 心理測驗題目 */
         .test_q1 {
             text-align: center;
         }
@@ -51,51 +52,50 @@
             height: 25px;
             border-radius: 25px;
             border: 1px solid #353231;
-            background-color: #C3BDB3;
+            background-color: #c3bdb3;
             cursor: pointer;
-            transition: .5s;
+            transition: 0.5s;
         }
 
         .option button:hover {
-            background-color: #AB8A49;
+            background-color: #ab8a49;
         }
 
         .test_question h3 {
             font-size: 1.2rem;
             letter-spacing: 5px;
         }
-        
-        .question{
+
+        .question {
             display: inline-flex;
             text-align: center;
         }
-        
-        .question_img img{
+
+        .question_img img {
             margin-top: 20px;
         }
 
-        .previous_arrow img{
+        .previous_arrow img {
             margin-right: 50px;
             margin-top: 400px;
             transform: rotatey(-180deg);
         }
-        
-       .next_arrow img{
+
+        .next_arrow img {
             margin-left: 50px;
             margin-top: 400px;
         }
-
     </style>
 </head>
 
 <body>
 
     <!-- 心理測驗內容 -->
-    @@include('layout/header.html')
+    <!-- @@include('layout/header.html') -->
     <section class="psychol_test_wrapper" id="bac">
 
         <!-- 心理測驗內容 -->
-        <section>
+        <section class="psychol_test_content">
             <div class="psychol_title ">
                 <h1>心理測驗</h1>
             </div>
