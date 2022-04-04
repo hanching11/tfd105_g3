@@ -198,7 +198,12 @@ $media_p:$p+0.8;
 
 
         .r1 {
-            padding: $padding + 10px;
+            // padding: $padding + 10px;
+            // padding-right: $padding - 10px;
+            margin: 20px;
+
+
+      
         }
 
         div .col-lg-6 {
@@ -429,6 +434,7 @@ $media_p:$p+0.8;
             @include h3;
             color: $coffeebrown;
             @include title_m;
+            max-width: 550px;
         }
 
         p {
@@ -525,6 +531,8 @@ $media_p:$p+0.8;
             @include h3;
             @include title_m;
             color: $coffeebrown;
+            max-width: 1000px;
+
 
         }
 
@@ -716,6 +724,7 @@ $media_p:$p+0.8;
 
                     }
 
+
                 }
 
                 a {
@@ -733,13 +742,15 @@ $media_p:$p+0.8;
                     }
                 }
 
-                .r1{
+                .r1 {
                     padding: 0;
-                    .rwd-1 ,.rwd-2{
+
+                    .rwd-1,.rwd-2 {
                         margin: $margin + 10px;
 
                     }
-                    .rwd-1{
+
+                    .rwd-1 {
                         width: 310px;
                         margin-left: $margin - 10px;
                         margin-right: $margin - 10px;
@@ -748,21 +759,37 @@ $media_p:$p+0.8;
                     }
                 }
 
-                .rwdbg{
+                .rwdbg {
                     background-image: url(/src/img/index/Rectangle\ 4067-1.jpg);
                     width: 391px;
-                    border-radius: $border-radius ;
-                    margin: 0 auto;
-                    margin-top: $margin * 4;
+                    border-radius: $border-radius;
+                    margin: 0 auto !important;
+                    margin-top: $margin * 4 !important;
 
                 }
 
+            };
+
+            .recommendation{
+                margin-top:  $margin * 45;
+
+                h3{
+                    @include media_h6;
+                    margin: 0 auto;
+
+                }
+                p{
+                    font-size: $p !important;
+
+                }
+
+
+
             }
 
-        }
-    }
 
-    ;
+        }
+    };
 
 
 
