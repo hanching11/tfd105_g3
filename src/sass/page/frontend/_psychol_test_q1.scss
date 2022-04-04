@@ -1,6 +1,6 @@
-.psychol_test_wrapper #bac {
+.psychol_test_wrapper{
        /* 心理測驗題目 */
-       .psychol_test_wrapper section {
+       .psychol_test_content {
         background-color: #eeeae2;
         color: #353231;
 
@@ -11,10 +11,16 @@
         letter-spacing: 1rem;
         line-height: 5;
         margin-left: 6%;
+        text-align: left;
+        font-weight: bold;
     }
 
     .test_q1 {
         text-align: center;
+    }
+
+    .test_question  h3{
+        font-weight: bold;
     }
 
     .question_img img {
@@ -74,5 +80,9 @@
     .next_arrow img {
         margin-left: 50px;
         margin-top: 400px;
+        transition: .5s;
+    }
+    .next_arrow img:hover{
+        filter: sepia(.5);
     }
 }
