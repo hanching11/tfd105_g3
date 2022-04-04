@@ -1,0 +1,158 @@
+// $border-radius5:5px;
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+.wrapper_checkout{
+margin: 0 120px;
+
+  .container{
+      color: $darkbrown1;
+      // border: solid 1px black;
+  }
+
+  .-checkStep{
+    margin: 40px 0 70px 0;
+  }
+
+  .-num{
+    font-family: $englishFont;
+    font-weight: $boldWeight;
+    font-size: 1.25rem;
+    // border:10px solid blue;
+  }
+
+    .-num::before{
+    // border: 2px solid blue;
+      background-repeat: no-repeat;
+      position: absolute;
+      display: block;
+      content: '';
+      background-image: url(/src/img/checkout/arrow1.svg);
+      top: 50%;
+      left: 90%;
+      height: 22px;
+      width: 100%;
+    }
+    
+    .col{
+      color: $lightgray;
+      font-weight: $boldWeight;
+      line-height: $lineheight1;
+      position: relative;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .-second{
+      color: $darkbrown1;
+      // border:10px solid blue;
+    }
+
+    .-num.-fourth:before{
+    // border: 2px solid blue;
+      display: none;
+    }
+   
+    .row-4{
+      color: $darkbrown1;
+      font-weight: $lightWeight;
+      font-family: $fontNoserif;
+      text-align: right;
+    }
+
+    // 商品資訊
+    .-borderTop{
+      //  border: 2px solid blue;
+      margin-right: 80px;
+     }
+
+
+    button.tax2:hover{
+      color: $white;
+      background: $coffeebrown;
+    }
+
+
+    
+
+    
+
+    
+    
+  
+  
+
+
+
+    
+ 
+  
+    input{
+    padding-left: 20px;
+    margin-right: 15px;
+    margin-bottom: 40px;
+    max-width: 66%;
+    font-size: $p;
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    }
+  
+
+  button.tax1{
+    text-decoration: none;
+    border-radius: 5px;
+    letter-spacing: $letterSpacing1;
+    font-weight: $lightWeight;
+    font-family: $fontNoserif;
+    color: $white;
+    background: $coffeebrown;
+    font-size: 0.875px;
+    height: 35px;
+    width: 100%;
+    border: none;
+
+    margin-bottom: 10px;
+  }
+
+  button.tax2{
+    text-decoration: none;
+    border-radius: 5px;
+    letter-spacing: $letterSpacing1;
+    font-weight: $lightWeight;
+    font-family: $fontNoserif;
+    color: $lightgray;
+    background: $beidge2;
+    font-size: 0.875px;
+    height: 35px;
+    width: 100%;
+    border: none;
+
+    margin-bottom: 85px;
+
+  }
+  
+  button.checkS1{
+    text-decoration: none;
+    border-radius: 5px;
+    letter-spacing: $letterSpacing1;
+    font-family: $fontNoserif;
+    color: $white;
+    background: $darkbrown2;
+    height: 35px;
+    width: 100%;
+    border: none;
+  }
+
+
+  
+
+
+
+
+}
