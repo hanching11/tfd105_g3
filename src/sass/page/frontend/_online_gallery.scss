@@ -1,6 +1,7 @@
 $line-height: 1.6;
 
 .wrapper_onlinegallery {
+    // font-family: $fontNoserif;
 
     // 模組
     .onlinegallery_content {
@@ -22,6 +23,10 @@ $line-height: 1.6;
         left: 38%;
         top: 10%;
         letter-spacing: .1em;
+        
+    }
+    .gallery_years p{
+        font-weight:bold;
     }
 
     .gallery_pic img {
@@ -42,11 +47,14 @@ $line-height: 1.6;
         color: $coffeebrown;
         margin-bottom: 20px;
         margin-top: 50px;
+        font-weight:bold;
+        letter-spacing: .4rem;
     }
 
     .gallery_text p {
         font-size: 14px;
         margin-bottom: 40px;
+        letter-spacing: .2rem;
     }
 
     .onlinegallery_content a {
@@ -135,16 +143,6 @@ $line-height: 1.6;
     }
 
 
-    // RWD
-    // @media screen and (max-width: 575.98px){
-    // }
-
-
-
-    // @media screen and (min-width: 576px) and (max-width: 767.9px){
-    // }
-
-
 }
 
 // RWD_wrapper_onlinegallery
@@ -174,21 +172,23 @@ $line-height: 1.6;
 
     .wrapper_onlinegallery .gallery_years {
         left: 25%;
-        font-weight:bold;
+    }
+
+    .wrapper_onlinegallery .scroll-line {
+        display: none;
     }
 }
 
 @media screen and (max-width: 575.98px){
     .wrapper_onlinegallery .gallery_years {
-        left:10%;
-        top: 12%;
-        font-size: 3.5rem;
-        font-weight:bold;
+        left:9%;
+        top: 7%;
+        font-size: 2.75rem;
     }
 
     .wrapper_onlinegallery .onlinegallery_content{
         width: 100vw;
-        padding: 150px 15px 80px 15px;
+        padding: 90px 15px 50px 15px;
         box-sizing: border-box;
     }
 
@@ -204,6 +204,10 @@ $line-height: 1.6;
     
     .wrapper_onlinegallery .gallery_text h1 {
         margin-top: 30px;
+    }
+
+    .wrapper_onlinegallery .scroll-line {
+        display: none;
     }
 }
 
