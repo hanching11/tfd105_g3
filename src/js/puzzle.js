@@ -631,9 +631,17 @@ let he = this.image.height;
 
 this.reqHeight = params.height; // requested height
 this.reqWidth = params.width;
-this.height = this.reqHeight - 2 * Puzzle.MARGIN1; // place left on screen including margin
-this.width = this.reqWidth - 2 * Puzzle.MARGIN1; //
 
+if($(window).width() < 767)
+{
+  this.height = 460; // place left on screen including margin
+  this.width = 290; // 更改拼圖顯示區域大小的關鍵!!!!!
+} else {
+  this.height = this.reqHeight - 2 * Puzzle.MARGIN1; // place left on screen including margin
+  this.width = this.reqWidth - 2 * Puzzle.MARGIN1; // 更改拼圖顯示區域大小的關鍵!!!!!
+}
+  
+  
 if (wi / he > this.width / this.height) { // actual picture "more horizontal" than game board
   this.height = this.width * he / wi;
 } else {
@@ -678,12 +686,13 @@ this.canvMobile.style.visibility = 'visible';
 this.canvMobile.width = parseFloat(this.divBoard.style.width);
 this.canvMobile.height = parseFloat(this.divBoard.style.height);
 this.canvMobile.style.position = "absolute";
-//調整初始顯示的圖片大小
+  
+//調整初始顯示的圖片大小位置
 if($(window).width() < 767)
 {
   
-  this.canvMobile.style.top = "-100px";
-  this.canvMobile.style.left = "-70px";
+  this.canvMobile.style.top = "0px";
+  this.canvMobile.style.left = "0px";
   
 } else {
   
