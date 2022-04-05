@@ -150,11 +150,16 @@ $line-height: 1.6;
 @media screen and (min-width: 768px) and (max-width: 991.8px) {
     .wrapper_onlinegallery .gallery_text {
         margin-left: 50px;
+        margin-top: 75px;
     }
 
     .wrapper_onlinegallery .scroll-line {
         left: 50%;
         transform: translate(50%) ;
+    }
+
+    .wrapper_onlinegallery .gallery_pic img {
+        margin: 0px;
     }
 
 }
