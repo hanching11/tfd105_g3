@@ -1,5 +1,7 @@
 // $border-radius5:5px;
 
+ 
+.wrapper_checkout{
   *{
     box-sizing: border-box;
     margin: 0;
@@ -7,7 +9,6 @@
     list-style: none;
 
 }
-.wrapper_checkout{
   margin: 0 120px;
 
   .container{
@@ -363,7 +364,7 @@
         // border: 2px solid red;
       }
     
-      input{
+      input.saleCode{
       padding-left: 20px;
       margin-right: 15px;
       margin-bottom: 40px;

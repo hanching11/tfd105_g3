@@ -6,7 +6,7 @@
 
 <body>
   <!-- @@include('./layout/header.html') -->
-  <div class="wrapper_checkout">
+  <div class="wrapper_checkout2">
 
     <!-- sm 以上範圍，三欄均分 -->
     <!-- 設定某欄佔幾欄 -->
@@ -38,129 +38,148 @@
         </div>
       </div>
 
-      <div class="row -checkMain">
-  
-        <div class="col-md-8">
-          <div class="row-md-4 -title"> 購物清單</div>
-        <!-- <button type="submit" class="checkS1">前往結帳</button> -->
-          
+
+      <div class="row -title1"> 
+        填寫收件資訊
       </div>
-
-      </div>
-        
-        <div class="col-6">
-          <div class="row-md-4 -title">填寫收件資訊</div>
-          <div class="row">
-            <div class="row-md-4 -title">訂購人資訊</div>
-     
-                <input type="text" name="saleCode" id="saleCode" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入折扣碼" onfocus="this.placeholder='輸入折扣碼'" onblur="this.placeholder='輸入折扣碼'" size="25"/>
-                
-            </ul>
-            
-          </div>
-        
-          
-          <div class="row">
-            <div class="col-md">
-          <div class="row-md-4 -title">收件人資訊</div>
-          <button type="submit" class="tax1">三聯式</button>
-          <button type="submit" class="tax2">二聯式</button>
-          <button type="submit" class="checkS1">確認資訊</button>
-
-
-              
   
-          
+
+      <div class="row -title">
+        <span>
+          訂購人資訊
+        </span>
+      </div>
+          <div class="row">
+            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+              <li>
+                <span>訂購人姓名</span>
+              </li>
+              <li>
+                <input class="orderName" type="text" name="orderName" id="orderName" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入訂購人姓名" onfocus="this.placeholder='輸入訂購人姓名'" onblur="this.placeholder='輸入訂購人姓名'" size="25"/>
+              </li>
             </div>
-            
           </div>
+          <div class="row">
+            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+              <li>
+                <span>電子郵件</span>
+              </li>
+              <li>
+                <input class="ordermail" type="text" name="ordermail" id="ordermail" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入電子郵件" onfocus="this.placeholder='輸入電子郵件'" onblur="this.placeholder='輸入電子郵件'" size="25"/>
+              </li>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+              <li>
+                <span>連絡電話</span>
+              </li>
+              <li>
+                <input class="orderTel" type="text" name="orderTel" id="orderTel" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入連絡電話" onfocus="this.placeholder='輸入連絡電話'" onblur="this.placeholder='輸入連絡電話'" size="25"/>
+              </li>
+            </div>
+          </div>
+
           
-        </div>
         
-      </div>
+          <div class="row -title">
+            <span>
+              收件人資訊
+            </span>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+              <li>
+                <span>收件人姓名</span>
+              </li>
+              <li>
+                <input class="recipName" type="text" name="recipName" id="recipName" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入收件人姓名" onfocus="this.placeholder='輸入收件人姓名'" onblur="this.placeholder='輸入收件人姓名'" size="25"/>
+              </li>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+              <li>
+                <span>連絡電話</span>
+              </li>
+              <li>
+                <input class="recipTel" type="text" name="recipTel" id="recipTel" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入收件人連絡電話" onfocus="this.placeholder='輸入收件人連絡電話'" onblur="this.placeholder='輸入收件人連絡電話'" size="25"/>
+              </li>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+              <li>
+                <span>收件地址</span>
+              </li>
+              <li>
+                <input class="recipAdr" type="text" name="recipAdr" id="recipAdr" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入收件人地址" onfocus="this.placeholder='輸入收件人地址'" onblur="this.placeholder='輸入收件人地址'" size="25"/>
+              </li>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+
+             <li>
+              發票格式
+             </li>
+
+             <li>
+               <ol>
+                <button type="submit" class="tax3">三聯式</button>
+               </ol>
+               <ol>
+                <button type="submit" class="tax2">二聯式</button>
+               </ol>
+             </li>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+              <li>
+                <span>公司抬頭</span>
+              </li>
+              <li>
+                <input class="tax3Tel" type="text" name="tax3Tel" id="tax3Tel" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入公司抬頭" onfocus="this.placeholder='輸入公司抬頭'" onblur="this.placeholder='輸入公司抬頭'" size="25"/>
+              </li>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+              <li>
+                <span>統一編號</span>
+              </li>
+              <li >
+                <input class="tax3Num" type="text" name="tax3Num" id="tax3Num" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入統一編號" onfocus="this.placeholder='輸入統一編號'" onblur="this.placeholder='輸入統一編號'" size="25"/>
+              </li>
+            </div>
+          </div>
+         
+          <div class="row -checkStep">
+            <div class="col-12 col-lg-3 col-md-4 col-sm-12">
+                <button type="submit" class="btnBackCheckS1">返回購物清單</button>
+              
+            </div>
+            <div class="col-12 col-lg-3 col-md-4 col-sm-12">
+              <button type="submit" class="btnCheckS2">確認資訊</button>
+            </div>
+          </div>
+        
+    
+          
+       
+        
     </div>    
   </div>
   <!-- @@include('./layout/footer.html') -->
-   <script>
-     (function() {
-    'use strict';
-    function ctrls() {
-      var _this = this;
-      this.counter = 0;
-      this.els = {
-        decrement: document.querySelector('.ctrl__button--decrement'),
-        counter: {
-          container: document.querySelector('.ctrl__counter'),
-          num: document.querySelector('.ctrl__counter-num'),
-          input: document.querySelector('.ctrl__counter-input')
-        },
-        increment: document.querySelector('.ctrl__button--increment')
-      };
-      this.decrement = function() {
-        var counter = _this.getCounter();
-        var nextCounter = (_this.counter > 0) ? --counter : counter;
-        _this.setCounter(nextCounter);
-      };
-      this.increment = function() {
-        var counter = _this.getCounter();
-        var nextCounter = (counter < 9999999999) ? ++counter : counter;
-        _this.setCounter(nextCounter);
-      };
-      this.getCounter = function() {
-        return _this.counter;
-      };
-      this.setCounter = function(nextCounter) {
-        _this.counter = nextCounter;
-      };
-      this.debounce = function(callback) {
-        setTimeout(callback, 100);
-      };
-      this.render = function(hideClassName, visibleClassName) {
-        _this.els.counter.num.classList.add(hideClassName);
-        setTimeout(function() {
-          _this.els.counter.num.innerText = _this.getCounter();
-          _this.els.counter.input.value = _this.getCounter();
-          _this.els.counter.num.classList.add(visibleClassName);
-        }, 100);
-        setTimeout(function() {
-          _this.els.counter.num.classList.remove(hideClassName);
-          _this.els.counter.num.classList.remove(visibleClassName);
-        }, 200);
-      };
-      this.ready = function() {
-        _this.els.decrement.addEventListener('click', function() {
-          _this.debounce(function() {
-            _this.decrement();
-            _this.render('is-decrement-hide', 'is-decrement-visible');
-          });
-        });
-        _this.els.increment.addEventListener('click', function() {
-          _this.debounce(function() {
-            _this.increment();
-            _this.render('is-increment-hide', 'is-increment-visible');
-          });
-        });
-        _this.els.counter.input.addEventListener('input', function(e) {
-          var parseValue = parseInt(e.target.value);
-          if (!isNaN(parseValue) && parseValue >= 0) {
-            _this.setCounter(parseValue);
-            _this.render();
-          }
-        });
-        _this.els.counter.input.addEventListener('focus', function(e) {
-          _this.els.counter.container.classList.add('is-input');
-        });
-        _this.els.counter.input.addEventListener('blur', function(e) {
-          _this.els.counter.container.classList.remove('is-input');
-          _this.render();
-        });
-      };
-    };
-    // init
-    var controls = new ctrls();
-    document.addEventListener('DOMContentLoaded', controls.ready);
-  })();
-   </script>
 </body>
 </html>
 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layout/head.html')
+
+    <title>Puzzle</title>
+    <!-- bootstrap -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    
+
+    
+</head>
+
+
+<body>
+    <div class="wrapper_puzzle">
+        <!-- header -->
+        <!-- @@include('./layout/header.html') -->
+        
+        
+        <main class="page-content">
+            <div class="puzzle_name">
+                <div class="puzzle_title">
+                    <h1>Pazzle of the art</h1>
+                </div>
+                
+            </div>
+
+            <!-- Swtich button -->
+            <div class="switch_button" >
+                <div class="can-toggle demo-rebrand-2">
+                    <input id="e" type="checkbox">
+                    <label for="e">
+                      <div class="can-toggle__switch" data-checked="25片" data-unchecked="12片"></div>
+                    </label>
+                </div>
+            </div>
+            
+
+
+            <!-- puzzle -->
+            <div class="puzzle_area">
+                <div  class="puzzle-putting">
+                    
+                    <div class="puzzle_frame">
+                        <!-- <img class="ppp" src="./img/Puzzle/game/frame_for_puzzle.png" alt=""> -->
+                    
+                    </div>
+                    <!-- 拼圖本體 -->
+                    <div id="forPuzzle"></div>
+
+                </div>
+
+                <div  class="puzzle-taking">
+                    
+                </div>
+
+                
+            </div>
+
+        </main>
+        
+
+        <!-- footer-->
+        <!-- @@include('./layout/footer.html') -->
+    </div>
+
+    <script src="./../dist/js/puzzle.min.js"></script>
+        
+
+    
+
+       
+</body>
+
+</html>
