@@ -82,7 +82,7 @@
                                     <td>台北市大安區</td>
                                     <td>準備中</td>
                                     <td>
-                                        <button type="button" class="btn btn-primary pa_d" data-bs-toggle="modal" data-bs-target="#orderModal">
+                                        <button type="button" class="btn btn-primary pa_d" data-bs-toggle="modal" data-bs-target="#order_editBackdrop">
                                             編輯與查看
                                         </button>
                                     </td>
@@ -94,8 +94,7 @@
             </div>                 
         </section>
         <section>  
-            <!-- order---Modal -->
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"></div>
+            <div class="modal fade" id="order_editBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">              
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -106,29 +105,29 @@
                             <form>
                                 <div class="form-group">
                                     <label for="order_editNumber"></label>
-                                    <input type="text" id="order_editNumber" name="number" class="form-control" placeholder="訂單編號">
+                                    <input type="text" id="order_editNumber" name="item[name]" class="form-control" placeholder="訂單編號">
                                 </div>
                                 <div class="form-group">
                                     <label for="order_editAccount"></label>
-                                    <input type="text" id="order_editAccount" name="account" class="form-control" placeholder="付款人帳號">
+                                    <input type="text" id="order_editAccount" name="item[account]" class="form-control" placeholder="付款人帳號">
                                 </div>
                                 <div class="form-group">
-                                    <label for="order_pro_number"></label>
-                                    <input type="text" id="order_pro_number" name="number" class="form-control" placeholder="商品編號">
+                                    <label for="product_number"></label>
+                                    <input type="text" id="order_pro_number" name="item[product_number]" class="form-control" placeholder="商品編號">
                                 </div>
                                 <div class="form-group">
-                                    <label for="order_pro_number"></label>
-                                    <input type="text" id="order_pro_number" name="number" class="form-control" placeholder="價格">
-                                    <label for="order_pro_number"></label>
-                                    <input type="text" id="order_pro_number" name="number" class="form-control" placeholder="數量">
+                                    <label for="order_editPrice"></label>
+                                    <input type="text" id="order_editPrice" name="item[price]" class="form-control" placeholder="價格">
+                                    <label for="order_editquantity"></label>
+                                    <input type="text" id="order_editquantity" name="item[quantity]" class="form-control" placeholder="數量">
                                 </div>
                                 <div class="form-group">
                                     <label for="order_editAddress"></label>
-                                    <input type="text" id="order_editAddress" name="address" class="form-control" placeholder="地址">
+                                    <input type="text" id="order_editAddress" name="item[address]" class="form-control" placeholder="地址">
                                 </div>
                                 <div class="form-group">
                                     <label for="order_editPay"></label>
-                                    <input type="text" id="order_editPay" name="pay" class="form-control" placeholder="付款方式">
+                                    <input type="text" id="order_editPay" name="item[pay]" class="form-control" placeholder="付款方式">
                                 </div>
                                 <div class="form-group horiz">
                                     訂單狀態
@@ -148,21 +147,13 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-                            <button type="button" class="btn btn-primary">完成</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                            <button type="button" class="btn btn-primary">儲存</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>      
-    <script>
-        imgInp.onchange = evt => {
-            const [file] = imgInp.files
-            if (file) {
-                blah.src = URL.createObjectURL(file)
-            }
-        }
-    </script>
 </body>
 </html> 

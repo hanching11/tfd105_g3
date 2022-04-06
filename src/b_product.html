@@ -51,10 +51,7 @@
                             <button type="button" class="btn btn-primary">下架</button>
                         </li>
                         <li>
-                            <button type="button" class="btn btn-primary">編輯</button>
-                        </li>
-                        <li>
-                            <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#newModal">新增</button>
+                            <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#product_newBackdrop">新增</button>
                         </li>
                         <li>
                             <button type="button" class="btn btn-primary">刪除</button>
@@ -85,7 +82,7 @@
                                     </div>
                                     <td>
                                         <div class="size align-bottom">
-                                            <img src="./img/logo_icon.png" alt="product_photo">
+                                            <img src="../src/img/Shop/hot-prodts/h-p-1.png" alt="product_photo">
                                         </div>
                                     </td>
                                     <td>1</td>
@@ -95,7 +92,7 @@
                                     <td>Vincent van Gogh</td>
                                     <td>上架</td>
                                     <td>
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#product_editBackdrop">
                                             編輯與查看
                                         </button>
                                     </td>
@@ -106,54 +103,63 @@
                 </div>
             </div>                 
         </section>
-        <!-- 新增商品視窗 -->
+        <!-- 新增商品視窗 ------------->
+
+        <!-- ------------------------------ -->
+
         <section>
-            <!-- Modal -->
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"></div>
-              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h6 class="modal-title" id="exampleModalLabel">新增商品</h6>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal fade" id="product_newBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title" id="exampleModalLabel">新增商品</h6>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="product_newName"></label>
+                                <input type="text" id="product_newName" name="item[name]" class="form-control" placeholder="商品名稱">
+                            </div>
+                            <div class="form-group">
+                                <label for="product_newArtist"></label>
+                                <input type="text" id="product_newArtist" name="item[price]" class="form-control" placeholder="價格">
+                                <label for="product_newCount"></label>
+                                <input type="text" id="product_newCount" name="item[quantity]" class="form-control" placeholder="數量">
+                            </div>
+                            <div class="form-group">
+                                <label for="product_newArtist"></label>
+                                <input type="text" id="product_newArtist" name="item[artist]" class="form-control" placeholder="產品作家">
+                            </div>
+                            <div class="form-group">
+                                <label for="product_newDescribe"></label>
+                                <textarea id="product_newDescribe" rows="3" cols="40" name="item[describe]" placeholder="展品描述"></textarea>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    <h6>此產品是否直接上架</h6>
+                                </label>
+                                <div class="form-group">
+                                    <input type="file" id="item_upLoad" name="item[photo]" accept="image/*" class="form-control" multiple="multiple">
+                                    <input type="submit" value="上傳">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                        <button type="button" class="btn btn-primary">儲存</button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="product_newName"></label>
-                            <input type="text" id="product_newName" name="item[name]" class="form-control" placeholder="商品名稱">
-                        </div>
-                        <div class="form-group">
-                            <label for="product_newArtist"></label>
-                            <input type="text" id="product_newArtist" name="item[price]" class="form-control" placeholder="價格">
-                            <label for="product_newCount"></label>
-                            <input type="text" id="product_newCount" name="item[qutitfy]" class="form-control" placeholder="數量">
-                        </div>
-                        <div class="form-group">
-                            <label for="product_newPrice"></label>
-                            <input type="text" id="product_newPrice" name="name" class="form-control" placeholder="產品作家">
-                        </div>
-                        <div class="form-group">
-                            <label for="illustrate"></label>
-                            <input name="illustrate" type="text" class="form-control" placeholder="產品說明">
-                        </div>
-                      </form>
-                      <form runat="server">
-                        <input accept="image/*" type='file' id="imgInp" multiple="multiple" />
-                        <img id="blah" src="#" alt="your image" />
-                    </form>
-                        
-                </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary">完成</button>
-                  </div>
-                </div>
-              </div>
-            </div></section>
-        <!-- 編輯與查看視窗 -->
+            </div>
+        </section>
+        <!-- 編輯與查看視窗----------------------- -->
+
+        <!-- ------------------------------------------- -->
         <section>  
             <!-- Modal -->
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"></div>
+            <div class="modal fade" id="product_editBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -164,45 +170,47 @@
                             商品編號:12345
                             <form>
                                 <div class="form-group">
-                                    <label for="name"></label>
-                                    <input type="text" name="name" class="form-control" placeholder="名稱">
+                                    <label for="product_editName"></label>
+                                    <input type="text" id="product_editName" name="item[edit_name]" class="form-control" placeholder="名稱">
                                 </div>
                                 <div class="form-group">
-                                    <label for="artist"></label>
-                                    <input type="text" name="artist" class="form-control" placeholder="藝術家">
+                                    <label for="product_esitArtist"></label>
+                                    <input type="text" id="product_esitArtist" name="item[edit_artist]" class="form-control" placeholder="產品作家">
                                 </div>
-                                <div class="form-group edit_lay">
-                                    <label for="price"></label>
-                                    <input type="text" name="price" class="form-control" placeholder="價格">
-                                    <label for="count"></label>
-                                    <input type="text" name="count" class="form-control" placeholder="數量">
+                                <div class="form-group">
+                                    <label for="product_editPrice"></label>
+                                    <input type="text" id="product_editPrice" name="item[edit_price]" class="form-control" placeholder="價格">
+                                    <label for="product_editCount"></label>
+                                    <input type="text" id="product_editCount" name="item[edit_quantity]" class="form-control" placeholder="數量">
                                 </div>
                                 <div class="form-group">
                                     <label for="illustrate"></label>
                                     <input name="illustrate" type="text" class="form-control" placeholder="產品說明"> 
                                 </div>
-                            </form>
-                            <form runat="server">
-                                <input accept="image/*" type='file' id="imgInp" multiple="multiple" />
-                                <img id="blah" src="#" alt="your image" />
+                                <div class="form-group">
+                                    <label for="product_editDescribe"></label>
+                                    <textarea id="product_editDescribe" rows="3" cols="40" name="item[edit_describe]" placeholder="展品描述"></textarea>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        <h6>此產品是否直接上架</h6>
+                                    </label>
+                                    <div class="form-group">
+                                        <input type="file" id="item_upLoad" name="item[edit_photo]" accept="image/*" class="form-control" multiple="multiple">
+                                        <input type="submit" value="上傳">
+                                    </div>
+                                </div>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-                            <button type="button" class="btn btn-primary">完成</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                            <button type="button" class="btn btn-primary">儲存</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-    <script>
-        imgInp.onchange = evt => {
-            const [file] = imgInp.files
-            if (file) {
-                blah.src = URL.createObjectURL(file)
-            }
-        }
-    </script>
 </body>
 </html> 
