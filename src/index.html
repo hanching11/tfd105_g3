@@ -8,7 +8,7 @@
 
 <body>
   <div class="wrapper_index">
-    <!-- @@include('./layout/header.html') -->
+    @@include('./layout/header.html')
     <section>
       <!-- 首頁 -->
       <!-- <h1 class="h1">文字文字文字文字</h1> -->
@@ -153,22 +153,28 @@
       </div>
 
       <div class="recommendation">
-        <h3 class="col-lg-12 text-uppercase">RECOMMENDATION</h3>
+        <h3 class="col-lg-12 text-uppercase col-xs-12">RECOMMENDATION</h3>
         <p>當月藝術流派推薦</p>
-        <div class="row">
-          <div class="col-lg-1">
+        <div class="row col-xs-12">
+          <div class="col-lg-1 col-2">
             <button><img src="/src/img/index/Vector 70.png" alt=""></button>
           </div>
-          <div class="col-lg-9 row">
-            <div class=" col-lg-4 re_box"><img src="/src/img/index/Rectangle 96.jpg" alt=""></div>
-            <div class=" col-lg-4 re_box"><img src="/src/img/index/Rectangle 97.jpg" alt=""></div>
-            <div class=" col-lg-4 re_box"><img src="/src/img/index/Rectangle 98.jpg" alt=""></div>
+          <div class="col-lg-9 row col">
+            <div class=" col-lg-4 re_box col-xs-12  col-xs-10 "><img src="/src/img/index/Rectangle 96.jpg" alt="">
+              <p class="col-xs-12">後印象派</p>
+              <h6 class=" col-xs-12 text-uppercase">Post-Impressionism</h6>
+            </div>
+            <div class=" col-lg-4 re_box col-xs-3  d-none d-sm-block "><img src="/src/img/index/Rectangle 97.jpg"
+                alt=""></div>
+            <div class=" col-lg-4 re_box col-xs-3  d-none d-sm-block"><img src="/src/img/index/Rectangle 98.jpg" alt="">
+            </div>
           </div>
-          <div class="col-lg-1">
+          <div class="col-lg-1 col-2">
             <button><img src="/src/img/index/Vector 69.png" alt=""></button>
           </div>
         </div>
       </div>
+
 
       <div class="login">
         <div>

@@ -76,7 +76,7 @@ $media_p:$p+0.8;
 
     section {
         // font-size: $fontWeight;
-        font-family: $fontNoserif, $fontSerif, $englishFont;
+        // font-family: $fontNoserif, $fontSerif, $englishFont;
 
         .top {
             max-width: $max-width;
@@ -744,6 +744,7 @@ $media_p:$p+0.8;
 
                 .r1 {
                     padding: 0;
+                    margin: 0;
 
                     .rwd-1,
                     .rwd-2 {
@@ -752,30 +753,32 @@ $media_p:$p+0.8;
 
                     }
 
+                    .rwdbg {
+                        background-image: url(/src/img/index/Rectangle\ 4067-1.jpg);
+                        width: 391px;
+                        border-radius: $border-radius;
+                        margin: 0 auto !important;
+                        margin-top: $margin * 4 !important;
+
+                        .rwd-2 {
+                            height: auto;
+                            background-color: aliceblue;
+                            border-radius: $border-radius;
+                            margin: $margin - 15px;
+                            padding: $padding * 2;
+                            width: 310px;
+                        }
+                    }
+
                     .rwd-1 {
                         width: 310px;
                         margin-left: $margin - 10px;
                         margin-right: $margin - 10px;
                         margin: 0 auto;
+                        margin-top: $margin * 2;
 
                     }
-                    // .rwd-2{
-                    //     background-color: $white;
-                    //     width: 300px;
-                    //     border-radius: $border-radius;
-                    // }
 
-
-                }
-
-                .rwdbg {
-                    background-image: url(/src/img/index/Rectangle\ 4067-1.jpg);
-                    width: 391px;
-                    border-radius: $border-radius;
-                    margin: 0 auto !important;
-                    margin-top: $margin * 4 !important;
-                  
-                    
 
                 }
 
@@ -786,19 +789,110 @@ $media_p:$p+0.8;
             ;
 
             .recommendation {
-                margin-top: $margin * 45;
+                margin-top: $margin * 50;
+
 
                 h3 {
                     @include media_h6;
-                    margin: 0 auto;        
+                    margin: 0 auto;
+                    text-align: center;
+
 
                 }
-                
+
 
                 p {
                     font-size: $p !important;
 
                 }
+
+                .row {
+                    margin: 0;
+                    margin-top: $margin * 2;
+                    padding: 0;
+
+                    button {
+                        width: auto;
+                        width: 50px;
+
+
+                        img {
+
+                            width: 100%;
+                            // width: 50px;
+
+
+                        }
+                    }
+
+                    .col-1 {
+                        padding: 0;
+
+                    }
+
+
+                    .col-10 {
+                        width: auto;
+                        height: auto;
+                        // padding-left: $padding + 10px;
+
+                        img {
+                            // width: 300px;
+                            width: 250px;
+
+                            // width: $img_width_height;
+                            // width: $img_width_height;
+                            // padding-left: $padding - 15px;
+                            // padding-right: $padding  - 15px;
+                        }
+
+
+
+                    }
+
+                    .re_box {
+
+                        p {
+                            @include p;
+                            width: 100%;
+                            font-size: $p * 1.8 !important;
+                            font-family: $fontNoserif, $fontSerif !important;
+                            margin: 0 auto;
+                            color: $darkbrown2;
+                            height: auto;
+                            // width: 250px;
+                            text-align: center;
+                            margin-top: $margin * 2;
+
+
+
+
+                        }
+
+                        h6 {
+                            @include media_h6;
+                            font-family: $englishFont;
+                            font-size: $p * 1.8 !important;
+                            width: 100%;
+                            margin: 0 auto;
+                            color: $darkbrown2;
+                            text-align: center;
+                            margin-top: $margin;
+
+                        }
+
+
+                    }
+
+
+
+
+
+
+                }
+
+
+
 
 
 
