@@ -1,12 +1,13 @@
 // $border-radius5:5px;
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+
 .wrapper_checkout4{
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
   text-align: center;
   line-height: $lineheight2;
   margin: 0 120px;
