@@ -631,9 +631,17 @@ let he = this.image.height;
 
 this.reqHeight = params.height; // requested height
 this.reqWidth = params.width;
-this.height = this.reqHeight - 2 * Puzzle.MARGIN1; // place left on screen including margin
-this.width = this.reqWidth - 2 * Puzzle.MARGIN1; //
 
+if($(window).width() < 767)
+{
+  this.height = 460; // place left on screen including margin
+  this.width = 290; // 更改拼圖顯示區域大小的關鍵!!!!!
+} else {
+  this.height = this.reqHeight - 2 * Puzzle.MARGIN1; // place left on screen including margin
+  this.width = this.reqWidth - 2 * Puzzle.MARGIN1; // 更改拼圖顯示區域大小的關鍵!!!!!
+}
+  
+  
 if (wi / he > this.width / this.height) { // actual picture "more horizontal" than game board
   this.height = this.width * he / wi;
 } else {
@@ -678,8 +686,21 @@ this.canvMobile.style.visibility = 'visible';
 this.canvMobile.width = parseFloat(this.divBoard.style.width);
 this.canvMobile.height = parseFloat(this.divBoard.style.height);
 this.canvMobile.style.position = "absolute";
-this.canvMobile.style.top = "0px";
-this.canvMobile.style.left = "0px";
+  
+//調整初始顯示的圖片大小位置
+if($(window).width() < 767)
+{
+  
+  this.canvMobile.style.top = "0px";
+  this.canvMobile.style.left = "0px";
+  
+} else {
+  
+  this.canvMobile.style.top = "0px";
+  this.canvMobile.style.left = "0px";
+  
+}
+
 
 this.canvMobile.style.zIndex = 50000;
 
@@ -694,13 +715,14 @@ if (!this.menu) {
   this.menu = new Menu({
     parentDiv: this.divGame,
     idDivMenu: "divmenu",
-    title: "MENU",
+    title: "想拼幾片?",
     lineOffset: 30,
     lineStep: 30,
     lines: [
     //   {text: "load image", func: this.loadImage()},
-      {text: "12 piece", func: this.returnFunct(12)},
-      {text: "25 piece", func: this.returnFunct(25)}
+      {text: "12 片", func: this.returnFunct(12)},
+      {text: "25 片", func: this.returnFunct(25)},
+      {text: "體驗地獄<3啾咪", func: this.returnFunct(400)}
     ]
   });
 }
@@ -1483,13 +1505,28 @@ return tbLoops;
 
 window.addEventListener("load", function(){
 
-let img = 'https://wkz3w59.fr/ipcp/Mona_Lisa.jpg';
+let img = './../../src/img/Puzzle/game/still-life.png';
 
 autoStart = isMiniature(); // used for nice miniature in CodePen
 
-let x = new Puzzle ( {img: img,
-                    width: window.innerWidth,
-                    height: window.innerHeight,
-                    idiv: "forPuzzle" });
+
+
+if($(window).width() < 767)
+{
+  let x = new Puzzle ( {img: img,
+    width: window.innerWidth,
+    height: window.innerHeight,
+    idiv: "forPuzzle" }
+    );
+} else {
+  let x = new Puzzle ( {img: img,
+    width: 600,
+    height: 400,
+    idiv: "forPuzzle" }
+    );
+}
+
+  
+  
 
 });

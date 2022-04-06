@@ -3,108 +3,40 @@
 
 <head>
     @@include('./layout/head.html')
-    <!-- <link rel="stylesheet" href="/dist/css/style.css">
-    <link rel="stylesheet" href="/src/sass/page/frontend/_psychol_test.scss">
-    <link rel="shortcut icon" href="/src/img/logo_icon.png"> -->
     <title>psychol_test</title>
-    <style>
-        #bac {
-            background-color: rgba(0, 0, 0, 0.5);
-            background-blend-mode: multiply;
-            background-image: url("/src/img/psychol_test/P_bac.jpg");
-            background-size: cover;
-            background-position: center center;
-            color: #eeeae2;
-        }
-
-        /* 心理測驗的部分 */
-        .psychol_test_content {
-            text-align: center;
-            line-height: 3;
-        }
-
-        .psychol_title h1 {
-            font-size: 1.5rem;
-            letter-spacing: 1rem;
-            line-height: 5;
-            margin-left: 6%;
-        }
-
-        .test_title h1 {
-            font-size: 1.2rem;
-            letter-spacing: 0.5rem;
-            font-weight: 600;
-        }
-
-        .test_content {
-            margin-bottom: 5%;
-        }
-
-        .game_start_btn {
-            border: 1px solid #eeeae2;
-            border-radius: 25px;
-            width: 450px;
-            margin: 0 auto;
-            padding: 30px 0;
-        }
-
-        .game_start_btn h1 {
-            line-height: 3;
-        }
-
-        .game_start_btn button {
-            color: #353231;
-            border: 0;
-            width: 200px;
-            background-color: #eeeae2;
-            border-radius: 25px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            letter-spacing: 0.3rem;
-            line-height: 2;
-            cursor: pointer;
-            transition: 0.5s;
-        }
-
-        .game_start_btn button:hover {
-            background-color: #ab8a49;
-            color: #eeeae2;
-        }
-
-        .space::before {
-            content: "";
-            margin: 30%;
-        }
-    </style>
 </head>
 
 <body>
 
     <!-- 心理測驗內容 -->
     @@include('./layout/header.html')
-    <section class="psychol_test_wrapper" id="bac">
-        <div class="psychol_title ">
-            <h1>心理測驗</h1>
-        </div>
+    <section class="psychol_test_wrapper_start">
 
-        <div class="psychol_test_content">
-            <div class="test_title">
-                <h1>心靈藝術家 - 從畫作中顯示出現階段你靈魂的藝術家</h1>
-                <div class="test_content">
-                    <p>每個人都是獨一無二的，每幅畫作帶給觀者的感受都是如此獨特，<br>
-                        透過測驗從不同的畫作中，找尋你靈魂的藝術家!<br>
-                        依題目選擇出最適合你當下感受的選項，一共5題。<br>
-                        測驗結果將推薦可能適合你的周邊商品!
-                    </p>
-                </div>
-                <div class="game_start_btn">
-                    <h1>現階段你靈魂的藝術家是?</h1>
-                    <a href="/dist/psychol_test_q1.html"><button>測驗開始!</button></a>
-                </div>
-                <div class="space">
+        <div class="psychol_test_bac">
+            <div class="psychol_title ">
+                <h1>心理測驗</h1>
+            </div>
+    
+            <div class="psychol_test_content">
+                <div class="test_title">
+                    <h1>心靈藝術家 - 從畫作中顯示出現階段你靈魂的藝術家</h1>
+                    <div class="test_content">
+                        <p>每個人都是獨一無二的，每幅畫作帶給觀者的感受都是如此獨特，<br>
+                            透過測驗從不同的畫作中，找尋你靈魂的藝術家!<br>
+                            依題目選擇出最適合你當下感受的選項，一共5題。<br>
+                            測驗結果將推薦可能適合你的周邊商品!
+                        </p>
+                    </div>
+                    <div class="game_start_btn">
+                        <h1>現階段你靈魂的藝術家是?</h1>
+                        <a href="/dist/psychol_test_q1.html"><button>測驗開始!</button></a>
+                    </div>
+                    <div class="space">
+                    </div>
                 </div>
             </div>
         </div>
+
     </section>
     @@include('./layout/footer.html')
 

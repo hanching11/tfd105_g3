@@ -24,14 +24,16 @@
     .puzzle_title h1{
         font-size: $h1;
         color: $beidge1;
-        width: 505px;
+        width: 100%;
+        text-align: center;
         margin: 0 auto;
     }
 
     .puzzle_subtitle{
         font-size: 24px;
         color: $beidge1;
-        width: 195px;
+        width: 100%;
+        text-align: center;
         margin: 0 auto;
         padding-top: 20px;
     }
@@ -68,8 +70,13 @@
         // background-color: $coffeebrown !important; 
         color: $darkbrown1;
         // outline: none !important;
-        border: 5px solid $coffeebrown;
+        // border: 5px solid $coffeebrown;
         // padding: 2px;
+
+        .part-2{
+            background-color: $darkbrown2;
+            color: $beidge2;
+        }
 
     }
 
@@ -86,6 +93,19 @@
         // margin-bottom: 120px;
         width: 250px;
         
+    
+    }
+
+    .choice-slide:hover {
+        // margin: 0 50px;
+        // margin-bottom: 120px;
+        width: 250px;
+        
+        .part-2{
+            background-color: $coffeebrown;
+            color: $beidge2;
+
+        }
     
     }
     
@@ -137,10 +157,24 @@
 
     .part-2{
         height: 80px;
-        background-color: #EFEFEF;
+        color: $darkbrown1;
+        background-color: $beidge2;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
+        display: block;
+
+        transition: all 0.4s;
+
     }
+
+    // .part-2:hover{
+    //     height: 80px;
+    //     background-color: #000;
+    //     border-bottom-left-radius: 20px;
+    //     border-bottom-right-radius: 20px;
+    //     display: block;
+        
+    // }
 
     .part-2 h4{
         font-size: 24px;

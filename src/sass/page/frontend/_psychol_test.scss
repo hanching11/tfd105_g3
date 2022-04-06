@@ -1,16 +1,21 @@
-.psychol_test_wrapper {
-
-    /* 心理測驗的部分 */
-    .psychol_test_content {
-        text-align: center;
-        line-height: 3;
-    }
+.psychol_test_wrapper_start {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    background-image: url("/src/img/psychol_test/P_bac.jpg");
+    background-size: cover;
+    background-position: center center;
+    color: #eeeae2;
 
     .psychol_title h1 {
         font-size: 1.5rem;
         letter-spacing: 1rem;
         line-height: 5;
         margin-left: 6%;
+        font-weight: bold;
+    }
+    .psychol_test_content {
+        text-align: center;
+        line-height: 3;
     }
 
     .test_title h1 {
