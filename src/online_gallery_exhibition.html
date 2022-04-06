@@ -43,8 +43,8 @@
                 <!-- owl-carousel -->
                 <div class="nonloop owl-carousel">
 
-                    <!-- pic01 -->
-                    <div class="item">
+                    <!-- pic_frame_test-->
+                    <!-- <div class="item">
                         <div class="c-gallery__photo">
                             <div class="c-photo c-photo--gallery is-black">
                                 <div class="c-photo__wrapper">
@@ -58,47 +58,25 @@
                                 <div class="c-photo__shadow-02"></div>
                             </div>
                         </div>
+                    </div> -->
+
+                    <!-- pic01 -->
+                    <div class="item">
+                       
                     </div>
 
                     <!-- pic02 -->
-                    <div class="item" id="star">
-                        <div class="c-gallery__photo">
-                            <div class="c-photo c-photo--gallery is-black">
-                                <div class="c-photo__wrapper">
-                                    <div class="c-photo__frame">
-                                        <div class="c-photo__inner">
-                                            <img src="../src/img/online_gallery/pic02.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="c-photo__shadow-01"></div>
-                                <div class="c-photo__shadow-02"></div>
-                            </div>
-                        </div>
+                    <div class="item">
+                   
                     </div>
 
                     <!-- pic03 -->
                     <div class="item">
-                        <div class="c-gallery__photo">
-                            <div class="c-photo c-photo--gallery is-black">
-                                <div class="c-photo__wrapper">
-                                    <div class="c-photo__frame">
-                                        <div class="c-photo__inner">
-                                            <img src="../src/img/online_gallery/pic02.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="c-photo__shadow-01"></div>
-                                <div class="c-photo__shadow-02"></div>
-                            </div>
+                        <div class="frame">
+                            <img src="../src/img/online_gallery/pic02.jpg" alt="">
                         </div>
                     </div>
-
-
                     <!-- <div class="item">
-                        <h4>4</h4>
-                    </div>
-                    <div class="item">
                         <h4>5</h4>
                     </div>
                     <div class="item">
@@ -140,10 +118,14 @@
                 items: 3,
                 // startPosition:star,
                 loop: false,
-                margin: 200,
+                margin: 180,
                 responsive: {
+                    0:{
+                        items: 1
+                    },
+
                     480: {
-                        items: 3
+                        items: 1
                     },
 
                     600: {
