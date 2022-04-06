@@ -119,9 +119,12 @@
         .f_bottom {
             display: none;
         }
+        .wrapper_footer {
+            width: 100%;
+            height: 100%;
+        }
         .mob_footer {
             position: static;
-            width: 100%;
             display: flex;
             text-align: center;
             align-items: center;
@@ -139,6 +142,7 @@
             font-weight: 40px;
             padding-left: 10px;
             cursor: pointer;
+            margin-top: 30px;
         }
         .mob_footer .right p{
             display: none;
@@ -156,7 +160,7 @@
             font-size: 25px;
             letter-spacing: 25px;
             color: #eeeae2;
-            line-height: 3;
+            line-height: 2;
         }
         .copyright_reference{
             display: none;
@@ -168,7 +172,7 @@
             margin: 0 auto;
             text-align: center;
             font-size: 12px;
-            line-height: 1.6;
+            line-height: 1.5;
         }
     }
 }
