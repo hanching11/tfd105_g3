@@ -18,17 +18,37 @@
         // }
 
         .page-content{
-            background-image: url(/src/img/Puzzle/choice/background/mona.png);
+            background-image: url(/src/img/Puzzle/backgroud/still-life.png);
             background-size: cover;
             width: 100%;
             height: 100vh;
             overflow-y: hidden;
             padding-top: 20px;
+
+            position: relative;
+
         
             
         }
 
+        //返回按鈕
+        .back_to_KY{
+            padding: 10px 10px;
+            line-height: 1.6;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    
+        .back_to_KY a{
+            text-decoration:none;
+        }
         
+        .back_to_KY p{
+            font-size: 20px;
+            color: $beidge2;
+        }
+    
 
         .puzzle_name{
             // padding-top: 100px;
@@ -61,7 +81,8 @@
             // margin-left: 200px;
             //超級拼圖//
             // background-color: #fff;
-            border: 5px solid $beidge1;
+            // border: 5px solid $beidge1;
+            padding: 5px;
             // background-image: url(./../../../img/Puzzle/game/frame_for_puzzle.png);
             
             background-image: linear-gradient(305deg, 
@@ -184,10 +205,13 @@
         .puzzle-taking{
             width: 180px;
             height: 410px;
-            border: 5px solid $lightgray;
+            // border: 5px solid $lightgray;
             margin-left: 160px;
             border-radius: 25px;
             background-color: $beidge1;
+            box-shadow: rgba(0,0,0,0.4)
+            3px 3px 15px 0px
+            inset;;
 
             
 
@@ -206,8 +230,7 @@
             // border: 5px solid #FFF;
         }
 
-        
-        .puzzle_title_mobile {
+        .puzzle_title_mobile{
             display: none;
         }
 
@@ -235,16 +258,30 @@
             background-image: url(/src/img/Puzzle/choice/background/mona.png);
             background-size: cover;
             width: 100%;
-            height: 120vh;
-            // overflow-y: hidden;
-            overflow: hidden; //暫時使用
-            padding-top: 20px;
-            // position: relative;
-
+            height: 1000px;
+            overflow-y: hidden;
+            padding-top: 30px;
         
             
         }
 
+        //返回按鈕
+        .back_to_KY{
+            padding: 10px 10px;
+            line-height: 1.6;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    
+        .back_to_KY a{
+            text-decoration:none;
+        }
+        
+        .back_to_KY p{
+            font-size: 14px;
+            color: $beidge2;
+        }
         
 
         .puzzle_name{
@@ -425,7 +462,7 @@
             // border: 5px solid #FFF;
         }
 
-        .puzzle_title_mobile {
+        .puzzle_title_mobile{
             font-size: 20px;
             color: #EEEAE2;
             width: 125px;

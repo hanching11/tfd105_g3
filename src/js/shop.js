@@ -13,7 +13,7 @@ $(document).ready(function() {
                     spaceBetween: 30
                     },
                     1028: {
-                    slidesPerView: 2,
+                    slidesPerView: 3,
                     spaceBetween: 30
                     },
                     767: {

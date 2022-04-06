@@ -1,4 +1,5 @@
 .wrapper_pazzle_choice{
+ 
     *,
     *:after,
     *::before {
@@ -8,8 +9,10 @@
     }
     
     // padding: 20px 20px;
-    
-    
+    position: relative;  //暫放
+    width: 100%;
+    margin: 0 auto;
+
     .page-content{
         background-image: url(/src/img/Puzzle/choice/background/mona.png);
         background-size: cover;
@@ -39,12 +42,14 @@
     }
 
     .puzzle_choice{
-        width: 880px;
+        // width: 720px;
         margin: 50px auto;
     }
 
+
+    //swiper-container
     .btn-group{
-        width: 880px;
+        width: 720px;
         // margin: 0 auto;
         // display: flex;
         // flex-grow: 1;
@@ -58,8 +63,8 @@
         border: none;
         border:5px solid transparent;
         // padding: 5px;
-        margin: 0;
-        margin-right: 50px;
+        margin: 0 25px;
+        // margin-right: 50px;
         padding: 0;
 
 
@@ -91,7 +96,7 @@
     .choice-slide {
         // margin: 0 50px;
         // margin-bottom: 120px;
-        width: 250px;
+        width: 180px;
         
     
     }
@@ -99,7 +104,7 @@
     .choice-slide:hover {
         // margin: 0 50px;
         // margin-bottom: 120px;
-        width: 250px;
+        // width: 200px;
         
         .part-2{
             background-color: $coffeebrown;
@@ -111,7 +116,7 @@
     
     .choice-slide .part-1 {
         position: relative;
-        height: 350px;
+        height: 270px;
         // max-height: 290px;
         // margin-bottom: 20px;
         overflow: hidden;
@@ -177,14 +182,14 @@
     // }
 
     .part-2 h4{
-        font-size: 24px;
+        font-size: 20px;
         line-height: 75px;
     }
 
     .submit-blt{
         width: 130px;
         margin: 0 auto;
-        margin-top: 100px;
+        margin-top: 50px;
     }
 
     .submit-blt .blt{
@@ -196,4 +201,127 @@
         border-radius: 25px;
         font-size: 20px;
     }
+
+
+    //新增的
+    .swiper-container {
+        max-width: 1280px;
+        width: 80%;
+        height: 360px;
+        margin: 0 auto;
+        border-radius: 25px;
+    }
+
+    .swiper-container {
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+    .swiper-wrapper {
+        
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-transition-property: -webkit-transform;
+        -moz-transition-property: -moz-transform;
+        -o-transition-property: -o-transform;
+        -ms-transition-property: -ms-transform;
+        transition-property: transform;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        // font-size: 18px; 
+        background: #fff;
+        
+        // Center slide text vertically 
+        // display: -webkit-box;
+        // display: -ms-flexbox;
+        // display: -webkit-flex;
+        // display: flex;
+        // -webkit-box-pack: center;
+        // -ms-flex-pack: center;
+        // -webkit-justify-content: center;
+        // justify-content: center;
+        // -webkit-box-align: center;
+        // -ms-flex-align: center;
+        // -webkit-align-items: center;
+        // align-items: center; 
+    }
+
+    .swiper-slide {
+        -webkit-flex-shrink: 0;
+        -ms-flex: 0 0 auto;
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        // position: relative; 
+        border-radius: 25px;
+      }
+    
+    .swiper-slide .part-1{
+        position: relative;
+        height: 190px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+      }
+    
+      .swiper-slide .part-1::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        transition: all 0.3s;
+    }
+    
+    .swiper-slide:hover .part-1::before {
+        transform: scale(1.1,1.1) rotate(0deg);
+    }
+    
+    
+
+    
+    .swiper-slide .part-2 .product-title {
+        margin-top: 50px;  
+        font-size: 1rem;
+    }
+    
+    .swiper-slide .part-2 h4 {
+        font-size: 1rem;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .swiper-slide .part-2 h3 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .swiper-slide .part-2 .buy-now {
+        color: $darkbrown1; 
+        position: relative;
+        padding: 0 7px;
+        border: none;
+        background: none;
+    }
+
+
+
+
+
 }
