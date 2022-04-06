@@ -1,0 +1,119 @@
+.wrapper_footer {
+        font-family: "Cinzel", "Noto Serif TC", serif;
+        background-color: #353231;
+        color: #eeeae2;
+        display: flex;
+        width: 100%;
+        height: 500px;
+        position: static;
+
+    .f_bottom {
+        width: 1200px;
+    }
+
+    .f_bottom i {
+        color: #eeeae2;
+        font-size: 16px;
+        transition: 0.5s;
+    }
+
+    .f_bottom i:hover {
+        color: #ab8a49;
+    }
+
+    .f_bottom img {
+        transition: 0.5s;
+    }
+
+    .f_bottom img:hover {
+        filter: sepia(1);
+    }
+
+    .f_bottom a {
+        text-decoration: none;
+        color: #eeeae2;
+    }
+
+    .f_bottom {
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .footer_logo {
+        height: 150px;
+    }
+
+    .footer_logo img {
+        height: 50px;
+        margin-bottom: 100px;
+    }
+
+    .f_bottom .left {
+        margin-bottom: 100px;
+    }
+
+    .f_bottom ul {
+        display: flex;
+    }
+
+    .f_bottom li {
+        list-style: none;
+        margin-right: 20px;
+    }
+
+    .f_bottom p {
+        font-size: 12px;
+        line-height: 2;
+    }
+
+    .f_bottom .right {
+        display: flex;
+        margin-left: 62%;
+    }
+
+    .f_bottom .right p {
+        letter-spacing: 1.2px;
+        line-height: 3;
+    }
+
+    .f_bottom .gallery_address {
+        margin-left: 50px;
+    }
+
+    .f_bottom .copyright {
+        display: flex;
+        border-top: 1px solid #eeeae2;
+        // width: 1200px;
+    }
+
+    .f_bottom .right h6 {
+        letter-spacing: 2px;
+        font-size: 1rem;
+    }
+
+    .f_bottom .copyright p {
+        margin-top: 30px;
+    }
+
+    .f_bottom #c1 {
+        margin-left: 720px;
+    }
+
+    .f_bottom #c2 {
+        margin-left: 70px;
+    }
+
+    .f_bottom .copyright_reference {
+        margin-top: 15px;
+        letter-spacing: 2px;
+    }
+
+    .f_bottom #c3 {
+        letter-spacing: 1px;
+    }
+
+    .f_bottom .footer_top {
+        display: flex;
+    }
+}

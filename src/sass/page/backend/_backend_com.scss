@@ -1,0 +1,80 @@
+.wrapper_melon{
+    .header_potter{
+        display: flex;
+        justify-content: space-between;
+        .logo {
+            width: 50px;
+            margin: 0 50px;
+                img {
+                    width: 100%;
+                    margin: 20px 0;
+                }
+        }
+    .con_h6 {
+        margin: 25px 0 0;
+        padding: 0 40px;
+               
+    }   
+        h6 {
+            color: black;
+        }
+    
+        
+    }
+// ----------------left-side ------------
+
+
+// ---------------------------------------
+.sideLeft {
+    display: flex;
+    border-top: 1px solid black;
+}
+    .content_left {
+        background-color: black;
+        width: 200px;
+        text-align: center;
+    }       
+        .wd-bord {
+            color: #fff;
+            padding: 20px 0;
+            border-bottom: 1px solid white;                
+        }
+
+
+    .left_ti {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .side_left {
+        display: block;
+        width: 200px;
+        height: 300px;
+}        
+    .ba_bk {
+        background-color: black;
+    }
+        ol {
+            margin: 20px 0;
+
+        }
+            
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+    //共用區 
+    .ju_between {
+        justify-content: space-between;
+    }
+    .pa_d {
+        padding: 2px;
+    }
+    .horiz {
+        display: flex;
+    }
+
+            
+}
+
+

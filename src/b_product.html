@@ -6,8 +6,8 @@
         <title>光緣畫廊 | KUANG YUAN</title>
     </head>
 <body>
-    <div class="wrapper">
-        <div class="header">
+    <div class="wrapper_melon">
+        <div class="header_potter">
             <div class="logo">
                 <img src="./img/logo_icon.png" alt="logo" >
             </div>
@@ -21,19 +21,19 @@
                 <aside class="side_left">
                     <ul>
                         <ol>
-                            <a href="./b_member.html">會員管理</a>
+                            <a href="../dist/b_member.html">會員管理</a>
                         </ol>
                         <ol>
-                            <a href="./b_order.html">訂單管理</a>
+                            <a href="../dist/b_order.html">訂單管理</a>
                         </ol>
                         <ol>
                             <a href="#">商品管理</a>
                         </ol>
                         <ol>
-                            <a href="./b_item_exhibits.html">展品管理</a>
+                            <a href="../dist/b_item_exhibits.html">展品管理</a>
                         </ol>
                         <ol>
-                            <a href="./b_discount.html">折扣碼管理</a>
+                            <a href="../dist/b_discount.html">折扣碼管理</a>
                         </ol>
                     </ul>
                 </aside>
@@ -85,7 +85,7 @@
                                     </div>
                                     <td>
                                         <div class="size align-bottom">
-                                            <img src="./img/logo_icon.png" alt="product_phtot">
+                                            <img src="./img/logo_icon.png" alt="product_photo">
                                         </div>
                                     </td>
                                     <td>1</td>
@@ -119,22 +119,22 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label for="product_newName">商品名稱</label>
-                            <input type="text" id="product_newName" name="name" class="form-control">
+                            <label for="product_newName"></label>
+                            <input type="text" id="product_newName" name="item[name]" class="form-control" placeholder="商品名稱">
                         </div>
                         <div class="form-group">
-                            <label for="product_newArtist">產品作家</label>
-                            <input type="text" id="product_newArtist" name="name" class="form-control">
-                            <label for="product_newCount">數量</label>
-                            <input type="text" id="product_newCount" name="name" class="form-control">
+                            <label for="product_newArtist"></label>
+                            <input type="text" id="product_newArtist" name="item[price]" class="form-control" placeholder="價格">
+                            <label for="product_newCount"></label>
+                            <input type="text" id="product_newCount" name="item[qutitfy]" class="form-control" placeholder="數量">
                         </div>
                         <div class="form-group">
-                            <label for="product_newPrice">價格</label>
-                            <input type="text" id="product_newPrice" name="name" class="form-control">
+                            <label for="product_newPrice"></label>
+                            <input type="text" id="product_newPrice" name="name" class="form-control" placeholder="產品作家">
                         </div>
                         <div class="form-group">
-                            <label for="illustrate">產品說明</label>
-                            <input name="illustrate" type="text" class="form-control">
+                            <label for="illustrate"></label>
+                            <input name="illustrate" type="text" class="form-control" placeholder="產品說明">
                         </div>
                       </form>
                       <form runat="server">
@@ -164,22 +164,22 @@
                             商品編號:12345
                             <form>
                                 <div class="form-group">
-                                    <label for="name">名稱</label>
-                                    <input type="text" name="name" class="form-control">
+                                    <label for="name"></label>
+                                    <input type="text" name="name" class="form-control" placeholder="名稱">
                                 </div>
                                 <div class="form-group">
-                                    <label for="artist">藝術家</label>
-                                    <input type="text" name="artist" class="form-control">
+                                    <label for="artist"></label>
+                                    <input type="text" name="artist" class="form-control" placeholder="藝術家">
                                 </div>
                                 <div class="form-group edit_lay">
-                                    <label for="price">價格</label>
-                                    <input type="text" name="price" class="form-control">
-                                    <label for="count">數量</label>
-                                    <input type="text" name="count" class="form-control">
+                                    <label for="price"></label>
+                                    <input type="text" name="price" class="form-control" placeholder="價格">
+                                    <label for="count"></label>
+                                    <input type="text" name="count" class="form-control" placeholder="數量">
                                 </div>
                                 <div class="form-group">
-                                    <label for="illustrate">產品說明</label>
-                                    <input name="illustrate" type="text" class="form-control">
+                                    <label for="illustrate"></label>
+                                    <input name="illustrate" type="text" class="form-control" placeholder="產品說明"> 
                                 </div>
                             </form>
                             <form runat="server">

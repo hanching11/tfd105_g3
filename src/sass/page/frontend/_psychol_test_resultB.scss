@@ -1,0 +1,108 @@
+/* 心理測驗的部分 */
+.pt_result_B {
+    font-family: "Cinzel", "Noto Serif TC", serif;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    background-image: url("/src/img/psychol_test/A2.jpg");
+    background-size: cover;
+    background-position: center center;
+    color: #eeeae2;
+    .psychol_test_content {
+        text-align: center;
+        line-height: 3;
+    }
+
+    .psychol_title h1 {
+        font-size: 1.5rem;
+        letter-spacing: 1rem;
+        line-height: 5;
+        margin-left: 6%;
+        font-weight: bold;
+    }
+
+    /* 心理測驗結果 */
+    .test_result {
+        text-align: center;
+        display: flex;
+        margin-top: 30px;
+    }
+
+    .artist_name h2 {
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        line-height: 3;
+        font-weight: bold;
+    }
+
+    .artist_name p {
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .artwork {
+        margin-left: 15%;
+        margin-bottom: 100px;
+    }
+
+    .result_right {
+        display: block;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    .artist h2 {
+        font-size: 2rem;
+        letter-spacing: 5px;
+        line-height: 3;
+        color: #c3bdb3;
+        font-weight: bold;
+    }
+
+    .artist_introduce {
+        width: 600px;
+        line-height: 2.5;
+    }
+
+    .artist_introduce p {
+        font-weight: normal;
+    }
+
+    .painting img {
+        height: 350px;
+        border-radius: 25px;
+        border: 1px solid #eeeae2;
+        margin: 0 auto;
+        transition: 1s;
+    }
+
+    .painting img:hover {
+        transform: rotatey(180deg);
+        filter: sepia(0.5);
+        border: 1px solid #ab8a49;
+    }
+
+    .recommend {
+        margin-top: 15%;
+        text-align: right;
+    }
+
+    .recommend a {
+        color: #eeeae2;
+        font-weight: bold;
+        font-size: 1rem;
+        letter-spacing: 5px;
+        transition: 0.5s;
+        text-decoration: none;
+    }
+
+    .recommend a:hover {
+        color: #c3bdb3;
+        letter-spacing: 8px;
+        filter: sepia(0.5);
+    }
+
+    .recommend img:hover {
+        filter: sepia(0.5);
+    }
+}
