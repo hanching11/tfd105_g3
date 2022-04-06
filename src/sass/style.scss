@@ -9,8 +9,8 @@
 // 共用區
 @import './base/reset';
 @import './base/var';
-@import './layout/header';
-@import './layout/footer';
+// @import './layout/header';
+// @import './layout/footer';
 // @import './layout/login';
 // @import './layout/nav';
 // @import './layout/RWD';
@@ -26,12 +26,9 @@
 @import './page/frontend/online_gallery';
 @import './page/frontend/_online_gallery_exhibition';
 @import './page/frontend/exhibition';
-<<<<<<< HEAD
 @import './page/frontend/about';
 
-=======
 @import './page/frontend/online_gallery_exhibition_painting';
->>>>>>> Dolly
 
 // 結帳區
 @import './page/frontend/checkout1';
@@ -42,8 +39,8 @@
 
 
 
-@import './page/backend/backendcom';
-@import './page/backend/b_product';
+// @import './page/backend/backendcom';
+// @import './page/backend/b_product';
 
 
 

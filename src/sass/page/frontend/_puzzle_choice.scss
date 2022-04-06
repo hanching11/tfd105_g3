@@ -1,6 +1,6 @@
 .wrapper_pazzle_choice{
- 
-    *,
+   
+        *,
     *:after,
     *::before {
         -webkit-box-sizing: border-box;
@@ -9,7 +9,7 @@
     }
     
     // padding: 20px 20px;
-    position: relative;  //暫放
+    
     width: 100%;
     margin: 0 auto;
 
@@ -18,6 +18,8 @@
         background-size: cover;
         width: 100%;
         height: 1200px;
+
+        position: relative;  //暫時
     }
 
     .puzzle_name{
@@ -42,36 +44,49 @@
         padding-top: 20px;
     }
 
-    .puzzle_choice{
-        // width: 720px;
-        margin: 50px auto;
+    .swiper-container{
+        // width: 720px 暫時註解
+        // margin: 50px auto;暫時註解
+        max-width: 1280px;
+        width: 80%;
+        height: 500px;
+        margin: 0 auto;
+        // height: 100%; 
+        border-radius: 25px;
+
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        //  Fix of Webkit flickering 
+        z-index: 1;
     }
 
-
-    //swiper-container
-    .btn-group{
-        width: 720px;
+    .swiper-wrapper{
+        // width: 720px; //暫時註解
         // margin: 0 auto;
         // display: flex;
         // flex-grow: 1;
 
     }
 
-    .btnn{
+    .swiper-slide{
         border-radius: 25px;
         display: block;
         background: transparent;
         border: none;
         border:5px solid transparent;
         // padding: 5px;
-        margin: 0 25px;
+        // margin: 0 25px;
         // margin-right: 50px;
-        padding: 0;
+        // padding: 0;
+
+        text-align: center;
+        
 
 
     }
 
-    .btn-group button.active{ 
+    .swiper-wrapper button.active{ 
         border-radius: 25px;
         // background-color: $coffeebrown !important; 
         color: $darkbrown1;
@@ -93,16 +108,23 @@
     .button_content{
 
     }
-    //
-    .choice-slide {
+
+    //改成swiper-slide
+    .swiper-slide {
         // margin: 0 50px;
         // margin-bottom: 120px;
-        width: 180px;
-        
+        // width: 180px;
+        -webkit-flex-shrink: 0;
+        -ms-flex: 0 0 auto;
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        // position: relative; 
+        border-radius: 25px;
     
     }
 
-    .choice-slide:hover {
+    .swiper-slide:hover {
         // margin: 0 50px;
         // margin-bottom: 120px;
         // width: 200px;
@@ -115,9 +137,9 @@
     
     }
     
-    .choice-slide .part-1 {
+    .swiper-slide .part-1 {
         position: relative;
-        height: 270px;
+        height: 320px;
         // max-height: 290px;
         // margin-bottom: 20px;
         overflow: hidden;
@@ -127,7 +149,7 @@
         
     }
     
-    .choice-slide .part-1::before {
+    .swiper-slide .part-1::before {
             position: absolute;
             content: "";
             top: 0;
@@ -138,7 +160,7 @@
             transition: all 0.3s;
     }
     
-    .choice-slide:hover .part-1::before {
+    .swiper-slide:hover .part-1::before {
             transform: scale(1.1,1.1) rotate(0deg);
     }
 
@@ -193,7 +215,7 @@
         margin-top: 50px;
     }
 
-    .submit-blt .blt{
+    .submit-blt .bltt{
         width: 130px;
         height: 55px;
         border: 1px solid #FFF;
@@ -202,25 +224,11 @@
         border-radius: 25px;
         font-size: 20px;
     }
+    
 
-
-    //新增的
-    .swiper-container {
-        max-width: 1280px;
-        width: 80%;
-        height: 360px;
-        margin: 0 auto;
-        border-radius: 25px;
-    }
-
-    .swiper-container {
-        margin-left: auto;
-        margin-right: auto;
-        overflow: hidden;
-        z-index: 1;
-      }
 
     .swiper-wrapper {
+        // position: relative; 
         
         width: 100%;
         height: 100%;
@@ -238,91 +246,46 @@
         -webkit-box-sizing: content-box;
         -moz-box-sizing: content-box;
         box-sizing: content-box;
-    }
-
-    .swiper-slide {
-        text-align: center;
-        // font-size: 18px; 
-        background: #fff;
-        
-        // Center slide text vertically 
-        // display: -webkit-box;
-        // display: -ms-flexbox;
-        // display: -webkit-flex;
-        // display: flex;
-        // -webkit-box-pack: center;
-        // -ms-flex-pack: center;
-        // -webkit-justify-content: center;
-        // justify-content: center;
-        // -webkit-box-align: center;
-        // -ms-flex-align: center;
-        // -webkit-align-items: center;
-        // align-items: center; 
-    }
-
-    .swiper-slide {
-        -webkit-flex-shrink: 0;
-        -ms-flex: 0 0 auto;
-        flex-shrink: 0;
-        width: 100%;
-        height: 100%;
-        // position: relative; 
-        border-radius: 25px;
       }
-    
-    .swiper-slide .part-1{
-        position: relative;
-        height: 190px;
-        margin-bottom: 20px;
-        overflow: hidden;
-        border-top-left-radius: 25px;
-        border-top-right-radius: 25px;
-      }
-    
-      .swiper-slide .part-1::before {
+
+
+      //   Arrows 
+      .swiper-button-prevone,
+      .swiper-button-nextone {
         position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        transition: all 0.3s;
-    }
+        top: 53%;
+        width: 70px;
+        height: 44px;
+        margin-top: -22px;
+        z-index: 10;
+        
+        cursor: pointer;
+        -moz-background-size: 70px 44px;
+        -webkit-background-size: 70px 44px;
+        background-size: 70px 44px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
     
-    .swiper-slide:hover .part-1::before {
-        transform: scale(1.1,1.1) rotate(0deg);
-    }
-    
-    
+      .swiper-button-prevone{
+        background-image: url("/src/img/arrow/left-arrow.svg");
+        left: 20px;
+        right: auto;
+        // right: 0;
 
-    
-    .swiper-slide .part-2 .product-title {
-        margin-top: 50px;  
-        font-size: 1rem;
-    }
-    
-    .swiper-slide .part-2 h4 {
-        font-size: 1rem;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-    
-    .swiper-slide .part-2 h3 {
-        text-align: center;
-        margin-bottom: 15px;
-    }
-    
-    .swiper-slide .part-2 .buy-now {
-        color: $darkbrown1; 
-        position: relative;
-        padding: 0 7px;
-        border: none;
-        background: none;
-    }
+      }
+      .swiper-button-nextone{
+        background-image: url("/src/img/arrow/right-arrow.svg");
+        right: 20px;
+        left: auto;
+        // left: 0;
+      }
 
 
 
+    
 
+   
+    
 
 }

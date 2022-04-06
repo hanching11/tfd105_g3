@@ -128,7 +128,7 @@ function browser(done) {
    watch(['src/*.html' , 'src/layout/*.html' ,] , includeHTML).on('change' , reload);
    watch(['src/sass/*.scss' , 'src/sass/**/*.scss' , 'src/sass/**/**/*.scss'] , sassstyle).on('change' , reload);
    watch(['src/js/*.js' , 'src/js/**/*.js'] , minijs).on('change' , reload);
-   //watch(['src/img/*.*' ,  'src/img/**/*.*'] , package).on('change' , reload);
+   watch(['src/img/*.*' ,  'src/img/**/*.*'] , package).on('change' , reload);
    done();
 }
 
