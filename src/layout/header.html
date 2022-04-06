@@ -55,8 +55,8 @@
             <div class="h_logo">
                 <a href="/dist/index.html"><img src="/src/img/logo.png" alt=""></a>
             </div>
-            <div class="navbar">
-                <div class="nav">
+            <div class="h_navbar">
+                <div class="h_nav">
                     <ul>
                         <li><a href="/dist/login.html"><i class="fa-solid fa-user head_icon"></i></a></li>
                         <li><a href="/dist/cart.html"><i class="fa-solid fa-cart-shopping head_icon"></i></a></li>
@@ -93,31 +93,4 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         referrerpolicy="no-referrer"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-        });
-        $("button.hamburger").on("click", function () {
-            $(this).toggleClass("is-active");
-            $(".nav-list").toggleClass("on");
-        });
-
-        $(".sub-nav").on("click", function () {
-            $(".sub-nav > li").toggle();
-        });
-
-        $(".sub-nav2").on("click", function () {
-            $(".sub-nav2 > li").toggle();
-        });
-
-        $('.sub-nav').on("click", function () {
-            $('#tg1').toggleClass("fas fa-plus-square")
-            $('#tg1').toggleClass("fa-regular fa-square-minus")
-
-        });
-
-        $('.sub-nav2').on("click", function () {
-            $('#tg2').toggleClass("fas fa-plus-square")
-            $('#tg2').toggleClass("fa-regular fa-square-minus")
-
-        });
-    </script>
+    <script src="/dist/js/header.min.js"></script>
