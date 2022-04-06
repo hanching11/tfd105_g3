@@ -16,12 +16,12 @@ $mediumWeight: 500;
 $regularWeight: 400;
 $lightWeight: 300;
 
-$h1: 4.125rem;//66px
-$h2: 3.5rem;//56px
-$h3: 2.75rem;//44px
-$h4: 2.25rem;//36px
+$h1: 4.125rem; //66px
+$h2: 3.5rem; //56px
+$h3: 2.75rem; //44px
+$h4: 2.25rem; //36px
 $h5: 2rem; //32px
-$h6: 1.75rem;//28px
+$h6: 1.75rem; //28px
 
 
 // $h7: 24px; //1.5rem
@@ -39,11 +39,10 @@ $lineheight1: 150%;
 $lineheight2: 200%;
 
 // 中文
-$fontNoserif: 'Noto Sans TC'; 
+$fontNoserif: 'Noto Sans TC';
 $fontSerif:'Noto Serif TC';
 
 
 // 英文
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&display=swap');
 $englishFont: 'Cinzel';
-
