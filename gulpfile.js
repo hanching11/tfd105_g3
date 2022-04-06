@@ -129,7 +129,7 @@ function browser(done) {
    // });
    watch(['src/*.html' , 'src/layout/*.html' ,] , includeHTML).on('change' , reload);
    watch(['src/sass/*.scss' , 'src/sass/**/*.scss' , 'src/sass/**/**/*.scss'] , sassstyle).on('change' , reload);
-   // watch(['src/js/*.js' , 'src/js/**/*.js'] , minijs).on('change' , reload);
+   watch(['src/js/*.js' , 'src/js/**/*.js'] , minijs).on('change' , reload);
    watch(['src/img/*.*' ,  'src/img/**/*.*'] , package).on('change' , reload);
    done();
 }
@@ -186,7 +186,7 @@ exports.cls = clear
 
 
 // dev開發
-exports.default = series(parallel(includeHTML ,sassstyle ,package, auto_css),browser)
+exports.default = series(parallel(includeHTML ,sassstyle ,package, auto_css, minijs),browser)
 
 // 上線壓縮打包用
 exports.online = series (clear, parallel(includeHTML, sassstyle, babel5, min_images,))
