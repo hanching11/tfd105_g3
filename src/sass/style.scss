@@ -16,9 +16,6 @@
 // @import './layout/RWD';
 
 
-
-
-
 //前台頁面
 @import './page/frontend/checkout';
 @import './page/frontend/index';
@@ -40,6 +37,12 @@
 @import './page/frontend/psychol_test_resultB';
 @import './page/frontend/psychol_test_resultC';
 @import './page/frontend/psychol_test_resultD';
+
+
+////後臺頁面//////////
+
+@import './page/backend/backend_com';
+@import './page/backend/b_product';
 
 
 
