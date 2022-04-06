@@ -12,6 +12,7 @@
         // border: 1px solid blue;
       }
 
+    // 畫廊宗旨
       .-aboutBanner{
           padding: 50px;
         // border: 5px solid blue;
@@ -22,7 +23,7 @@
           background-image: url(/src/img/about/1922.4467\ -\ Old\ Man\ with\ a\ Gold\ Chain.jpg);
         }
 
-        h4{
+        h4, .-aboutPlace{
             font-size: $h4;
             color: $beidge1;
             font-weight: $boldWeight;
@@ -36,21 +37,19 @@
             letter-spacing: $letterSpacing1;
         }
 
+        // 光緣畫廊
+        .-aboutlLogo img{
+            width: 100%;
+        // border: 5px solid blue;
 
-        .col-6.-aboutlLogo{
-            height:450px;
-            background-repeat: no-repeat;
-            // background-size: cover;
-            background-position:right;
-            background-image: url(/src/img/about/about_logo.png);
         }
 
-        .col-3 {
-           
+        .-aboutK{
+            padding: 80px;
+            
         }
+
       .-aboutK h4{
-       
-
         font-size: $h4;
         color: $darkbrown1;
         font-weight: $boldWeight;
@@ -62,8 +61,27 @@
         font-weight: $regularWeight;
         line-height: $lineheight2;
         letter-spacing: $letterSpacing1;
+        text-align:justify;
       }
 
 
+    //  實體畫廊
+    .-placePic{
+        height:450px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:bottom;
+        background-image: url(/src/img/about/about_place.jpg);
+    }
+
+    .-placeInfo h4{
+        text-align: center;
+    }
+
+    .-placeInfo{
+        float: right;
+        text-align: left;
+        width: 30%;
+    }
 
 }
