@@ -203,7 +203,7 @@ $media_p:$p+0.8;
             margin: 20px;
 
 
-      
+
         }
 
         div .col-lg-6 {
@@ -745,7 +745,8 @@ $media_p:$p+0.8;
                 .r1 {
                     padding: 0;
 
-                    .rwd-1,.rwd-2 {
+                    .rwd-1,
+                    .rwd-2 {
                         margin: $margin + 10px;
 
 
@@ -758,31 +759,44 @@ $media_p:$p+0.8;
                         margin: 0 auto;
 
                     }
+                    // .rwd-2{
+                    //     background-color: $white;
+                    //     width: 300px;
+                    //     border-radius: $border-radius;
+                    // }
 
-                    
+
                 }
+
                 .rwdbg {
-                        background-image: url(/src/img/index/Rectangle\ 4067-1.jpg);
-                        width: 391px;
-                        border-radius: $border-radius;
-                        margin: 0 auto !important;
-                        margin-top: $margin * 4 !important;
-    
+                    background-image: url(/src/img/index/Rectangle\ 4067-1.jpg);
+                    width: 391px;
+                    border-radius: $border-radius;
+                    margin: 0 auto !important;
+                    margin-top: $margin * 4 !important;
+                  
+                    
+
                 }
 
-              
 
-            };
 
-            .recommendation{
-                margin-top:  $margin * 45;
+            }
 
-                h3{
+            ;
+
+            .recommendation {
+                margin-top: $margin * 45;
+
+                h3 {
                     @include media_h6;
-                    margin: 0 auto;
+                    margin: 0 auto;                   
+                   
 
                 }
-                p{
+                
+
+                p {
                     font-size: $p !important;
 
                 }
@@ -793,7 +807,9 @@ $media_p:$p+0.8;
 
 
         }
-    };
+    }
+
+    ;
 
 
 
