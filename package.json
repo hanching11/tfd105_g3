@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "安裝套件": "npm install",
+    "搬圖片" :" gulp pic", 
     "開發": "gulp",
     "上線打包": "gulp online"
   },
