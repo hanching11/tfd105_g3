@@ -186,7 +186,7 @@ exports.cls = clear
 
 
 // dev開發
-exports.default = series(parallel(includeHTML ,sassstyle, minijs ,package, auto_css),browser)
+exports.default = series(parallel(includeHTML ,sassstyle, minijs ,package, auto_css, minijs),browser)
 
 // 上線壓縮打包用
 exports.online = series (clear, parallel(includeHTML, sassstyle, babel5, min_images,))
