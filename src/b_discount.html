@@ -1,7 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         @@include('./layout/head.html')
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
         <title>光緣畫廊 | KUANG YUAN</title>
     </head>
 <body>
@@ -14,33 +16,108 @@
                 <h6>登出</h6>
             </div>
         </div>
-            <section class="sideLeft">
-                <div class="content_left">
-                    <div class="left_ti">
-                        <h6 class="wd-bord">後臺管理</h6>
-                        <aside class="side_left">
-                            <ul class="ba_bk">
-                                <ol>
-                                    <a href="../dist/b_member.html">會員管理</a>
-                                </ol>
-                                <ol>
-                                    <a href="../dist/b_order.html">訂單管理</a>
-                                </ol>
-                                <ol>
-                                    <a href="../dist/b_product.html">商品管理</a>
-                                </ol>
-                                <ol>
-                                    <a href="../dist/b_item_exhibits.html">展品管理</a>
-                                </ol>
-                                <ol>
-                                    <a href="#">折扣碼管理</a>
-                                </ol>
-                            </ul>
-                        </aside>
-                    </div>
-                </div>      
-            </section>
+        <section class="sideLeft">
+            <div class="content_left">
+                <h6 class="wd-bord">後臺管理</h6>
+                <aside class="side_left">
+                    <ul>
+                        <ol>
+                            <a href="../dist/b_member.html">會員管理</a>
+                        </ol>
+                        <ol>
+                            <a href="../dist/b_order.html">訂單管理</a>
+                        </ol>
+                        <ol>
+                            <a href="../dist/b_product.html">商品管理</a>
+                        </ol>
+                        <ol>
+                            <a href="../dist/b_item_exhibits.html">展品管理</a>
+                        </ol>
+                        <ol>
+                            <a href="../dist/b_discount.html">折扣碼管理</a>
+                        </ol>
+                    </ul>
+                </aside>
+            </div>
+            <div class="sideRight">
+                <div class="channel ju_between">
+                    <div class="fs-6">
+                        <h6>折扣碼管理</h6>
+                    </div>   
+                    <ul class="list_co btn-group" role="group">
+                        <li>
+                            <button type="button" class="btn btn-primary pa_d"  data-bs-toggle="modal" data-bs-target="#new_codeModal">新增</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="table_product">
+                    <table class="table align-middle table-striped">
+                        <thead>
+                            <tr class="table_color table_td--center">
+                                <th scope="col">折扣碼編號</th>
+                                <th scope="col">上架日期</th>
+                                <th scope="col">折扣碼號</th>
+                                <th scope="col">標題</th>
+                                <th scope="col">狀態</th>
+                            </tr>
+                        </thead>
+                        <tbody class>
+                            <tr>
+                                <th scope="row" class="table_td--center">4</th>
+                                <td>2022-4-1</td>
+                                <td>artist134</td>
+                                <td>discount code</td>
+                                <td>上架</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pa_d" data-bs-toggle="modal" data-bs-target="#editBackdrop">
+                                        編輯與查看
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>                 
+        </section>
+        </div>      
+    </section>
+        <!-- 新增折扣碼視窗 -->
+        <section>
+            <!-- Modal -->
+            <div class="modal fade" id="new_codeModal" data-bs-backdrop="static"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="new_codeModal" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h6 class="modal-title" id="new_codeModalLabel">新增折扣碼</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group edit_lay">
+                            <label for="discount_newNumber"></label>
+                            <input type="text" id="discount_newNumber" name="item[new_number]" class="form-control" placeholder="折扣碼號">
+                            <label for="discount_newAmount"></label>
+                            <input type="text" id="discount_newAmount" name="item[new_amount]" class="form-control" placeholder="折扣金額">
+                            <label for="discount_newstatus"></label>
+                            <input type="text" id="product_newCount" name="item[new_status]" class="form-control" placeholder="上下架">
+                        </div>
+                           
+                        <div class="form-group">
+                            <label for="discount_newtittle">標題</label>
+                            <input type="text" id="" name="item[new_tittle]" class="form-control">
+                        </div>
+                    </form>
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                    <button type="button" class="btn btn-primary">儲存</button>
+                </div>
+            </div>
+        </div>
+        </section>
+        <!-- 折扣碼編輯與查看視窗 -->
+
     </div>
-</div>
 </body>
 </html> 
