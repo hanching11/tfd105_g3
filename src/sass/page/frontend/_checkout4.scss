@@ -1,0 +1,105 @@
+// $border-radius5:5px;
+
+
+.wrapper_checkout4{
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  text-align: center;
+  line-height: $lineheight2;
+  margin: 0 120px;
+
+  .container{
+      color: $darkbrown1;
+      // border: solid 1px black;
+  }
+
+  .-checkStep{
+    margin: 40px 0 70px 0;
+  }
+  
+
+    .-num{
+      font-family: $englishFont;
+      font-weight: $boldWeight;
+      font-size: 1.25rem;
+      // border:10px solid blue;
+    }
+
+      .-num::before{
+      // border: 2px solid blue;
+        background-repeat: no-repeat;
+        position: absolute;
+        display: block;
+        content: '';
+        background-image: url(/src/img/checkout/arrow1.svg);
+        top: 50%;
+        left: 90%;
+        height: 22px;
+        width: 100%;
+      }
+      
+      .col{
+        color: $lightgray;
+        font-weight: $boldWeight;
+        line-height: $lineheight1;
+        position: relative;
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      .-fourth{
+        color: $darkbrown1;
+        // border:10px solid blue;
+      }
+ 
+      .-num.-fourth:before{
+      // border: 2px solid blue;
+        display: none;
+      }
+     
+      .row-4{
+        color: $darkbrown1;
+        font-weight: $lightWeight;
+        font-family: $fontNoserif;
+        text-align: right;
+      }
+
+
+      h4{
+        font-size: $h5;
+        font-weight: $boldWeight;
+        margin-bottom: 50px;
+      }
+
+  .checkStep4{
+    padding: 45px;
+    border-top: solid 0.5px $darkbrown1;
+  }
+
+  .checkStep4{
+    border-bottom: solid 0.5px $darkbrown1;
+    margin-bottom: 300px;
+  }
+
+  .orderNum{
+      // border: solid 1px black;
+
+    font-family: $fontNoserif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 60px;
+  }
+
+  p{
+    margin-top: 60px;
+  }
+
+
+
+
+
+}
