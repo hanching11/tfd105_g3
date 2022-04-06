@@ -48,6 +48,9 @@
                         <li>
                             <button type="button" class="btn btn-danger">停權</button>
                         </li>
+                        <li>
+                            <button type="button" class="btn btn-success">復權</button>
+                        </li>
                     </ul>
                 </div>
                 <div class="table_product">
@@ -77,11 +80,6 @@
                                     <td>1666/1/1</td>
                                     <td>0911009988</td>
                                     <td>一般</td>
-                                    <td>
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
-                                            編輯與查看
-                                        </button>
-                                    </td>
                                 </th>
                             </tr>
                         </tbody>
@@ -91,79 +89,5 @@
         </section>
         </div>      
     </section>
-        <!-- 新增商品視窗 -->
-        <section>
-            <!-- Modal -->
-            <div class="modal fade" id="newModal" tabindex="-1" aria-labelledby="newModal" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h6 class="modal-title" id="exampleModalLabel">新增商品</h6>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="product_newName">商品名稱</label>
-                            <input type="text" id="product_newName" name="name" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="product_newArtist">產品作家</label>
-                            <input type="text" id="product_newArtist" name="name" class="form-control">
-                            <label for="product_newCount">數量</label>
-                            <input type="text" id="product_newCount" name="name" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="product_newPrice">價格</label>
-                            <input type="text" id="product_newPrice" name="name" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="illustrate">產品說明</label>
-                            <input name="illustrate" type="text" class="form-control">
-                        </div>
-                      </form>
-                      <form runat="server">
-                        <input accept="image/*" type='file' id="imgInp" multiple="multiple" />
-                        <img id="blah" src="#" alt="your image" />
-                    </form>
-                        
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary">完成</button>
-                </div>
-            </div>
-        </div>
-        </section>
-        <!-- 編輯與查看視窗 -->
-        <section>  
-            <!-- Modal -->
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"></div>
-                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h6 class="modal-title" id="exampleModalLabel">會員編輯</h6>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-                            <button type="button" class="btn btn-primary">完成</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <script>
-        imgInp.onchange = evt => {
-            const [file] = imgInp.files
-            if (file) {
-                blah.src = URL.createObjectURL(file)
-            }
-        }
-    </script>
 </body>
 </html> 
