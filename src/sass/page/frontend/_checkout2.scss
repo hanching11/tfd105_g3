@@ -1,0 +1,237 @@
+// $border-radius5:5px;
+
+@mixin resetForCheckout(){
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none; 
+}
+
+.wrapper_checkout2{
+@include resetForCheckout();
+// @media (min-width: 769px) {
+// margin: 0 120px;
+
+// }
+// @media (max-width: 575.98px) and  (min-width: 768.98px){
+// margin: 0 15px;
+  
+// }
+
+
+  .container{
+    
+  }
+
+  .-checkStep{
+    // position: relative;
+    margin: 40px 0 70px 0;
+  }
+
+  .-num{
+    font-family: $englishFont;
+    font-weight: $boldWeight;
+    font-size: 1.25rem;
+    // border:10px solid blue;
+  }
+
+    .-num::before{
+    // border: 2px solid blue;
+      background-repeat: no-repeat;
+      position: absolute;
+      display: block;
+      content: '';
+      background-image: url(/src/img/checkout/arrow1.svg);
+      top: 50%;
+      left: 90%;
+      height: 22px;
+      width: 100%;
+    }
+    
+    .col{
+      color: $lightgray;
+      font-weight: $boldWeight;
+      line-height: $lineheight1;
+      position: relative;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .col-lg-4{
+      margin: 0 auto;
+    }
+   
+    .-second{
+      color: $darkbrown1;
+      // border:10px solid blue;
+    }
+
+    .-num.-fourth:before{
+    // border: 2px solid blue;
+      display: none;
+    }
+   
+    .-title{
+      // border: 2px solid blue;
+      text-align: center;
+      font-weight: $mediumWeight;
+      // color: $darkbrown1;
+      padding: 25px 0;
+    }
+   
+
+    // 商品資訊
+    .-borderTop{
+      //  border: 2px solid blue;
+      margin-right: 80px;
+     }
+
+
+    button.tax2:hover{
+      color: $white;
+      background: $coffeebrown;
+    }
+
+  
+    input{
+    padding-left: 10px;
+    width: 100%;
+    font-size: $p;
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    }
+  
+
+  button.tax3{
+    text-decoration: none;
+    border-radius: 5px;
+    letter-spacing: $letterSpacing1;
+    font-weight: $lightWeight;
+    font-family: $fontNoserif;
+    color: $white;
+    background: $coffeebrown;
+    font-size: 0.875px;
+    height: 35px;
+    width: 100%;
+    border: none;
+  }
+
+  button.tax2{
+      //  border: 2px solid blue;
+    text-decoration: none;
+    border-radius: 5px;
+    letter-spacing: $letterSpacing1;
+    font-weight: $lightWeight;
+    font-family: $fontNoserif;
+    color: $lightgray;
+    background: $beidge2;
+    font-size: 0.875px;
+    height: 35px;
+    width: 100%;
+    border: none;
+  }
+  
+
+
+.col-sm-12{
+  margin: 0 auto;
+}
+
+.col-2, .col-12{
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  //  border: 2px solid blue;
+
+}
+
+li{
+  display: flex;
+  margin-bottom: 15px;
+  //  border: 2px solid blue;
+
+}
+
+li:first-child{
+  font-size: 0.875rem;
+  flex-basis: 40%;
+  // border: 2px solid blue;
+  // padding-right: 75px;
+}
+
+li:last-child, ol{
+  flex-basis: 100%;
+  // border: 2px solid blue;
+}
+
+.orderTel, .tax3Num{
+  margin-bottom: 25px;
+}
+
+ol:first-child{
+  margin-right: 10px;
+}
+
+.col-12 .col-lg-3 .col-md-4 .col-sm-12{
+flex-basis: 100%;
+}
+
+button.btnCheckS2{
+  flex-grow: 1;
+  text-decoration: none;
+  border-radius: 5px;
+  letter-spacing: $letterSpacing1;
+  font-family: $fontNoserif;
+  color: $white;
+  background: $darkbrown2;
+  height: 35px;
+  width: 100%;
+  border: none;
+  margin-bottom: 10px;
+}
+
+button.btnBackCheckS1{
+  position: relative;
+  padding-left: 10%;
+  flex-grow: 1;
+  text-decoration: none;
+  border-radius: 5px;
+  letter-spacing: $letterSpacing1;
+  font-family: $fontNoserif;
+  color: $darkbrown1;
+  background: $beidge1;
+  height: 35px;
+  width: 100%;
+  border: 1px solid $darkbrown1;
+}
+
+button.btnBackCheckS1::before{
+  // border: 2px solid blue;
+  background-repeat: no-repeat;
+  position: absolute;
+  display: block;
+  content: '';
+  background-image: url(/src/img/checkout/arrow1.svg);
+  top: 30%;
+  left: 10%;
+  height: 25px;
+  width: 100%;
+}
+
+@media all and (max-width: 575.98px){
+
+  .-num::before{
+    display: none;
+    }
+  
+  div.a{
+  // border: 2px solid blue;
+    order: 2;
+  }
+  div.b{
+    order: 1;
+  }
+}
+
+}

@@ -21,10 +21,10 @@
     
         
     }
-// ----------------left-side ------------
+    // ----------------left-side ------------
 
 
-// ---------------------------------------
+    // ---------------------------------------
 .sideLeft {
     display: flex;
     border-top: 1px solid black;
@@ -73,8 +73,12 @@
     .horiz {
         display: flex;
     }
-
-            
+    .table_td--center {
+        text-align: center;
+    }
+    .sideRight{
+        margin: 0 auto;
+    }
 }
 
 

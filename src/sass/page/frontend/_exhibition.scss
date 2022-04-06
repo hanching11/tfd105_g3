@@ -1,4 +1,5 @@
 $fontSerif:'Noto Serif TC';
+$englishFont: 'Cinzel';
 
 $darkbrown1: #353231;
 $beidge1: #EEEAE2;
@@ -206,7 +207,7 @@ $beidge2: #E3DED4;
         font-weight: bold;
         text-align: left;
         position: absolute;
-        top: 8%;
+        top: 7%;
         right: 19%;
 
 
@@ -220,7 +221,8 @@ $beidge2: #E3DED4;
 
     #s4 .s4_second .second_intro{
         // padding-top: 40px;
-        margin-left: 70px;
+        margin-left: 80px;
+        margin-top: 40px;
     
     }
 
@@ -231,7 +233,7 @@ $beidge2: #E3DED4;
 
     #s4 .s4_second .second_intro img{
         // position: absolute;
-        margin-top: 70px;
+        margin-top: 45px;
         margin-right: 40px;
       
 
@@ -241,7 +243,7 @@ $beidge2: #E3DED4;
 
     #s4 .s4_second .second_intro p{
         position: absolute;
-        top: 38%;
+        top: 34%;
         left: 10%;
         text-align: left;
         font-size: 18px;
@@ -301,20 +303,168 @@ $beidge2: #E3DED4;
         border-radius: 10px;
       } 
 
-     #swiper_pic{
+    .swiper-slide img{
+        border-radius:10px;
+    }
+        
+
+
+   .swiper-button-nextone{
+       position: absolute;
+       bottom: 13%;
+       left: 5%;
+       cursor: pointer;
+
+   }
+
+   .swiper-button-prevone{
+      position: absolute;
+       bottom: 13%;
+       right: 5%;
+       cursor: pointer;
+   }
+
+  
+
+
+     #s5{
+         background-image: url(/src/img/exhibition/f5-2.png);
+         background-repeat: no-repeat;
+         background-size: cover;
+         position: relative;
+     }
+
+     #s5 p{
+         position: absolute;
+         color: #FFFFFF;
+         font-size: 18px;
+         font-weight: bold;
+         font-family: $fontSerif;
+         line-height: 1.8;
+         bottom: 3%;
+         right: 8%;
+         background-color:rgba(48, 48, 48, 0.5);
+         padding: 20px;
          border-radius: 10px;
      }
 
 
-      #s5 img{
-          width: 100%;
-        
-      }
+  
 
       #s6{
           background-image: url(/src/img/exhibition/f6-bacl.png);
-          
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
       }
+
+
+      #s6 .sspic{
+          position: absolute;
+          top: 6%;
+          right: 33%;
+      }
+
+      #s6 .f6_border{
+          position: absolute;
+          top: 1%;
+          right: 30.5%;
+
+      }
+
+      #s6 .f6_p{
+          text-align: center;
+          color: #FFFFFF;
+          font-size: 18px;
+          font-weight: bold;
+          line-height: 1.8;
+          font-family: $fontSerif;
+          position: absolute;
+          bottom: 0;
+          right: 17%;
+      }
+
+
+      #s7{
+          position: relative;
+      }
+
+      #s7 .f7_main{
+        display: flex;
+        padding-left:50 ;
+      }
+
+      #s7 .f7_h1 h1{
+          font-size: 40px;
+          font-family: $englishFont;
+          font-weight: bold;
+          line-height: 1.6;
+          color: $coffeebrown;
+          text-align: center;
+          z-index: 99;
+          position: absolute;
+          top: 8%;
+          right: 28%;
+
+      }
+
+
+    //   #s7 .f7_main img{
+    //       position: absolute;
+    //       top: 10%;
+    //       left: 7%;
+    //   }
+
+
+    #s7 .f7_main .f7_mainpic{
+        position: absolute;
+        top: 10%;
+        left: 4%;
+
+
+    }
+
+
+
+
+
+      #s7 .f7_main p{
+          font-size: 24px;
+          font-family: $englishFont;
+          font-weight: bold;
+          line-height: 1.8;
+          color: $darkbrown1;
+          position: absolute;
+          top: 28%;
+          right: 7%;
+
+      }
+
+      #s7 .f7_btn{
+          background-color: #786B54;
+          width: 190px;
+          height: 50px;
+          position: absolute;
+          bottom: 3%;
+          right: 20%;
+          border-radius:15px ;
+          border: none;
+      }
+
+      #s7 .f7_btn a{
+          display: block;
+          text-decoration: none;
+          color: #f3f3f3;
+          font-family: $englishFont;
+          font-weight: bold;
+
+      }
+
+
+
+
+
+
 
 
   
