@@ -4,17 +4,51 @@
     box-sizing: border-box;
     overflow: hidden;
 
-    .online_gallery_exhibition_painting>a {
-        font-size: 12px;
-        margin-left: 50px;
+    //返回展間
+    a {
         color: $coffeebrown;
         text-decoration: none;
     }
 
+    a:nth-child(1) {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-left: 120px;
+        color: $coffeebrown;
+        text-decoration: none;
+        display: block;
+    }
+
+
+    //右下icon
+    .media_icon {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .media_icon {
+        font-size: 18px;
+        color: $coffeebrown;
+        text-decoration: none;
+        display: block;
+        font-family: $englishFont;
+        float: right;
+        margin-right: 120px;
+    }
+
+    .media_icon p {
+        display: inline;
+    }
+
+    .media_icon i {
+        font-size: 20px;
+    }
+
+    //中間部分
     .box {
         display: flex;
         width: 100%;
-        height: 100%;
+        height: 90%;
     }
 
     // 左圖    
@@ -98,16 +132,27 @@
 
     .online_gallery_exhibition_painting .box .info {
         width: 100%;
-        padding: 20px 20px;
+        padding: 0 15px;
     }
 
     .online_gallery_exhibition_painting .box .info h2,
     .online_gallery_exhibition_painting .box .info h3 {
-        font-size: 18px;
+        font-size: 25px;
     }
 
     .online_gallery_exhibition_painting .box .info h2 {
         margin-bottom: 10px;
+    }
+
+    .online_gallery_exhibition_painting a:nth-child(1) {
+        margin-left: 15px;
+    }
+
+    .online_gallery_exhibition_painting .media_icon {
+        margin-left: 15px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        float: left;
     }
 }
 
