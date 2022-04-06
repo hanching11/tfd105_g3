@@ -1,11 +1,4 @@
 .wrapper_header {
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        // font-family: "Cinzel", "Noto Serif TC", serif;
-    }
-
     a {
         text-decoration: none;
         color: #353231;
@@ -26,7 +19,7 @@
         color: #eeeae2;
         font-size: 30px;
         transition: 0.5s;
-        margin-top: 15px;
+        margin-top: 20px;
     }
 
     i:hover {
@@ -68,11 +61,11 @@
         margin-left: 60px;
     }
 
-    .navbar {
+    .h_navbar {
         margin-right: 60px;
     }
 
-    .nav {
+    .h_nav {
         display: flex;
     }
 
@@ -90,7 +83,7 @@
         background-color: transparent;
         border: 0;
         margin: 0;
-        padding-top: 15px;
+        padding-top: 20px;
         overflow: visible;
     }
 
@@ -225,7 +218,7 @@
     /* 選單列 */
 
     .nav-list {
-        // position: fixed;
+        position: fixed;
         right: 0;
         top: 70px;
         background-color: #c3bdb3;
@@ -321,5 +314,39 @@
     .on {
         display: inline-block !important;
     }
-  
+    @media screen and (max-width: 575.98px) {
+        div .header_bac {
+            width: 100%;
+        }
+    }
+
+    @media screen and (min-width: 576px) and (max-width: 767.98px) {
+        div .header_bac {
+            width: 540px;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 991.98px) {
+        div .header_bac {
+            width: 720px;
+        }
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1199.98px) {
+        div .header_bac {
+            width: 960px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) and (max-width: 1399.98px) {
+        div .header_bac {
+            width: 1140px;
+        }
+    }
+
+    @media screen and (min-width: 1400px) {
+        div .header_bac {
+            width: 1320px;
+        }
+    }
 }
