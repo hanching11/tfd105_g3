@@ -42,7 +42,7 @@
 
 // 這邊是預設區，要變動請告知。
 body{
-    font-family: $fontSerif, $fontNoserif, $englishFont;
+    font-family:  #{$fontSerif}, #{$englishFont}, #{$fontNoserif};
     font-weight: $mediumWeight; //預設
     background-color: $beidge1;
     

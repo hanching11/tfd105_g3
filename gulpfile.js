@@ -30,21 +30,21 @@ exports.c = minicss;
 
 
 //  js minify ckeck 
-// const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify');
 
-// function minijs() {
-//    return src(['src/js/*.js', 'src/js/**/*.js'])
-//       .pipe(uglify())
-//       .pipe(rename({
-//          extname: '.min.js' // 修改附檔名
-//          //prefix : 'web-' // 前綴字
-//          //suffix : '-min'  // 後綴字
-//          //basename : 'all' //更名
-//       }))
-//       .pipe(dest('dist/js'))
-// }
+function minijs() {
+   return src(['src/js/*.js', 'src/js/**/*.js'])
+      .pipe(uglify())
+      .pipe(rename({
+         extname: '.min.js' // 修改附檔名
+         //prefix : 'web-' // 前綴字
+         //suffix : '-min'  // 後綴字
+         //basename : 'all' //更名
+      }))
+      .pipe(dest('dist/js'))
+}
 
-// exports.ugjs = minijs;
+exports.ugjs = minijs;
 
 
 // 整合所有檔案
