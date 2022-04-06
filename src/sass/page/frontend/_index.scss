@@ -881,8 +881,17 @@ $media_p:$p+0.8;
 
                         }
 
+                        .col-lg-10{
+                            margin: 0 !important;
+                        }
+
 
                     }
+
+
+
+
+
 
 
 
@@ -897,6 +906,50 @@ $media_p:$p+0.8;
 
 
             }
+
+            ;
+
+            .product_description {
+                margin: 0;
+                margin-top: $margin * 2;
+
+
+                h3 {
+                    @include media_h6;
+                    margin: 0 auto;
+                    text-align: center;
+
+
+                }
+
+                p {
+                    font-size: $p !important;
+                    text-align: center;
+
+
+
+                }
+
+                button {
+                    width: auto;
+                    width: 50px;
+
+
+                    img {
+
+                        width: 100%;
+                        // width: 50px;
+
+
+                    }
+                }
+
+
+            }
+
+            ;
+
+
 
 
         }
