@@ -63,6 +63,7 @@
                 text-decoration: none;
                 color: #fff;
             }
+
     //共用區 
     .ju_between {
         justify-content: space-between;
@@ -78,6 +79,11 @@
     }
     .sideRight{
         margin: 0 auto;
+    }
+    .table_img_wid {
+        width: 70px;
+    }   img {
+        display: block;
     }
 }
 
