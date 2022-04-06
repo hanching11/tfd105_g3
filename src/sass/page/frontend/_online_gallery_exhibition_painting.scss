@@ -1,0 +1,169 @@
+.online_gallery_exhibition_painting {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    //返回展間
+    a {
+        color: $coffeebrown;
+        text-decoration: none;
+    }
+
+    a:nth-child(1) {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-left: 120px;
+        color: $coffeebrown;
+        text-decoration: none;
+        display: block;
+    }
+
+
+    //右下icon
+    .media_icon {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .media_icon {
+        font-size: 18px;
+        color: $coffeebrown;
+        text-decoration: none;
+        display: block;
+        font-family: $englishFont;
+        float: right;
+        margin-right: 120px;
+    }
+
+    .media_icon p {
+        display: inline;
+    }
+
+    .media_icon i {
+        font-size: 20px;
+    }
+
+    //中間部分
+    .box {
+        display: flex;
+        width: 100%;
+        height: 90%;
+    }
+
+    // 左圖    
+    .box .paint {
+        width: 50%;
+        // height: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin: auto;
+    }
+
+    .box .paint img {
+        width: 360px;
+        display: block;
+        margin: auto;
+    }
+
+    // 右文
+    .box .info {
+        width: 50%;
+        box-sizing: border-box;
+        overflow: hidden;
+        letter-spacing: .2rem;
+        line-height: 1.6;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .box .info h2 {
+        font-size: $h6;
+        color: $coffeebrown;
+        font-family: $englishFont;
+        font-weight: bold;
+    }
+
+    .box .info h3 {
+        font-size: $h6;
+        color: $coffeebrown;
+        font-family: $englishFont;
+
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            width: 80%;
+            height: .5px;
+            background-color: $coffeebrown;
+        }
+    }
+
+    .box .info p {
+        margin-top: 20px;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 575.98px) {
+    .online_gallery_exhibition_painting {
+        width: 100%;
+        height: 100%;
+    }
+
+    .online_gallery_exhibition_painting .box {
+        display: block;
+    }
+
+    .online_gallery_exhibition_painting .box .paint {
+        width: 100%;
+        padding: 50px 15px;
+        box-sizing: border-box;
+    }
+
+    .online_gallery_exhibition_painting .box .paint img {
+        width: 330px;
+    }
+
+    .online_gallery_exhibition_painting .box .info {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .online_gallery_exhibition_painting .box .info h2,
+    .online_gallery_exhibition_painting .box .info h3 {
+        font-size: 25px;
+    }
+
+    .online_gallery_exhibition_painting .box .info h2 {
+        margin-bottom: 10px;
+    }
+
+    .online_gallery_exhibition_painting a:nth-child(1) {
+        margin-left: 15px;
+    }
+
+    .online_gallery_exhibition_painting .media_icon {
+        margin-left: 15px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        float: left;
+    }
+}
+
+
+
+@media screen and (min-width: 576px) and (max-width: 767.9px) {}
+
+@media screen and (min-width: 768px) and (max-width: 991.8px) {}
+
+@media screen and (min-width: 992px) and (max-width: 1199.8px) {}
+
+@media screen and (min-width: 1200px) and (max-width: 1399.8px) {}
+
+@media screen and (min-width: 1400px) {}
