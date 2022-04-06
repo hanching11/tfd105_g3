@@ -22,7 +22,7 @@
   }
   
   .col-12 .col-lg-6 .col-md-8 .col-sm-12{
-  // margin: 0 auto;
+  margin: 0 auto;
 
 }
 
@@ -237,8 +237,8 @@
 
     .text-muted li:first-child{
       // border: 1px solid orange;
-      flex-basis: 0;
-     flex-grow: 1;
+      flex-basis: 100%;
+    //  flex-grow: 1;
       color: $darkbrown1;
       font-family: $fontSerif;
       letter-spacing: $letterSpacing1;
@@ -327,7 +327,7 @@
       }
 
     .row.-infoCheck li ol:last-child{
-      border: 1px solid red;
+      // border: 1px solid red;
       text-align: left;
       // align-content:center;
       line-height: $lineheight1;
@@ -423,6 +423,8 @@
       height: 35px;
       width: 100%;
       border: none;
+      margin-bottom: 10px;
+
     }
 
     .btnBackshop{
@@ -439,4 +441,20 @@
       width: 100%;
       border: 1px solid $darkbrown1;
     }
+
+    @media all and (max-width: 575.98px){
+
+      .-num::before{
+        display: none;
+        }
+      
+      div.a{
+      // border: 2px solid blue;
+        order: 2;
+      }
+      div.b{
+        order: 1;
+      }
+    }
+    
 }

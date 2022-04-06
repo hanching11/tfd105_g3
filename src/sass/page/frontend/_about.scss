@@ -1,0 +1,69 @@
+.wrapper_about{
+    div.container, div.container-fluid{
+       
+        text-align: center;
+        // align-items:center;
+        // align-self:center;
+        border: 1px solid red;
+      }
+      div.container div.col, div.container-fluid div.col{
+        margin: 0 auto;
+
+        // border: 1px solid blue;
+      }
+
+      .-aboutBanner{
+          padding: 50px;
+        // border: 5px solid blue;
+          height:450px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position:bottom;
+          background-image: url(/src/img/about/1922.4467\ -\ Old\ Man\ with\ a\ Gold\ Chain.jpg);
+        }
+
+        h4{
+            font-size: $h4;
+            color: $beidge1;
+            font-weight: $boldWeight;
+            padding: 30px;
+        }
+
+        span{
+            color: $beidge1;
+            font-weight: $regularWeight;
+            line-height: $lineheight2;
+            letter-spacing: $letterSpacing1;
+        }
+
+
+        .col-6.-aboutlLogo{
+            height:450px;
+            background-repeat: no-repeat;
+            // background-size: cover;
+            background-position:right;
+            background-image: url(/src/img/about/about_logo.png);
+        }
+
+        .col-3 {
+           
+        }
+      .-aboutK h4{
+       
+
+        font-size: $h4;
+        color: $darkbrown1;
+        font-weight: $boldWeight;
+        padding: 30px;
+      }
+
+      .-aboutK span{
+        color: $darkbrown1;
+        font-weight: $regularWeight;
+        line-height: $lineheight2;
+        letter-spacing: $letterSpacing1;
+      }
+
+
+
+}
