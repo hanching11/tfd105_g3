@@ -61,6 +61,10 @@
       margin: 0 auto;
     }
    
+    .-second{
+      color: $darkbrown1;
+      // border:10px solid blue;
+    }
 
     .-num.-fourth:before{
     // border: 2px solid blue;
@@ -72,7 +76,6 @@
       text-align: center;
       font-weight: $mediumWeight;
       // color: $darkbrown1;
-   
       padding: 25px 0;
     }
    
@@ -185,6 +188,7 @@ button.btnCheckS2{
   height: 35px;
   width: 100%;
   border: none;
+  margin-bottom: 10px;
 }
 
 button.btnBackCheckS1{
@@ -215,8 +219,19 @@ button.btnBackCheckS1::before{
   width: 100%;
 }
 
+@media all and (max-width: 575.98px){
 
-
-
+  .-num::before{
+    display: none;
+    }
+  
+  div.a{
+  // border: 2px solid blue;
+    order: 2;
+  }
+  div.b{
+    order: 1;
+  }
+}
 
 }
