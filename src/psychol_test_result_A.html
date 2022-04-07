@@ -11,35 +11,69 @@
     <!-- 心理測驗結果 -->
     @@include('layout/header.html')
     <section class="pt_result_A">
-        <div class="psychol_title ">
+        <div class="c_pt_resultA">
+            <div class="psychol_title ">
+                <h1>心理測驗 | 測驗結果</h1>
+            </div>
+    
+            <div class="test_result">
+                <div class="artwork">
+                    <div class="painting">
+                        <img src="./img/psychol_test/A1.jpg" alt="">
+                    </div>
+                    <div class="artist_name">
+                        <h2>Pablo Picasso</h2>
+                        <p>The Old Guitarist</p>
+                    </div>
+                </div>
+    
+                <div class="result_right">
+                    <div class="artist">
+                        <h2>A. Pablo Picasso</h2>
+                    </div>
+                    <div class="artist_introduce">
+                        <p>
+                            1881年10月25日生於西班牙馬拉加，畢卡索一生是個不斷變化藝術手法的探求者，印象派、後期印象派、野獸的藝術手法都被他汲取改造為自己的風格。他的才能在於他的各種變異風格中，都保持自己粗獷剛勁的個性，而且在各種手法的使用中，都能達到內部的統一與和諧。畢卡索也是立體派、拼貼畫等的代表性作家，最為人熟知的畫作還包括「亞維儂姑娘」和「格爾尼卡城」等。
+                        </p>
+                    </div>
+                    <div class="recommend">
+                        <a href="./shop.html">前往推薦商品! <img src="./img/arrow/right-arrow.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile version -->
+       <div class="mobile_test_result">
+        <div class="m_psychol_title ">
             <h1>心理測驗 | 測驗結果</h1>
         </div>
 
-        <div class="test_result">
-            <div class="artwork">
-                <div class="painting">
-                    <img src="/src/img/psychol_test/A1.jpg" alt="">
+        <div class="m_test_result">
+            <div class="m_artwork">
+                <div class="m_painting">
+                    <img src="./img/psychol_test/A1.jpg" alt="">
                 </div>
-                <div class="artist_name">
+                <div class="m_artist_name">
                     <h2>Pablo Picasso</h2>
                     <p>The Old Guitarist</p>
                 </div>
             </div>
 
-            <div class="result_right">
-                <div class="artist">
+            <div class="m_result_right">
+                <div class="m_artist">
                     <h2>A. Pablo Picasso</h2>
                 </div>
-                <div class="artist_introduce">
+                <div class="m_artist_introduce">
                     <p>
                         1881年10月25日生於西班牙馬拉加，畢卡索一生是個不斷變化藝術手法的探求者，印象派、後期印象派、野獸的藝術手法都被他汲取改造為自己的風格。他的才能在於他的各種變異風格中，都保持自己粗獷剛勁的個性，而且在各種手法的使用中，都能達到內部的統一與和諧。畢卡索也是立體派、拼貼畫等的代表性作家，最為人熟知的畫作還包括「亞維儂姑娘」和「格爾尼卡城」等。
                     </p>
                 </div>
-                <div class="recommend">
-                    <a href="/dist/shop.html">前往推薦商品! <img src="/src/img/checkout/arrow1.svg" alt=""></a>
+                <div class="m_recommend">
+                    <a href="./shop.html">前往推薦商品! <img src="./img/arrow/right-arrow.svg" alt=""></a>
                 </div>
             </div>
         </div>
+       </div>
     </section>
     
     @@include('layout/footer.html')
