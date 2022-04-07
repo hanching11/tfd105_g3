@@ -1522,7 +1522,7 @@ function lookForLoops(tbCases) {
 
 window.addEventListener("load", function () {
 
-  let img = './img/Puzzle/game/still-life.png';
+let img = './img/Puzzle/game/still-life.png';
 
   autoStart = isMiniature(); // used for nice miniature in CodePen
 

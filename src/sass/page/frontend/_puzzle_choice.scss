@@ -236,6 +236,21 @@
         color: $darkbrown2;
     
     }
+
+    .bltt a{
+        color: $beidge2;
+        text-decoration: none;
+        display: block;
+    }
+
+    .submit-blt a:hover{
+        
+        // background: $beidge2;
+        color: $darkbrown2;
+    
+    }
+
+
     
 
 
@@ -520,6 +535,11 @@
         color: $beidge1;
         border-radius: 25px;
         font-size: 16px;
+    }
+
+    .bltt a{
+        color: $beidge1;
+        text-decoration: none;
     }
     
 
