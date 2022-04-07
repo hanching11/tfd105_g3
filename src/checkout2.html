@@ -5,7 +5,7 @@
     </head>
 
 <body>
-  <!-- @@include('./layout/header.html') -->
+  @@include('./layout/header.html')
   <div class="wrapper_checkout2">
 
     <!-- sm 以上範圍，三欄均分 -->
@@ -165,16 +165,23 @@
          
           <div class="row -checkStep">
             <div class="a col-12 col-lg-3 col-md-4 col-sm-12">
-                <button type="submit" class="btnBackCheckS1">返回購物清單</button>
+                <button type="submit" class="btnBackCheckS1">
+                  <a href="./checkout1.html">返回購物清單</a>
+                  
+                </button>
             </div>
             <div class="b col-12 col-lg-3 col-md-4 col-sm-12">
-              <button type="submit" class="btnCheckS2">確認資訊</button>
+              <button type="submit" class="btnCheckS2">
+                <a href="./checkout3.html">
+                確認資訊
+                </a>
+              </button>
             </div>
           </div>
            
     </div>    
   </div>
-  <!-- @@include('./layout/footer.html') -->
+  @@include('./layout/footer.html')
 </body>
 </html>
 

@@ -5,11 +5,9 @@
     </head>
 
 <body>
-  <!-- @@include('./layout/header.html') -->
+  @@include('./layout/header.html')
   <div class="wrapper_checkout">
 
-    <!-- sm 以上範圍，三欄均分 -->
-    <!-- 設定某欄佔幾欄 -->
     <div class="container">
       <div class="row -checkStep">
         <div class="col -first">
@@ -22,19 +20,19 @@
           <div class="col -num -second">
             2
           </div>
-          付款方式
+          填寫資料
         </div>
         <div class="col -third">
           <div class="col -num -third">
             3
           </div>
-          付款方式
+          確認訂單
         </div>
         <div class="col -fourth">
           <div class="col -num -fourth">
             4
           </div>
-          付款方式
+          完成訂購
         </div>
       </div>
 
@@ -45,7 +43,7 @@
       
           <div class="row -copyPdc">
               <div class="col-4">
-                  <img class="img-fluid" src="/src/img/Shop/products/D/p1.png">
+                  <img class="img-fluid" src="./img/Shop/products/D/p1.png">
               </div>
                 <div class="col -borderTop">
                   <div class="row text-muted">
@@ -81,7 +79,7 @@
 
         <div class="row -copyPdc">
           <div class="col-4">
-              <img class="img-fluid" src="/src/img/Shop/products/D/p1.png">
+              <img class="img-fluid" src="./img/Shop/products/D/p1.png">
           </div>
             <div class="col -borderTop">
               <div class="row text-muted">
@@ -114,8 +112,6 @@
             </div>
         </div>    
           
-        <!-- <button type="submit" class="checkS1">前往結帳</button> -->
-          
     </div>
 
         
@@ -147,12 +143,7 @@
             </ul>
             
           </div>
-          <!-- <div class="row">
-            小計
-          </div>
-          <div class="row">
-            小計
-          </div> -->
+ 
           
           <div class="row">
             <div class="col-md">
@@ -165,17 +156,21 @@
         </div>
         <div class="row -checkStep justify-content-between">
           <div class="a col-12 col-lg-3 col-md-4 col-sm-12">
-              <button type="submit" class="btnBackshop">返回商品總覽</button>
+              <button type="submit" class="btnBackshop">
+                <a href="./shop.html">返回商品總覽</a>
+              </button>
           </div>
           <div class="b col-12 col-lg-3 col-md-4 col-sm-12">
-            <button type="submit" class="btncheckS1">前往結帳</button>
+          
+              <a class="btncheckS1" href="./checkout2.html">前往結帳</a>
+          
           </div>
         </div>
         
       </div>
     </div>    
   </div>
-  <!-- @@include('./layout/footer.html') -->
+  @@include('./layout/footer.html')
    <script>
      (function() {
     'use strict';

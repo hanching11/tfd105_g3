@@ -34,7 +34,7 @@
         position: absolute;
         display: block;
         content: '';
-        background-image: url(/src/img/checkout/arrow1.svg);
+        background-image: url(../img/checkout/arrow1.svg);
         top: 50%;
         left: 90%;
         height: 22px;
@@ -423,7 +423,10 @@
 
     }
     
-    button.btncheckS1{
+    a.btncheckS1{
+      line-height: 35px;
+      text-align: center;
+      display: block;
       text-decoration: none;
       border-radius: 5px;
       letter-spacing: $letterSpacing1;
@@ -448,5 +451,24 @@
       height: 35px;
       width: 100%;
       border: 1px solid $darkbrown1;
+
+    }
+
+    .btnBackshop a{
+      text-decoration: none;
+      color: $darkbrown1;
+    }
+
+    .btnBackshop::before{
+      // border: 2px solid blue;
+      background-repeat: no-repeat;
+      position: absolute;
+      display: block;
+      content: '';
+      background-image: url(../img/checkout/arrow2.svg);
+      top: 30%;
+      left: 15%;
+      height: 25px;
+      width: 30px;
     }
 }
