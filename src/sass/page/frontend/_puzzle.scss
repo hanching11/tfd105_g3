@@ -138,7 +138,7 @@
             font-weight:bold;
             font-size:$h6;
             letter-spacing: 5px;
-            line-height: 41px;
+            line-height: 35px;
             position:absolute;
             top: -195px;
             left:30px;
@@ -255,7 +255,7 @@
         // }
 
         .page-content{
-            background-image: url(../img/Puzzle/choice/background/mona.png);
+            background-image: url(../img/Puzzle/backgroud/still-life.png);
             background-size: cover;
             width: 100%;
             height: 1000px;
@@ -281,6 +281,7 @@
         .back_to_KY p{
             font-size: 14px;
             color: $beidge2;
+            text-shadow: black 0.1em 0.1em 0.5em;
         }
         
 
@@ -373,7 +374,7 @@
             font-weight:bold;
             font-size: 14px;
             letter-spacing: 5px;
-            line-height: 30px;
+            line-height: 26px;
             position:absolute;
             top: -152px;
             left: -25px;
@@ -470,6 +471,8 @@
             position: absolute;
             top: -35px !important;
             right: -7px !important;
+
+            text-shadow: black 0.1em 0.1em 0.5em;
         }
 
 
