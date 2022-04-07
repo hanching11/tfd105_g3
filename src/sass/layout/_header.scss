@@ -3,6 +3,9 @@
         text-decoration: none;
         color: #353231;
     }
+    #h_color_label{
+        color: #786B54;
+    }
 
     .header_bac {
         background-color: #353231;
@@ -315,7 +318,7 @@
         .nav-list{
             background-color: rgba(0, 0, 0, .5);
             background-blend-mode: multiply;
-            background-image: url("/src/img/navbac.jpg");
+            background-image: url("../img/navbac.jpg");
             background-size: cover;
             background-position: center center;
         }

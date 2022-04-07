@@ -99,6 +99,8 @@
 
         .content{
             padding: 85px;
+            line-height: 15px;
+            letter-spacing: 1px;
         }
 
         .content h4{
@@ -117,6 +119,11 @@
             font-size: 16px;
             border: none;
             background: none;
+        }
+        .store_item_add_to_cart a{
+            
+            color: $darkbrown1;
+            text-decoration: none;
         }
 
         .links-panel{
@@ -282,7 +289,9 @@
         .content{
             padding: 50px;
             text-align: center;
-            line-height: 14px;
+            line-height: 15px;
+             letter-spacing: 1px;
+
         }
 
         .content h4{
@@ -301,6 +310,12 @@
             font-size: 16px;
             border: none;
             background: none;
+        }
+
+        .store_item_add_to_cart a{
+            
+            color: $darkbrown1;
+            text-decoration: none;
         }
 
         .links-panel{
