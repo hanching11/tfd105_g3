@@ -25,10 +25,10 @@
 
 
     // ---------------------------------------
-.sideLeft {
+    .sideLeft {
     display: flex;
     border-top: 1px solid black;
-}
+    }
     .content_left {
         background-color: black;
         width: 200px;
@@ -85,6 +85,10 @@
     }   img {
         display: block;
     }
+    .table_color {
+        background-color: #cbbcb2;
+    }
+    
 }
 
 
