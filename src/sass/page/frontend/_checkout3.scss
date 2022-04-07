@@ -87,33 +87,20 @@
         margin-bottom: 60px;
        }
 
-   
-    
-
     .text-muted{
       display: flex;
       line-height: $lineheight2;
     }
 
-    .text-muted li:first-child{
+ 
+
+    .text-muted li{
       // border: 1px solid orange;
-      flex-basis: 100%;
-    //  flex-grow: 1;
+      flex-grow: 1;
       color: $darkbrown1;
       font-family: $fontSerif;
       letter-spacing: $letterSpacing1;
       text-align: left;
-    }
-
-    .text-muted li:last-child{
-      // border: 1px solid orange;
-      flex-basis: 0;
-     flex-grow: .5;
-    
-      color: $darkbrown1;
-      font-family: $fontSerif;
-      letter-spacing: $letterSpacing1;
-      text-align: right;
     }
 
     .img-fluid{
@@ -122,8 +109,9 @@
     }
 
     .borderTop{
+      border:  1px solid black;
       margin-bottom: 5px;
-      border-top: solid 0.5px $beidge2;
+      // border-top: solid 0.5px $beidge2;
     }
 
     .-pdcPrice{
@@ -165,6 +153,7 @@
       // border: 1px solid red;
       }
 
+      // 訂購標題
       .row li ol:first-child{
         flex-basis:25%;
       }
@@ -187,7 +176,7 @@
     }
 
 
-    .row li:first-child{
+    li ol, .-infoCheck2{
       // border: 1px solid red;
       border-top: solid 0.5px $beidge2;
     }

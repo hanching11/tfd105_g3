@@ -10,9 +10,11 @@
   }
   text-align: center;
   line-height: $lineheight2;
-  margin: 0 120px;
+
 
   .container{
+    margin: 0 auto;
+
       color: $darkbrown1;
       // border: solid 1px black;
   }
@@ -75,12 +77,10 @@
         margin-bottom: 50px;
       }
 
+
   .checkStep4{
     padding: 45px;
     border-top: solid 0.5px $darkbrown1;
-  }
-
-  .checkStep4{
     border-bottom: solid 0.5px $darkbrown1;
     margin-bottom: 300px;
   }
@@ -98,8 +98,15 @@
     margin-top: 60px;
   }
 
+  @media all and (max-width: 575.98px){
+    .checkStep4{
+      margin: 0 15px 150px;
+    }
 
-
-
+    .-num::before{
+      display: none;
+      }
+ 
+  }
 
 }
