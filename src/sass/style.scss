@@ -27,6 +27,7 @@
 @import './page/frontend/_online_gallery_exhibition';
 @import './page/frontend/exhibition';
 @import './page/frontend/about';
+@import './page/frontend/online_gallery_exhibition_painting';
 @import './page/frontend/psychol_test';
 @import './page/frontend/psychol_test_q1';
 @import './page/frontend/psychol_test_q2';
@@ -47,11 +48,15 @@
 @import './page/frontend/checkout3';
 @import './page/frontend/checkout4';
 
+//訂單查詢 
+
+@import './page/frontend/member';
 
 
 
-// @import './page/backend/backendcom';
-// @import './page/backend/b_product';
+
+@import './page/backend/backend-com';
+@import './page/backend/b_product';
 
 
 

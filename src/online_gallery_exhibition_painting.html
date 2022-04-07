@@ -4,10 +4,19 @@
 <head>
     @@include('./layout/head.html')
     <title>Online Gallery Exhibition| 光緣畫廊 | KUANG YUAN</title>
+
+    <style>
+        .wrapper_header .header_bac{
+            position: fixed;
+            z-index: 9999999;
+        }
+    </style>
 </head>
 
 <body>
+    @@include('./layout/header.html')
     <div class="online_gallery_exhibition_painting">
+
         <a href="./online_gallery_exhibition.html">
             <p class="door"><i class="fa-solid fa-door-open"></i>&nbsp;返回展間</p>
         </a>

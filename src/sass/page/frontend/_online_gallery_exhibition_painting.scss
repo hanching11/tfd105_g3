@@ -3,6 +3,7 @@
     height: 100vh;
     box-sizing: border-box;
     overflow: hidden;
+    padding-top: 70px;
 
     //返回展間
     a {
@@ -11,12 +12,16 @@
     }
 
     a:nth-child(1) {
-        font-size: 14px;
+        font-size: 12px;
         margin-top: 10px;
         margin-left: 120px;
         color: $coffeebrown;
         text-decoration: none;
         display: block;
+        transition: 0.5s;
+        &:hover{
+            color: $darkbrown1;
+        }
     }
 
 
@@ -42,6 +47,10 @@
 
     .media_icon i {
         font-size: 20px;
+        transition: 0.5s;
+        &:hover{
+            color: $darkbrown1;
+        }
     }
 
     //中間部分
