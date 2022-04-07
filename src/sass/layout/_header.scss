@@ -335,6 +335,13 @@
         .h_navbar {
             margin-right: 10px;
         }
+        
+    }
+    @media (max-width: 576px) {
+        .shopping-cart {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     //購物車
