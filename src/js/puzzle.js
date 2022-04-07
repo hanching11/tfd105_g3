@@ -701,7 +701,7 @@ Puzzle.prototype.createPuzzle = function (params) {
   }
 
 
-  this.canvMobile.style.zIndex = 50000;
+  this.canvMobile.style.zIndex = 100;
 
   this.dCoupling = 10; // distance for pieces to couple together, in pixels (on each x and y axis)
 
