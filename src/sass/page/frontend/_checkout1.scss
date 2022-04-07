@@ -9,13 +9,13 @@
     list-style: none;
 
 }
-  margin: 0 120px;
-
+  
   .container{
+    margin: 0 auto;
       color: $darkbrown1;
       // border: solid 1px black;
   }
-  
+ 
   .-checkStep{
     margin: 40px 0 70px 0;
   }
@@ -50,6 +50,10 @@
         text-align: center;
       }
 
+      .col-lg-4{
+        margin: 0 auto;
+      }
+
       .-first{
         color: $darkbrown1;
         // border:10px solid blue;
@@ -59,8 +63,12 @@
       // border: 2px solid blue;
         display: none;
       }
-     
+
+      
+      
+    //  ??????
       .row-4{
+        // border: 1px solid black;
         color: $darkbrown1;
         font-weight: $lightWeight;
         font-family: $fontNoserif;
@@ -71,7 +79,7 @@
       .-borderTop{
         //  border: 2px solid blue;
         margin-right: 80px;
-        margin-left: 10px;
+        margin-left: 20px;
 
        }
 
@@ -82,15 +90,40 @@
         font-family: $fontNoserif;
         color: $lightgray;
         background: $beidge2;
-       font-size: 0.875rem;
+        font-size: 0.875rem;
         height: 35px;
-        width: 85px;
+        max-width: 85px;
+        padding: 0 10px;
         border: none;
       }
 
       button.delPdc:hover{
         color: $white;
         background: $darkbrown2;
+      }
+
+      @media (max-width: 575.98px){
+        .-num::before{
+          display: none;
+          }
+        .-borderTop{
+          margin-right: 0px;
+          }
+
+        .pdcInfo{
+          display: none;
+        }
+
+        button.delPdc{
+          font-size: .875rem;
+        }
+        div.a{
+        // border: 2px solid blue;
+          order: 2;
+        }
+        div.b{
+          order: 1;
+        }
       }
 
 
@@ -279,8 +312,9 @@
 
   
     .img-fluid{
-      // max-width: 100%;
+      object-fit: cover;
       border-radius: $border-radius;
+      height: 100%;
 
       // border: 1px solid rgb(126, 103, 60);
 
