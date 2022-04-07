@@ -24,3 +24,35 @@ $('.sub-nav2').on("click", function () {
     $('#tg2').toggleClass("fa-regular fa-square-minus")
 
 });
+
+// 滾動後選單消失 X 變回漢堡
+
+var previousScroll = 0;
+
+window.addEventListener('scroll', function(){
+    var currentScroll = $(this).scrollTop();
+   if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()) {
+        if (currentScroll > previousScroll) {
+            hideNav();
+        }
+        previousScroll = currentScroll;
+    }
+  
+});
+
+function hideNav() {
+    $("button.hamburger").removeClass("is-active")
+    $(".nav-list").removeClass("on")
+}
+
+
+//  購物車
+$("#cart").on("click", function() {
+    $(".shopping-cart").fadeToggle( "fast");
+});
+    
+// 關掉購物車
+
+$("#btn-cart-close").on("click", function() {
+    $(".shopping-cart").hide();
+});

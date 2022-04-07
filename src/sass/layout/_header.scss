@@ -335,5 +335,107 @@
         .h_navbar {
             margin-right: 10px;
         }
+        
     }
-}
+    @media (max-width: 576px) {
+        .shopping-cart {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    //購物車
+
+    #cart {
+        position: relative;
+    }
+
+    .shopping-cart{
+        display: none;
+        background-color: #eeeae2;
+        width: 30%;
+        position: absolute;
+        right: 0;
+        z-index: 1000;
+    }
+    .shopping-cart-items {
+        display: flex;
+        flex-direction: column;
+    
+        padding-top: 20px;
+    
+          li {
+            margin-bottom: 18px;
+          }
+    
+        img {
+            display: block;
+            margin: 0 10px 0 15px;
+            width: 100%;
+        }
+        
+        .item-name {
+          display: block;
+          color: #353231;
+          white-space: nowrap;
+          text-align: left;   
+        
+        }
+        
+        .item-price {
+            color: #353231;
+            display: flex;
+        }
+        
+       
+    }
+       
+    
+    #button {
+      background:#786B54; 
+      color:white;
+      text-align: center;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+      border-radius: 3px;
+      margin: 20px auto;
+      width:60%;
+      
+      
+    }
+
+    .clearfix:after {
+        content: "";
+
+    }
+    
+    .clearfix {
+        max-width: 100px;
+        background-color: #eeeae2;
+        display: flex;
+
+    }
+    .cart_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .product-quantity {
+        margin: 0 20px;
+        width: 100px;
+        input{
+            width: 45px;
+        }
+    }
+    
+    .cart-close {
+        text-align: right;
+        margin: 0 20px
+    }
+
+    
+    
+}  
+
+
