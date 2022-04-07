@@ -12,12 +12,19 @@
 
     @@include('./layout/head.html')
     <title>Online Gallery| 光緣畫廊 | KUANG YUAN</title>
+    <style>
+        .wrapper_header .header_bac{
+            position: fixed;
+            z-index: 9999999;
+        }
+    </style>
+
 </head>
 
 <body>
     <div class="wrapper_onlinegallery">
         <!-- 引入header -->
-        <!-- @@include('./layout/header.html') -->
+        @@include('./layout/header.html')
 
         <!-- scroll-line -->
         <div class="scroll-line">
