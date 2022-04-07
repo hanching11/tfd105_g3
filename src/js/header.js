@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 $("button.hamburger").on("click", function () {
     $(this).toggleClass("is-active");
-    $(".nav-list").toggleClass("on");
+    $(".nav-list").toggleClass("on"); 
 });
 
 $(".sub-nav").on("click", function () {
