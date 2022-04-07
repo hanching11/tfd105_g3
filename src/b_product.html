@@ -17,30 +17,30 @@
         </div>
         <section class="sideLeft">
             <div class="content_left">
-                <h6 class="wd-bord">後臺管理</h6>
+                <h6 class="wd-border">後臺管理</h6>
                 <aside class="side_left">
                     <ul>
                         <ol>
-                            <a href="../dist/b_member.html">會員管理</a>
+                            <a href="./b_member.html">會員管理</a>
                         </ol>
                         <ol>
-                            <a href="../dist/b_order.html">訂單管理</a>
+                            <a href="./b_order.html">訂單管理</a>
                         </ol>
                         <ol>
                             <a href="#">商品管理</a>
                         </ol>
                         <ol>
-                            <a href="../dist/b_item_exhibits.html">展品管理</a>
+                            <a href="./b_item_exhibits.html">展品管理</a>
                         </ol>
                         <ol>
-                            <a href="../dist/b_discount.html">折扣碼管理</a>
+                            <a href="./b_discount.html">折扣碼管理</a>
                         </ol>
                     </ul>
                 </aside>
             </div>
             <div class="sideRight">
-                <div class="channel">
-                    <div class="fs-6">
+                <div class="channel-around">
+                    <div class="page_title2">
                         <h6>商品管理</h6>
                     </div>   
                     <ul class="list_co btn-group" role="group">
@@ -129,26 +129,33 @@
                                 <input type="text" id="product_newArtist" name="item[artist]" class="form-control" placeholder="產品作家">
                             </div>
                              <!-- 新增商品價格、數量 -->
-                             <div class="form-group">
-                                <label for="product_newPrice"></label>
-                                <input type="text" id="product_newPrice" name="item[price]" class="form-control" placeholder="價格">
-                                <label for="product_newCount"></label>
-                                <input type="text" id="product_newCount" name="item[quantity]" class="form-control" placeholder="數量">
+                             <div class="form-group level">
+                                <div class="input-borad">
+                                    <label for="product_newPrice"></label>
+                                    <input type="text" id="product_newPrice" name="item[price]" class="form-control" placeholder="價格">
+                                </div>
+                                <div class="input-borad">
+                                    <label for="product_newCount"></label>
+                                    <input type="text" id="product_newCount" name="item[quantity]" class="form-control" placeholder="數量">
+                                </div>
                             </div>
                              <!-- 新增商品描述 -->
-                            <div class="form-group">
+                            <div class="form-group input-borad">
                                 <label for="product_newDescribe"></label>
                                 <textarea id="product_newDescribe" rows="3" cols="40" name="item[describe]" placeholder="展品描述"></textarea>
                             </div>
                              <!-- 新增商品檔案上傳 -->
-                            <div class="form-check">
+                            <div class="form-check form-check-borad">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label" for="flexCheckDefault">
                                     <h6>此產品是否直接上架</h6>
                                 </label>
-                                <div class="form-group">
+                                <div class="form-group file-borad">
                                     <input type="file" id="item_upLoad" name="item[photo]" accept="image/*" class="form-control" multiple="multiple">
-                                    <input type="submit" value="上傳">
+                                    <div>  
+                                        <img class="preview">
+                                        <div class="preview_size"></div>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -186,26 +193,34 @@
                                     <input type="text" id="product_esitArtist" name="item[edit_artist]" class="form-control" placeholder="產品作家">
                                 </div>
                                 <!-- 編輯商品數量；價格 -->
-                                <div class="form-group">
-                                    <label for="product_editPrice"></label>
-                                    <input type="text" id="product_editPrice" name="item[edit_price]" class="form-control" placeholder="價格">
-                                    <label for="product_editCount"></label>
-                                    <input type="text" id="product_editCount" name="item[edit_quantity]" class="form-control" placeholder="數量">
+                                <div class="form-group level">
+                                    <div class="input-borad">
+                                        <label for="product_editPrice"></label>
+                                        <input type="text" id="product_editPrice" name="item[edit_price]" class="form-control" placeholder="價格">
+                                    </div>
+                                    <div class="input-borad">
+                                        <label for="product_editCount"></label>
+                                        <input type="text" id="product_editCount" name="item[edit_quantity]" class="form-control" placeholder="數量">
+                                    </div>
                                 </div>
                                 <!-- 編輯商品描述 -->
-                                <div class="form-group">
+                                <div class="form-group input-borad">
                                     <label for="product_editDescribe"></label>
                                     <textarea id="product_editDescribe" rows="3" cols="40" name="item[edit_describe]" placeholder="展品描述"></textarea>
                                 </div>
                                 <!-- 編輯商品檔案 -->
-                                <div class="form-check">
+                                <div class="form-check form-check-borad">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         <h6>此產品是否直接上架</h6>
                                     </label>
-                                    <div class="form-group">
+                                    <div class="form-group file-borad">
                                         <input type="file" id="item_upLoad" name="item[edit_photo]" accept="image/*" class="form-control" multiple="multiple">
-                                        <input type="submit" value="上傳">
+                                        <div>  
+                                            <img class="preview">
+                                            <div class="preview_size"></div>
+                                        </div>
+                                        <input type="submit" class="file-borad2" value="上傳">
                                     </div>
                                 </div>
                             </form>
@@ -219,5 +234,32 @@
             </div>
         </section>
     </div>
+    <script> 
+     // 檔案預覽
+        function format_float(num, pos)
+        {
+            var size = Math.pow(10, pos);
+            return Math.round(num * size) / size;
+        }
+    
+        function preview(input) {
+    
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                
+                reader.onload = function (e) {
+                    $('.preview').attr('src', e.target.result);
+                    var KB = format_float(e.total / 1024, 2);
+                    $('.preview_size').text("檔案大小：" + KB + " KB");
+                }
+    
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    
+        $("body").on("change", "#item_upLoad", function (){
+            preview(this);
+        })
+    </script>
 </body>
 </html> 

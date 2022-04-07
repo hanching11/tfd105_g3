@@ -18,30 +18,30 @@
         </div>
         <section class="sideLeft">
             <div class="content_left">
-                <h6 class="wd-bord">後臺管理</h6>
+                <h6 class="wd-border">後臺管理</h6>
                 <aside class="side_left">
                     <ul>
                         <ol>
-                            <a href="../dist/b_member.html">會員管理</a>
+                            <a href="./b_member.html">會員管理</a>
                         </ol>
                         <ol>
-                            <a href="../dist/b_order.html">訂單管理</a>
+                            <a href="./b_order.html">訂單管理</a>
                         </ol>
                         <ol>
-                            <a href="../dist/b_product.html">商品管理</a>
+                            <a href="./b_product.html">商品管理</a>
                         </ol>
                         <ol>
-                            <a href="../dist/b_item_exhibits.html">展品管理</a>
+                            <a href="./b_item_exhibits.html">展品管理</a>
                         </ol>
                         <ol>
-                            <a href="../dist/b_discount.html">折扣碼管理</a>
+                            <a href="./b_discount.html">折扣碼管理</a>
                         </ol>
                     </ul>
                 </aside>
             </div>
             <div class="sideRight">
-                <div class="channel">
-                    <div class="fs-6">
+                <div class="channel-around">
+                    <div class="page_title2">
                         <h6>展品管理</h6>
                     </div>   
                     <ul class="list_co btn-group" role="group">
@@ -91,7 +91,7 @@
                                     <td>一般</td>
                                     <td>
                                         <button type="button" class="btn btn-primary pa_d" data-bs-toggle="modal" data-bs-target="#item_editBackdrop">
-                                            編輯
+                                            編輯與查看
                                         </button>
                                     </td>
                                 </th>
@@ -131,19 +131,23 @@
                             <input type="text" id="item_newArtist" name="item[new_item_artist]" class="form-control" placeholder="展品作家">
                         </div>
                         <!-- 新增展品描述 -->
-                        <div class="form-group">
+                        <div class="form-group input-borad">
                             <label for="item_newDescribe"></label>
                             <textarea id="item_newDescribe" rows="3" cols="40" name="item[new_item_describe]" placeholder="展品描述"></textarea>
                         </div>
                         <!-- 新增展品檔案上傳 -->
-                        <div class="form-check">
+                        <div class="form-check form-check-borad">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                             <label class="form-check-label" for="flexCheckDefault">
                                 <h6>此產品是否直接上架</h6>
                             </label>
-                            <div class="form-group">
+                            <div class="form-group file-borad">
                                 <input type="file" id="item_upLoad" name="item[new_item_photo]" accept="image/*" class="form-control" multiple="multiple">
-                                <input type="submit" value="上傳">
+                                <div>  
+                                    <img class="preview">
+                                    <div class="preview_size"></div>
+                                </div>
+                                <input type="submit"  class="file-borad2" value="上傳">
                             </div>
                         </div>
                     </form>
@@ -198,6 +202,10 @@
                             </label>
                             <div class="form-group">
                                 <input type="file" id="item_upLoad" name="item[edit_item_photo]" accept="image/*" class="form-control" multiple="multiple">
+                                <div>  
+                                    <img class="preview">
+                                    <div class="preview_size"></div>
+                                </div>
                                 <input type="submit" value="上傳">
                             </div>
                         </div>
@@ -211,6 +219,34 @@
             </div>
         </div>
     </div>
-    <script></script>
+    <script>
+
+        // 檔案預覽
+        function format_float(num, pos)
+        {
+            var size = Math.pow(10, pos);
+            return Math.round(num * size) / size;
+        }
+    
+        function preview(input) {
+    
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                
+                reader.onload = function (e) {
+                    $('.preview').attr('src', e.target.result);
+                    var KB = format_float(e.total / 1024, 2);
+                    $('.preview_size').text("檔案大小：" + KB + " KB");
+                }
+    
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    
+        $("body").on("change", "#item_upLoad", function (){
+            preview(this);
+        })
+        
+    </script>
 </body>
 </html> 
