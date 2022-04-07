@@ -219,6 +219,7 @@
 
     .nav-list {
         position: fixed;
+        z-index: 100;
         right: 0;
         top: 70px;
         background-color: #c3bdb3;
