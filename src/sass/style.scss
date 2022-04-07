@@ -28,6 +28,19 @@
 @import './page/frontend/exhibition';
 @import './page/frontend/about';
 @import './page/frontend/online_gallery_exhibition_painting';
+@import './page/frontend/psychol_test';
+@import './page/frontend/psychol_test_q1';
+@import './page/frontend/psychol_test_q2';
+@import './page/frontend/psychol_test_q3';
+@import './page/frontend/psychol_test_q4';
+@import './page/frontend/psychol_test_q5';
+@import './page/frontend/psychol_test_resultA';
+@import './page/frontend/psychol_test_resultB';
+@import './page/frontend/psychol_test_resultC';
+@import './page/frontend/psychol_test_resultD';
+
+@import './page/frontend/online_gallery_exhibition_painting';
+@import'./page/frontend/online_exhibition';
 
 // 結帳區
 @import './page/frontend/checkout1';
@@ -38,61 +51,48 @@
 
 
 
-@import './page/backend/backendcom';
-@import './page/backend/b_product';
+// @import './page/backend/backendcom';
+// @import './page/backend/b_product';
 
 
 
 // 這邊是預設區，要變動請告知。
-body{
-    font-family:  #{$fontSerif}, #{$englishFont}, #{$fontNoserif};
+body {
+    font-family: #{$fontSerif},
+    #{$englishFont},
+    #{$fontNoserif};
     font-weight: $mediumWeight; //預設
     background-color: $beidge1;
-    
-    .wrapper{
-        h1{
+
+    .wrapper {
+        h1 {
             font-size: $h1;
         }
-        
-        h2{
+
+        h2 {
             font-size: $h2;
         }
-        
-        h3{
+
+        h3 {
             font-size: $h3;
         }
-        
-        h4{
+
+        h4 {
             font-size: $h4;
         }
-        
-        h5{
+
+        h5 {
             font-size: $h5;
         }
-        
-        h6{
+
+        h6 {
             font-size: $h6;
         }
-        
-        
-        p{
+
+
+        p {
             font-size: $p;
         }
     }
-   
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

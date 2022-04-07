@@ -1,9 +1,8 @@
-.psychol_test_wrapper{
-       /* 心理測驗題目 */
-       .psychol_test_content {
+.psychol_test_wrapper {
+    /* 心理測驗題目 */
+    .psychol_test_content {
         background-color: #eeeae2;
         color: #353231;
-
     }
 
     .psychol_title h1 {
@@ -19,7 +18,7 @@
         text-align: center;
     }
 
-    .test_question  h3{
+    .test_question h3 {
         font-weight: bold;
     }
 
@@ -80,9 +79,35 @@
     .next_arrow img {
         margin-left: 50px;
         margin-top: 400px;
-        transition: .5s;
+        transition: 0.5s;
     }
-    .next_arrow img:hover{
-        filter: sepia(.5);
+    .next_arrow img:hover {
+        filter: sepia(0.5);
+    }
+    // quiz rwd
+    @media (max-width: 480px) {
+        .psychol_test_content .question img {
+            margin: 0 auto;
+            width: 90%;
+            height: 100%;
+        }
+        .psychol_test_content .next_arrow {
+            display: none;
+        }
+        .psychol_test_content  .test_question h3{
+            font-size: 16px;
+            letter-spacing: 3px;
+            margin-top: 50px;
+        }
+        .psychol_test_content  .test_question .option button {
+            width: 40px;
+            height: 40px;
+            border-radius: 25px;
+            border: 1px solid #353231;
+            background-color: #c3bdb3;
+        }
+        .psychol_test_content  .test_question .option li {
+            font-size: 20px;
+        }
     }
 }

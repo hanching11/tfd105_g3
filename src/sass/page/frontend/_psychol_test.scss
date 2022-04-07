@@ -63,4 +63,57 @@
         content: "";
         margin: 30%;
     }
+    .psychol_test_mobile {
+        display: none;
+    }
+    // 心理測驗 Rwd
+    @media (max-width: 320px) {
+        .psychol_test_mobile .test_title {
+            font-size: 14px;
+        }
+    }
+    @media (max-width: 640px) {
+        .psychol_test_bac{
+            display: none;
+        }
+        .psychol_test_mobile{
+            display: block;
+        }
+        .psychol_test_mobile .test_title h1{
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+        .psychol_test_mobile .test_title p{
+            font-size: 16px;
+            font-weight: lighter;
+            margin-bottom: 50px;
+        }
+        
+        .psychol_test_mobile .game_start_btn {
+            border: 1px solid #eeeae2;
+            border-radius: 25px;
+            width: 350px;
+        }
+        .psychol_test_mobile .game_start_btn h1{
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.5;
+            letter-spacing: 3px;
+        }
+        .psychol_test_mobile .game_start_btn a{
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+        .psychol_test_mobile .game_start_btn button {
+            color: #353231;
+            border: 0;
+            width: 150x;
+            background-color: #eeeae2;
+            border-radius: 25px;
+            font-weight: bold;
+            line-height: 2;
+        }
+    }
+
 }

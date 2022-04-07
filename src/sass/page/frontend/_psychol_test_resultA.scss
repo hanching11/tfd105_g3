@@ -106,4 +106,45 @@
     .recommend img:hover {
         filter: sepia(0.5);
     }
+    
+    // result A RWD
+    @media (max-width: 1140px) {
+        .pt_result_A .psychol_title h1{
+            font-size: 1rem;
+            line-height: 1.6;
+            letter-spacing: 1px;
+        }
+        .pt_result_A {
+            display: block;
+        }
+
+        .test_result, .result_right {
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+        }
+        .artist_introduce p{
+            text-align: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .pt_result_A .test_result .artwork .painting img{
+            width: 50%;
+            margin: 0 auto;
+        }
+        .artist_name ,.artist_introduce{
+            width: 90%;
+            text-align: center;
+        }
+        .recommend {
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+        .recommend a {
+            letter-spacing: 3px;
+            line-height: 5;
+        }
+    }
 }
