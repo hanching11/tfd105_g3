@@ -11,7 +11,7 @@
             position: relative;
             background-color: #EEEAE2;
             color: #353231;
-            padding: 20px;
+            /* padding: 20px; */
             box-sizing: border-box;
         }
 
@@ -33,6 +33,7 @@
             width: 100%;
             text-align: center;
             line-height: 1.6;
+            padding: 20px 15px;
         }
 
         .title {
@@ -83,9 +84,6 @@
         }
 
         /* 表單 */
-        #tab_inner {
-            margin-bottom: 30px;
-        }
 
         #tab_inner input {
             border: 1px #C3BDB3 solid;
@@ -105,6 +103,7 @@
         .form_content {
             width: 500px;
             margin: 0 auto;
+            margin-bottom: 100px;
             /* border: 1px red solid; */
             box-sizing: border-box;
         }
@@ -247,7 +246,7 @@
 <body>
     <div class="wrapper_login">
         <!-- header -->
-        <!-- @@include('./layout/header.html') -->
+        @@include('./layout/header.html')
 
         <div class="title">
             <h3>成為我們的會員</h3>
@@ -340,7 +339,7 @@
 
 
             <!-- footer-->
-            <!-- @@include('./layout/footer.html') -->
+            @@include('./layout/footer.html')
         </div>
 
         <script>
