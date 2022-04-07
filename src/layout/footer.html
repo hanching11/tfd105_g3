@@ -45,8 +45,8 @@
                     </ul>
                     <div class="right">
                         <div class="gallery_opening">
-                            <ol>實體開放時間<i class="fa-solid fa-angle-down" id="tg_m1"></i></ol>
-                                <li>
+                            <ol class="sub-nav">實體開放時間<i class="fa-solid fa-angle-down" id="tg_m1"></i></ol>
+                                <li class="sub_nav-oping">
                                     <p>
                                         開放星期一-星期六<br>
                                         10:00 - 17:00<br>
@@ -57,7 +57,7 @@
                         </div>
                         <div class="gallery_address">
                             <ol class="sub-nav2">實體地址<i class="fa-solid fa-angle-down" id="tg_m2"></i></ol>
-                                <li>
+                                <li class="sub_nav2-address">
                                     <p>
                                         南京東路三段219號5樓<br>
                                         104 台北市中山區<br>
@@ -100,5 +100,15 @@
             </p>
         </div>
     </div>
+    <script>
+        // 子選單按鈕切換
+        $('.sub-nav').on("click", function(){
+            $(".sub_nav-oping > p").toggle();
+        })
+
+        $('.sub-nav2').on("click", function(){
+            $(".sub_nav2-address > p").toggle();
+        })
+    </script>
 
 </footer>
