@@ -20,6 +20,9 @@
   .-checkStep{
     margin: 40px 0 70px 0;
   }
+  .-checkMain{
+    margin: 0 auto;
+  }
   
   .col-12 .col-lg-6 .col-md-8 .col-sm-12{
   margin: 0 auto;
@@ -75,19 +78,8 @@
       // 商品資訊
       .-borderTop{
         //  border: 2px solid blue;
-        // margin-right: 20px;
-        margin-left: 10px;
+        margin-left: 20px;
        }
-
-       
-       button.delPdc{
-        display: none;
-      }
-
-      button.delPdc:hover{
-        color: $white;
-        background: $darkbrown2;
-      }
 
 
       //  各項商品
@@ -95,140 +87,8 @@
         margin-bottom: 60px;
        }
 
-    // 數量增減
-    .ctrl {
-     display: none;
-         /* border: 3px solid rgb(5, 166, 241);   */
-      }
+   
     
-      
-      .ctrl__counter {
-        font-family: Noto Sans TC;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 26px;
-        letter-spacing: 0.2em;
-    
-        position: relative;
-        width: 100%;
-        height: 50px;
-        color: $coffeebrown;
-        text-align: center;
-        overflow: hidden;
-          /* border: 3px solid rgb(5, 166, 241);   */
-      }
-      .ctrl__counter.is-input .ctrl__counter-num {
-        visability: hidden;
-        opacity: 0;
-        -webkit-transition: opacity 100ms ease-in;
-        transition: opacity 100ms ease-in;
-      }
-      .ctrl__counter.is-input .ctrl__counter-input {
-        visability: visible;
-        opacity: 1;
-        -webkit-transition: opacity 100ms ease-in;
-        transition: opacity 100ms ease-in;
-      }
-      .ctrl__counter-input {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        position: relative;
-        z-index: 2;
-        box-shadow: none;
-        outline: none;
-        border: none;
-        color: #042D41;
-        font-size: 30px;
-        line-height: 50px;
-        text-align: center;
-        /* visability: hidden; */
-        opacity: 0;
-        -webkit-transition: opacity 100ms ease-in;
-        transition: opacity 100ms ease-in;
-           /* border: 3px solid rgb(5, 166, 241);   */
-      }
-    
-    
-    
-      .ctrl__button {
-        font-family: Noto Sans TC;
-        font-weight:50;
-        font-size: 30px;  
-    
-        width: 50px;
-        line-height: 50px;
-        text-align: center;
-        color: $coffeebrown;
-        cursor: pointer;
-    
-
-           /* border: 3px solid rgb(5, 166, 241);   */
-      }
-    
-      .ctrl__button--decrement:hover {
-        color: #fff;
-        background-color: $coffeebrown;
-      border-radius:   5px 0px  0 5px;
-
-      }
-      .ctrl__button--increment:hover {
-        border-radius:  0 5px 5px  0;
-          color: #fff;
-          background-color: $coffeebrown;
-        }
-
-      .ctrl__button--decrement:active {
-          background-color: $lightgray;
-        }
-
-      .ctrl__button--increment:active {
-        background-color: $lightgray;
-      }
-     
-     
-    
-    
-      .ctrl__counter-num {
-        position: absolute;
-        
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        line-height: 50px;
-        visability: visible;
-        opacity: 1;
-        -webkit-transition: opacity 100ms ease-in;
-        transition: opacity 100ms ease-in;
-           /* border: 3px solid rgb(5, 166, 241);   */
-      }
-      .ctrl__counter-num.is-increment-hide {
-       
-        -webkit-animation: increment-prev 100ms ease-in;
-        animation: increment-prev 100ms ease-in;
-      }
-      .ctrl__counter-num.is-increment-visible {
-        opacity: 1;
-    
-        -webkit-animation: increment-next 100ms ease-out;
-        animation: increment-next 100ms ease-out;
-      }
-      .ctrl__counter-num.is-decrement-hide {
-      
-        -webkit-animation: decrement-prev 100ms ease-in;
-        animation: decrement-prev 100ms ease-in;
-      }
-      .ctrl__counter-num.is-decrement-visible {
-        opacity: 1;
-    
-        -webkit-animation: decrement-next 100ms ease-out;
-        animation: decrement-next 100ms ease-out;
-      }
-      
-      
-  
 
     .text-muted{
       display: flex;
@@ -256,14 +116,9 @@
       text-align: right;
     }
 
-
-  
     .img-fluid{
       // max-width: 100%;
       border-radius: $border-radius;
-
-      // border: 1px solid rgb(126, 103, 60);
-
     }
 
     .borderTop{
@@ -290,43 +145,37 @@
     }
 
   
-    .ctrl__counter {
-      
-        font-size: 14px;
-        line-height: 30px;
-        height: 30px;
-        //  border: 3px solid rgb(5, 166, 241);
-    }
-
-    .ctrl__button {
-        font-size: 20px;  
-        line-height: 30px;
-        // border: 3px solid rgb(5, 166, 241); 
-      }
-
-    .ctrl__counter-num {
-        line-height: 30px;
-        //  border: 3px solid rgb(5, 166, 241); 
-    }
+   
 
     .row-md-4{
       margin-bottom: 30px;
       font-weight: $boldWeight;
     }
 
-    div.col-md-6 .row li{
+    .row ul li{
       display: flex;
-      // padding-right: 40px;
+
+      // border: 1px solid rgb(25, 0, 255);
     }
     .row li ol{
       padding: 25px 0;
-      flex-grow: 1;
+      // flex-grow: 1;
       // align-content: space-between;
       border-bottom: solid 0.5px $beidge2;
       // border: 1px solid red;
       }
 
-    .row.-infoCheck li ol:last-child{
+      .row li ol:first-child{
+        flex-basis:25%;
+      }
+
+      .-infoCheck1 li ol:last-child{
+        flex-grow: 1;
+        // border: 1px solid red;
+        text-align: right;
+      }
+
+    .-infoCheck2 li ol:last-child{
       // border: 1px solid red;
       text-align: left;
       // align-content:center;
@@ -355,63 +204,8 @@
       text-align: right;
         // border: 2px solid red;
       }
+  
     
-      input.saleCode{
-      padding-left: 20px;
-      margin-right: 15px;
-      margin-bottom: 40px;
-      max-width: 66%;
-      font-size: $p;
-      border-radius: 5px;
-      border: none;
-      height: 35px;
-      }
-    
-    button.useCode{
-      text-decoration: none;
-      border-radius: 5px;
-      letter-spacing: $letterSpacing1;
-      font-family: $fontNoserif;
-      color: $white;
-      background: $darkbrown2;
-     font-size: 0.875rem;
-      height: 35px;
-      width: 85px;
-      border: none;
-    }
-
-    button.creditCard{
-      text-decoration: none;
-      border-radius: 5px;
-      letter-spacing: $letterSpacing1;
-      font-weight: $lightWeight;
-      font-family: $fontNoserif;
-      color: $white;
-      background: $coffeebrown;
-      font-size: 0.875px;
-      height: 35px;
-      width: 100%;
-      border: none;
-
-      margin-bottom: 10px;
-    }
-
-    button.payCash{
-      text-decoration: none;
-      border-radius: 5px;
-      letter-spacing: $letterSpacing1;
-      font-weight: $lightWeight;
-      font-family: $fontNoserif;
-      color: $lightgray;
-      background: $beidge2;
-      font-size: 0.875px;
-      height: 35px;
-      width: 100%;
-      border: none;
-
-      margin-bottom: 85px;
-
-    }
     
     button.btncheckfin{
       text-decoration: none;
@@ -470,6 +264,9 @@
     
 
     @media all and (max-width: 575.98px){
+      .-checkMain{
+        margin: 0 15px;
+      }
 
       .-num::before{
         display: none;

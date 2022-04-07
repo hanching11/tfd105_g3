@@ -185,7 +185,7 @@ button.btnCheckS2{
   margin-bottom: 10px;
 }
 
-button.btnBackCheckS1{
+.btnBackCheckS1{
   position: relative;
   padding-left: 10%;
   flex-grow: 1;
@@ -212,7 +212,7 @@ a{
   color: $beidge1;
 }
 
-button.btnBackCheckS1::before{
+.btnBackCheckS1::before{
   // border: 2px solid blue;
   background-repeat: no-repeat;
   position: absolute;
@@ -226,18 +226,26 @@ button.btnBackCheckS1::before{
 }
 
 
-@media all and (max-width: 575.98px){
-
+@media (max-width: 575.98px){
   .-num::before{
     display: none;
     }
-  
   div.a{
   // border: 2px solid blue;
     order: 2;
   }
   div.b{
     order: 1;
+  }
+  .btnBackCheckS1{
+  // border: 2px solid blue;
+
+    width: 60%;
+  }
+
+  .btnBackCheckS1::before{
+    left: 10%;
+
   }
 }
 

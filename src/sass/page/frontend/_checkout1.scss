@@ -102,30 +102,7 @@
         background: $darkbrown2;
       }
 
-      @media (max-width: 575.98px){
-        .-num::before{
-          display: none;
-          }
-        .-borderTop{
-          margin-right: 0px;
-          }
-
-        .pdcInfo{
-          display: none;
-        }
-
-        button.delPdc{
-          font-size: .875rem;
-        }
-        div.a{
-        // border: 2px solid blue;
-          order: 2;
-        }
-        div.b{
-          order: 1;
-        }
-      }
-
+  
 
       //  各項商品
        .-copyPdc{
@@ -301,7 +278,7 @@
     .text-muted li:last-child{
       // border: 1px solid orange;
       flex-basis: 0;
-     flex-grow: .5;
+      flex-grow: .5;
     
       color: $darkbrown1;
       font-family: $fontSerif;
@@ -470,6 +447,7 @@
       height: 35px;
       width: 100%;
       border: none;
+      margin-bottom: 15px;
     }
 
     .btnBackshop{
@@ -505,4 +483,64 @@
       height: 25px;
       width: 30px;
     }
+
+    @media (max-width: 575.98px){
+      .-checkMain{
+        margin: 0 15px;
+      }
+      .-num::before{
+        display: none;
+        }
+      .-borderTop{
+        margin-right: 0px;
+        }
+
+      .pdcInfo{
+        display: none;
+      }
+
+      button.delPdc{
+        font-size: .875rem;
+      }
+
+      .text-muted{
+        display: flex;
+        line-height: $lineheight2;
+      }
+  
+      .text-muted li:first-child{
+        // border: 1px solid orange;
+        font-size: 0.875rem;
+      line-height: $lineheight1;
+      padding: 10px 0 20px;
+      }
+  
+      .text-muted li:last-child{
+        // border: 1px solid orange;
+        flex-basis: 0;
+        flex-grow: .5;
+      
+        color: $darkbrown1;
+        font-family: $fontSerif;
+        letter-spacing: $letterSpacing1;
+        text-align: right;
+      }
+
+      .btnBackshop{
+        width: 60%;
+      }
+
+      .btnBackshop::before{
+        left: 10%;
+      }
+  
+      div.a{
+      // border: 2px solid blue;
+        order: 2;
+      }
+      div.b{
+        order: 1;
+      }
+    }
+
 }
