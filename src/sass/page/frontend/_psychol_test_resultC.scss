@@ -3,15 +3,15 @@
     font-family: "Cinzel", "Noto Serif TC", serif;
     background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: multiply;
-    background-image: url('/src/img/psychol_test/A3.jpg');
+    background-image: url("../img/psychol_test/A3.jpg");
     background-size: cover;
     background-position: center center;
-    color: #EEEAE2;
+    color: #eeeae2;
     .psychol_test_content {
         text-align: center;
         line-height: 3;
     }
-    
+
     .psychol_title h1 {
         font-size: 1.5rem;
         letter-spacing: 1rem;
@@ -19,90 +19,154 @@
         margin-left: 6%;
         font-weight: bold;
     }
-    
+
     /* 心理測驗結果 */
     .test_result {
         text-align: center;
         display: flex;
         margin-top: 30px;
     }
-    
+
     .artist_name h2 {
         font-size: 1.5rem;
         letter-spacing: 3px;
         line-height: 3;
         font-weight: bold;
     }
-    
+
     .artist_name p {
         font-size: 1.2rem;
         font-weight: 600;
         letter-spacing: 1px;
     }
-    
+
     .artwork {
         margin-left: 15%;
         margin-bottom: 100px;
     }
-    
+
     .result_right {
         display: block;
         text-align: left;
         margin: 0 auto;
     }
-    
+
     .artist h2 {
         font-size: 2rem;
         letter-spacing: 5px;
         line-height: 3;
-        color: #C3BDB3;
+        color: #c3bdb3;
         font-weight: bold;
     }
-    
+
     .artist_introduce {
         width: 500px;
         line-height: 2.2;
     }
-    
+
     .artist_introduce p {
         font-weight: normal;
     }
-    
+
     .painting img {
         height: 280px;
         border-radius: 25px;
-        border: 1px solid #EEEAE2;
+        border: 1px solid #eeeae2;
         margin: 0 auto;
         transition: 1s;
     }
-    
+
     .painting img:hover {
         transform: rotatey(180deg);
-        filter: sepia(.5);
-        border: 1px solid #AB8A49;
+        filter: sepia(0.5);
+        border: 1px solid #ab8a49;
     }
-    
+
     .recommend {
         margin-top: 15%;
         text-align: right;
     }
-    
+
     .recommend a {
-        color: #EEEAE2;
+        color: #eeeae2;
         font-weight: bold;
         font-size: 1rem;
         letter-spacing: 5px;
-        transition: .5s;
+        transition: 0.5s;
         text-decoration: none;
     }
-    
+
     .recommend a:hover {
-        color: #C3BDB3;
+        color: #c3bdb3;
         letter-spacing: 8px;
-        filter: sepia(.5);
+        filter: sepia(0.5);
     }
-    
+
     .recommend img:hover {
-        filter: sepia(.5);
+        filter: sepia(0.5);
+    }
+    .mobile_test_result {
+        display: none;
+    }
+    // result C RWD
+    @media (max-width: 1140px) {
+        .c_pt_resultC {
+            display: none;
+        }
+        .mobile_test_result {
+            display: block;
+            text-align: center;
+        }
+        .mobile_test_result .m_psychol_title {
+            font-size: 1.5rem;
+            letter-spacing: 0.5rem;
+            line-height: 5;
+            font-weight: bold;
+        }
+        .m_painting img {
+            width: 300px;
+            border-radius: 25px;
+            border: 1px solid #eeeae2;
+            transition: 1s;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+        .m_artist_name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+            line-height: 2;
+        }
+        .m_artist {
+            margin: 50px 0;
+        }
+        .m_artist h2 {
+            font-size: 1.6rem;
+            letter-spacing: 3px;
+            border-radius: 40px;
+            width: 300px;
+            margin: auto;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            background-color: #786b54;
+            color: #eeeae2;
+            padding: 10px;
+        }
+        .m_artist_introduce {
+            width: 80%;
+            margin: 30px auto;
+        }
+        .m_artist_introduce p {
+            font-size: 1.1rem;
+            line-height: 2;
+        }
+        .m_recommend a {
+            text-decoration: none;
+            color: #eeeae2;
+            font-size: 1.4rem;
+            letter-spacing: 5px;
+            line-height: 5;
+        }
     }
 }

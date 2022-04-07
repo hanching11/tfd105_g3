@@ -28,6 +28,7 @@
             -moz-appearance: textfield;
         }
 
+
         /* 標題 */
         .title {
             width: 100%;
@@ -135,14 +136,14 @@
         }
 
         /* 錯誤訊息 */
-        #msg {
+        #msg , #msg2{
             text-align: center;
             margin: 0 auto;
             padding: 10px;
         }
 
         /* 彈窗 */
-        #msg {
+        #msg  , #msg2{
             color: red;
             font-weight: bold;
             height: 40px;
@@ -199,7 +200,7 @@
         }
 
         @media screen and (max-width: 575.98px) {
-            .form_content{
+            .form_content {
                 width: 250px;
             }
 
@@ -217,10 +218,11 @@
             }
 
             #tab_inner input {
-               width: 100%;
+                width: 100%;
             }
 
-            #join_btn, #login_btn{
+            #join_btn,
+            #login_btn {
                 margin-left: 25px;
             }
 
@@ -238,7 +240,6 @@
         @media screen and (min-width: 1200px) and (max-width: 1399.8px) {}
 
         @media screen and (min-width: 1400px) {}
-        
     </style>
 
 </head>
@@ -319,7 +320,7 @@
                     <input type="password" class="form-control" id="password_l" placeholder="請輸入密碼">
                 </div>
 
-                <div id="msg"></div>
+                <div id="msg2"></div>
 
                 <button id="login_btn">
                     <p>登入會員</p>
@@ -358,11 +359,26 @@
             const phone = document.getElementById('phone');
             const confirmPassword = document.getElementById('confirmPassword');
 
+            const login_btn = document.getElementById('login_btn');
+            const msg2 = document.getElementById('msg2');
+            const email_l = document.getElementById('email_l');
+            const password_l = document.getElementById('password_l');
+
+
+
             const popupcontent = document.getElementsByClassName('popupcontent')[0];
             const mask = document.getElementsByClassName('mask')[0];
 
 
             document.addEventListener("DOMContentLoaded", function () {
+ 
+                //input type= number e bug
+                $('input[type=number]').keypress(function (e) {
+                    if (!String.fromCharCode(e.keyCode).match(/[0-9\.]/)) {
+                        return false;
+                    }
+                });
+
                 //tab切換
                 // 啟動第一個panel
                 panelDisplay(member_tab[0]);
@@ -472,7 +488,8 @@
                     // }
 
                     //若成功
-                    alert("成功");
+                    msg.textContent = ' ';
+                    alert("註冊成功");
 
                     // msg.textContent = "會員註冊成功";
                     // popupcontent.style.display = "flex";
@@ -499,6 +516,33 @@
                     //         });
 
 
+
+
+                });
+
+                
+                //會員登入驗證
+                login_btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // console.log("AAA");
+                    const email_l_V = email_l.value;
+                    const password_l_V = password_l.value;
+
+                    if (email_l_V == null || email_l_V == undefined || email_l_V == '') {
+                        // console.log("AA");
+                        msg2.textContent = '請輸入帳號';
+                        return;
+                    } 
+
+                    if (password_l_V == null || password_l_V == undefined || password_l_V == '') {
+                        // console.log("AA");
+                        msg2.textContent = '請輸入密碼';
+                        return;
+                    } 
+
+                    //若成功
+                    msg.textContent = ' ';
+                    alert("帳號密碼輸入錯誤");
 
 
                 });
