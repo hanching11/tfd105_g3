@@ -39,7 +39,7 @@
       position: absolute;
       display: block;
       content: '';
-      background-image: url(/src/img/checkout/arrow1.svg);
+      background-image: url(../img/checkout/arrow1.svg);
       top: 50%;
       left: 90%;
       height: 22px;
@@ -204,18 +204,31 @@ button.btnBackCheckS1{
   border: 1px solid $darkbrown1;
 }
 
+a{
+  text-decoration: none;
+}
+
+.btnBackCheckS1 a{
+  color: $darkbrown1;
+}
+
+.btnCheckS2 a{
+  color: $beidge1;
+}
+
 button.btnBackCheckS1::before{
   // border: 2px solid blue;
   background-repeat: no-repeat;
   position: absolute;
   display: block;
   content: '';
-  background-image: url(/src/img/checkout/arrow1.svg);
+  background-image: url(../img/checkout/arrow2.svg);
   top: 30%;
   left: 10%;
   height: 25px;
-  width: 100%;
+  width: 50px;
 }
+
 
 @media all and (max-width: 575.98px){
 

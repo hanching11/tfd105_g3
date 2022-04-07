@@ -6,11 +6,10 @@
 </head>
 
 <body>
+  @@include('./layout/header.html')
 
   <div class="wrapper_about">
-    <div class="container">
-  
-        
+    <div class="container-fluid">
       <div class="row align-items-center"> 
         <div class="col -aboutBanner">
           <h4>
@@ -25,26 +24,117 @@
         </div>
       </div>
       
-      
-     
-      <div class="row">
-        
-        <div class="col-6 -aboutK">
+      <div class="row justify-content-around">
+        <div class="col-12 col-sm-6 -aboutK">
           <h4>光緣畫廊</h4>
           <span>
             光緣畫廊除了有線上畫廊以外，還有實體畫廊等相關敘述文字，介紹文介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹介紹。
           </span>
         </div>
-        <div class="col-6 -aboutlLogo">
+        <div class="col-12 col-sm-6 -aboutlLogo">
+          <img src="./img/about/about_logo.png" alt="">
         </div>
       </div>
 
-      
+      <div class="row justify-content-around">
+        <div class="col-12 -placePic">
+          <div class="col -placeInfo">
+            <h4>實體畫廊</h4>
+            <span>
+              奇美博物館希望成為一座無門檻的美學文化殿堂，因此，收藏展示的文物強調3歲幼童到9旬長輩都看得懂、聽得懂，如許創辦人表示：「好的文物不能只是自己欣賞，也要分享給更多人欣賞；收藏文物不能只是自己喜歡的品味，更重要是大眾都能欣賞的風格。」
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row -aboutMapinfo">
+        <div class="col-12 col-sm-6 -mapInfo">
+          <h4>地理位置</h4>
+          <span>
+            地址｜台北市中山區南京東路 <br>
+            交通｜捷運南京復興站8號出口
+          </span>
+        </div>
+        <div class="col-12 col-sm-6 -aboutMap">
+          <img class="img-fluid -map" src="./img/about/KY_map.png" alt="">
+        </div>
+      </div>
+
+      <div class="row -aboutPpl">
+        <div class="row">
+          <div class="col-12 -PplInfo">
+            <h4>畫廊創辦人</h4>
+            <span>
+              文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字字文字文字文字文字文字文字文字文字文字文字文字文
+            </span>
+          </div>
+        </div>
+        <div class="row -PplPic">
+          <div class="col-6 -PplPic -a">
+            <img class="img-fluid -ppl" src="./img/about/pexels-photo-5211578.webp" alt="">
+            <h2>創辦人</h2>
+          </div>
+          <div class="col-6 -PplPic -b">
+            <img class="img-fluid -ppl" src="./img/about/pexels-photo-5211578.webp" alt="">
+            <h2>創辦人</h2>
+          </div>
+
+          <div class="col-6 -PplPic -c">
+            <img class="img-fluid -ppl" src="./img/about/pexels-photo-5211578.webp" alt="">
+            <h2>創辦人</h2>
+          </div>
+          <div class="col-6 -PplPic -d">
+            <img class="img-fluid -ppl" src="./img/about/pexels-photo-5211578.webp" alt="">
+            <h2>創辦人</h2>
+          </div>
+
+        </div>
+       
+      </div>
+
+
     </div>
+
+    <div class="row">
+      <div class="col">
+        
+      </div>
+    </div>
+
+    <section class="contect-blk">
+      <!-- display: flex;
+      flex-wrap: wrap;
+      align-content: space-between; -->
+      
+      <div class="left-side">
+              <div class="contect-title">
+                      <h4>聯絡我們</h4>
+              </div>
+              <div class="contect-content">
+                  <h7 class="cc-title">實體藝廊</h7>
+                  <br>
+                  <div class="cca">Adress Adress Adress</div>
+                  <br>
+                  <div class="cca">00-123456789</div>
+                  <br>
+                  <div class="cca">garelly@gmail.com</div>
+                  <br>
+              </div>  
+      </div>
+      <div class="row -aboutNum">
+      </div>
+      <div class="right-side">
+              <div class="text-box" >
+                      <input type="text" class="text-content" placeholder="您想對我們說什麼?" >
+              </div>
+              <div class="info-box">
+                      <input type="text" class="text-name" placeholder="您的大名">
+                      <input type="text" class="text-email" placeholder="您的電子郵件">
+              </div>
+              <button class="content-blt" value="送出訊息">送出訊息</button>
+      </div> 
+    </section>
   </div>
-    <!-- @@include('./layout/footer.html') -->
-
-
+    @@include('./layout/footer.html')
 
 <!-- @@include('./js/member.js') -->
 

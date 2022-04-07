@@ -5,7 +5,7 @@
     </head>
 
 <body>
-  <!-- @@include('./layout/header.html') -->
+  @@include('./layout/header.html')
   <div class="wrapper_checkout3">
 
     <!-- sm 以上範圍，三欄均分 -->
@@ -43,7 +43,7 @@
             <div class="row-md-4 -title"> 購物清單</div>
             <div class="row -copyPdc">
               <div class="col-4">
-                  <img class="img-fluid" src="/src/img/Shop/products/D/p1.png">
+                  <img class="img-fluid" src="./img/Shop/products/D/p1.png">
               </div>
                   <div class="col-7 -borderTop">
                     <div class="row text-muted">
@@ -78,7 +78,7 @@
             
             <div class="row -copyPdc">
               <div class="col-4">
-                  <img class="img-fluid" src="/src/img/Shop/products/D/p1.png">
+                  <img class="img-fluid" src="./img/Shop/products/D/p1.png">
               </div>
                 <div class="col-7 -borderTop">
                   <div class="row text-muted">
@@ -167,16 +167,21 @@
       </div>
       <div class="row -checkStep justify-content-between">
         <div class="a col-12 col-lg-3 col-md-4 col-sm-12">
-            <button type="submit" class="btnBackshop">返回上一頁</button>
+            <button type="submit" class="btnBackshop">
+              
+              <a href="./checkout2.html">返回上一頁</a>
+            </button>
         </div>
         <div class="b col-12 col-lg-3 col-md-4 col-sm-12">
-          <button type="submit" class="btncheckS1">繼續結帳</button>
+          <button type="submit" class="btncheckfin">
+            <a href="./checkout4.html">繼續結帳</a>
+            </button>
         </div>
       </div>
 
     </div>    
   </div>
-  <!-- @@include('./layout/footer.html') -->
+  @@include('./layout/footer.html')
    <script>
      (function() {
     'use strict';
