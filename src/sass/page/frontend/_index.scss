@@ -953,19 +953,12 @@ $media_p:$p+0.8;
 
             ;
 
-            .modal {
-
-                color: aquamarine;
-
-
-                .modal-body {
-
-                    img {
-                        border-radius: 50%;
-
-                    }
-                }
+            .modal-body {
+                margin: $margin * 3;
+                background-color: aquamarine;
             }
+
+
 
 
 
