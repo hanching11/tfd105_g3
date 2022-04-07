@@ -63,6 +63,7 @@
                                 <th scope="col">付款方式</th>
                                 <th scope="col">地址</th>
                                 <th scope="col">訂單狀態</th>
+                                <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -93,6 +94,9 @@
                 </div>
             </div>                 
         </section>
+        <!-- ---------------------------------------
+                編輯訂單
+        --------------------------------------- -->
         <section>  
             <div class="modal fade" id="order_editBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">              
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -103,32 +107,39 @@
                         </div>
                         <div class="modal-body">
                             <form>
+                                <!-- 訂單編號編輯 -->
                                 <div class="form-group">
                                     <label for="order_editNumber"></label>
                                     <input type="text" id="order_editNumber" name="item[name]" class="form-control" placeholder="訂單編號">
                                 </div>
+                                <!-- 付款人帳號編輯 -->
                                 <div class="form-group">
                                     <label for="order_editAccount"></label>
                                     <input type="text" id="order_editAccount" name="item[account]" class="form-control" placeholder="付款人帳號">
                                 </div>
+                                <!-- 訂單_商品編號編輯 -->
                                 <div class="form-group">
                                     <label for="product_number"></label>
                                     <input type="text" id="order_pro_number" name="item[product_number]" class="form-control" placeholder="商品編號">
                                 </div>
+                                <!-- 訂單價格數量編輯 -->
                                 <div class="form-group">
                                     <label for="order_editPrice"></label>
                                     <input type="text" id="order_editPrice" name="item[price]" class="form-control" placeholder="價格">
                                     <label for="order_editquantity"></label>
                                     <input type="text" id="order_editquantity" name="item[quantity]" class="form-control" placeholder="數量">
                                 </div>
+                                <!-- 訂單地址編輯 -->
                                 <div class="form-group">
                                     <label for="order_editAddress"></label>
                                     <input type="text" id="order_editAddress" name="item[address]" class="form-control" placeholder="地址">
                                 </div>
+                                <!-- 訂單付款方式編輯 -->
                                 <div class="form-group">
                                     <label for="order_editPay"></label>
                                     <input type="text" id="order_editPay" name="item[pay]" class="form-control" placeholder="付款方式">
                                 </div>
+                                <!-- 訂單狀態編輯 -->
                                 <div class="form-group horiz">
                                     訂單狀態
                                     <div class="form-check">

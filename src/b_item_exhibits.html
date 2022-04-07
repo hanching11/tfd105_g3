@@ -69,6 +69,7 @@
                                 <th scope="col">展品名稱</th>
                                 <th scope="col">展品作家</th>
                                 <th scope="col">上架狀態</th>
+                                <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -80,7 +81,7 @@
                                         </label>
                                     </div>
                                     <td class="align-middle">
-                                        <div class="table_img_wid">
+                                        <div class="table_img_block">
                                             <img src="../src/img/exhibition/f1-1-1.png" alt="paint">
                                         </div>
                                     </td>
@@ -114,22 +115,27 @@
                   </div>
                   <div class="modal-body">
                     <form>
+                        <!-- 新增展品編號 -->
                         <div class="form-group">
                             <label for="item_newNumber"></label>
                             <input type="text" id="item_newNumber" name="item[new_item_number]" class="form-control" placeholder="展品編號">
                         </div>
+                        <!-- 新增展品名稱 -->
                         <div class="form-group">
                             <label for="item_newName"></label>
                             <input type="text" id="item_newName" name="item[new_item_name]" class="form-control" placeholder="展品名稱">
                         </div>
+                        <!-- 新增展品作家 -->
                         <div class="form-group">
-                            <label for="item_newAuthor"></label>
-                            <input type="text" id="item_newAuthor" name="item[new_item_author]" class="form-control" placeholder="展品作家">
+                            <label for="item_newAatist"></label>
+                            <input type="text" id="item_newArtist" name="item[new_item_artist]" class="form-control" placeholder="展品作家">
                         </div>
+                        <!-- 新增展品描述 -->
                         <div class="form-group">
                             <label for="item_newDescribe"></label>
                             <textarea id="item_newDescribe" rows="3" cols="40" name="item[new_item_describe]" placeholder="展品描述"></textarea>
                         </div>
+                        <!-- 新增展品檔案上傳 -->
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                             <label class="form-check-label" for="flexCheckDefault">
@@ -164,22 +170,27 @@
                   </div>
                   <div class="modal-body">
                     <form>
+                        <!-- 編輯展品編號 -->
                         <div class="form-group">
                             <label for="item_editNumber"></label>
                             <input type="text" id="item_editNumber" name="item[edit_item_number]" class="form-control" placeholder="展品編號">
                         </div>
+                        <!-- 編輯展品名稱 -->
                         <div class="form-group">
                             <label for="item_editName"></label>
                             <input type="text" id="item_editName" name="item[edit_item_name]" class="form-control" placeholder="展品名稱">
                         </div>
+                        <!-- 編輯展品作者 -->
                         <div class="form-group">
-                            <label for="item_editAuthor"></label>
-                            <input type="text" id="item_editAuthor" name="item[edit_item_author]" class="form-control" placeholder="展品作家">
+                            <label for="item_editArtist"></label>
+                            <input type="text" id="item_editArtist" name="item[edit_item_artist]" class="form-control" placeholder="展品作家">
                         </div>
+                        <!-- 編輯展品描述 -->
                         <div class="form-group">
                             <label for="item_editDescribe"></label>
                             <textarea id="item_editDescribe" rows="3" cols="40" name="item[edit_item_describe]" placeholder="展品描述"></textarea>
                         </div>
+                        <!-- 編輯展品檔案 -->
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                             <label class="form-check-label" for="flexCheckDefault">
