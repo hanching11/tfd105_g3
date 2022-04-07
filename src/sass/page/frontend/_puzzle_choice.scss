@@ -1,6 +1,8 @@
 .wrapper_pazzle_choice{
-   
-        *,
+    // transition: all 3s;
+
+    @media (min-width: 767px){
+    *,
     *:after,
     *::before {
         -webkit-box-sizing: border-box;
@@ -14,7 +16,7 @@
     margin: 0 auto;
 
     .page-content{
-        background-image: url(/src/img/Puzzle/choice/background/mona.png);
+        background-image: url(../img/Puzzle/choice/background/mona.png);
         background-size: cover;
         width: 100%;
         height: 1200px;
@@ -165,19 +167,19 @@
     }
 
     #pc1 .part-1 {
-        background: url("/src/img/Puzzle/choice/for-choice/scream.png") no-repeat center;
+        background: url("../img/Puzzle/choice/for-choice/scream.png") no-repeat center;
         background-size: cover;
             transition: all 0.3s;
     }
 
     #pc2 .part-1 {
-        background: url("/src/img/Puzzle/choice/for-choice/mona.png") no-repeat center;
+        background: url("../img/Puzzle/choice/for-choice/mona.png") no-repeat center;
         background-size: cover;
             transition: all 0.3s;
     }
 
     #pc3 .part-1{
-        background: url("/src/img/Puzzle/choice/for-choice/flower.png") no-repeat center;
+        background: url("../img/Puzzle/choice/for-choice/flower.png") no-repeat center;
         background-size: cover;
             transition: all 0.3s;
     }
@@ -213,6 +215,7 @@
         width: 130px;
         margin: 0 auto;
         margin-top: 50px;
+        // z-index: 10;
     }
 
     .submit-blt .bltt{
@@ -223,6 +226,15 @@
         color: $beidge1;
         border-radius: 25px;
         font-size: 20px;
+
+        transition: all 0.5s;
+    }
+
+    .submit-blt .bltt:hover{
+        
+        background: $beidge2;
+        color: $darkbrown2;
+    
     }
     
 
@@ -265,21 +277,308 @@
         background-size: 70px 44px;
         background-position: center;
         background-repeat: no-repeat;
+        
+        display: none;
       }
     
       .swiper-button-prevone{
-        background-image: url("/src/img/arrow/left-arrow.svg");
+        background-image: url("../img/arrow/left-arrow.svg");
         left: 20px;
         right: auto;
         // right: 0;
 
       }
       .swiper-button-nextone{
-        background-image: url("/src/img/arrow/right-arrow.svg");
+        background-image: url("../img/arrow/right-arrow.svg");
         right: 20px;
         left: auto;
         // left: 0;
       }
+    }
+
+    @media (max-width: 767px){
+    *,
+    *:after,
+    *::before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    // padding: 20px 20px;
+    
+    width: 100%;
+    margin: 0 auto;
+
+    .page-content{
+        background-image: url(../img/Puzzle/choice/background/mona.png);
+        background-size: cover;
+        width: 100%;
+        height: 900px;
+
+        position: relative;  //暫時
+    }
+
+    .puzzle_name{
+        padding-top: 100px;
+    }
+
+    .puzzle_title h1{
+        
+        font-size: $h6;
+        color: $beidge1;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .puzzle_subtitle{
+        font-size: 16px;
+        color: $beidge1;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+
+    .swiper-container{
+        // width: 720px 暫時註解
+        // margin: 50px auto;暫時註解
+        max-width: 1280px;
+        width: 80%;
+        height: 500px;
+        margin: 0 auto;
+        // height: 100%; 
+        border-radius: 25px;
+
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        //  Fix of Webkit flickering 
+        z-index: 1;
+    }
+
+    .swiper-wrapper{
+        // width: 720px; //暫時註解
+        // margin: 0 auto;
+        // display: flex;
+        // flex-grow: 1;
+
+    }
+
+    .swiper-slide{
+        border-radius: 25px;
+        display: block;
+        background: transparent;
+        border: none;
+        border:5px solid transparent;
+        // padding: 5px;
+        // margin: 0 25px;
+        // margin-right: 50px;
+        // padding: 0;
+
+        text-align: center;
+        
+
+
+    }
+
+    .swiper-wrapper button.active{ 
+        border-radius: 25px;
+        // background-color: $coffeebrown !important; 
+        color: $darkbrown1;
+        // outline: none !important;
+        // border: 5px solid $coffeebrown;
+        // padding: 2px;
+
+        .part-2{
+            background-color: $darkbrown2;
+            color: $beidge2;
+        }
+
+    }
+
+    // .btn:focus {
+    //     outline: none !important;
+    //   }
+
+    .button_content{
+
+    }
+
+    //改成swiper-slide
+    .swiper-slide {
+        // margin: 0 50px;
+        // margin-bottom: 120px;
+        // width: 180px;
+        -webkit-flex-shrink: 0;
+        -ms-flex: 0 0 auto;
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        // position: relative; 
+        border-radius: 25px;
+    
+    }
+
+    .swiper-slide:hover {
+        // margin: 0 50px;
+        // margin-bottom: 120px;
+        // width: 200px;
+        
+        .part-2{
+            background-color: $coffeebrown;
+            color: $beidge2;
+
+        }
+    
+    }
+    
+    .swiper-slide .part-1 {
+        position: relative;
+        height: 380px;
+        // max-height: 290px;
+        // margin-bottom: 20px;
+        overflow: hidden;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        
+    }
+    
+    .swiper-slide .part-1::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transition: all 0.3s;
+    }
+    
+    .swiper-slide:hover .part-1::before {
+            transform: scale(1.1,1.1) rotate(0deg);
+    }
+
+    #pc1 .part-1 {
+        background: url("../img/Puzzle/choice/for-choice/scream.png") no-repeat center;
+        background-size: cover;
+            transition: all 0.3s;
+    }
+
+    #pc2 .part-1 {
+        background: url("../img/Puzzle/choice/for-choice/mona.png") no-repeat center;
+        background-size: cover;
+            transition: all 0.3s;
+    }
+
+    #pc3 .part-1{
+        background: url("../img/Puzzle/choice/for-choice/flower.png") no-repeat center;
+        background-size: cover;
+            transition: all 0.3s;
+    }
+    //
+
+    .part-2{
+        height: 80px;
+        color: $darkbrown1;
+        background-color: $beidge2;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: block;
+
+        transition: all 0.4s;
+
+    }
+
+    // .part-2:hover{
+    //     height: 80px;
+    //     background-color: #000;
+    //     border-bottom-left-radius: 20px;
+    //     border-bottom-right-radius: 20px;
+    //     display: block;
+        
+    // }
+
+    .part-2 h4{
+        font-size: 20px;
+        line-height: 75px;
+    }
+
+    .submit-blt{
+        width: 100px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .submit-blt .bltt{
+        width: 100px;
+        height: 50px;
+        border: 1px solid #FFF;
+        background: $coffeebrown;
+        color: $beidge1;
+        border-radius: 25px;
+        font-size: 16px;
+    }
+    
+
+
+    .swiper-wrapper {
+        // position: relative; 
+        
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-transition-property: -webkit-transform;
+        -moz-transition-property: -moz-transform;
+        -o-transition-property: -o-transform;
+        -ms-transition-property: -ms-transform;
+        transition-property: transform;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+      }
+
+
+      //   Arrows 
+      .swiper-button-prevone,
+      .swiper-button-nextone {
+        position: absolute;
+        top: 45%;
+        width: 40px;
+        height: 44px;
+        margin-top: -22px;
+        z-index: 10;
+        
+        cursor: pointer;
+        -moz-background-size: 40px 44px;
+        -webkit-background-size: 40px 44px;
+        background-size: 40px 44px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    
+      .swiper-button-prevone{
+        background-image: url("../img/arrow/w-left-arrow.svg");
+        left: 4px;
+        right: auto;
+        // right: 0;
+
+      }
+      .swiper-button-nextone{
+        background-image: url("../img/arrow/w-right-arrow.svg");
+        right: 4px;
+        left: auto;
+        // left: 0;
+      }
+    }
+    
 
 
 
