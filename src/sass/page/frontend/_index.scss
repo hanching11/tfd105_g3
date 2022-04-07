@@ -169,7 +169,7 @@ $media_p:$p+0.8;
 
     .exhibition {
 
-        background-image: url(/src/img/index/Rectangle\ 4067.jpg);
+        background-image: url(../img/index/Rectangle\ 4067.jpg);
         margin-top: $margin * 5;
         margin-bottom: $margin * 5;
 
@@ -483,7 +483,7 @@ $media_p:$p+0.8;
     ;
 
     .login {
-        background-image: url(/src/img/index/Rectangle\ 8.jpg);
+        background-image: url(../img/index/Rectangle\ 8.jpg);
         margin-top: $margin * 4;
         margin-bottom: $margin * 4;
 
@@ -754,7 +754,7 @@ $media_p:$p+0.8;
                     }
 
                     .rwdbg {
-                        background-image: url(/src/img/index/Rectangle\ 4067-1.jpg);
+                        background-image: url(../img/index/Rectangle\ 4067-1.jpg);
                         width: 391px;
                         border-radius: $border-radius;
                         margin: 0 auto !important;
@@ -852,6 +852,8 @@ $media_p:$p+0.8;
 
                     .re_box {
 
+                        margin: 0 !important;
+
                         p {
                             @include p;
                             width: 100%;
@@ -881,9 +883,11 @@ $media_p:$p+0.8;
 
                         }
 
-                        .col-lg-10{
+                        .col-lg-10 {
                             margin: 0 !important;
+                            color: aquamarine;
                         }
+
 
 
                     }
@@ -945,9 +949,20 @@ $media_p:$p+0.8;
                 }
 
 
+
+
             }
 
             ;
+
+            .modal-body {
+                margin: $margin * 3;
+                background-color: aquamarine;
+            }
+
+
+
+
 
 
 

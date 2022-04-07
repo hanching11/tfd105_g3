@@ -3,7 +3,7 @@
     font-family: "Cinzel", "Noto Serif TC", serif;
     background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: multiply;
-    background-image: url("/src/img/psychol_test/A1.jpg");
+    background-image: url("../img/psychol_test/A1.jpg");
     background-size: cover;
     background-position: center center;
     color: #eeeae2;
@@ -106,44 +106,68 @@
     .recommend img:hover {
         filter: sepia(0.5);
     }
-    
+    .mobile_test_result {
+        display: none;
+    }
+
     // result A RWD
     @media (max-width: 1140px) {
-        .pt_result_A .psychol_title h1{
-            font-size: 1rem;
-            line-height: 1.6;
-            letter-spacing: 1px;
+        .c_pt_resultA {
+            display: none;
         }
-        .pt_result_A {
+        .mobile_test_result {
             display: block;
-        }
-
-        .test_result, .result_right {
-            margin: 0 auto;
             text-align: center;
-            display: block;
         }
-        .artist_introduce p{
+        .mobile_test_result .m_psychol_title {
+            font-size: 1.5rem;
+            letter-spacing: 0.5rem;
+            line-height: 5;
+            font-weight: bold;
+        }
+        .m_painting img {
+            width: 300px;
+            border-radius: 25px;
+            border: 1px solid #eeeae2;
+            transition: 1s;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+        .m_artist_name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+            line-height: 2;
+        }
+        .m_artist {
+            margin: 50px 0;
+        }
+        .m_artist h2 {
+            font-size: 1.6rem;
+            letter-spacing: 3px;
+            border-radius: 25px;
+            width: 300px;
+            margin: auto;
             text-align: center;
             align-items: center;
-            margin: 0 auto;
+            justify-content: center;
+            background-color: #786b54;
+            color: #eeeae2;
+            padding: 10px;
         }
-
-        .pt_result_A .test_result .artwork .painting img{
-            width: 50%;
-            margin: 0 auto;
+        .m_artist_introduce {
+            width: 80%;
+            margin: 30px auto;
         }
-        .artist_name ,.artist_introduce{
-            width: 90%;
-            text-align: center;
+        .m_artist_introduce p {
+            font-size: 1.1rem;
+            line-height: 2;
         }
-        .recommend {
-            text-align: center;
-            margin: 0 auto;
-            margin-top: 30px;
-        }
-        .recommend a {
-            letter-spacing: 3px;
+        .m_recommend a {
+            text-decoration: none;
+            color: #eeeae2;
+            font-size: 1.4rem;
+            letter-spacing: 5px;
             line-height: 5;
         }
     }
