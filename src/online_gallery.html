@@ -10,6 +10,7 @@
         integrity="sha512-v0jjVvFpZqb1BcXhgLbaBDRKwZ09IpWFZL5NHTNbW9MlSjhZihkxEz2uNeMGd6HuK1qnSEL6JdyTr24ZHlgKow=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    
     @@include('./layout/head.html')
     <title>Online Gallery| 光緣畫廊 | KUANG YUAN</title>
     <style>
@@ -183,6 +184,7 @@
         // fullpage
         new fullpage('#fullpage', {
             navigation: true,
+            scrollingSpeed: 1200,
             responsiveWidth: 700,
             anchors: ['gothic', 'renaissance', 'ukiyo-e', 'post-impressionism', 'cubism'],
             parallax: true,

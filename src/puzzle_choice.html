@@ -3,10 +3,9 @@
 
 <head>
     @@include('./layout/head.html')
-    <!-- <link
-    rel="stylesheet"
-    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-  /> -->
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>Puzzle_choice</title>
     <!-- bootstrap -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"> -->
@@ -34,9 +33,9 @@
             </div>
 
 
-            <div class="swiper-container swiper-no-swiping">
+            <div class="swiper-container swiper-no-swiping" data-aos="fade-up" data-aos-duration="3000">
                 <!-- 網頁版 -->
-                <div class="swiper-wrapper" arial-label="Basic example" id="app">
+                <div class="swiper-wrapper" arial-label="Basic example" id="app" >
                     <button type="button" @click="i18n.locale = 'sm'" :class="{active:i18n.locale === 'sm' }"
                         class="swiper-slide" id="pc1">
                         <div class="part-1">
@@ -83,7 +82,9 @@
             </div>
 
             <div class="submit-blt">
-                <button type="button" class="bltt"><a href="./puzzle.html">確認送出</a> </button>
+                <button type="button" class="bltt">
+                    <a href="./puzzle.html">確認送出</a>
+                </button>
             </div>
 
         </main>
@@ -100,6 +101,9 @@
     <!-- 熱門商品輪播 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
         //vue for 選擇固定
@@ -177,6 +181,11 @@
                 }
             });
         });
+
+        //aos
+       
+        AOS.init();
+        
     </script>
 </body>
 
