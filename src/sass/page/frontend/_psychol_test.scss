@@ -1,11 +1,22 @@
 .psychol_test_wrapper_start {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #ab8a49;
     background-blend-mode: multiply;
     background-image: url("../img/psychol_test/P_bac.jpg");
     background-size: cover;
     background-position: center center;
     color: #eeeae2;
-
+    animation: p_animate 5s ease-in-out infinite;
+    
+    @keyframes p_animate {
+        50%{
+            background:linear-gradient(160deg, #eeeae2, transparent),
+            linear-gradient(280deg, #ab8a49, transparent),
+            linear-gradient(400deg, #353231, transparent);
+            background-image: url("../img/psychol_test/P_bac.jpg");
+            background-size: cover;
+            background-position: center center;
+        }
+    }
     .psychol_title h1 {
         font-size: 1.5rem;
         letter-spacing: 1rem;
@@ -52,6 +63,13 @@
         line-height: 2;
         cursor: pointer;
         transition: 0.5s;
+        animation: p_start 2s linear infinite;
+    }
+    @keyframes p_start {
+        50%{
+            letter-spacing: 0.5rem;
+            transform: scale(.8);
+        }
     }
 
     .game_start_btn button:hover {

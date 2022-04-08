@@ -137,6 +137,13 @@
         border-radius: 50%;
         background-color: #786B54;
     }
+    #goBackBtn i{
+        color: #eeeae2;
+        transition: .5s;
+    }
+    #goBackBtn i:hover{
+        color: #c3bdb3;
+    }
 
 
     // mobile version

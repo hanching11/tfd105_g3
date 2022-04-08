@@ -49,7 +49,7 @@ function hideNav() {
 
 //  購物車
 $("#cart").on("click", function() {
-    $(".shopping-cart").fadeToggle( "fast");
+    $(".shopping-cart").fadeToggle("fast");
 });
     
 // 關掉購物車
