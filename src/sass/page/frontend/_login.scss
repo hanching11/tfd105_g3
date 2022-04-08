@@ -1,0 +1,234 @@
+.wrapper_login {
+    input{
+        padding: 5px;
+    }
+
+    .hide-arrows::-webkit-outer-spin-button,
+    .hide-arrows::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+
+    // Firefox
+    .hide-arrows {
+        -moz-appearance: textfield;
+    }
+
+
+    // 標題
+    .title {
+        width: 100%;
+        text-align: center;
+        line-height: 1.6;
+        padding: 20px 15px;
+    }
+
+    .title {
+        margin-bottom: 50px;
+    }
+
+    .title h3 {
+        font-size: 2.75rem;
+        color: #786B54;
+        margin: 50px 0 20px 0;
+        letter-spacing: .4rem;
+        font-weight: bold;
+    }
+
+    .title p {
+        font-size: 18px;
+        color: #353231;
+        letter-spacing: .2;
+    }
+
+    // 註冊登入切換按鈕
+    .member {
+        width: 180px;
+        height: 40px;
+        margin: 0 auto;
+        background-color: #E3DED4;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 40px;
+        margin-bottom: 30px;
+    }
+
+
+    #tab_join_btn {
+        box-sizing: border-box;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    #tab_join_btn p,
+    .member a {
+        text-align: center;
+        line-height: 1.6;
+        color: #C3BDB3;
+        text-decoration: none;
+
+    }
+
+    // 表單
+
+    #tab_inner input {
+        border: 1px #C3BDB3 solid;
+        background-color: #FFFFFF;
+        width: 300px;
+    }
+
+    .form-group {
+        text-align: left;
+        height: 50px;
+        /* margin: 0 auto; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form_content {
+        width: 500px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+        /* border: 1px red solid; */
+        box-sizing: border-box;
+    }
+
+    #bitrhday {
+        width: 170px;
+        box-sizing: border-box;
+    }
+
+    // 註冊登入按鈕
+    #join_btn,
+    #login_btn {
+        width: 200px;
+        height: 30px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        border-radius: 15px;
+        background-color: #786B54;
+        border: none;
+        margin-left: 150px;
+        margin-top: 20px;
+    }
+
+    #join_btn p,
+    #login_btn p {
+        text-align: center;
+        margin: 0;
+        color: #EEEAE2;
+    }
+
+    // 錯誤訊息 
+    #msg,
+    #msg2 {
+        text-align: center;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    // 彈窗 
+    #msg,
+    #msg2 {
+        color: red;
+        font-weight: bold;
+        height: 40px;
+        line-height: 1.6;
+        box-sizing: border-box;
+    }
+
+    .popupcontent {
+        width: 500px;
+        height: 250px;
+        background-color: beige;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px;
+        box-sizing: border-box;
+
+
+        position: fixed;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+
+        display: none;
+
+    }
+
+    .popupcontent h2 {
+        text-align: center;
+        width: 300px;
+    }
+
+
+
+    #confirm {
+        width: 150px;
+        height: 40px;
+        border-radius: 30px;
+        margin: 0 auto
+    }
+
+    // 遮罩
+    .mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: black;
+        opacity: .7;
+        width: 100%;
+        height: 100%;
+
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 575.98px) {
+    .wrapper_login {
+        .form_content {
+            width: 250px;
+        }
+
+        .form-group {
+            display: block;
+            margin: 0 auto;
+            text-align: left;
+            height: 80px;
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .form-group label {
+            line-height: 1.6;
+        }
+
+        #tab_inner input {
+            width: 100%;
+        }
+
+        #join_btn,
+        #login_btn {
+            margin-left: 25px;
+        }
+    }
+
+}
+
+
+
+@media screen and (min-width: 576px) and (max-width: 767.9px) {}
+
+@media screen and (min-width: 768px) and (max-width: 991.8px) {}
+
+@media screen and (min-width: 992px) and (max-width: 1199.8px) {}
+
+@media screen and (min-width: 1200px) and (max-width: 1399.8px) {}
+
+@media screen and (min-width: 1400px) {}

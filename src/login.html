@@ -6,241 +6,7 @@
 
     <title>Login</title>
 
-    <style>
-        body {
-            position: relative;
-            background-color: #EEEAE2;
-            color: #353231;
-            /* padding: 20px; */
-            box-sizing: border-box;
-        }
 
-
-        .hide-arrows::-webkit-outer-spin-button,
-        .hide-arrows::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-
-
-        /* Firefox */
-        .hide-arrows {
-            -moz-appearance: textfield;
-        }
-
-
-        /* 標題 */
-        .title {
-            width: 100%;
-            text-align: center;
-            line-height: 1.6;
-            padding: 20px 15px;
-        }
-
-        .title {
-            margin-bottom: 50px;
-        }
-
-        .title h3 {
-            font-size: 2.75rem;
-            color: #786B54;
-            margin: 50px 0 20px 0;
-            letter-spacing: .4rem;
-            font-weight: bold;
-        }
-
-        .title p {
-            font-size: 18px;
-            color: #353231;
-            letter-spacing: .2;
-        }
-
-
-        /* 註冊/登入切換按鈕 */
-        .member {
-            width: 180px;
-            height: 40px;
-            margin: 0 auto;
-            background-color: #E3DED4;
-            padding: 10px;
-            box-sizing: border-box;
-            border-radius: 40px;
-            margin-bottom: 30px;
-        }
-
-
-        #tab_join_btn {
-            box-sizing: border-box;
-            margin-right: 10px;
-            margin-left: 10px;
-        }
-
-        #tab_join_btn p,
-        .member a {
-            text-align: center;
-            line-height: 1.6;
-            color: #C3BDB3;
-            text-decoration: none;
-
-        }
-
-        /* 表單 */
-
-        #tab_inner input {
-            border: 1px #C3BDB3 solid;
-            background-color: #FFFFFF;
-            width: 300px;
-        }
-
-        .form-group {
-            text-align: left;
-            height: 50px;
-            /* margin: 0 auto; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .form_content {
-            width: 500px;
-            margin: 0 auto;
-            margin-bottom: 100px;
-            /* border: 1px red solid; */
-            box-sizing: border-box;
-        }
-
-        #bitrhday {
-            width: 170px;
-            box-sizing: border-box;
-        }
-
-        /* 註冊/登入按鈕 */
-        #join_btn,
-        #login_btn {
-            width: 200px;
-            height: 30px;
-            box-sizing: border-box;
-            margin: 0 auto;
-            border-radius: 15px;
-            background-color: #786B54;
-            border: none;
-            margin-left: 150px;
-            margin-top: 20px;
-        }
-
-        #join_btn p,
-        #login_btn p {
-            text-align: center;
-            margin: 0;
-            color: #EEEAE2;
-        }
-
-        /* 錯誤訊息 */
-        #msg , #msg2{
-            text-align: center;
-            margin: 0 auto;
-            padding: 10px;
-        }
-
-        /* 彈窗 */
-        #msg  , #msg2{
-            color: red;
-            font-weight: bold;
-            height: 40px;
-            line-height: 1.6;
-            box-sizing: border-box;
-        }
-
-        .popupcontent {
-            width: 500px;
-            height: 250px;
-            background-color: beige;
-            display: flex;
-            flex-wrap: wrap;
-            padding: 50px;
-            box-sizing: border-box;
-
-
-            position: fixed;
-            justify-content: center;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 5;
-
-            display: none;
-
-        }
-
-        .popupcontent h2 {
-            text-align: center;
-            width: 300px;
-        }
-
-
-
-        #confirm {
-            width: 150px;
-            height: 40px;
-            border-radius: 30px;
-            margin: 0 auto
-        }
-
-        /* 遮罩 */
-        .mask {
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: black;
-            opacity: .7;
-            width: 100%;
-            height: 100%;
-
-            display: none;
-        }
-
-        @media screen and (max-width: 575.98px) {
-            .form_content {
-                width: 250px;
-            }
-
-            .form-group {
-                display: block;
-                margin: 0 auto;
-                text-align: left;
-                height: 80px;
-                box-sizing: border-box;
-                margin: 0;
-            }
-
-            .form-group label {
-                line-height: 1.6;
-            }
-
-            #tab_inner input {
-                width: 100%;
-            }
-
-            #join_btn,
-            #login_btn {
-                margin-left: 25px;
-            }
-
-
-        }
-
-
-
-        @media screen and (min-width: 576px) and (max-width: 767.9px) {}
-
-        @media screen and (min-width: 768px) and (max-width: 991.8px) {}
-
-        @media screen and (min-width: 992px) and (max-width: 1199.8px) {}
-
-        @media screen and (min-width: 1200px) and (max-width: 1399.8px) {}
-
-        @media screen and (min-width: 1400px) {}
-    </style>
 
 </head>
 
@@ -264,85 +30,96 @@
             <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
         </div> -->
 
-    </div>
 
 
-    <div class="member" id="member_tab">
-        <span class="btn_bg"><a href="" id="tab_join_btn">會員註冊</a></span>
-        <span><a href="" id="tab_login_btn">會員登入</a></span>
-    </div>
 
-    <!-- form 會員註冊 -->
-    <div id="tab_inner" class="">
-        <form class="form_content" id="tab_join_content">
-
-            <div class="form-group">
-                <label for="text">&nbsp; &nbsp;帳號&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
-                <input type="text" class="form-control" id="username_j" placeholder="請輸入帳號或Email">
+        <!-- Swtich button -->
+        <div class="switch_button">
+            <div class="can-toggle demo-rebrand-2">
+                <input id="e" type="checkbox">
+                <label for="text">
+                    <div class="can-toggle__switch" data-checked="會員登入" data-unchecked="會員註冊"></div>
+                </label>
             </div>
-            <div class="form-group">
-                <label for="password">&nbsp; &nbsp;密碼&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
-                <input type="password" class="form-control" id="password_j" placeholder="請輸入密碼">
-            </div>
-            <div class="form-group">
-                <label for="confirm_pas">確認密碼&nbsp; &nbsp; &nbsp; </label>
-                <input type="password" class="form-control" id="confirmPassword" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="name">&nbsp; &nbsp;姓名&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
-                <input type="text" class="form-control" id="name" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="bitrhday">&nbsp; &nbsp;生日&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
-                <input type="date" class="form-control" id="bitrhday">
-            </div>
-            <div class="form-group">
-                <label for="phone">&nbsp; &nbsp;電話&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
-                <input type="number" class="form-control hide-arrows" id="phone">
-            </div>
+        </div>
 
-            <div id="msg"></div>
 
-            <button id="join_btn">
-                <p>註冊會員</p>
-            </button>
-        </form>
+        <div class="member" id="member_tab">
+            <span class="btn_bg"><a href="" id="tab_join_btn">會員註冊</a></span>
+            <span><a href="" id="tab_login_btn">會員登入</a></span>
+        </div>
 
-        <!-- form 會員登入 -->
-        <div id="-tab_inner" class="">
-            <form class="form_content" id="tab_login_content">
+        <!-- form 會員註冊 -->
+        <div id="tab_inner" class="">
+            <form class="form_content" id="tab_join_content">
+
                 <div class="form-group">
-                    <label for="email">&nbsp; &nbsp;帳號&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
-                    <input type="email" class="form-control" id="email_l" placeholder="請輸入帳號或Email">
+                    <label for="text">&nbsp; &nbsp;帳號&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
+                    <input type="text" id="username_j" placeholder="請輸入帳號或Email">
                 </div>
                 <div class="form-group">
-                    <label for="password">&nbsp; &nbsp;密碼&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
-                    <input type="password" class="form-control" id="password_l" placeholder="請輸入密碼">
+                    <label for="password">&nbsp; &nbsp;密碼&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
+                    <input type="password" id="password_j" placeholder="請輸入密碼">
+                </div>
+                <div class="form-group">
+                    <label for="confirm_pas">確認密碼&nbsp; &nbsp; &nbsp; </label>
+                    <input type="password" id="confirmPassword" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="name">&nbsp; &nbsp;姓名&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
+                    <input type="text" id="name" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="bitrhday">&nbsp; &nbsp;生日&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
+                    <input type="date" id="bitrhday">
+                </div>
+                <div class="form-group">
+                    <label for="phone">&nbsp; &nbsp;電話&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
+                    <input type="number" class=" hide-arrows" id="phone">
                 </div>
 
-                <div id="msg2"></div>
+                <div id="msg"></div>
 
-                <button id="login_btn">
-                    <p>登入會員</p>
+                <button id="join_btn">
+                    <p>註冊會員</p>
                 </button>
             </form>
 
-            <!-- 彈窗 -->
-            <div class="popupcontent">
-                <h1><i class="fa-solid fa-circle-exclamation"></i></h1>
-                <h2>會員註冊成功</h2>
-                <button id="confirm">確定</button>
+            <!-- form 會員登入 -->
+            <div id="-tab_inner" class="">
+                <form class="form_content" id="tab_login_content">
+                    <div class="form-group">
+                        <label for="email">&nbsp; &nbsp;帳號&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+                        <input type="email" id="email_l" placeholder="請輸入帳號或Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">&nbsp; &nbsp;密碼&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+                        <input type="password" id="password_l" placeholder="請輸入密碼">
+                    </div>
+
+                    <div id="msg2"></div>
+
+                    <button id="login_btn">
+                        <p>登入會員</p>
+                    </button>
+                </form>
+
+                <!-- 彈窗 -->
+                <div class="popupcontent">
+                    <h1><i class="fa-solid fa-circle-exclamation"></i></h1>
+                    <h2>會員註冊成功</h2>
+                    <button id="confirm">確定</button>
+                </div>
+
+                <!-- 遮罩 -->
+                <div class="mask"></div>
+
+
+
+                <!-- footer-->
+                @@include('./layout/footer.html')
             </div>
-
-            <!-- 遮罩 -->
-            <div class="mask"></div>
-
-
-
-            <!-- footer-->
-            @@include('./layout/footer.html')
         </div>
-
         <script>
             const member_tab = document.getElementById("member_tab").querySelectorAll("a");
             const tab_inner = document.getElementById("tab_inner").querySelectorAll('.form_content');
@@ -371,7 +148,7 @@
 
 
             document.addEventListener("DOMContentLoaded", function () {
- 
+
                 //input type= number e bug
                 $('input[type=number]').keypress(function (e) {
                     if (!String.fromCharCode(e.keyCode).match(/[0-9\.]/)) {
@@ -520,7 +297,7 @@
 
                 });
 
-                
+
                 //會員登入驗證
                 login_btn.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -532,13 +309,13 @@
                         // console.log("AA");
                         msg2.textContent = '請輸入帳號';
                         return;
-                    } 
+                    }
 
                     if (password_l_V == null || password_l_V == undefined || password_l_V == '') {
                         // console.log("AA");
                         msg2.textContent = '請輸入密碼';
                         return;
-                    } 
+                    }
 
                     //若成功
                     msg.textContent = ' ';
