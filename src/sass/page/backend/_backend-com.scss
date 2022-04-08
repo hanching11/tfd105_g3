@@ -8,7 +8,6 @@
             position: relative;
                 img {
                     display: block;
-                    width: 100%;
                     margin: 30px 0;
                 }
         }
@@ -32,15 +31,18 @@
     display: flex;
     border-top: 1px solid black;
     }
+    h6{
+        letter-spacing: 5px;
+    }
     .content_left {
         background-color: black;
         width: 200px;
         text-align: center;
     }       
         .wd-border {
-            color: #fff;
+            color: #EEEAE2;
             padding: 20px 0;
-            border-bottom: 1px solid white;  
+            border-bottom: 1px solid #EEEAE2;  
             width: 80%;
             margin: 0 auto;
             cursor: default;             
@@ -57,21 +59,27 @@
         width: 200px;
         height: 300px;
         a:hover {
-            color: #ec8744;
+            color: #E3DED4;
         }
 }        
     .ba_bk {
-        background-color: black;
+        background-color: #353231;
     }
         ol {
-            margin: 20px 0;
-
+            margin: 40px 0;
+            letter-spacing: 5px;
         }
-            
+
             a {
                 text-decoration: none;
-                color: #fff;
+                color: #EEEAE2;
             }
+            #b_color_label{
+                width: 80%;
+                background-color: #C3BDB3;
+                color: #353231;
+                padding: 5px 5px 10px 10px;
+            }   
 
     //共用區 
     .ju_between {
