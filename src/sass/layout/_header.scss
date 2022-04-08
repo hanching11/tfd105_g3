@@ -1,10 +1,13 @@
 .wrapper_header {
+    padding-bottom: 70px;
+
     a {
         text-decoration: none;
         color: #353231;
     }
 
     .header_bac {
+        position: fixed;
         background-color: #353231;
         color: #eeeae2;
         display: flex;
@@ -13,6 +16,7 @@
         justify-content: space-between;
         margin: 0 auto;
         text-align: center;
+        z-index: 1000;
     }
 
     .head_icon {
@@ -39,7 +43,7 @@
 
     .header_bac a {
         text-decoration: none;
-        text-align: left;
+        text-align: center;
         color: #eeeae2;
     }
 
@@ -219,7 +223,6 @@
 
     .nav-list {
         position: fixed;
-        z-index: 100;
         right: 0;
         top: 70px;
         background-color: #c3bdb3;
@@ -256,15 +259,6 @@
     .nav-list a:hover {
         color: #eeeae2;
     }
-    .nav_top ol{
-        color: #353231;
-        cursor: pointer;
-        transition: .5s;
-    }
-    ol.sub-nav:hover {
-        color: #eeeae2;
-    }
-
 
     /* 網頁捲軸 寬度 */
     ::-webkit-scrollbar {
@@ -312,6 +306,15 @@
         color: #eeeae2;
     }
 
+    .nav_top ol{
+        color: #353231;
+        cursor: pointer;
+        transition: .5s;
+    }
+    ol.sub-nav:hover, ol.sub-nav2:hover {
+        color: #eeeae2;
+    }
+
     .sub_nav {
         cursor: pointer;
     }
@@ -333,6 +336,10 @@
         }
         .nav-list ul a:hover{
             color: #353231;
+        }
+        .nav_top ol{
+            color: #eeeae2;
+            transition: .5s;
         }
         .h_logo {
             margin-left: 10px;
