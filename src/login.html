@@ -25,24 +25,15 @@
 
 
 
-        <!-- <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-            <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
-        </div> -->
-
-
-
-
         <!-- Swtich button -->
-        <div class="switch_button">
+        <!-- <div class="switch_button">
             <div class="can-toggle demo-rebrand-2">
                 <input id="e" type="checkbox">
-                <label for="text">
-                    <div class="can-toggle__switch" data-checked="會員登入" data-unchecked="會員註冊"></div>
+                <label for="e">
+                    <div class="can-toggle__switch" data-checked="登入" data-unchecked="註冊"></div>
                 </label>
             </div>
-        </div>
-
+        </div> -->
 
         <div class="member" id="member_tab">
             <span class="btn_bg"><a href="" id="tab_join_btn">會員註冊</a></span>
@@ -123,6 +114,7 @@
         <script>
             const member_tab = document.getElementById("member_tab").querySelectorAll("a");
             const tab_inner = document.getElementById("tab_inner").querySelectorAll('.form_content');
+            const form_content = document.querySelectorAll('.form_content')
             const tab_join_btn = document.getElementById("tab_join_btn");
             const tab_login_btn = document.getElementById("tab_login_btn");
             const tab_join_content = document.getElementById("tab_join_content");
@@ -156,7 +148,7 @@
                     }
                 });
 
-                //tab切換
+              //tab切換
                 // 啟動第一個panel
                 panelDisplay(member_tab[0]);
 
@@ -188,6 +180,21 @@
                 }
                 //tab切換end
 
+                // switch btn 切換
+                // const toggle__switch = document.getElementsByClassName('switch_button')[0];
+
+                // toggle__switch.addEventListener('click', (e) => {
+                //     // console.log("AAA");
+                //     for (let i = 0; i < form_content.length; i++) {
+                //         if (tab_join_content.style.display === "block") {
+                //             tab_login_content.style.display === "none";
+                //         } else {
+                //             tab_join_content.style.display === "none";
+                //             tab_login_content.style.display === "block";
+                //         }
+                //     }
+
+                // });
 
                 //會員註冊驗證
                 join_btn.addEventListener('click', (e) => {
