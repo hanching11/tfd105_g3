@@ -342,9 +342,10 @@
         .shopping-cart {
             width: 100% !important;
             height: 100% !important;
+            position: fixed!important;
         }
         .shopping-cart-items {
-            align-items: center;
+            align-items: flex-start;
         }
     }
 

@@ -31,7 +31,7 @@ var previousScroll = 0;
 
 window.addEventListener('scroll', function(){
     var currentScroll = $(this).scrollTop();
-   if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()) {
+   if (currentScroll > 100 && currentScroll < $(document).height() - $(window).height()) {
         if (currentScroll > previousScroll) {
             hideNav();
         }
@@ -44,6 +44,7 @@ function hideNav() {
     $("button.hamburger").removeClass("is-active")
     $(".nav-list").removeClass("on")
 }
+
 
 
 //  購物車
