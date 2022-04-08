@@ -258,7 +258,13 @@
     }
     .nav_top ol{
         color: #353231;
+        cursor: pointer;
+        transition: .5s;
     }
+    ol.sub-nav:hover {
+        color: #eeeae2;
+    }
+
 
     /* 網頁捲軸 寬度 */
     ::-webkit-scrollbar {
