@@ -7,8 +7,6 @@
 
         // 畫廊宗旨
         .-aboutBanner {
-            padding: 50px;
-            // border: 5px solid blue;
             height: 450px;
             background-repeat: no-repeat;
             background-size: cover;
@@ -88,10 +86,14 @@
 
         @media (max-width: 575.98px) {
             .-aboutBanner {
-                height: 300px;
-                padding-top: 20px;
+                height: 400px;
+                background-repeat: no-repeat;
+                background-size:auto;
+                background-position-y: -1500px;
+                background-image: url(../img/about/1922.4467\ -\ Old\ Man\ with\ a\ Gold\ Chain.jpg);
             }
 
+           
             h4,
             .-aboutPlace {
                 font-size: 1.5rem;
@@ -383,7 +385,6 @@
             .contect-blk {
                 margin-bottom: 0px;
             }
-            
             .-aboutNum {
                 height: 100vh;
                 // border: 1px solid black;
