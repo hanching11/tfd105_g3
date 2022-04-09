@@ -234,21 +234,22 @@
     .nav_top {
         display: flex;
         flex-direction: column;
-        margin: 25px 50px 0 0;
+        margin-top: 40px;
     }
 
     .nav_top ol {
-        padding: 30px 0 0 0;
+        // padding: 35px 0 0 0;
         font-weight: bold;
         font-size: 1.2em;
         letter-spacing: 5px;
-        margin-left: 35%;
+        line-height: 3;
+        // margin-left: 25%;
     }
 
     .nav_top li {
         list-style: none;
         font-size: 1rem;
-        line-height: 1.8;
+        line-height: 1.6;
     }
 
     .nav-list a {
@@ -280,7 +281,7 @@
         background: #e3ded4;
     }
     .nav-list ol {
-        text-align: left;
+        text-align: center;
     }
 
     .nav-list ol li {
@@ -295,7 +296,7 @@
 
     .nav-list ol i {
         color: #353231;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: lighter;
         cursor: pointer;
         transition: 0.5s;
@@ -306,12 +307,16 @@
         color: #eeeae2;
     }
 
-    .nav_top ol{
+    .nav_top ol {
         color: #353231;
         cursor: pointer;
-        transition: .5s;
+        transition: 0.5s;
     }
-    ol.sub-nav:hover, ol.sub-nav2:hover {
+    ol.sub-nav, ol.sub-nav2{
+        margin-left: 10%;
+    }
+    ol.sub-nav:hover,
+    ol.sub-nav2:hover {
         color: #eeeae2;
     }
 
@@ -324,38 +329,39 @@
     }
     // header rwd
     @media (max-width: 768px) {
-        .nav-list{
-            background-color: rgba(0, 0, 0, .5);
+        .nav-list {
+            background-color: rgba(0, 0, 0, 0.5);
             background-blend-mode: multiply;
             background-image: url("../img/navbac.jpg");
             background-size: cover;
             background-position: center center;
         }
-        .nav-list ul ol a, #tg1, #tg2{
+        .nav-list ul ol a,
+        #tg1,
+        #tg2 {
             color: #eeeae2;
         }
-        .nav-list ul a:hover{
+        .nav-list ul a:hover {
             color: #353231;
         }
-        .nav_top ol{
+        .nav_top ol {
             color: #eeeae2;
-            transition: .5s;
+            transition: 0.5s;
         }
         .h_logo {
             margin-left: 10px;
         }
-    
+
         .h_navbar {
             margin-right: 10px;
         }
-        
     }
 
     @media (max-width: 767px) {
         .shopping-cart {
             width: 100% !important;
             height: 100% !important;
-            position: fixed!important;
+            position: fixed !important;
         }
         .shopping-cart-items {
             align-items: flex-start;
@@ -368,7 +374,7 @@
         position: relative;
     }
 
-    .shopping-cart{
+    .shopping-cart {
         display: none;
         background-color: #eeeae2;
         width: 30%;
@@ -379,60 +385,52 @@
     .shopping-cart-items {
         display: flex;
         flex-direction: column;
-    
+
         padding-top: 35px;
-    
-          li {
+
+        li {
             margin-bottom: 18px;
-          }
-    
+        }
+
         img {
             display: block;
             margin: 0 10px 0 15px;
             width: 100%;
         }
-        
+
         .item-name {
-          display: block;
-          color: #353231;
-          white-space: nowrap;
-          text-align: left;   
-        
+            display: block;
+            color: #353231;
+            white-space: nowrap;
+            text-align: left;
         }
-        
+
         .item-price {
             color: #353231;
             display: flex;
         }
-        
-       
     }
-       
-    
+
     #button {
-      background:#786B54; 
-      color:white;
-      text-align: center;
-      padding: 10px;
-      text-decoration: none;
-      display: block;
-      border-radius: 3px;
-      margin: 20px auto;
-      width:60%;
-      
-      
+        background: #786b54;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+        border-radius: 3px;
+        margin: 20px auto;
+        width: 60%;
     }
 
     .clearfix:after {
         content: "";
-
     }
-    
+
     .clearfix {
         max-width: 100px;
         background-color: #eeeae2;
         display: flex;
-
     }
     .cart_item {
         display: flex;
@@ -442,18 +440,13 @@
     .product-quantity {
         margin: 0 20px;
         width: 100px;
-        input{
+        input {
             width: 45px;
         }
     }
-    
+
     .cart-close {
         text-align: right;
-        margin: 0 20px
+        margin: 0 20px;
     }
-
-    
-    
-}  
-
-
+}

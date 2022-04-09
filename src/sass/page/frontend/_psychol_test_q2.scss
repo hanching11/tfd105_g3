@@ -82,8 +82,8 @@
     @media (max-width: 800px) {
         .question img {
             margin: 0 auto;
-            width: 300px;
-            height: 100%;
+            max-width: 300px;
+            height: auto;
         }
         .test_q1 .next_arrow , .test_q1 .previous_arrow{
             display: none;
