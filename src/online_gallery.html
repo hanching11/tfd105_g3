@@ -10,13 +10,28 @@
         integrity="sha512-v0jjVvFpZqb1BcXhgLbaBDRKwZ09IpWFZL5NHTNbW9MlSjhZihkxEz2uNeMGd6HuK1qnSEL6JdyTr24ZHlgKow=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    
+
     @@include('./layout/head.html')
     <title>Online Gallery| 光緣畫廊 | KUANG YUAN</title>
     <style>
-        .wrapper_header .header_bac{
+        .wrapper_header .header_bac {
             position: fixed;
             z-index: 9999999;
+        }
+        .wrapper_footer{
+            display: none;
+        }
+        
+        @media screen and (max-width: 575.98px) {
+            .wrapper_header .header_bac {
+                position: relative;
+                z-index: 9999999;
+            }
+            .wrapper_footer{
+                display: block;
+            }
+
+
         }
     </style>
 
@@ -56,7 +71,7 @@
 
             <!-- 02_Renaissance -->
             <div class="section" id="section1">
-                <div class="dark renaissance onlinegallery_content">
+                <div class="renaissance onlinegallery_content dark ">
 
                     <div class="gallery_pic">
                         <img src="./img/online_gallery/pic02.jpg">
@@ -176,6 +191,9 @@
 
             </ul>
         </div> <!-- fullpage_dot end-->
+
+        <!-- 引入header -->
+        @@include('./layout/footer.html')
     </div>
 
 
