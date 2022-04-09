@@ -26,14 +26,14 @@
 
 
         <!-- Swtich button -->
-        <!-- <div class="switch_button">
+        <div class="switch_button">
             <div class="can-toggle demo-rebrand-2">
                 <input id="e" type="checkbox">
                 <label for="e">
                     <div class="can-toggle__switch" data-checked="登入" data-unchecked="註冊"></div>
                 </label>
             </div>
-        </div> -->
+        </div>
 
         <div class="member" id="member_tab">
             <span class="btn_bg"><a href="" id="tab_join_btn">會員註冊</a></span>
@@ -181,20 +181,20 @@
                 //tab切換end
 
                 // switch btn 切換
-                // const toggle__switch = document.getElementsByClassName('switch_button')[0];
+                const toggle__switch = document.getElementsByClassName('switch_button')[0];
 
-                // toggle__switch.addEventListener('click', (e) => {
-                //     // console.log("AAA");
-                //     for (let i = 0; i < form_content.length; i++) {
-                //         if (tab_join_content.style.display === "block") {
-                //             tab_login_content.style.display === "none";
-                //         } else {
-                //             tab_join_content.style.display === "none";
-                //             tab_login_content.style.display === "block";
-                //         }
-                //     }
+                toggle__switch.addEventListener('click', (e) => {
+                    // console.log("AAA");
+                    for (let i = 0; i < form_content.length; i++) {
+                        if (tab_join_content.style.display === "block") {
+                            tab_login_content.style.display === "none";
+                        } else {
+                            tab_join_content.style.display === "none";
+                            tab_login_content.style.display === "block";
+                        }
+                    }
 
-                // });
+                });
 
                 //會員註冊驗證
                 join_btn.addEventListener('click', (e) => {

@@ -5,22 +5,24 @@
     @@include('./layout/head.html')
     <title>Online Gallery Exhibition| 光緣畫廊 | KUANG YUAN</title>
 
-    <style>
+    <!-- <style>
         .wrapper_header .header_bac{
             position: fixed;
             z-index: 9999999;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
-    @@include('./layout/header.html')
     <div class="online_gallery_exhibition_painting">
+        @@include('./layout/header.html')
 
-        <a href="./online_gallery_exhibition.html">
-            <p class="door"><i class="fa-solid fa-door-open"></i>&nbsp;返回展間</p>
-        </a>
-        
+        <div class="title">
+            <a href="./online_gallery_exhibition.html">
+                <p class="door"><i class="fa-solid fa-door-open"></i>&nbsp;返回展間</p>
+            </a>
+        </div>
+
         <div class="box">
             <div class="paint">
                 <img src="./img/online_gallery/pic02.jpg" alt="">
@@ -44,7 +46,7 @@
         <div class="media_icon">
             <p>SHARE &nbsp;&nbsp;</p>
             <a href=""><i class="fa-solid fa-square-share-nodes"></i></a>&nbsp;
-           
+
             <a href=""><i class="fa-brands fa-facebook-square"></i></a>&nbsp;
 
             <a href=""><i class="fa-brands fa-line"></i></a>
