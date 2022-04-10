@@ -170,6 +170,8 @@ $media_p:$p+0.8;
     .exhibition {
 
         background-image: url(../img/index/Rectangle\ 4067.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
         margin-top: $margin * 5;
         margin-bottom: $margin * 5;
 
@@ -443,38 +445,89 @@ $media_p:$p+0.8;
             @include title_m;
         }
 
-        .row {
-            // width: $img_width_height;
-            margin: $margin;
-            margin-left: $margin *2;
-            margin-right: $margin *2;
+        // .row {
+        //     // width: $img_width_height;
+        //     margin: $margin;
+        //     margin-left: $margin *2;
+        //     margin-right: $margin *2;
 
-            button {
-                background: none;
-                border: none;
-                padding-top: $padding * 8;
-                padding-bottom: $padding * 8;
+        //     button {
+        //         background: none;
+        //         border: none;
+        //         padding-top: $padding * 8;
+        //         padding-bottom: $padding * 8;
 
-                img {
-                    width: $img_width_height;
-                }
-            }
+        //         img {
+        //             width: $img_width_height;
+        //         }
+        //     }
 
-            .re_box {
+        //     .re_box {
 
-                max-width: 322px;
-                max-height: 463px;
+        //         max-width: 322px;
+        //         max-height: 463px;
 
-                img {
-                    width: $img_width_height;
-                    border-radius: $border-radius;
-                }
+        //         img {
+        //             width: $img_width_height;
+        //             border-radius: $border-radius;
+        //         }
 
-            }
-
-
+        //     }
 
 
+
+
+        // }
+
+
+
+
+        .swiper-container {
+            width: 80%;
+            height: 550px;
+            // background-color: #786B54;
+    
+        }
+    
+        .swiper-slide {
+            text-align: center;
+            /* font-size: 18px; */
+            /* background: #fff; */
+            // Center slide text vertically ;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            box-sizing: content-box;
+        }
+    
+        .swiper-slide img {
+            border-radius: 20px;
+        }
+    
+    
+    
+        .swiper-button-nextone {
+            position: absolute;
+            top: 410%;
+            left: 3%;
+            cursor: pointer;
+            
+
+
+    
+        }
+    
+        .swiper-button-prevone {
+        //     position: absolute;
+        //     top:410%;
+        //     right: 3%;
+            cursor: pointer;
         }
 
 
@@ -484,6 +537,8 @@ $media_p:$p+0.8;
 
     .login {
         background-image: url(../img/index/Rectangle\ 8.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
         margin-top: $margin * 4;
         margin-bottom: $margin * 4;
 
@@ -906,6 +961,8 @@ $media_p:$p+0.8;
                     font-size: $p !important;
 
                 }
+
+                
 
                 .row {
                     margin: 0;
