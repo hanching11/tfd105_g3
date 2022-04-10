@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {    
 });
 $("button.hamburger").on("click", function () {
     $(this).toggleClass("is-active");
-    $(".nav-list").toggleClass("on"); 
+    $(".nav-list").toggleClass("on");
 });
 
 $(".sub-nav").on("click", function () {
@@ -29,15 +29,15 @@ $('.sub-nav2').on("click", function () {
 
 var previousScroll = 0;
 
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', function () {
     var currentScroll = $(this).scrollTop();
-   if (currentScroll > 100 && currentScroll < $(document).height() - $(window).height()) {
+    if (currentScroll > 100 && currentScroll < $(document).height() - $(window).height()) {
         if (currentScroll > previousScroll) {
             hideNav();
         }
         previousScroll = currentScroll;
     }
-  
+
 });
 
 function hideNav() {
@@ -45,15 +45,13 @@ function hideNav() {
     $(".nav-list").removeClass("on")
 }
 
-
-
 //  購物車
-$("#cart").on("click", function() {
+$("#cart").on("click", function () {
     $(".shopping-cart").fadeToggle("fast");
 });
-    
+
 // 關掉購物車
 
-$("#btn-cart-close").on("click", function() {
+$("#btn-cart-close").on("click", function () {
     $(".shopping-cart").hide();
 });
