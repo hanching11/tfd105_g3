@@ -170,6 +170,8 @@ $media_p:$p+0.8;
     .exhibition {
 
         background-image: url(../img/index/Rectangle\ 4067.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
         margin-top: $margin * 5;
         margin-bottom: $margin * 5;
 
@@ -511,9 +513,9 @@ $media_p:$p+0.8;
     
     
         .swiper-button-nextone {
-        //     position: absolute;
-        //     top: 410%;
-        //     left: 3%;
+            position: absolute;
+            top: 410%;
+            left: 3%;
             cursor: pointer;
             
 
@@ -535,6 +537,8 @@ $media_p:$p+0.8;
 
     .login {
         background-image: url(../img/index/Rectangle\ 8.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
         margin-top: $margin * 4;
         margin-bottom: $margin * 4;
 
