@@ -7,6 +7,7 @@
 
         // 畫廊宗旨
         .-aboutBanner {
+            text-align: justify;
             height: 450px;
             background-repeat: no-repeat;
             background-size: cover;
@@ -14,21 +15,22 @@
             background-image: url(../img/about/1922.4467\ -\ Old\ Man\ with\ a\ Gold\ Chain.jpg);
         }
 
-        .col-sm-6 {
+        .col-sm-8 {
             margin: 0 auto;
+            padding: 40px;
         }
 
-        h4,
-        .-aboutPlace {
+        h4{
+            text-align: center;
             letter-spacing: $letterSpacing1;
             font-size: $h4;
             color: $beidge1;
             font-weight: $boldWeight;
-            padding: 30px;
+            padding-bottom: 30px;
         }
 
         span {
-            width: 50%;
+            // border: 5px solid blue;
             color: $beidge1;
             font-weight: $regularWeight;
             line-height: $lineheight2;
@@ -41,13 +43,15 @@
             // border: 5px solid blue;
         }
 
-        .-aboutK {
+        .-aboutK{
             padding: 80px;
+            text-align: justify;
         }
 
-        .-aboutK h4 {
-            letter-spacing: $letterSpacing1;
 
+        .-aboutK h4 {
+            text-align: center;
+            letter-spacing: $letterSpacing1;
             font-size: $h4;
             color: $darkbrown1;
             font-weight: $boldWeight;
@@ -59,13 +63,12 @@
             font-weight: $regularWeight;
             line-height: $lineheight2;
             letter-spacing: $letterSpacing1;
-            text-align: justify;
         }
 
 
         //  實體畫廊
         .-placePic {
-            height: 450px;
+            min-height: 450px;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: bottom;
@@ -84,7 +87,7 @@
             width: 45%;
         }
 
-        @media (max-width: 575.98px) {
+        @media (max-width: 768.98px) {
             .-aboutBanner {
                 height: 400px;
                 background-repeat: no-repeat;
@@ -92,10 +95,8 @@
                 background-position-y: -1500px;
                 background-image: url(../img/about/1922.4467\ -\ Old\ Man\ with\ a\ Gold\ Chain.jpg);
             }
-
            
-            h4,
-            .-aboutPlace {
+            h4{
                 font-size: 1.5rem;
             }
 
@@ -108,17 +109,20 @@
                 padding: 40px;
                 float: none;
                 text-align: left;
-                width: 80%;
+                width: 100%;
             }
 
             .-placePic {
-                background-position: right;
+                min-height: 300px;
+                background-size:auto;
+
+                background-position-x: 100%;
             }
+
         }
 
         // 實體地圖
         .-aboutMapinfo {
-
             background-color: $darkbrown1;
         }
 
@@ -157,6 +161,7 @@
         .-aboutPpl {
             // text-align: center;
             // height:3000px;
+            margin: 0 auto;
             background-repeat: no-repeat;
             background-size: auto;
             background-position-y: 100px;
@@ -167,7 +172,7 @@
                 letter-spacing: $letterSpacing1;
                 font-size: $h4;
                 font-weight: $boldWeight;
-                padding: 30px;
+                // padding: 30px;
             }
 
             span {
@@ -178,6 +183,7 @@
             }
 
             .-PplPic {
+                // border: 1px solid black;
                 position: relative;
                 margin-bottom: 200px;
             }
@@ -196,29 +202,23 @@
             .-d {
                 margin-top: 50px;
             }
-        }
+        
 
-        .-PplInfo {
-            padding: 150px 0;
-            margin: 0 auto;
-            width: 50%;
-        }
-
-        .-ppl {
-            object-fit: cover;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-        }
-
-        @media (max-width: 575.98px) {
             .-ppl {
+                // border: 1px solid black;
+                
                 object-fit: cover;
                 width: 200px;
-                height: 160px;
+                height: 200px;
                 border-radius: 50%;
             }
+            @media (max-width: 768.98px) {
+                .-ppl{
+                    height:150px;
+                }
+            }
         }
+     
 
         //聯絡我們輸入區
         .contect-blk {
@@ -348,7 +348,7 @@
                 display: block;
                 content: '幅';
                 letter-spacing: $letterSpacing1;
-                top: 42%;
+                top: 38%;
                 left: 15%;
                 height: 25px;
                 width: 30px;
@@ -366,8 +366,8 @@
 
             ul li span {
                 position: absolute;
-                top: 10%;
-                right: 13%;
+                top: -60%;
+                right: 35%;
                 color: $coffeebrown;
                 font-size: 1.5rem;
                 font-weight: $boldWeight;
@@ -379,11 +379,39 @@
                 font-size: 1.5rem;
                 font-weight: $boldWeight;
             }
+        
+
+            @media (max-width: 768.98px) {
+                .-aboutpaint::after {
+                    // border: 1px solid black;
+                    top: 39%;
+
+                    left: 16%;
+                    font-size: 1.25rem;
+
+                }
+
+                ul li span {
+                    // border: 1px solid black;
+                    top: -40%;
+                    right: 20%;
+                    font-size: 1.25rem;
+                }
+
+                p {
+                    font-size: 1.25rem;
+                }
+            }
         }
 
         @media (max-width: 575.98px) {
             .contect-blk {
                 margin-bottom: 0px;
+            }
+
+            .-aboutK {
+                padding: 40px;
+        
             }
             .-aboutNum {
                 height: 100vh;
@@ -392,13 +420,8 @@
                 .-aboutpaint::after {
                     // border: 1px solid black;
                     font-size: 1rem;
-                    top: 10%;
+                    top: 9%;
                     left: 56%;
-                    right: 0%;
-                }
-
-                .col-12 {
-                    padding: 0px;
                 }
 
                 ul {
@@ -411,23 +434,14 @@
                 }
 
                 ul li span {
-                    top: 24%;
-                    right: 18%;
+                    // border: 1px solid black;
+                    top:-27%;
+                    right: 40%;
                     font-size: 1rem;
                 }
-
-                p {
-                    font-size: 1rem;
-                }
-
-
 
             }
-
-           
-            
         }
-
         // 感謝名單
         .-thanksPic {
             text-align: center;
@@ -452,7 +466,7 @@
             margin-bottom: 50px;
         }
 
-        @media (max-width: 575.98px) {
+        @media (max-width: 768.98px) {
             .-thanksPic {
                 padding: 0px;
             }
