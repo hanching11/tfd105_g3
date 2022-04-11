@@ -115,6 +115,7 @@ $media_p:$p+0.8;
                     margin-right: 0;
                 }
 
+
                 // div{
                 //      max-height: 200px;
 
@@ -146,20 +147,21 @@ $media_p:$p+0.8;
                         object-fit: cover;
                         width: $max-width;
                     }
-                  
+
                     .img-fluid {
-                    //     // border: solid 1px black;
+                        //     // border: solid 1px black;
                         height: 200px;
                         border-radius: $border-radius;
                         width: auto;
                     }
-                    a{
+
+                    a {
                         max-width: 100px;
                         // width: $img_width_height;
                     }
-                    
 
-                   
+
+
 
                 }
 
@@ -497,9 +499,9 @@ $media_p:$p+0.8;
             width: 80%;
             height: 550px;
             // background-color: #786B54;
-    
+
         }
-    
+
         .swiper-slide {
             text-align: center;
             /* font-size: 18px; */
@@ -516,28 +518,28 @@ $media_p:$p+0.8;
             align-items: center;
             box-sizing: content-box;
         }
-    
+
         .swiper-slide img {
             border-radius: 20px;
         }
-    
-    
-    
+
+
+
         .swiper-button-nextone {
             position: absolute;
             top: 410%;
             left: 3%;
             cursor: pointer;
-            
 
 
-    
+
+
         }
-    
+
         .swiper-button-prevone {
-        //     position: absolute;
-        //     top:410%;
-        //     right: 3%;
+            //     position: absolute;
+            //     top:410%;
+            //     right: 3%;
             cursor: pointer;
         }
 
@@ -806,23 +808,25 @@ $media_p:$p+0.8;
 
                 }
 
+                .new_work {
+                    margin-top: $margin * 2;
 
-                .row {
-                    margin: $margin;
-                    // .col-xs-12 .rwd1,.col-xs-12 .rwd4{
-                    //     min-height: 163px;
-                    // }
-                    // .rwd2,.rwd3{
-                    //     min-height: 62px;
+                    .row {
+                        // margin: $margin;
+                        overflow: hidden;
+                        flex-wrap: nowrap;
+                    }
 
-                    // }
-                    // img{
-                    // }
+                    .phonenone {
+
+                        .rwd_ph1 {
+                            margin-left: $margin;
+                        }
+                    }
                 }
 
-                .phonenone {
-                    display: none;
-                }
+
+
 
             }
 
@@ -974,7 +978,7 @@ $media_p:$p+0.8;
 
                 }
 
-                
+
 
                 .row {
                     margin: 0;
