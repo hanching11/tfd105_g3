@@ -8,6 +8,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
     crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
   <title>光緣畫廊 | KUANG YUAN</title>
 </head>
 
@@ -25,20 +27,21 @@
       <div class="the_new ">
         <h3 class="col-lg-12 col-xs-12" class="text-uppercase">THE new online works</h3>
         <p class="col-lg-12 col-xs-12">最新上線作品</p>
-        <div class="new_work" class="container">
-          <div class="row ">
-            <div class="col-lg-3 col-6 col-xs-12 rwd1"><a href="./online_gallery.html"><img class="img-fluid"
-                  src="./img/index/Group 102.jpg" alt="img"></a></div>
-            <div class="col-lg-6 col-5 col-xs-12 rwd2"><a href="./online_gallery.html"><img class="img-fluid"
+        <div class="new_work">
+          <div class="row slider autoplay">
+            <div class="col-lg-3 col-6 col-xs-12 rwd1 item active"><a href="./online_gallery.html"><img
+                  class="img-fluid" src="./img/index/Group 102.jpg" alt="img"></a></div>
+            <div class="col-lg-6 col-5 col-xs-12 rwd2 item"><a href="./online_gallery.html"><img class="img-fluid img1"
                   src="./img/index/Group 103.jpg" alt="img"></a></div>
-            <div class="col-lg-3 col-6 col-xs-12 rwd3"><a href="./online_gallery.html"><img class="img-fluid"
+            <div class="col-lg-3 col-6 col-xs-12 rwd3 item"><a href="./online_gallery.html"><img class="img-fluid img2"
                   src="./img/index/Group 104.jpg" alt="img"></a></div>
             <div class="col-lg-3 d-block d-sm-none col-5 col-xs-12 rwd4"><a href="./online_gallery.html"><img img
-                  class="img-fluid" src="./img/index/Group 105.jpg" alt="img"></a></div>
+                  class="img-fluid img3" src="./img/index/Group 105.jpg" alt="img"></a></div>
 
           </div>
 
-          <div class="row phonenone">
+
+          <div class="row phonenone slider autoplay">
             <div class="col-lg-4 d-none d-sm-block"><a href="./online_gallery.html"><img img class="img-fluid"
                   src="./img/index/Group 105.jpg" alt="img"></a></div>
             <div class="col-lg-5 d-none d-sm-block"><a href="./online_gallery.html"><img img class="img-fluid"
@@ -75,7 +78,7 @@
               </div>
             </div>
 
-            <div class="row box_img ">
+            <div class="row box_img autoplay">
               <div class="col-lg-4 col-12 col-xs-12"><a href=""><img src="./img/index/exhibition_left/image 18.jpg"
                     alt="img"></a>
               </div>
@@ -336,10 +339,31 @@
       </div>
     </section>
     @@include('./layout/footer.html')
+            
 
-
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
-    <script>
+    <script type="text/javascript">
+        $('.autoplay').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: false,
+        autoplaySpeed: 2000,
+        // variableWidth:true,
+        // responsive: [
+        // {
+        //   breakpoint: 400,
+        //   settings: {
+        //       arrows: true
+        //   }
+        // },
+        // {
+        //   breakpoint: 500,
+        //   settings: {
+        //       arrows: true
+       
+      });
 
 var swiper = new Swiper('.swiper-container', {
             spaceBetween: 10,
