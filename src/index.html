@@ -3,12 +3,14 @@
 
 <head>
   @@include('./layout/head.html')
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css"> -->
+  <!-- 大輪播 -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    crossorigin="anonymous"></script> -->
+  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
 
   <title>光緣畫廊 | KUANG YUAN</title>
 </head>
@@ -20,10 +22,32 @@
       <!-- 首頁 -->
       <!-- <h1 class="h1">文字文字文字文字</h1> -->
 
-      <div class="top">
+      <!-- <div class="top">
         <img src="./img/index/Rectangle 3.jpg" alt="img">
 
+      </div> -->
+      <!-- 大型banner -->
+      <div class="huge_banner">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./img/index/huge_banner/index_banner1_about.svg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/index/huge_banner/index_banner2_exhibition.svg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/index/huge_banner/index_banner3_puzzle.svg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/index/huge_banner/index_banner4_shop.svg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/index/huge_banner/index_banner5_online_gallery.svg" alt=""></div>
+          </div>
+      
+          <!-- <div class="swiper-button-next"><img src="./img/arrow/right-arrow.svg" alt=""></div>
+          <div class="swiper-button-prev"><img src="./img/arrow/left-arrow.svg" alt=""></div> -->
+          <div class="swiper-pagination"></div>
+      
+        </div>
       </div>
+      
+
+
+
+      <!-- 最新上線作品 -->
       <div class="the_new ">
         <h3 class="col-lg-12 col-xs-12 text-uppercase">THE new online works</h3>
         <p class="col-lg-12 col-xs-12">最新上線作品</p>
@@ -77,8 +101,6 @@
       <div class="exhibition">
 
 
-        <!-- <div class="title">
-              </div> -->
         <h3 class="text-uppercase">Exhibitions</h3>
         <p>光緣主題展覽</p>
         <div class="row r1">
@@ -180,7 +202,8 @@
 
       </div>
 
-      <div class="recommendation">
+      
+      <!-- <div class="recommendation">
         <h3 class="col-lg-12 text-uppercase col-xs-12">RECOMMENDATION</h3>
         <p>當月藝術流派推薦</p>
         <div class="swiper-father">
@@ -209,17 +232,17 @@
 
 
 
-          </div>
+          </div> -->
 
           <!-- Add Arrows -->
-          <div class="swiper-button-nextone">
-            <img src="/src/img/arrow/left-arrow.svg" alt="">
-          </div>
-          <div class="swiper-button-prevone">
-            <img src="./img/arrow/right-arrow.svg" alt="">
-          </div>
+            <!-- <div class="swiper-button-nextone">
+                <img src="/src/img/arrow/left-arrow.svg" alt="">
+            </div>
+            <div class="swiper-button-prevone">
+                <img src="./img/arrow/right-arrow.svg" alt="">
+            </div>
         </div>
-        <!-- <div class="row col-xs-12">
+        <div class="row col-xs-12">
           <div class="col-lg-1 col-2">
             <button><img src="./img/index/Vector 70.png" alt=""></button>
           </div>
@@ -236,8 +259,8 @@
           <div class="col-lg-1 col-2">
             <button><img src="./img/index/Vector 69.png" alt=""></button>
           </div>
-        </div> -->
-      </div>
+        </div>
+      </div> -->
 
 
       <div class="login">
@@ -247,7 +270,7 @@
             <img src="./img/index/Vector 71.png" alt="">
           </a>
           <a href="">
-            <P>進入光源</P>
+            <P>進入光緣</P>
           </a>
         </div>
       </div>
@@ -322,7 +345,10 @@
           <!-- If we need navigation buttons -->
           <div class="swiper-button-prevone"></div>
           <div class="swiper-button-nextone"></div>
+          
         </div>
+
+       
 
 
 
@@ -367,8 +393,8 @@
           <div class="col-lg-1 col-2">
             <button><img src="./img/index/Vector 73.png" alt=""></button>
           </div>
-        </div> -->
-      </div>
+        </div>
+      </div> -->
 
     </section>
 
@@ -427,10 +453,64 @@
     @@include('./layout/footer.html')
 
 
+    
+
+
+    <!--大輪播 Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      //  Initialize Swiper
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: true,
+        speed: 1200,
+        // spaceBetween: 100,
+        // autoHeight: true,
+        autoWidth: true,
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+          
+        },
+      });
+
+    </script>
+
+    <!-- 最新上線作品 -->
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <script>
+         $('.autoplay').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: false,
+        autoplaySpeed: 2000,
+        // variableWidth:true,
+        // responsive: [
+        // {
+        //   breakpoint: 400,
+        //   settings: {
+        //       arrows: true
+        //   }
+        // },
+        // {
+        //   breakpoint: 500,
+        //   settings: {
+        //       arrows: true
+       
+      });
+    </script>
+
+    <!-- 光緣主題展覽 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
     <script>
-
-
       var swiper = new Swiper('.swiper-container', {
         spaceBetween: 10,
         centeredSlides: true,
@@ -467,44 +547,43 @@
         }
       });
 
+                      
+    </script>
 
-
-
-      // // for產品介紹
-      // $(document).ready(function() {
-      // // Swiper: Slider
-      //         new Swiper('.swiper-container', {
-      //         loop: true,
-      //         nextButton: '.swiper-button-nextone',
-      //         prevButton: '.swiper-button-prevone',
-      //         slidesPerView: 4,
-      //         paginationClickable: true,
-      //         spaceBetween: 15,
-      //         breakpoints: {
-      //                 1920: {
-      //                 slidesPerView: 3,
-      //                 spaceBetween: 30
-      //                 },
-      //                 1028: {
-      //                 slidesPerView: 2,
-      //                 spaceBetween: 30
-      //                 },
-      //                 767: {
-      //                 slidesPerView: 1,
-      //                 spaceBetween: 10
-      //                 },
-      //                 400: {
-      //                 slidesPerView: 1,
-      //                 spaceBetween: 10
-      //                 }
-      //         }
-      //         });
-      // });
-
-
-
-
-
+    <!-- 產品介紹輪播 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+    <script>
+      // for產品介紹
+      $(document).ready(function() {
+      // Swiper: Slider
+              new Swiper('.swiper-container', {
+              loop: true,
+              nextButton: '.swiper-button-nextone',
+              prevButton: '.swiper-button-prevone',
+              slidesPerView: 4,
+              paginationClickable: true,
+              spaceBetween: 15,
+              breakpoints: {
+                      1920: {
+                      slidesPerView: 3,
+                      spaceBetween: 30
+                      },
+                      1028: {
+                      slidesPerView: 2,
+                      spaceBetween: 30
+                      },
+                      767: {
+                      slidesPerView: 1,
+                      spaceBetween: 10
+                      },
+                      400: {
+                      slidesPerView: 1,
+                      spaceBetween: 10
+                      }
+              }
+              });
+      });
     </script>
 
 </body>
