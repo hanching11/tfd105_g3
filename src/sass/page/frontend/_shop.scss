@@ -377,6 +377,8 @@
         .single-product .part-2 h3 {
             text-align: center;
             margin-bottom: 15px;
+            
+
         }
         
         .single-product .part-2 .buy-now {
@@ -610,6 +612,8 @@
         .swiper-slide .part-2 h3 {
             text-align: center;
             margin-bottom: 15px;
+            color: $coffeebrown;
+
         }
         
         .swiper-slide .part-2 .buy-now {
@@ -706,6 +710,14 @@
         }
         
         
+        textarea::placeholder { /* Chrome, Safari */
+            position: relative;
+            // top: -88px;
+            left: 0px;
+            color: $lightgray;
+        
+        }
+
         input::placeholder { /* Chrome, Safari */
             position: relative;
             // top: -88px;
@@ -1335,6 +1347,8 @@
         .swiper-slide .part-2 .product-title {
             margin-top: 50px;  
             font-size: 1rem;
+            // color: $coffeebrown;
+
         }
         
         .swiper-slide .part-2 h4 {
@@ -1348,6 +1362,8 @@
         .swiper-slide .part-2 h3 {
             text-align: center;
             margin-bottom: 15px;
+            color: $coffeebrown;
+
         }
         
         .swiper-slide .part-2 .buy-now {
@@ -1445,6 +1461,14 @@
         }
         
         
+        textarea::placeholder { /* Chrome, Safari */
+            position: relative;
+            // top: -88px;
+            left: 0px;
+            color: $lightgray;
+        
+        }
+
         input::placeholder { /* Chrome, Safari */
             position: relative;
             // top: -88px;
@@ -2036,6 +2060,7 @@
         .swiper-slide .part-2 .product-title {
             margin-top: 50px;  
             font-size: 1rem;
+            
         }
         
         .swiper-slide .part-2 h4 {
@@ -2049,6 +2074,8 @@
         .swiper-slide .part-2 h3 {
             text-align: center;
             margin-bottom: 15px;
+            color: $coffeebrown;
+        
         }
         
         .swiper-slide .part-2 .buy-now {
@@ -2146,8 +2173,16 @@
         }
         
         
-        input::placeholder { /* Chrome, Safari */
+        textarea::placeholder { /* Chrome, Safari */
             font-size: 12px;
+            position: relative;
+            // top: -88px;
+            left: 0px;
+            color: $lightgray;
+        
+        }
+
+        input::placeholder { /* Chrome, Safari */
             position: relative;
             // top: -88px;
             left: 0px;
