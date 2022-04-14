@@ -3,6 +3,8 @@
 
 <head>
   @@include('./layout/head.html')
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
     crossorigin="anonymous"></script>
@@ -12,6 +14,7 @@
 <body>
   <div class="wrapper_index">
     @@include('./layout/header.html')
+    
     <section>
       <!-- 首頁 -->
       <!-- <h1 class="h1">文字文字文字文字</h1> -->
@@ -48,24 +51,168 @@
 
       </div>
 
-      <div class="exhibition">
+      
+      <div class="row -exhibition">
+        <div class="row d-none d-lg-block">
+          <div class="col -title1">
+            <h3 class="text-uppercase">Exhibitions</h3>
+            <p>光緣主題展覽</p>
+          </div>
+        </div>
+        
+        <!-- 梵谷 -->
+        <div class="col-12 col-lg-6 -ppl1 ">
+          <div class="row d-block d-lg-none">
+            <div class="col-12 -title1">
+              <h3 class="text-uppercase">Exhibitions</h3>
+              <p>光緣主題展覽</p>
+            </div>
+          </div>
+          <div class="-artist ">
+            <div class="row -artistInfo">
+              <div class="col-12 col-sm-5 -artistImg">
+                <img class="img-fluid" src="./img/index/Rectangle-4060.jpg" alt="">
+              </div>
+              <div class="col-12 col-sm-7  -artistTitle">
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-clock"></i>
+                    <span class="h8">更新於 &nbsp; 3/16/22</span>
+                  </li>
+                  <li>
+                    <span class="h7">| 當今展覽 | 傾聽梵谷 |</span>
+                  </li>
+                  <li>
+                    <div class="d-none d-sm-block">
+                      <button class="h9">線上觀展</button>
+                    </div>
+                  </li>
+                </ul>
+              
+              </div>
+            </div>
+            <div class="row g-2 -ImgAll align-items-center">
+              <div class="col-12 col-sm-4 col-md-4 -Img18">
+                <a href=""><img class="img-fluid" src="./img/index/exhibition_left/image 18.jpg"
+                  alt="img"></a>
+              </div>
+              <div class="col-6 p-1 col-sm-2 col-md-2 -grp ">
+                <div class="col -Img20 ">
+                  <a href=""><img class="img-fluid" src="./img/index/exhibition_left/image 20.jpg" alt=""></a>
+                </div>
+                <div class="col -Img22 ">
+                  <a href=""><img class="img-fluid" src="./img/index/exhibition_left/image 22.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4 col-md-4 -Img19">
+                <img class="img-fluid" src="./img/index/exhibition_left/image 19.jpg"
+                      alt="img"></a>
+              </div>
+              
+              <div class="col-6 col-sm-2 col-md-2 -Img21">
+                <a href=""><img class="img-fluid"
+                  src="./img/index/exhibition_left/image 21.jpg" alt=""></a>
+              </div>
 
+              <div class="col-12 d-block d-sm-none -pupUp">
+                <button class="h9">線上觀展</button>
+              </div>
+             
+            </div>
+          </div>
+        </div>
 
-        <!-- <div class="title">
-              </div> -->
+        <!-- 達文西 -->
+        <div class="col-12 col-lg-6 -ppl2 ">
+          <div class="-artist ">
+            <div class="row -artistInfo">
+              <div class="col-12 col-sm-5 -artistImg">
+                <img class="img-fluid" src="./img/index/Rectangle-4061 .jpg" alt="">
+              </div>
+              <div class="col-12 col-sm-7  -artistTitle">
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-clock"></i>
+                    <span class="h8">更新於 &nbsp; 3/08/22</span>
+                  </li>
+                  <li>
+                    <span class="h7">| 實體展覽 | 真相達文西 |</span>
+                  </li>
+                  <li>
+                    <div class="d-none d-sm-block">
+                      <a href="#open" data-bs-toggle="modal" data-bs-target="#open">
+                        <button class="h9">展覽資訊</button>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="row g-2 -ImgAll align-items-start">
+              <div class="col-12  col-sm-3 col-md-3 -Img25">
+                <a href=""><img class="img-fluid" src="./img/index/exhibition_right/image 25.jpg"
+                  alt="img"></a>
+              </div>
+              <div class="col-12 col-sm-3 col-md-3 -grpA ">
+                <div class="col d-none d-sm-block -Img28 ">
+                  <a href=""><img class="img-fluid" src="./img/index/exhibition_right/image 28.jpg" alt=""></a>
+                </div>
+                <div class="col -Img23 ">
+                  <a href=""><img class="img-fluid" src="./img/index/exhibition_right/image 23.jpg" alt=""></a>
+                </div>
+              </div>
+              <div class="col-12   col-sm-3 col-md-3 -Img24">
+                <img class="img-fluid" src="./img/index/exhibition_right/image 24.jpg"
+                      alt="img"></a>
+              </div>
+
+              <div class="col-12 col-sm-1 col-md-1 -grp justify-content-between ">
+                <div class="row gx-1 ">
+                  <div class="col-6 col-sm-12 -Img29 align-self-start ">
+                    <a href=""><img class="img-fluid" src="./img/index/exhibition_right/image 29.jpg" alt=""></a>
+                  </div>
+                  <div class="col-6 col-sm-12 -Img30 ">
+                    <a href=""><img class="img-fluid" src="./img/index/exhibition_right/image 30.jpg" alt=""></a>
+                  </div>
+                </div>
+   
+              </div>
+              <div class="col-12   d-none d-sm-block col-sm-2 col-md-2 -Img27">
+                <img class="img-fluid" src="./img/index/exhibition_right/image 27.jpg"
+                      alt="img"></a>
+              </div>
+              <div class="col-12 d-block d-sm-none -pupUp">
+                <a href="#open" data-bs-toggle="modal" data-bs-target="#open">
+                  <button class="h9">展覽資訊</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row d-none d-sm-block ">
+          <div class="col Kuang1">
+            <h3>Kuang Yuan</h3>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- <div class="exhibition">
+         <div class="title">
+              </div> 
         <h3 class="text-uppercase">Exhibitions</h3>
-        <p>光緣主題展覽</p>
-        <div class="row r1">
-          <div class="col-lg-6 col-12 col-xs-12 rwd-1">
+        <p>光緣主題展覽</p> 
+         <div class="row r1">
+          <div class="col-12 col-lg-6  col-xs-6 rwd-1">
             <div class="row">
               <div class="col-lg-4">
-                <img src="./img/index/Rectangle-4060.jpg" alt="">
+                <img  src="./img/index/Rectangle-4060.jpg" alt="">
               </div>
               <div class=" col-lg-8 text_box col-xs-12">
-                <img class="clock col-xs-2" src="./img/index/clock-solid 1 (1).png" alt="">
+                <img  class="clock col-xs-2" src="./img/index/clock-solid 1 (1).png" alt="">
                 <p class="col-xs-10">更新於 3/16/22</p>
                 <a href="./exhibition.html">
-                  <p class="p1 col-xs-12">| 當今展覽 | 傾聽梵谷 |</p>
+                  <p class="p1 col-xs-12">| 實體展覽 | 真相達文西 |</p>
                 </a>
                 <a href="">
                   <p class="p2 d-none d-sm-block">線上觀展</p>
@@ -74,23 +221,23 @@
             </div>
 
             <div class="row box_img ">
-              <div class="col-lg-4 col-12 col-xs-12"><a href=""><img src="./img/index/exhibition_left/image 18.jpg"
+              <div class="col-12   col-xs-12 align-self-center col-lg-4"><a href=""><img class="img-fluid -a" src="./img/index/exhibition_left/image 18.jpg"
                     alt="img"></a>
               </div>
               <div class="col-lg-2 col-6 col-xs-6">
-                <div class="col-lg-12 "><a href=""><img src="./img/index/exhibition_left/image 20.jpg" alt=""></a>
+                <div class="col-lg-12 "><a href=""><img  src="./img/index/exhibition_left/image 20.jpg" alt=""></a>
                 </div>
-                <div class="col-lg-12 box2 "><a href=""><img src="./img/index/exhibition_left/image 22.jpg" alt=""></a>
+                <div class="col-lg-12 box2 "><a href=""><img  src="./img/index/exhibition_left/image 22.jpg" alt=""></a>
                 </div>
               </div>
-              <div class="col-lg-2 box1 d-block d-sm-none col-6 col-xs-6"><a href=""><img
+              <div class="col-lg-2 box1 d-block d-sm-none col-6 col-xs-6"><a href=""><img class="img-fluid -d"
                     src="./img/index/exhibition_left/image 21.jpg" alt=""></a>
               </div>
-              <div class="col-lg-4 col-12 col-xs-12"><a href=""><img src="./img/index/exhibition_left/image 19.jpg"
+              <div class="col-lg-4 col-12 col-xs-12"><a href=""><img  src="./img/index/exhibition_left/image 19.jpg"
                     alt="img"></a>
               </div>
-              <div class="col-lg-2 box1 d-none d-sm-block"><a href=""><img
-                    src="./img/index/exhibition_left/image 21.jpg" alt=""></a>
+              <div class="col-lg-2 box1 d-none d-sm-block "><a href=""><img
+                 src="./img/index/exhibition_left/image 21.jpg" alt=""></a>
               </div>
             </div>
             <a href="">
@@ -99,7 +246,7 @@
 
           </div>
 
-          <div class="col-lg-6 rwdbg col-12 col-xs-12">
+          <div class="col-12 col-lg-6 rwdbg col-xs-6">
             <div class="col-lg-12 rwd-2">
               <div class="row ">
                 <div class="col-lg-4">
@@ -152,12 +299,57 @@
           <h3 class="Kuang1">Kuang Yuan</h3>
         </div>
 
-      </div>
+      </div> -->
 
       <div class="recommendation">
         <h3 class="col-lg-12 text-uppercase col-xs-12">RECOMMENDATION</h3>
         <p>當月藝術流派推薦</p>
-        <div class="row col-xs-12">
+        <div class="swiper-father">
+          <div class="swiper-container">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide" id="swiper_pic"><img src="./img/index/Rectangle 96.jpg"
+                          alt="">
+                  </div>
+                  <div class="swiper-slide" id="swiper_pic"><img src="/dist/img/index/Rectangle 97.jpg"
+                          alt="">
+                  </div>
+                  <div class="swiper-slide" id="swiper_pic"><img src="./img/index/Rectangle 98.jpg"
+                          alt="">
+                  </div>
+                  <div class="swiper-slide" id="swiper_pic"><img src="./img/index/Rectangle2.png"
+                          alt="">
+                  </div>
+                  <div class="swiper-slide" id="swiper_pic"><img src="./img/index/Rectangle3.png"
+                          alt="">
+                  </div>
+                  <div class="swiper-slide" id="swiper_pic"><img src="./img/index/Rectangle6.png"
+                          alt="">
+                  </div>
+                  <div class="swiper-slide" id="swiper_pic"><img src="./img/index/111.png"
+                          alt="">
+                  </div>
+                  <div class="swiper-slide" id="swiper_pic"><img src="./img/index/Rectangle4.png"
+                          alt="">
+                  </div>
+                  <div class="swiper-slide" id="swiper_pic"><img src="./img/index/Rectangle5.png"
+                          alt="">
+                  </div>
+
+              </div>
+
+
+
+          </div>
+
+          <!-- Add Arrows -->
+          <div class="swiper-button-nextone">
+              <img src="/src/img/arrow/left-arrow.svg" alt="">
+          </div>
+          <div class="swiper-button-prevone">
+              <img src="./img/arrow/right-arrow.svg" alt="">
+          </div>
+      </div>
+        <!-- <div class="row col-xs-12">
           <div class="col-lg-1 col-2">
             <button><img src="./img/index/Vector 70.png" alt=""></button>
           </div>
@@ -174,7 +366,7 @@
           <div class="col-lg-1 col-2">
             <button><img src="./img/index/Vector 69.png" alt=""></button>
           </div>
-        </div>
+        </div> -->
       </div>
 
 
@@ -291,7 +483,44 @@
     @@include('./layout/footer.html')
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
     <script>
+
+var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 10,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-prevone',
+                prevEl: '.swiper-button-nextone',
+            },
+            breakpoints: {
+                    1920: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                    },
+                    1028: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                    },
+                    767: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                    },
+                    576:{
+                    slidesPerView: 1,
+                    spaceBetween: 10
+
+                    }
+            }
+        });
 
 
     </script>
