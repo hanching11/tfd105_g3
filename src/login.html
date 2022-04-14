@@ -6,6 +6,34 @@
 
     <title>Login</title>
 
+    <style>
+        .wrapper_header .nav-list .sub-nav2 {
+            color: #eeeae2;
+        }
+
+        .wrapper_header .nav-list .sub-nav2 #tg2 {
+            color: #eeeae2;
+        }
+
+        .wrapper_header .nav-list .sub-nav2>li>a {
+            color: #eeeae2;
+        }
+
+        @media (max-width: 768px) {
+
+            .wrapper_header .nav-list .sub-nav2 {
+                color: #353231;
+            }
+
+            .wrapper_header .nav-list .sub-nav2 #tg2 {
+                color: #353231;
+            }
+
+            .wrapper_header .nav-list .sub-nav2>li a {
+                color: #353231;
+            }
+        }
+    </style>
 
 
 </head>
@@ -26,18 +54,10 @@
 
 
         <!-- Swtich button -->
-        <div class="switch_button">
-            <div class="can-toggle demo-rebrand-2">
-                <input id="e" type="checkbox">
-                <label for="e">
-                    <div class="can-toggle__switch" data-checked="登入" data-unchecked="註冊"></div>
-                </label>
-            </div>
-        </div>
-
         <div class="member" id="member_tab">
-            <span class="btn_bg"><a href="" id="tab_join_btn">會員註冊</a></span>
-            <span><a href="" id="tab_login_btn">會員登入</a></span>
+            <div class="switch"></div>
+            <button type="button" id="tab_join_btn" class="member_btn">註冊</button>
+            <button type="button" id="tab_login_btn" class="member_btn white_fnot">登入</button>
         </div>
 
         <!-- form 會員註冊 -->
@@ -148,52 +168,51 @@
                     }
                 });
 
-              //tab切換
+                //tab切換 舊的
                 // 啟動第一個panel
-                panelDisplay(member_tab[0]);
+                // panelDisplay(member_tab[0]);
 
-                //點擊 tab a連結
-                for (let i = 0; i < member_tab.length; i++) {
-                    member_tab[i].addEventListener('click', function (e) {
-                        e.preventDefault();
-                        panelDisplay(this);
-                        // return false;
-                    });
+                // //點擊 tab a連結
+                // for (let i = 0; i < member_tab.length; i++) {
+                //     member_tab[i].addEventListener('click', function (e) {
+                //         e.preventDefault();
+                //         panelDisplay(this);
+                //         // return false;
+                //     });
 
-                };
+                // };
 
-                function panelDisplay(activePanel) {
-                    for (let i = 0; i < member_tab.length; i++) {
+                // function panelDisplay(activePanel) {
+                //     for (let i = 0; i < member_tab.length; i++) {
 
-                        //設定條件tabLink ==activePanel 
-                        //將tablink代入for循環中並利用 if ...else 進行條件 classList.add增加class="active" ，就是每執行一次function的時候就進行全部tablinks增加class
+                //         //設定條件tabLink ==activePanel 
+                //         //將tablink代入for循環中並利用 if ...else 進行條件 classList.add增加class="active" ，就是每執行一次function的時候就進行全部tablinks增加class
 
-                        if (member_tab[i] == activePanel) {
-                            member_tab[i].classList.add("active");
-                            tab_inner[i].style.display = "block";
+                //         if (member_tab[i] == activePanel) {
+                //             member_tab[i].classList.add("active");
+                //             tab_inner[i].style.display = "block";
 
-                        } else {
-                            member_tab[i].classList.remove("active");
-                            tab_inner[i].style.display = "none";
-                        }
-                    }
-                }
+                //         } else {
+                //             member_tab[i].classList.remove("active");
+                //             tab_inner[i].style.display = "none";
+                //         }
+                //     }
+                // }
                 //tab切換end
 
                 // switch btn 切換
-                const toggle__switch = document.getElementsByClassName('switch_button')[0];
-
-                toggle__switch.addEventListener('click', (e) => {
-                    // console.log("AAA");
-                    for (let i = 0; i < form_content.length; i++) {
-                        if (tab_join_content.style.display === "block") {
-                            tab_login_content.style.display === "none";
-                        } else {
-                            tab_join_content.style.display === "none";
-                            tab_login_content.style.display === "block";
-                        }
+                $(".member_btn").click(function(){
+                    $(".form_content").toggle()
+                    $(".switch").toggleClass("transformX")
+                    // $(".member_btn").toggleClass("white")
+                    // $(".switch").css("transform", "translateX(-80%)");
+                    if( $(".switch").hasClass("transformX") ){
+                        $("#tab_join_btn").addClass("white_fnot")
+                        $("#tab_login_btn").removeClass("white_fnot")
+                    }else{
+                        $("#tab_join_btn").removeClass("white_fnot")
+                        $("#tab_login_btn").addClass("white_fnot")
                     }
-
                 });
 
                 //會員註冊驗證
