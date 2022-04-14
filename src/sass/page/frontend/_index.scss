@@ -459,6 +459,229 @@ $media_p:$p+0.8;
 
                 }
 
+                .row{
+                    display: flex;
+                    flex-flow: row nowrap;
+                    overflow: hidden;
+
+                    .rwd1 {
+                        position: relative;
+    
+                        p {
+    
+                            display: none;
+                        }
+    
+                        .mask {
+                            @include mask;
+                        }
+    
+    
+                    }
+    
+    
+                    .rwd1:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+    
+                        p {
+                            @include hover_p;
+    
+                        }
+    
+                    }
+    
+                    .rwd2 {
+                        position: relative;
+    
+                        p {
+    
+                            display: none;
+                        }
+    
+                        .mask {
+                            @include mask;
+                            width: 496px;
+    
+                        }
+    
+    
+                    }
+    
+                    .rwd2:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+    
+                        p {
+                            @include hover_p;
+    
+                        }
+    
+                    }
+    
+                    .rwd3 {
+                        position: relative;
+    
+                        p {
+    
+                            display: none;
+                        }
+    
+                        .mask {
+                            @include mask;
+                        }
+    
+    
+                    }
+    
+                    .rwd3:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+    
+                        p {
+                            @include hover_p;
+    
+                        }
+    
+                    }
+
+                    .rwd1,.rwd2,.rwd3{
+                        animation: loop 35s -9s linear infinite;
+                        
+                    }
+
+                    .rwd1{
+                        animation-delay: 2s;
+                    }
+    
+                    @keyframes loop{
+                        0% {
+                          transform: translateX(100%);
+                        }
+                        100% {
+                          transform: translateX(-100%);
+                        }
+                    }
+
+                }
+
+                
+
+                .phonenone {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    overflow: hidden;
+
+                   
+
+                    .rwd_d1 {
+                        position: relative;
+
+                        p {
+
+                            display: none;
+                        }
+
+                        .mask {
+                            @include mask;
+                            width: 327px;
+
+                        }
+
+
+                    }
+
+                    .rwd_d1:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+
+                        p {
+                            @include hover_p;
+
+                        }
+
+                    }
+
+                    .rwd_d2 {
+                        position: relative;
+
+                        p {
+
+                            display: none;
+                        }
+
+                        .mask {
+                            @include mask;
+                            width: 412px;
+
+                        }
+
+
+                    }
+
+                    .rwd_d2:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+
+                        p {
+                            @include hover_p;
+
+                        }
+
+                    }
+
+                    .rwd_d3 {
+                        position: relative;
+                        p {
+
+                            display: none;
+                        }
+
+                        .mask {
+                            @include mask;
+                        }
+
+
+                    }
+
+                    .rwd_d3:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+
+                        p {
+                            @include hover_p;
+
+                        }
+
+                    }
+                    .rwd_d1,.rwd_d2,.rwd_d3{
+                        animation: loop 35s -9s linear infinite;
+                        
+                    }
+    
+                    @keyframes loop{
+                        0% {
+                          transform: translateX(100%);
+                        }
+                        100% {
+                          transform: translateX(-100%);
+                        }
+                    }
+
+
+                }
+                
+                  
+
+
+
+
 
 
 
