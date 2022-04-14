@@ -486,6 +486,7 @@ $media_p:$p+0.8;
             width: 80%;
             height: 550px;
             // background-color: #786B54;
+            position: relative;
     
         }
     
@@ -509,7 +510,8 @@ $media_p:$p+0.8;
         .swiper-slide img {
             border-radius: 20px;
         }
-    
+        
+
     
     
         .swiper-button-nextone {
@@ -524,7 +526,7 @@ $media_p:$p+0.8;
         }
     
         .swiper-button-prevone {
-        //     position: absolute;
+            // position: absolute;
         //     top:410%;
         //     right: 3%;
             cursor: pointer;
