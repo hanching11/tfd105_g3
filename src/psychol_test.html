@@ -4,6 +4,21 @@
 <head>
     @@include('./layout/head.html')
     <title>psychol_test</title>
+    <style>
+        .wrapper_header .nav-list ul ol:nth-child(5),
+        .wrapper_header .nav-list ul ol:nth-child(5) i,
+        .wrapper_header .nav-list ul ol:nth-child(5) #sub-nav_color2 {
+            color: #eeeae2;
+        }
+
+        @media (max-width: 768px) {
+            .wrapper_header .nav-list ul ol:nth-child(5),
+            .wrapper_header .nav-list ul ol:nth-child(5) #tg1,
+            .wrapper_header .nav-list ul ol:nth-child(5) #sub-nav_color2 {
+                color: #353231;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -16,7 +31,7 @@
             <div class="psychol_title ">
                 <h1>心理測驗</h1>
             </div>
-    
+
             <div class="psychol_test_content">
                 <div class="test_title">
                     <h1>心靈藝術家 - 從畫作中顯示出現階段你靈魂的藝術家</h1>
@@ -42,7 +57,7 @@
             <div class="psychol_title ">
                 <h1>心理測驗</h1>
             </div>
-    
+
             <div class="psychol_test_content">
                 <div class="test_title">
                     <h1>心靈藝術家<br>從畫作中顯示出現階段你靈魂的藝術家</h1>
