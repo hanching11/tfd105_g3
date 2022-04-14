@@ -100,8 +100,8 @@ $beidge2: #E3DED4;
         color: #ffffff;
         position: absolute;
         bottom: 2%;
-        right: 14%;
-        font-size: 30px;
+        right: 16%;
+        font-size: 26px;
         line-height: 1.6;
         font-weight: bold;
     }
@@ -263,7 +263,8 @@ $beidge2: #E3DED4;
 
 
     #s4 .s4_third .third_intro img {
-        margin-top: 60px;
+        margin-top: 10px;
+        height: 180px;
     }
 
 
@@ -275,14 +276,14 @@ $beidge2: #E3DED4;
         color: $darkbrown1;
         font-weight: bold;
         position: absolute;
-        top: 60%;
+        top: 4%;
         left: 21%;
 
     }
 
     .swiper-container {
         width: 80%;
-        height: 550px;
+        height: 500px;
         // background-color: #786B54;
 
     }
@@ -306,13 +307,14 @@ $beidge2: #E3DED4;
 
     .swiper-slide img {
         border-radius: 10px;
+        height: 420px;
     }
 
 
 
     .swiper-button-nextone {
         position: absolute;
-        bottom: 13%;
+        bottom: 30%;
         left: 5%;
         cursor: pointer;
 
@@ -320,7 +322,7 @@ $beidge2: #E3DED4;
 
     .swiper-button-prevone {
         position: absolute;
-        bottom: 13%;
+        bottom: 30%;
         right: 5%;
         cursor: pointer;
     }
@@ -396,7 +398,7 @@ $beidge2: #E3DED4;
     }
 
     #s7 .f7_h1 h1 {
-        font-size: 40px;
+        font-size: 36px;
         font-family: $englishFont;
         font-weight: bold;
         line-height: 1.6;
@@ -420,7 +422,8 @@ $beidge2: #E3DED4;
     #s7 .f7_main .f7_mainpic {
         position: absolute;
         top: 10%;
-        left: 4%;
+        left: 6%;
+        height: 550px;
 
 
     }
@@ -430,14 +433,14 @@ $beidge2: #E3DED4;
 
 
     #s7 .f7_main p {
-        font-size: 24px;
+        font-size: 20px;
         font-family: $englishFont;
         font-weight: bold;
         line-height: 1.8;
         color: $darkbrown1;
         position: absolute;
         top: 28%;
-        right: 7%;
+        right: 12%;
 
     }
 
@@ -446,8 +449,8 @@ $beidge2: #E3DED4;
         width: 190px;
         height: 50px;
         position: absolute;
-        bottom: 3%;
-        right: 20%;
+        bottom: 5%;
+        right: 24%;
         border-radius: 15px;
         border: none;
     }
