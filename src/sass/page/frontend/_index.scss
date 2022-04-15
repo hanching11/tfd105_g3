@@ -71,6 +71,33 @@ $media_p:$p+0.8;
 
 }
 
+@mixin mask {
+    position: absolute;
+    top: -183px;
+    left: 0;
+    margin: 0;
+    background-color: rgba(49, 49, 49, 0.21);
+    height: 201px;
+    width: 174px;
+    border-radius: $border-radius;
+    opacity: 0;
+
+}
+
+@mixin hover_p {
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    right: 28px;
+    font-family: sans-serif;
+    letter-spacing: 0;
+    font-size: $p * 1.4;
+    color: $white;
+    font-weight: $regularWeight;
+
+
+}
+
 
 .wrapper_index {
     line-height: $lineheight;
@@ -102,8 +129,9 @@ $media_p:$p+0.8;
         // padding: 0;
         .huge_banner{
             // width: 90%;
-            // padding: 0px 20px;
-            max-width: 1200px;
+            // height: 50%;
+            // padding: 0px 150px;
+            max-width: 950px;
             margin: 0 auto;
             
             .huge_banner .swiper {
@@ -389,49 +417,49 @@ $media_p:$p+0.8;
 
             margin: $margin * 5;
             margin-bottom: $margin;
-
+        
             h3 {
                 @include h3;
                 color: $coffeebrown;
-
+        
             }
-
+        
             p {
                 @include p;
                 color: $lightgray;
-
+        
             }
-
+        
             .new_work {
                 // width: $max-width;
-
-
+        
+        
                 div.row {
                     margin-bottom: $margin * 2;
                     margin-right: 0;
                 }
-
+        
                 // div{
                 //      max-height: 200px;
-
-
-
+        
+        
+        
                 //     img{
                 //         width: $img_width_height;
                 //         height: $img_width_height;
                 //         border-radius: $border-radius;
-
+        
                 //     }
-
+        
                 // }
-
+        
                 div {
                     // border: solid 1px black;
                     //  max-height: 200px;
                     border: none;
                     // width: auto;
                     margin: 0;
-
+        
                     .col-lg-3 img,
                     .col-lg-4 img,
                     .col-lg-5 img,
@@ -440,32 +468,329 @@ $media_p:$p+0.8;
                     .col-lg-8 img {
                         // border: solid 2px black;
                         object-fit: cover;
-                        width: $max-width;
+                        // width: $max-width;
                     }
-                  
+        
                     .img-fluid {
-                    //     // border: solid 1px black;
+                        //     // border: solid 1px black;
                         height: 200px;
                         border-radius: $border-radius;
                         width: auto;
                     }
-                    a{
+        
+                    a {
                         max-width: 100px;
                         // width: $img_width_height;
                     }
-                    
-
-                   
-
+        
+        
+        
+        
                 }
-
-
-
-
+        
+                .row {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    overflow: hidden;
+                    // float:right;
+                    position: relative;
+        
+                    div {
+                        display: inline;
+                        margin-left: $margin;
+                        position: absolute;
+                        top: 0;
+                        right: 1000px;
+                    }
+        
+        
+                    .rwd1 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                        }
+        
+        
+                    }
+        
+        
+                    .rwd1:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+                        }
+        
+                    }
+        
+                    .rwd2 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                            width: 400px;
+        
+                        }
+        
+        
+                    }
+        
+                    .rwd2:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+                        }
+        
+                    }
+        
+                    .rwd3 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                            width: 285px;
+                        }
+        
+        
+                    }
+        
+                    .rwd3:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+                        }
+        
+                    }
+        
+                    .rwd4 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                            width: 280px;
+                        }
+        
+        
+                    }
+        
+                    .rwd4:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+                        }
+        
+                    }
+        
+                    .rwd5 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                            width: 100px;
+                        }
+        
+        
+                    }
+        
+                    .rwd5:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+                        }
+        
+                    }
+        
+        
+        
+        
+                }
+        
+        
+        
+                .phonenone {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    overflow: hidden;
+                    position: relative;
+        
+                    div {
+                        display: inline;
+                        margin-left: $margin;
+                        position: absolute;
+                        top: 0;
+                        right: -1000px;
+                    }
+        
+        
+        
+                    .rwd_d1 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                            width: 285px;
+        
+                        }
+        
+        
+                    }
+        
+                    .rwd_d1:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+                        }
+        
+                    }
+        
+                    .rwd_d2 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                            width: 400px;
+        
+                        }
+        
+        
+                    }
+        
+                    .rwd_d2:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+                        }
+        
+                    }
+        
+                    .rwd_d3 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                            width: 160px;
+                        }
+        
+        
+                    }
+        
+                    .rwd_d3:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+                        }
+        
+                    }
+        
+                    .rwd_d4 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                            width: 280px;
+                        }
+        
+        
+                    }
+        
+                    .rwd_d4:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+        
+        
+                        }
+        
+                    }
+        
+        
+        
+                }
+        
+        
             }
         }
-
-        ;
 
     }
 
@@ -986,111 +1311,163 @@ $media_p:$p+0.8;
 
     // ;
 
-    // .recommendation {
+    //當月藝術流派推薦開始
+    .recommendation {
+        position: relative;
+        height: 700px;
+        margin: 100px 0px;
+
+        .rcd_title{
+            margin-left: 10%;
+        }
+
+        .rcd_title h3 {
+            // @include h3;
+            // @include title_m;
+            color: $coffeebrown;
+            // max-width: 1000px;
+            width: 100%;
+
+            font-size: $h3;
+            letter-spacing: $letter-space;
+            font-family: $englishFont;
+            font-weight: $regularWeight;
 
 
-    //     h3 {
-    //         @include h3;
-    //         color: $coffeebrown;
-    //         @include title_m;
-    //         max-width: 550px;
-    //     }
+        }
 
-    //     p {
-    //         @include p;
-    //         color: $lightgray;
-    //         @include title_m;
-    //     }
-
-        // .row {
-        //     // width: $img_width_height;
-        //     margin: $margin;
-        //     margin-left: $margin *2;
-        //     margin-right: $margin *2;
-
-        //     button {
-        //         background: none;
-        //         border: none;
-        //         padding-top: $padding * 8;
-        //         padding-bottom: $padding * 8;
-
-        //         img {
-        //             width: $img_width_height;
-        //         }
-        //     }
-
-        //     .re_box {
-
-        //         max-width: 322px;
-        //         max-height: 463px;
-
-        //         img {
-        //             width: $img_width_height;
-        //             border-radius: $border-radius;
-        //         }
-
-        //     }
-
-
-
-
-    //     // }
-
-
-
-
-    //     .swiper-container {
-    //         width: 80%;
-    //         height: 550px;
-    //         // background-color: #786B54;
-    
-    //     }
-    
-    //     .swiper-slide {
-    //         text-align: center;
-    //         /* font-size: 18px; */
-    //         /* background: #fff; */
-    //         // Center slide text vertically ;
-    //         display: flex;
-    //         -webkit-box-pack: center;
-    //         -ms-flex-pack: center;
-    //         -webkit-justify-content: center;
-    //         justify-content: center;
-    //         -webkit-box-align: center;
-    //         -ms-flex-align: center;
-    //         -webkit-align-items: center;
-    //         align-items: center;
-    //         box-sizing: content-box;
-    //     }
-    
-    //     .swiper-slide img {
-    //         border-radius: 20px;
-    //     }
-    
-    
-    
-    //     .swiper-button-nextone {
-    //         position: absolute;
-    //         top: 410%;
-    //         left: 3%;
-    //         cursor: pointer;
+        .rcd_title p {
             
+            color: $lightgray;
+            // @include text_overflow;
+
+            font-size: $p * 1.6;
+            letter-spacing: $letter-space;
+            margin-bottom: 20px;
+            font-weight: $boldWeight;
 
 
+        }
+
+        .swiper-container {
+            max-width: 1280px;
+            width: 80%;
+            height: 400px;
+            margin: 0 auto;
+            // background-color: #786B54;
+
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            //  Fix of Webkit flickering 
+            z-index: 1;
     
-    //     }
+        }
+
+        .swiper-wrapper{
+            position: relative;
+
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-transition-property: -webkit-transform;
+            -moz-transition-property: -moz-transform;
+            -o-transition-property: -o-transform;
+            -ms-transition-property: -ms-transform;
+            transition-property: transform;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+        }
     
-    //     .swiper-button-prevone {
-    //     //     position: absolute;
-    //     //     top:410%;
-    //     //     right: 3%;
-    //         cursor: pointer;
-    //     }
+        .swiper-slide {
+            text-align: center;
+            background: transparent;
+
+            -webkit-flex-shrink: 0;
+            -ms-flex: 0 0 auto;
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+
+            position: relative;
+            overflow: hidden;
+            
+        }
+    
+        .swiper-slide img {
+            border-radius: 20px;
+
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+
+        }
+        
+
+        .swiper-slide:hover .part-1  img {
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+        }
+    
+        
+        //   Arrows 
+        .swiper-button-prevone,
+        .swiper-button-nextone {
+            position: absolute;
+            top: 45%;
+            width: 50px;
+            height: 44px;
+            margin-top: -22px;
+            z-index: 10;
+            
+            cursor: pointer;
+            -moz-background-size: 50px 44px;
+            -webkit-background-size: 50px 44px;
+            background-size: 50px 44px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 
 
-    // }
+        .swiper-button-prevone {
+            background-image: url("../img/arrow/left-arrow.svg");
+            left: 20px;
+            right: auto;
+            // cursor: pointer;
+        }
 
-    // ;
+        .swiper-button-nextone {
+            background-image: url("../img/arrow/right-arrow.svg");
+            right: 20px;
+            left: auto;
+            // cursor: pointer;
+    
+        }
+        
+
+        // 副標題
+        .rcd_name_style{
+            display: none;
+        }
+        
+
+
+    }
+
+    ;
+    //當月藝術流派推薦結束
+
 
     .login {
         background-image: url(../img/index/Rectangle\ 8.jpg);
@@ -1174,7 +1551,7 @@ $media_p:$p+0.8;
 
 
         }
-        .swiper-container {
+        .swiper-container2 {
             max-width: 1280px;
             width: 80%;
             height: 360px;
@@ -1208,7 +1585,7 @@ $media_p:$p+0.8;
         }
         
         //  ------------------- 
-        .swiper-container {
+        .swiper-container2 {
             margin-left: auto;
             margin-right: auto;
             overflow: hidden;
@@ -1260,69 +1637,32 @@ $media_p:$p+0.8;
             // border-top-right-radius: 25px;
         }
         
-        .swiper-slide .part-1::before {
-            position: absolute;
-            content: "";
-            top: 0;
-            left: 0;
+        .swiper-slide .part-1  img{
+            // position: relative;
+            // height: 200px;
+            // max-height: 290px;
+            // margin-bottom: 20px;
+            // border-radius: 25px;
+
+            object-fit: cover;
             width: 100%;
             height: 100%;
-            z-index: -1;
-            transition: all 0.3s;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+            
+
         }
         
-        .swiper-slide:hover .part-1::before {
-            transform: scale(1.1,1.1) rotate(0deg);
+        .swiper-slide:hover .part-1  img {
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
         }
         
-        #hp1 .part-1::before {
-            background: url("../img/index/Rectangle 11.jpg") no-repeat center;
-            z-index: 99;
-            background-size: cover;
-            transition: all 0.3s;
-        }
         
-        #hp2 .part-1::before {
-            background: url("../img/index/Rectangle 12.jpg") no-repeat center;
-            z-index: 99;
-            background-size: cover;
-            transition: all 0.3s;
-        }
         
-        #hp3 .part-1::before {
-            background: url("../img/index/Rectangle 13.jpg") no-repeat center;
-            z-index: 99;
-            background-size: cover;
-            transition: all 0.3s;
-        }
-        
-        #hp4 .part-1::before {
-            background: url("../img/Shop/hot-prodts/h-p-6.png") no-repeat center;
-            z-index: 99;
-            background-size: cover;
-            transition: all 0.3s;
-        }
-        
-        #hp5 .part-1::before {
-            background: url("../img/Shop/hot-prodts/h-p-7.png") no-repeat center;
-            z-index: 99;
-            background-size: cover;
-            transition: all 0.3s;
-        }
-        
-        #hp6 .part-1::before {
-            background: url("../img/Shop/hot-prodts/h-p-3.png") no-repeat center;
-            z-index: 99;
-            background-size: cover;
-            transition: all 0.3s;
-        }
-        
-        #hp7 .part-1::before {
-            background: url("../img/Shop/hot-prodts/h-p-4.png") no-repeat center;
-            z-index: 99;
-            background-size: cover;
-            transition: all 0.3s;
-        }
+       
         
         //   Arrows 
         .swiper-button-prevone,
@@ -1568,6 +1908,114 @@ $media_p:$p+0.8;
 
     // and (min-width: 400px)
     @media (max-width: 767px) { 
+        .recommendation {
+            position: relative;
+            height: 700px;
+            margin: 0px;
+    
+            .rcd_title{
+                margin-left: 10%;
+            }
+    
+            .rcd_title h3 {
+                // @include h3;
+                // @include title_m;
+                color: $coffeebrown;
+                // max-width: 1000px;
+                width: 100%;
+    
+                font-size: 24px;
+                letter-spacing: $letter-space;
+                font-family: $englishFont;
+                font-weight: $regularWeight;
+    
+    
+            }
+    
+            .rcd_title p {
+                
+                color: $lightgray;
+                // @include text_overflow;
+    
+                font-size: $p * 1.6;
+                letter-spacing: $letter-space;
+                margin-bottom: 20px;
+                font-weight: $boldWeight;
+    
+    
+            }
+
+                //   Arrows 
+            .swiper-button-prevone,
+            .swiper-button-nextone {
+                position: absolute;
+                top: 40%;
+                width: 30px;
+                height: 44px;
+                margin-top: -22px;
+                z-index: 10;
+                
+                cursor: pointer;
+                -moz-background-size: 30px 44px;
+                -webkit-background-size: 30px 44px;
+                background-size: 30px 44px;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+
+            .swiper-button-prevone {
+                background-image: url("../img/arrow/left-arrow.svg");
+                left: 5px;
+                right: auto;
+                // cursor: pointer;
+            }
+
+            .swiper-button-nextone {
+                background-image: url("../img/arrow/right-arrow.svg");
+                right: 5px;
+                left: auto;
+                // cursor: pointer;
+        
+            }
+
+            // 副標題
+        .rcd_name_style{
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            line-height: 230%;
+        }
+
+        .rcd_name_style h3{
+            color: $darkbrown2;
+            // max-width: 1000px;
+
+            font-size: 20px;
+            letter-spacing: $letterSpacing5;
+            font-family: $fontSerif;
+            font-weight: $boldWeight;
+        }
+
+        .rcd_name_style p{
+            color: $darkbrown2;
+            font-size: 20px;
+            letter-spacing: $letter-space;
+            font-family: $englishFont;
+        }
+
+
+
+
+
+
+
+
+        };
+
+
+
         .product_description {
 
             position: relative;
@@ -1689,69 +2137,32 @@ $media_p:$p+0.8;
                 // border-top-right-radius: 25px;
             }
             
-            .swiper-slide .part-1::before {
-                position: absolute;
-                content: "";
-                top: 0;
-                left: 0;
+            .swiper-slide .part-1  img{
+                // position: relative;
+                // height: 200px;
+                // max-height: 290px;
+                // margin-bottom: 20px;
+                // border-radius: 25px;
+    
+                object-fit: cover;
                 width: 100%;
                 height: 100%;
-                z-index: -1;
-                transition: all 0.3s;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                -webkit-transition: .3s ease-in-out;
+                transition: .3s ease-in-out;
+                
+    
             }
             
-            .swiper-slide:hover .part-1::before {
-                transform: scale(1.1,1.1) rotate(0deg);
+            .swiper-slide:hover .part-1  img {
+                -webkit-transform: scale(1.3);
+                transform: scale(1.3);
             }
             
-            #hp1 .part-1::before {
-                background: url("../img/index/Rectangle 11.jpg") no-repeat center;
-                z-index: 99;
-                background-size: cover;
-                transition: all 0.3s;
-            }
             
-            #hp2 .part-1::before {
-                background: url("../img/index/Rectangle 12.jpg") no-repeat center;
-                z-index: 99;
-                background-size: cover;
-                transition: all 0.3s;
-            }
             
-            #hp3 .part-1::before {
-                background: url("../img/index/Rectangle 13.jpg") no-repeat center;
-                z-index: 99;
-                background-size: cover;
-                transition: all 0.3s;
-            }
             
-            #hp4 .part-1::before {
-                background: url("../img/Shop/hot-prodts/h-p-6.png") no-repeat center;
-                z-index: 99;
-                background-size: cover;
-                transition: all 0.3s;
-            }
-            
-            #hp5 .part-1::before {
-                background: url("../img/Shop/hot-prodts/h-p-7.png") no-repeat center;
-                z-index: 99;
-                background-size: cover;
-                transition: all 0.3s;
-            }
-            
-            #hp6 .part-1::before {
-                background: url("../img/Shop/hot-prodts/h-p-3.png") no-repeat center;
-                z-index: 99;
-                background-size: cover;
-                transition: all 0.3s;
-            }
-            
-            #hp7 .part-1::before {
-                background: url("../img/Shop/hot-prodts/h-p-4.png") no-repeat center;
-                z-index: 99;
-                background-size: cover;
-                transition: all 0.3s;
-            }
             
             //   Arrows 
             .swiper-button-prevone,
@@ -1995,113 +2406,111 @@ $media_p:$p+0.8;
 
             ;
 
-            .recommendation {
-                margin-top: $margin * 50;
+            // .recommendation {
+            //     margin-top: $margin * 50;
 
 
-                h3 {
-                    @include media_h6;
-                    margin: 0 auto;
-                    text-align: center;
+            //     h3 {
+            //         @include media_h6;
+            //         margin: 0 auto;
+            //         text-align: center;
 
 
-                }
+            //     }
 
 
-                p {
-                    font-size: $p !important;
+            //     p {
+            //         font-size: $p !important;
 
-                }
+            //     }
 
                 
 
-                .row {
-                    margin: 0;
-                    margin-top: $margin * 2;
-                    padding: 0;
+            //     .row {
+            //         margin: 0;
+            //         margin-top: $margin * 2;
+            //         padding: 0;
 
-                    button {
-                        width: auto;
-                        width: 50px;
-
-
-                        img {
-
-                            width: 100%;
-                            // width: 50px;
+            //         button {
+            //             width: auto;
+            //             width: 50px;
 
 
-                        }
-                    }
+            //             img {
 
-                    .col-1 {
-                        padding: 0;
-
-                    }
+            //                 width: 100%;
+            //                 // width: 50px;
 
 
-                    .col-10 {
-                        width: auto;
-                        height: auto;
-                        // padding-left: $padding + 10px;
+            //             }
+            //         }
 
-                        img {
-                            // width: 300px;
-                            width: 250px;
+            //         .col-1 {
+            //             padding: 0;
 
-                            // width: $img_width_height;
-                            // width: $img_width_height;
-                            // padding-left: $padding - 15px;
-                            // padding-right: $padding  - 15px;
-                        }
+            //         }
 
 
+            //         .col-10 {
+            //             width: auto;
+            //             height: auto;
+            //             // padding-left: $padding + 10px;
 
-                    }
+            //             img {
+            //                 // width: 300px;
+            //                 width: 250px;
 
-                    .re_box {
-
-                        margin: 0 !important;
-
-                        p {
-                            @include p;
-                            width: 100%;
-                            font-size: $p * 1.8 !important;
-                            font-family: $fontNoserif, $fontSerif !important;
-                            margin: 0 auto;
-                            color: $darkbrown2;
-                            height: auto;
-                            // width: 250px;
-                            text-align: center;
-                            margin-top: $margin * 2;
+            //                 // width: $img_width_height;
+            //                 // width: $img_width_height;
+            //                 // padding-left: $padding - 15px;
+            //                 // padding-right: $padding  - 15px;
+            //             }
 
 
 
+            //         }
 
-                        }
+            //         .re_box {
 
-                        h6 {
-                            @include media_h6;
-                            font-family: $englishFont;
-                            font-size: $p * 1.8 !important;
-                            width: 100%;
-                            margin: 0 auto;
-                            color: $darkbrown2;
-                            text-align: center;
-                            margin-top: $margin;
+            //             margin: 0 !important;
 
-                        }
-
-                        .col-lg-10 {
-                            margin: 0 !important;
-                            color: aquamarine;
-                        }
+            //             p {
+            //                 @include p;
+            //                 width: 100%;
+            //                 font-size: $p * 1.8 !important;
+            //                 font-family: $fontNoserif, $fontSerif !important;
+            //                 margin: 0 auto;
+            //                 color: $darkbrown2;
+            //                 height: auto;
+            //                 // width: 250px;
+            //                 text-align: center;
+            //                 margin-top: $margin * 2;
 
 
 
-                    }
+
+            //             }
+
+            //             h6 {
+            //                 @include media_h6;
+            //                 font-family: $englishFont;
+            //                 font-size: $p * 1.8 !important;
+            //                 width: 100%;
+            //                 margin: 0 auto;
+            //                 color: $darkbrown2;
+            //                 text-align: center;
+            //                 margin-top: $margin;
+
+            //             }
+
+            //             .col-lg-10 {
+            //                 margin: 0 !important;
+            //                 color: aquamarine;
+            //             }
 
 
+
+            //         }
 
 
 
@@ -2111,16 +2520,18 @@ $media_p:$p+0.8;
 
 
 
-                }
+
+
+            //     }
 
 
 
 
 
 
-            }
+            // }
 
-            ;
+            // ;
 
             // .product_description {
             //     margin: 0;

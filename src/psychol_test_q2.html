@@ -36,23 +36,31 @@
             <div class="test_q1">
 
                 <div class="question">
-                    <div class="previous_arrow">
+                    <!-- <div class="previous_arrow">
                         <a href="./psychol_test_q1.html"><img src="./img/arrow/right-arrow.svg" alt=""></a>
-                    </div>
+                    </div> -->
                     <div class="question_img">
                         <img src="./img/psychol_test/Q2.jpg" alt="">
                     </div>
-                    <div class="next_arrow">
+                    <!-- <div class="next_arrow">
                         <a href="./psychol_test_q3.html"><img src="./img/arrow/right-arrow.svg" alt=""></a>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="test_question">
                     <h3>Q2. 你喜歡抒發自我感受和主觀情感?</h3>
-                    <ul class="option">
+                    <!-- <ul class="option">
                         <li><a href="./psychol_test_q3.html"><button id="b1"></button> &nbsp;&nbsp;&nbsp;&nbsp;是</a></li>
                         <li><a href="./psychol_test_q3.html"><button id="b1"></button> &nbsp;&nbsp;&nbsp;&nbsp;否</a></li>
-                    </ul>
+                    </ul> -->
+                    <form action="./psychol_test_q3.html">
+                        <label for="yes_option"><input type="radio" name="option" id="yes" value="1"
+                                >&nbsp;&nbsp;&nbsp;&nbsp;是</label>
+                        <label for="no_option"><input type="radio" name="option" id="no"
+                                value="2">&nbsp;&nbsp;&nbsp;&nbsp;否</label>
+                        <br>
+                        <button class="next_q">下一題</button>
+                    </form>
                 </div>
             </div>
         </section>
