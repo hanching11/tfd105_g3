@@ -47,7 +47,8 @@ function hideNav() {
 
 //  購物車
 $("#cart").on("click", function () {
-    $(".shopping-cart").fadeToggle("fast");
+    event.preventDefault();
+    $(".shopping-cart").fadeToggle("fast").addClass('is-visible');
 });
 
 // 關掉購物車
@@ -55,3 +56,27 @@ $("#cart").on("click", function () {
 $("#btn-cart-close").on("click", function () {
     $(".shopping-cart").hide();
 });
+
+
+ //彈窗
+//  jQuery(document).ready(function($){
+//     //open popup
+//     $('.cd-popup-trigger').on('click', function(event){
+//         event.preventDefault();
+//         $('.cd-popup').addClass('is-visible');
+//     });
+    
+//     //close popup
+//     $('.cd-popup').on('click', function(event){
+//         if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup') ) {
+//             event.preventDefault();
+//             $(this).removeClass('is-visible');
+//         }
+//     });
+//     //close popup when clicking the esc keyboard button
+//     $(document).keyup(function(event){
+//         if(event.which=='27'){
+//             $('.cd-popup').removeClass('is-visible');
+//         }
+//     });
+// });
