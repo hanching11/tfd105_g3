@@ -151,56 +151,7 @@
 
     /* 選單列 */
 
-    .-checkStep{
-        margin: 40px 0 70px 0;
-      }
-      
-    
-        .-num{
-          font-family: $englishFont;
-          font-weight: $boldWeight;
-          font-size: 1.25rem;
-          // border:10px solid blue;
-        }
-    
-          .-num::before{
-          // border: 2px solid blue;
-            background-repeat: no-repeat;
-            position: absolute;
-            display: block;
-            content: '';
-            background-image: url(../img/checkout/arrow1.svg);
-            top: 50%;
-            left: 90%;
-            height: 22px;
-            width: 100%;
-          }
-          
-          .col{
-            color: $lightgray;
-            font-weight: $boldWeight;
-            line-height: $lineheight1;
-            position: relative;
-            font-size: 1rem;
-            text-align: center;
-          }
-    
-          .col-lg-4{
-            margin: 0 auto;
-          }
-    
-          .-first{
-            color: $darkbrown1;
-            // border:10px solid blue;
-          }
-     
-          .-num.-fourth:before{
-          // border: 2px solid blue;
-            display: none;
-          }
-    
-          
-          
+  
         //  ??????
           .row-4{
             // border: 1px solid black;
@@ -236,9 +187,7 @@
             color: $white;
             background: $darkbrown2;
           }
-    
-      
-    
+
           //  各項商品
            .-copyPdc{
             margin-bottom: 60px;
@@ -500,7 +449,7 @@
         }
     }
 
-    nav {
+    nav{
         // position: fixed;
         // z-index: 100;
         // right: 0;
