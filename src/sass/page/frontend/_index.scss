@@ -71,6 +71,33 @@ $media_p:$p+0.8;
 
 }
 
+@mixin mask {
+    position: absolute;
+    top: -183px;
+    left: 0;
+    margin: 0;
+    background-color: rgba(49, 49, 49, 0.21);
+    height: 201px;
+    width: 174px;
+    border-radius: $border-radius;
+    opacity: 0;
+
+}
+
+@mixin hover_p {
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    right: 28px;
+    font-family: sans-serif;
+    letter-spacing: 0;
+    font-size: $p * 1.4;
+    color: $white;
+    font-weight: $regularWeight;
+
+
+}
+
 
 .wrapper_index {
     line-height: $lineheight;
@@ -390,49 +417,49 @@ $media_p:$p+0.8;
 
             margin: $margin * 5;
             margin-bottom: $margin;
-
+        
             h3 {
                 @include h3;
                 color: $coffeebrown;
-
+        
             }
-
+        
             p {
                 @include p;
                 color: $lightgray;
-
+        
             }
-
+        
             .new_work {
                 // width: $max-width;
-
-
+        
+        
                 div.row {
                     margin-bottom: $margin * 2;
                     margin-right: 0;
                 }
-
+        
                 // div{
                 //      max-height: 200px;
-
-
-
+        
+        
+        
                 //     img{
                 //         width: $img_width_height;
                 //         height: $img_width_height;
                 //         border-radius: $border-radius;
-
+        
                 //     }
-
+        
                 // }
-
+        
                 div {
                     // border: solid 1px black;
                     //  max-height: 200px;
                     border: none;
                     // width: auto;
                     margin: 0;
-
+        
                     .col-lg-3 img,
                     .col-lg-4 img,
                     .col-lg-5 img,
@@ -441,32 +468,329 @@ $media_p:$p+0.8;
                     .col-lg-8 img {
                         // border: solid 2px black;
                         object-fit: cover;
-                        width: $max-width;
+                        // width: $max-width;
                     }
-                  
+        
                     .img-fluid {
-                    //     // border: solid 1px black;
+                        //     // border: solid 1px black;
                         height: 200px;
                         border-radius: $border-radius;
                         width: auto;
                     }
-                    a{
+        
+                    a {
                         max-width: 100px;
                         // width: $img_width_height;
                     }
-                    
-
-                   
-
+        
+        
+        
+        
                 }
-
-
-
-
+        
+                .row {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    overflow: hidden;
+                    // float:right;
+                    position: relative;
+        
+                    div {
+                        display: inline;
+                        margin-left: $margin;
+                        position: absolute;
+                        top: 0;
+                        right: 1000px;
+                    }
+        
+        
+                    .rwd1 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                        }
+        
+        
+                    }
+        
+        
+                    .rwd1:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+                        }
+        
+                    }
+        
+                    .rwd2 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                            width: 400px;
+        
+                        }
+        
+        
+                    }
+        
+                    .rwd2:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+                        }
+        
+                    }
+        
+                    .rwd3 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                            width: 285px;
+                        }
+        
+        
+                    }
+        
+                    .rwd3:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+                        }
+        
+                    }
+        
+                    .rwd4 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                            width: 280px;
+                        }
+        
+        
+                    }
+        
+                    .rwd4:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+                        }
+        
+                    }
+        
+                    .rwd5 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                            width: 100px;
+                        }
+        
+        
+                    }
+        
+                    .rwd5:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+                        }
+        
+                    }
+        
+        
+        
+        
+                }
+        
+        
+        
+                .phonenone {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    overflow: hidden;
+                    position: relative;
+        
+                    div {
+                        display: inline;
+                        margin-left: $margin;
+                        position: absolute;
+                        top: 0;
+                        right: -1000px;
+                    }
+        
+        
+        
+                    .rwd_d1 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                            width: 285px;
+        
+                        }
+        
+        
+                    }
+        
+                    .rwd_d1:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+                        }
+        
+                    }
+        
+                    .rwd_d2 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                            width: 400px;
+        
+                        }
+        
+        
+                    }
+        
+                    .rwd_d2:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+                        }
+        
+                    }
+        
+                    .rwd_d3 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                            width: 160px;
+                        }
+        
+        
+                    }
+        
+                    .rwd_d3:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+                        }
+        
+                    }
+        
+                    .rwd_d4 {
+                        position: relative;
+        
+                        p {
+        
+                            display: none;
+                        }
+        
+                        .mask {
+                            @include mask;
+                            width: 280px;
+                        }
+        
+        
+                    }
+        
+                    .rwd_d4:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+        
+                        p {
+                            @include hover_p;
+        
+        
+        
+                        }
+        
+                    }
+        
+        
+        
+                }
+        
+        
             }
         }
-
-        ;
 
     }
 
