@@ -1,14 +1,11 @@
-$max-width:100%;
-$lineheight:1.6;
-$letter-space:5px;
-$img_width_height:100%;
-$margin:20px;
-$border-radius:25px;
-$padding:20px;
-$media_p:$p+0.8;
-
-
-
+$max-width: 100%;
+$lineheight: 1.6;
+$letter-space: 5px;
+$img_width_height: 100%;
+$margin: 20px;
+$border-radius: 25px;
+$padding: 20px;
+$media_p: $p + 0.8;
 
 @mixin h3 {
     font-size: $h3;
@@ -16,44 +13,36 @@ $media_p:$p+0.8;
     letter-spacing: $letter-space;
     font-family: $englishFont;
     font-weight: $regularWeight;
-
 }
 
 @mixin p {
-
     font-size: $p * 1.6;
     // font-weight: $fontWeight ;
     letter-spacing: $letter-space;
     margin-bottom: $margin;
     font-weight: $boldWeight;
-
 }
 
 @mixin title_m {
-
     margin-left: $margin * 6;
     margin-right: $margin * 6;
-
 }
 
 @mixin text_overflow {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-
 }
 
 @mixin media_h6 {
     font-size: $h6 !important;
     letter-spacing: 0 !important;
-
 }
 
 @mixin media {
     //區塊變數
     margin: 0 !important;
     text-align: center;
-
 }
 
 @mixin media_button_p2 {
@@ -68,7 +57,6 @@ $media_p:$p+0.8;
     margin-top: $margin * 2;
     margin-left: $margin * 11 + 5px;
     font-weight: $boldWeight;
-
 }
 
 @mixin mask {
@@ -81,7 +69,6 @@ $media_p:$p+0.8;
     width: 174px;
     border-radius: $border-radius;
     opacity: 0;
-
 }
 
 @mixin hover_p {
@@ -94,22 +81,20 @@ $media_p:$p+0.8;
     font-size: $p * 1.4;
     color: $white;
     font-weight: $regularWeight;
-
-
 }
-
 
 .wrapper_index {
     line-height: $lineheight;
 
-    body {}
+    body {
+    }
 
     section {
         // font-size: $fontWeight;
         // font-family: $fontNoserif, $fontSerif, $englishFont;
 
         // .top {
-            // max-width: $max-width;
+        // max-width: $max-width;
         //     max-height: 580px;
         //     margin-bottom: $margin;
 
@@ -121,8 +106,6 @@ $media_p:$p+0.8;
 
         // position: relative;
         // height: 100%;
-
-
 
         // margin: 0;
         // padding: 0;
@@ -170,13 +153,11 @@ $media_p:$p+0.8;
                 margin-right: auto;
             }
 
-            // 大輪播css套件開始     
+            // 大輪播css套件開始
 
+            $swiper-theme-color: #786b54;
 
-            $swiper-theme-color: #786B54;
-
-            $swiper-navigation-size:22px;
-
+            $swiper-navigation-size: 22px;
 
             .swiper {
                 margin-left: auto;
@@ -189,7 +170,7 @@ $media_p:$p+0.8;
                 z-index: 1;
             }
 
-            .swiper-vertical>.swiper-wrapper {
+            .swiper-vertical > .swiper-wrapper {
                 flex-direction: column;
             }
 
@@ -226,7 +207,7 @@ $media_p:$p+0.8;
             }
 
             .swiper-virtual.swiper-css-mode .swiper-wrapper::after {
-                content: '';
+                content: "";
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -291,7 +272,7 @@ $media_p:$p+0.8;
 
             .swiper-button-prev:after,
             .swiper-rtl .swiper-button-next:after {
-                content: '';
+                content: "";
             }
 
             .swiper-button-next,
@@ -302,7 +283,7 @@ $media_p:$p+0.8;
 
             .swiper-button-next:after,
             .swiper-rtl .swiper-button-prev:after {
-                content: '';
+                content: "";
             }
 
             .swiper-button-lock {
@@ -324,7 +305,7 @@ $media_p:$p+0.8;
             /* Common Styles */
             .swiper-pagination-fraction,
             .swiper-pagination-custom,
-            .swiper-horizontal>.swiper-pagination-bullets,
+            .swiper-horizontal > .swiper-pagination-bullets,
             .swiper-pagination-bullets.swiper-pagination-horizontal {
                 bottom: 10px;
                 left: 0;
@@ -397,80 +378,85 @@ $media_p:$p+0.8;
                 background: $swiper-theme-color;
             }
 
-            .swiper-vertical>.swiper-pagination-bullets,
+            .swiper-vertical > .swiper-pagination-bullets,
             .swiper-pagination-vertical.swiper-pagination-bullets {
                 right: 10px;
                 top: 50%;
                 transform: translate3d(0px, -50%, 0);
             }
 
-            .swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet,
+            .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet,
             .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet {
                 margin: var(--swiper-pagination-bullet-vertical-gap, 6px) 0;
                 display: block;
             }
 
-            .swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+            .swiper-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
             .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
                 top: 50%;
                 transform: translateY(-50%);
                 width: 8px;
             }
 
-            .swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
-            .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+            .swiper-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
+            .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic
+                .swiper-pagination-bullet {
                 display: inline-block;
                 transition: 200ms transform, 200ms top;
             }
 
-            .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+            .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
             .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
                 margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
             }
 
-            .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+            .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
             .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
                 left: 50%;
                 transform: translateX(-50%);
                 white-space: nowrap;
             }
 
-            .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
-            .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+            .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
+            .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic
+                .swiper-pagination-bullet {
                 transition: 200ms transform, 200ms left;
             }
 
-            .swiper-horizontal.swiper-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+            .swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
                 transition: 200ms transform, 200ms right;
             }
 
-            // 大輪播css套件結束              
+            // 大輪播css套件結束
+        }
+        #huge_banner2{
+            display: none;
+        }
+        @media (max-width: 900px) {
+            #huge_banner1{
+                display: none;
+            }
+            #huge_banner2{
+                display: block;
+            }
         }
 
-        ;
-
-
-
         .the_new {
-
             margin: $margin * 5;
             margin-bottom: $margin;
 
             h3 {
                 @include h3;
                 color: $coffeebrown;
-
             }
 
             p {
                 @include p;
                 color: $lightgray;
-
             }
 
             .new_work {
                 // width: $max-width;
-
 
                 div.row {
                     margin-bottom: $margin * 2;
@@ -479,8 +465,6 @@ $media_p:$p+0.8;
 
                 // div{
                 //      max-height: 200px;
-
-
 
                 //     img{
                 //         width: $img_width_height;
@@ -520,10 +504,6 @@ $media_p:$p+0.8;
                         max-width: 100px;
                         // width: $img_width_height;
                     }
-
-
-
-
                 }
 
                 .row {
@@ -545,22 +525,17 @@ $media_p:$p+0.8;
                         text-decoration: none;
                     }
 
-
                     .rwd1 {
                         position: relative;
 
                         p {
-
                             display: none;
                         }
 
                         .mask {
                             @include mask;
                         }
-
-
                     }
-
 
                     .rwd1:hover {
                         .mask {
@@ -569,26 +544,20 @@ $media_p:$p+0.8;
 
                         p {
                             @include hover_p;
-
                         }
-
                     }
 
                     .rwd2 {
                         position: relative;
 
                         p {
-
                             display: none;
                         }
 
                         .mask {
                             @include mask;
                             width: 400px;
-
                         }
-
-
                     }
 
                     .rwd2:hover {
@@ -598,16 +567,13 @@ $media_p:$p+0.8;
 
                         p {
                             @include hover_p;
-
                         }
-
                     }
 
                     .rwd3 {
                         position: relative;
 
                         p {
-
                             display: none;
                         }
 
@@ -615,8 +581,6 @@ $media_p:$p+0.8;
                             @include mask;
                             width: 285px;
                         }
-
-
                     }
 
                     .rwd3:hover {
@@ -626,16 +590,13 @@ $media_p:$p+0.8;
 
                         p {
                             @include hover_p;
-
                         }
-
                     }
 
                     .rwd4 {
                         position: relative;
 
                         p {
-
                             display: none;
                         }
 
@@ -643,8 +604,6 @@ $media_p:$p+0.8;
                             @include mask;
                             width: 272px;
                         }
-
-
                     }
 
                     .rwd4:hover {
@@ -654,26 +613,20 @@ $media_p:$p+0.8;
 
                         p {
                             @include hover_p;
-
                         }
-
                     }
 
                     .rwd5 {
                         position: relative;
 
                         p {
-
                             display: none;
-
                         }
 
                         .mask {
                             @include mask;
                             width: 141px;
                         }
-
-
                     }
 
                     .rwd5:hover {
@@ -685,26 +638,20 @@ $media_p:$p+0.8;
                             @include hover_p;
                             position: absolute;
                             right: 15px;
-
                         }
-
                     }
 
                     .rwd6 {
                         position: relative;
 
                         p {
-
                             display: none;
-
                         }
 
                         .mask {
                             @include mask;
                             width: 350px;
                         }
-
-
                     }
 
                     .rwd6:hover {
@@ -714,19 +661,9 @@ $media_p:$p+0.8;
 
                         p {
                             @include hover_p;
-
-
                         }
-
                     }
-
-
-
-
-
                 }
-
-
 
                 .phonenone {
                     display: flex;
@@ -746,23 +683,17 @@ $media_p:$p+0.8;
                         text-decoration: none;
                     }
 
-
-
                     .rwd_d1 {
                         position: relative;
 
                         p {
-
                             display: none;
                         }
 
                         .mask {
                             @include mask;
                             width: 285px;
-
                         }
-
-
                     }
 
                     .rwd_d1:hover {
@@ -772,26 +703,20 @@ $media_p:$p+0.8;
 
                         p {
                             @include hover_p;
-
                         }
-
                     }
 
                     .rwd_d2 {
                         position: relative;
 
                         p {
-
                             display: none;
                         }
 
                         .mask {
                             @include mask;
                             width: 400px;
-
                         }
-
-
                     }
 
                     .rwd_d2:hover {
@@ -801,16 +726,13 @@ $media_p:$p+0.8;
 
                         p {
                             @include hover_p;
-
                         }
-
                     }
 
                     .rwd_d3 {
                         position: relative;
 
                         p {
-
                             display: none;
                         }
 
@@ -818,8 +740,6 @@ $media_p:$p+0.8;
                             @include mask;
                             width: 160px;
                         }
-
-
                     }
 
                     .rwd_d3:hover {
@@ -829,16 +749,13 @@ $media_p:$p+0.8;
 
                         p {
                             @include hover_p;
-
                         }
-
                     }
 
                     .rwd_d4 {
                         position: relative;
 
                         p {
-
                             display: none;
                         }
 
@@ -846,8 +763,6 @@ $media_p:$p+0.8;
                             @include mask;
                             width: 280px;
                         }
-
-
                     }
 
                     .rwd_d4:hover {
@@ -857,18 +772,13 @@ $media_p:$p+0.8;
 
                         p {
                             @include hover_p;
-
-
-
                         }
-
                     }
 
                     .rwd_d5 {
                         position: relative;
 
                         p {
-
                             display: none;
                         }
 
@@ -876,8 +786,6 @@ $media_p:$p+0.8;
                             @include mask;
                             width: 135px;
                         }
-
-
                     }
 
                     .rwd_d5:hover {
@@ -887,26 +795,12 @@ $media_p:$p+0.8;
 
                         p {
                             @include hover_p;
-
-
-
                         }
-
                     }
-
-
-
-
                 }
-
-
             }
         }
-
     }
-
-    ;
-
 
     .-exhibition {
         .text-uppercase {
@@ -922,7 +816,6 @@ $media_p:$p+0.8;
                 border-top: 1px solid white;
             }
         }
-
 
         .Kuang1 {
             @include h3;
@@ -1080,7 +973,6 @@ $media_p:$p+0.8;
             }
         }
 
-
         @media all and (max-width: 768.98px) {
             border: none;
             background-image: none;
@@ -1089,7 +981,6 @@ $media_p:$p+0.8;
         .-ImgAll {
             text-align: center;
         }
-
 
         .-Img27 {
             // border: 1px solid black;
@@ -1114,7 +1005,6 @@ $media_p:$p+0.8;
             padding-bottom: 16px;
         }
 
-
         .-grpA {
             // border: 1px solid black;
             height: 10%;
@@ -1126,11 +1016,8 @@ $media_p:$p+0.8;
             .-grpA {
                 height: 10%;
                 max-width: 100%;
-
             }
-
         }
-
 
         @media all and (max-width: 575.98px) {
             .row {
@@ -1155,8 +1042,6 @@ $media_p:$p+0.8;
                 // }
             }
         }
-
-
     }
 
     // .exhibition {
@@ -1170,7 +1055,7 @@ $media_p:$p+0.8;
     //     // .title{
 
     //     //     border-top: 1px solid $white;
-    //     //     margin-top: $margin;  
+    //     //     margin-top: $margin;
 
     //     // } //線顯示不出來
 
@@ -1178,7 +1063,6 @@ $media_p:$p+0.8;
     //         @include h3;
     //         color: $white;
     //         @include title_m;
-
 
     //     }
 
@@ -1189,14 +1073,10 @@ $media_p:$p+0.8;
 
     //     }
 
-
-
     //     .r1 {
     //         // padding: $padding + 10px;
     //         // padding-right: $padding - 10px;
     //         margin: 20px;
-
-
 
     //     }
 
@@ -1209,7 +1089,6 @@ $media_p:$p+0.8;
     //         // margin: $margin - 15px;
     //         padding: $padding * 2;
 
-
     //         img {
     //             max-width: 160px;
     //             border-radius: 50%;
@@ -1217,7 +1096,6 @@ $media_p:$p+0.8;
 
     //         .text_box {
     //             // padding-left: $padding * 2;
-
 
     //             .clock {
     //                 max-width: 23px;
@@ -1234,9 +1112,6 @@ $media_p:$p+0.8;
     //                 margin-bottom: $margin;
     //                 font-weight: $lightWeight;
 
-
-
-
     //             }
 
     //             .p1 {
@@ -1246,17 +1121,13 @@ $media_p:$p+0.8;
 
     //             a {
 
-
     //                 text-decoration: none;
 
     //                 .p2 {
     //                     @include media_button_p2;
 
-
-
     //                 }
     //             }
-
 
     //         }
 
@@ -1289,8 +1160,6 @@ $media_p:$p+0.8;
     //                 // padding: 0;
     //             }
 
-
-
     //             .col-lg-12 {
     //                 // border: 1px solid black;
 
@@ -1307,7 +1176,6 @@ $media_p:$p+0.8;
     //             }
     //             .col-lg-4{
     //                 // border: 1px solid black;
-
 
     //             }
 
@@ -1342,12 +1210,9 @@ $media_p:$p+0.8;
     //             padding: 0;
     //             margin-top: $margin;
 
-
     //             img {
     //                 border-radius: 0;
     //                 width: $img_width_height;
-
-
 
     //             }
 
@@ -1377,8 +1242,6 @@ $media_p:$p+0.8;
 
     //             }
 
-
-
     //             .box3 {
     //                 max-width: 125px;
     //                 max-height: 62px;
@@ -1388,7 +1251,6 @@ $media_p:$p+0.8;
     //                 max-width: 100px;
     //                 max-height: 128px;
     //                 width: $img_width_height;
-
 
     //             }
 
@@ -1422,17 +1284,10 @@ $media_p:$p+0.8;
 
     //         }
 
-
-
-
-
-
-
     //     }
 
     //     .Kuang {
     //         // border-bottom: 1px solid $white;
-
 
     //         .Kuang1 {
     //             margin-left: $margin * 37;
@@ -1465,12 +1320,9 @@ $media_p:$p+0.8;
             letter-spacing: $letter-space;
             font-family: $englishFont;
             font-weight: $regularWeight;
-
-
         }
 
         .rcd_title p {
-
             color: $lightgray;
             // @include text_overflow;
 
@@ -1478,8 +1330,6 @@ $media_p:$p+0.8;
             letter-spacing: $letter-space;
             margin-bottom: 20px;
             font-weight: $boldWeight;
-
-
         }
 
         .swiper-container {
@@ -1492,9 +1342,8 @@ $media_p:$p+0.8;
             margin-left: auto;
             margin-right: auto;
             overflow: hidden;
-            //  Fix of Webkit flickering 
+            //  Fix of Webkit flickering
             z-index: 1;
-
         }
 
         .swiper-wrapper {
@@ -1531,7 +1380,6 @@ $media_p:$p+0.8;
 
             position: relative;
             overflow: hidden;
-
         }
 
         .swiper-slide img {
@@ -1542,19 +1390,16 @@ $media_p:$p+0.8;
             height: 100%;
             -webkit-transform: scale(1);
             transform: scale(1);
-            -webkit-transition: .3s ease-in-out;
-            transition: .3s ease-in-out;
-
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
         }
-
 
         .swiper-slide:hover .part-1 img {
             -webkit-transform: scale(1.3);
             transform: scale(1.3);
         }
 
-
-        //   Arrows 
+        //   Arrows
         .swiper-button-prevone,
         .swiper-button-nextone {
             position: absolute;
@@ -1572,7 +1417,6 @@ $media_p:$p+0.8;
             background-repeat: no-repeat;
         }
 
-
         .swiper-button-prevone {
             background-image: url("../img/arrow/left-arrow.svg");
             left: 20px;
@@ -1585,22 +1429,15 @@ $media_p:$p+0.8;
             right: 20px;
             left: auto;
             // cursor: pointer;
-
         }
-
 
         // 副標題
         .rcd_name_style {
             display: none;
         }
-
-
-
     }
 
-    ;
     //當月藝術流派推薦結束
-
 
     .login {
         background-image: url(../img/index/Rectangle\ 8.jpg);
@@ -1615,7 +1452,6 @@ $media_p:$p+0.8;
             max-width: 300px;
             padding-top: $padding * 5;
             padding-bottom: $padding * 5;
-
         }
 
         a {
@@ -1626,15 +1462,12 @@ $media_p:$p+0.8;
             h2 {
                 @include h3;
                 font-size: $h2;
-
-
             }
 
             img {
                 max-width: 313px;
                 max-height: 20px;
                 width: $img_width_height;
-
             }
 
             p {
@@ -1642,13 +1475,9 @@ $media_p:$p+0.8;
                 margin-top: $margin;
             }
         }
-
     }
 
-    ;
-
     .product_description {
-
         position: relative;
         height: 570px;
         // width: 100%;
@@ -1668,12 +1497,9 @@ $media_p:$p+0.8;
             letter-spacing: $letter-space;
             font-family: $englishFont;
             font-weight: $regularWeight;
-
-
         }
 
         .pd_title p {
-
             color: $lightgray;
             // @include text_overflow;
 
@@ -1681,8 +1507,6 @@ $media_p:$p+0.8;
             letter-spacing: $letter-space;
             margin-bottom: 20px;
             font-weight: $boldWeight;
-
-
         }
 
         .swiper-container2 {
@@ -1692,19 +1516,18 @@ $media_p:$p+0.8;
             margin: 0 auto;
             // position: relative;
 
-            // height: 100%; 
+            // height: 100%;
             // border-radius: 25px;
         }
 
         .swiper-slide {
             text-align: center;
-            // font-size: 18px; 
+            // font-size: 18px;
             background: transparent;
-            border: 1px solid #C5B6B6;
+            border: 1px solid #c5b6b6;
             padding: 20px;
 
-
-            // Center slide text vertically 
+            // Center slide text vertically
             // display: -webkit-box;
             // display: -ms-flexbox;
             // display: -webkit-flex;
@@ -1716,21 +1539,20 @@ $media_p:$p+0.8;
             // -webkit-box-align: center;
             // -ms-flex-align: center;
             // -webkit-align-items: center;
-            // align-items: center; 
+            // align-items: center;
         }
 
-        //  ------------------- 
+        //  -------------------
         .swiper-container2 {
             margin-left: auto;
             margin-right: auto;
             overflow: hidden;
-            //  Fix of Webkit flickering 
+            //  Fix of Webkit flickering
             z-index: 1;
         }
 
-
         .swiper-wrapper {
-            // position: relative; 
+            // position: relative;
 
             width: 100%;
             height: 100%;
@@ -1756,14 +1578,14 @@ $media_p:$p+0.8;
             flex-shrink: 0;
             width: 100%;
             height: 100%;
-            // position: relative; 
+            // position: relative;
             border-radius: 5px;
         }
 
         .swiper-slide .part-1 {
             position: relative;
             height: 200px;
-            // max-height: 218px; 
+            // max-height: 218px;
             margin-bottom: 10px;
             overflow: hidden;
             border-radius: 5px;
@@ -1784,10 +1606,8 @@ $media_p:$p+0.8;
             height: 100%;
             -webkit-transform: scale(1);
             transform: scale(1);
-            -webkit-transition: .3s ease-in-out;
-            transition: .3s ease-in-out;
-
-
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
         }
 
         .swiper-slide:hover .part-1 img {
@@ -1795,11 +1615,7 @@ $media_p:$p+0.8;
             transform: scale(1.3);
         }
 
-
-
-
-
-        //   Arrows 
+        //   Arrows
         .swiper-button-prevone,
         .swiper-button-nextone {
             position: absolute;
@@ -1829,43 +1645,39 @@ $media_p:$p+0.8;
             left: auto;
         }
 
-
         .swiper-slide .part-2 .product-title {
-            // margin-top: 50px;  
+            // margin-top: 50px;
             font-size: 1rem;
         }
 
         .swiper-slide .part-2 h4 {
-            // display: inline-block; 
+            // display: inline-block;
             font-size: 12px;
             text-align: left;
             // margin-top: 20px;
             margin-bottom: 10px;
-            // margin-left: 30px; 
+            // margin-left: 30px;
         }
 
         .swiper-slide .part-2 h3 {
             text-align: center;
             // margin-bottom: 15px;
             color: $coffeebrown;
-
         }
 
         .swiper-slide .part-2 .buy-now {
             color: $darkbrown1;
             position: relative;
             padding: 0 7px;
-            // margin-left: 80px; 
+            // margin-left: 80px;
             border: none;
             background: none;
         }
 
         .buy-now a {
-
             color: $darkbrown1;
             text-decoration: none;
         }
-
 
         //     .row {
 
@@ -1883,7 +1695,6 @@ $media_p:$p+0.8;
         //             padding-top: $padding * 8;
         //             padding-bottom: $padding * 8;
 
-
         //             img {
         //                 width: $img_width_height;
         //             }
@@ -1898,7 +1709,6 @@ $media_p:$p+0.8;
         //             padding-bottom: $padding - 8px;
         //             text-align: center;
         //             margin: $margin - 16px;
-
 
         //             img {
         //                 max-width: 365px;
@@ -1935,12 +1745,7 @@ $media_p:$p+0.8;
         //         }
 
         //     }
-
-
-
     }
-
-    ;
 
     .modal-content {
         background-color: $beidge1;
@@ -1955,21 +1760,14 @@ $media_p:$p+0.8;
             }
         }
 
-
-
-
         .main {
             margin: $margin;
             border: 1px solid black;
             border-radius: $border-radius;
 
-
-
             p {
                 font-size: $p;
             }
-
-
 
             .col-lg-6 {
                 max-width: 160px;
@@ -1977,7 +1775,6 @@ $media_p:$p+0.8;
                 border-radius: 50%;
                 width: $img_width_height;
                 // margin-left: $margin - 10px;
-
             }
 
             .main-1 {
@@ -1989,11 +1786,8 @@ $media_p:$p+0.8;
                         font-size: $p + 0.75;
                         padding: 0;
                         width: auto;
-
                     }
-
                 }
-
 
                 .time {
                     margin-top: $margin - 13px;
@@ -2012,7 +1806,6 @@ $media_p:$p+0.8;
                         // padding: 0;
                     }
                 }
-
             }
 
             .te {
@@ -2020,12 +1813,10 @@ $media_p:$p+0.8;
                 padding-top: $padding * 2;
                 padding-bottom: $padding;
                 margin-bottom: $margin;
-
             }
 
             .art {
                 margin-bottom: $margin * 2;
-
             }
 
             .contant {
@@ -2036,11 +1827,7 @@ $media_p:$p+0.8;
                     width: auto;
                 }
             }
-
-
         }
-
-
     }
 
     // and (min-width: 400px)
@@ -2065,12 +1852,9 @@ $media_p:$p+0.8;
                 letter-spacing: $letter-space;
                 font-family: $englishFont;
                 font-weight: $regularWeight;
-
-
             }
 
             .rcd_title p {
-
                 color: $lightgray;
                 // @include text_overflow;
 
@@ -2078,11 +1862,9 @@ $media_p:$p+0.8;
                 letter-spacing: $letter-space;
                 margin-bottom: 20px;
                 font-weight: $boldWeight;
-
-
             }
 
-            //   Arrows 
+            //   Arrows
             .swiper-button-prevone,
             .swiper-button-nextone {
                 position: absolute;
@@ -2100,7 +1882,6 @@ $media_p:$p+0.8;
                 background-repeat: no-repeat;
             }
 
-
             .swiper-button-prevone {
                 background-image: url("../img/arrow/left-arrow.svg");
                 left: 5px;
@@ -2113,7 +1894,6 @@ $media_p:$p+0.8;
                 right: 5px;
                 left: auto;
                 // cursor: pointer;
-
             }
 
             // 副標題
@@ -2141,22 +1921,9 @@ $media_p:$p+0.8;
                 letter-spacing: $letter-space;
                 font-family: $englishFont;
             }
-
-
-
-
-
-
-
-
         }
 
-        ;
-
-
-
         .product_description {
-
             position: relative;
             height: 570px;
 
@@ -2175,12 +1942,9 @@ $media_p:$p+0.8;
                 letter-spacing: $letter-space;
                 font-family: $englishFont;
                 font-weight: $regularWeight;
-
-
             }
 
             .pd_title p {
-
                 color: $lightgray;
                 // @include text_overflow;
 
@@ -2188,8 +1952,6 @@ $media_p:$p+0.8;
                 letter-spacing: $letter-space;
                 margin-bottom: 20px;
                 font-weight: $boldWeight;
-
-
             }
 
             .swiper-container {
@@ -2198,19 +1960,18 @@ $media_p:$p+0.8;
                 height: 360px;
                 margin: 0 auto;
 
-                // height: 100%; 
+                // height: 100%;
                 // border-radius: 25px;
             }
 
             .swiper-slide {
                 text-align: center;
-                // font-size: 18px; 
+                // font-size: 18px;
                 background: transparent;
-                border: 1px solid #C5B6B6;
+                border: 1px solid #c5b6b6;
                 padding: 20px;
 
-
-                // Center slide text vertically 
+                // Center slide text vertically
                 // display: -webkit-box;
                 // display: -ms-flexbox;
                 // display: -webkit-flex;
@@ -2222,21 +1983,20 @@ $media_p:$p+0.8;
                 // -webkit-box-align: center;
                 // -ms-flex-align: center;
                 // -webkit-align-items: center;
-                // align-items: center; 
+                // align-items: center;
             }
 
-            //  ------------------- 
+            //  -------------------
             .swiper-container {
                 margin-left: auto;
                 margin-right: auto;
                 overflow: hidden;
-                //  Fix of Webkit flickering 
+                //  Fix of Webkit flickering
                 z-index: 1;
             }
 
-
             .swiper-wrapper {
-                // position: relative; 
+                // position: relative;
 
                 width: 100%;
                 height: 100%;
@@ -2262,14 +2022,14 @@ $media_p:$p+0.8;
                 flex-shrink: 0;
                 width: 100%;
                 height: 100%;
-                // position: relative; 
+                // position: relative;
                 border-radius: 5px;
             }
 
             .swiper-slide .part-1 {
                 position: relative;
                 height: 200px;
-                // max-height: 218px; 
+                // max-height: 218px;
                 margin-bottom: 10px;
                 overflow: hidden;
                 border-radius: 5px;
@@ -2290,10 +2050,8 @@ $media_p:$p+0.8;
                 height: 100%;
                 -webkit-transform: scale(1);
                 transform: scale(1);
-                -webkit-transition: .3s ease-in-out;
-                transition: .3s ease-in-out;
-
-
+                -webkit-transition: 0.3s ease-in-out;
+                transition: 0.3s ease-in-out;
             }
 
             .swiper-slide:hover .part-1 img {
@@ -2301,11 +2059,7 @@ $media_p:$p+0.8;
                 transform: scale(1.3);
             }
 
-
-
-
-
-            //   Arrows 
+            //   Arrows
             .swiper-button-prevone,
             .swiper-button-nextone {
                 position: absolute;
@@ -2335,60 +2089,47 @@ $media_p:$p+0.8;
                 left: auto;
             }
 
-
             .swiper-slide .part-2 .product-title {
-                // margin-top: 50px;  
+                // margin-top: 50px;
                 font-size: 1rem;
                 margin-bottom: 10px;
             }
 
             .swiper-slide .part-2 h4 {
-                // display: inline-block; 
+                // display: inline-block;
                 font-size: 12px;
                 text-align: left;
                 // margin-top: 20px;
                 margin-bottom: 10px;
-                // margin-left: 30px; 
+                // margin-left: 30px;
             }
 
             .swiper-slide .part-2 h3 {
                 text-align: center;
                 // margin-bottom: 15px;
                 color: $coffeebrown;
-
             }
 
             .swiper-slide .part-2 .buy-now {
                 color: $darkbrown1;
                 position: relative;
                 padding: 0 7px;
-                // margin-left: 80px; 
+                // margin-left: 80px;
                 border: none;
                 background: none;
             }
 
             .buy-now a {
-
                 color: $darkbrown1;
                 text-decoration: none;
             }
-
-
-
         }
-
-        ;
-
-
     }
-
 
     @media all and(max-width: 575.98px) {
         .wrapper_index {
             margin: 0;
             padding: 0;
-
-
         }
 
         @media screen and (max-width: 575.98px) {
@@ -2398,9 +2139,7 @@ $media_p:$p+0.8;
 
                 h3 {
                     @include media_h6;
-
                 }
-
 
                 .row {
                     margin: $margin;
@@ -2427,14 +2166,12 @@ $media_p:$p+0.8;
                         img {
                             width: auto;
                         }
-
                     }
                 }
 
                 .phonenone {
                     display: none;
                 }
-
             }
 
             .exhibition {
@@ -2444,19 +2181,13 @@ $media_p:$p+0.8;
                 border-radius: $border-radius;
                 height: 980px;
 
-
-
                 h3 {
                     @include media_h6;
                     margin: 0 auto;
                     padding-top: $padding;
                     border-bottom: 1px solid $white;
                     width: 300px;
-
                 }
-
-
-
 
                 .col-lg-4 {
                     img {
@@ -2473,7 +2204,6 @@ $media_p:$p+0.8;
                         width: 13px;
                         margin: 0 !important;
                         margin-left: $margin * 3 !important;
-
                     }
 
                     p {
@@ -2495,29 +2225,20 @@ $media_p:$p+0.8;
                 }
 
                 .box_img {
-
                     margin-top: $margin * 2;
 
                     .col-xs-12 {
                         width: auto;
-
                     }
-
-
                 }
 
                 a {
-
-
                     text-decoration: none;
-
 
                     .p2 {
                         @include media_button_p2;
                         margin: 0 auto;
                         margin-top: $margin * 2;
-
-
                     }
                 }
 
@@ -2528,8 +2249,6 @@ $media_p:$p+0.8;
                     .rwd-1,
                     .rwd-2 {
                         // margin: $margin + 10px;
-
-
                     }
 
                     .rwdbg {
@@ -2555,37 +2274,24 @@ $media_p:$p+0.8;
                         margin-right: $margin - 10px;
                         margin: 0 auto;
                         margin-top: $margin * 2;
-
                     }
-
-
                 }
-
-
-
             }
-
-            ;
 
             // .recommendation {
             //     margin-top: $margin * 50;
-
 
             //     h3 {
             //         @include media_h6;
             //         margin: 0 auto;
             //         text-align: center;
 
-
             //     }
-
 
             //     p {
             //         font-size: $p !important;
 
             //     }
-
-
 
             //     .row {
             //         margin: 0;
@@ -2596,12 +2302,10 @@ $media_p:$p+0.8;
             //             width: auto;
             //             width: 50px;
 
-
             //             img {
 
             //                 width: 100%;
             //                 // width: 50px;
-
 
             //             }
             //         }
@@ -2610,7 +2314,6 @@ $media_p:$p+0.8;
             //             padding: 0;
 
             //         }
-
 
             //         .col-10 {
             //             width: auto;
@@ -2626,8 +2329,6 @@ $media_p:$p+0.8;
             //                 // padding-left: $padding - 15px;
             //                 // padding-right: $padding  - 15px;
             //             }
-
-
 
             //         }
 
@@ -2646,9 +2347,6 @@ $media_p:$p+0.8;
             //                 // width: 250px;
             //                 text-align: center;
             //                 margin-top: $margin * 2;
-
-
-
 
             //             }
 
@@ -2669,26 +2367,9 @@ $media_p:$p+0.8;
             //                 color: aquamarine;
             //             }
 
-
-
             //         }
 
-
-
-
-
-
-
-
-
-
-
             //     }
-
-
-
-
-
 
             // }
 
@@ -2698,12 +2379,10 @@ $media_p:$p+0.8;
             //     margin: 0;
             //     margin-top: $margin * 2;
 
-
             //     h3 {
             //         @include media_h6;
             //         margin: 0 auto;
             //         text-align: center;
-
 
             //     }
 
@@ -2711,40 +2390,31 @@ $media_p:$p+0.8;
             //         font-size: $p !important;
             //         text-align: center;
 
-
-
             //     }
 
             //     button {
             //         width: auto;
             //         width: 50px;
 
-
             //         img {
 
             //             width: 100%;
             //             // width: 50px;
 
-
             //         }
             //     }
-
-
-
 
             // }
 
             // ;
 
             .main {
-
                 .col-xs-12 {
                     margin: 0 auto;
                     // margin-left: 0;
                 }
 
                 .h8 {
-
                     // padding:  0 12px;
                     p {
                         font-size: $p * 1.8 !important;
@@ -2768,25 +2438,7 @@ $media_p:$p+0.8;
                         width: 133px;
                     }
                 }
-
             }
-
-
-
-
-
-
-
-
-
-
-
         }
     }
-
-    ;
-
-
-
-
 }
