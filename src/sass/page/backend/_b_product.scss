@@ -32,5 +32,42 @@
     .edit_lay {
         display: flex;
     }
-     
+    
+    .status_toggle:focus,
+    .status_toggle.focus,
+    .status_toggle:focus.active,
+    .status_toggle.focus.active {
+        outline: none;
+    }   
+    .status_toggle:before,
+    .status_toggle:after {
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        transition: opacity 0.25s;
+    }
+    .status_toggle:before {
+        content: '上架';
+        left: -5rem;
+        color: #109fff;
+    }
+    .status_toggle:after {
+        content: '下架';
+        right: -5rem;
+        opacity: 0.5;
+        color: #F47280;
+    }
+    .status-toggle {
+        margin: 0 4rem;
+        padding: 0;
+        position: relative;
+        border: none;
+        height: 1.5rem;
+        width: 5rem;
+        border-radius: 1.5rem;
+        color: #6b7381;
+        background: #0885da;
+    }
 }

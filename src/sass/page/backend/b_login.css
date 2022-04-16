@@ -1,0 +1,66 @@
+.b_login_wrapper {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-image: url("../img/index/Rectangle 3.jpg");
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+
+.b_login_wrapper .b_login_box {
+  width: 500px;
+  height: 300px;
+  background-color: #C3BDB3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.b_login_wrapper .b_login_box .b_login {
+  text-align: center;
+  letter-spacing: 3px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.b_login_wrapper .b_login_box .b_login h3 {
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: .5rem;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.b_login_wrapper .b_login_box .b_login input {
+  margin-bottom: 40px;
+  height: 30px;
+  color: #AB8A49;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.b_login_wrapper .b_login_box .b_login input:hover {
+  border: 1px solid #AB8A49;
+}
+
+.b_login_wrapper .b_login_box .b_login button {
+  width: 100px;
+  font-size: 1rem;
+  letter-spacing: 5px;
+  line-height: 1.6;
+  border: 0;
+  border-radius: 25px;
+  color: #EEEAE2;
+  background-color: #786B54;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.b_login_wrapper .b_login_box .b_login button:hover {
+  background-color: #AB8A49;
+}
