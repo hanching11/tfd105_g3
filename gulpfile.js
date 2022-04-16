@@ -10,6 +10,11 @@ const {
 function package() {
    return src(['src/img/*.*' , 'src/img/**/*.*']).pipe(dest('dist/img'))
 }
+
+function movePHP() {
+   return src(['src/php/*.php', 'src/php/**/*.php']).pipe(dest('dist/php'))
+}
+
 const rename = require('gulp-rename');
 
 // css minify
@@ -129,6 +134,7 @@ function browser(done) {
    watch(['src/sass/*.scss' , 'src/sass/**/*.scss' , 'src/sass/**/**/*.scss'] , sassstyle).on('change' , reload);
    watch(['src/js/*.js' , 'src/js/**/*.js'] , minijs).on('change' , reload);
    watch(['src/img/*.*' ,  'src/img/**/*.*'] , package).on('change' , reload);
+   watch(['src/php/*.php', 'src/php/**/*.php'] , package).on('change' , reload);
    done();
 }
 
@@ -184,7 +190,7 @@ exports.cls = clear
 
 
 // dev開發
-exports.default = series(parallel(includeHTML ,sassstyle, minijs),browser)
+exports.default = series(parallel(includeHTML ,sassstyle, minijs,movePHP),browser)
 exports.pic = package
 // exports.default = series(parallel(includeHTML ,sassstyle, minijs ,package, auto_css, minijs),browser)
 
