@@ -12,6 +12,7 @@
         }
 
         @media (max-width: 768px) {
+
             .wrapper_header .nav-list ul ol:nth-child(5),
             .wrapper_header .nav-list ul ol:nth-child(5) #tg1,
             .wrapper_header .nav-list ul ol:nth-child(5) #sub-nav_color2 {
@@ -53,19 +54,183 @@
                         <li><a href="./psychol_test_result_B.html"><button id="b1"></button> &nbsp;&nbsp;&nbsp;&nbsp;是</a></li>
                         <li><a href="./psychol_test_result_D.html"><button id="b1"></button> &nbsp;&nbsp;&nbsp;&nbsp;否</a></li>
                     </ul> -->
-                    <form action="./psychol_test_result_B.html">
-                        <label for="yes_option"><input type="radio" name="option" id="yes" value="1"
-                                >&nbsp;&nbsp;&nbsp;&nbsp;是</label>
+                    <!-- <form action="./psychol_test_result_B.html"> -->
+                    <form>
+                        <label for="yes_option"><input type="radio" name="option" id="yes"
+                                value="1">&nbsp;&nbsp;&nbsp;&nbsp;是</label>
                         <label for="no_option"><input type="radio" name="option" id="no"
                                 value="2">&nbsp;&nbsp;&nbsp;&nbsp;否</label>
                         <br>
-                        <button class="next_q">測驗結果</button>
+                        <button class="next_q" type="button">測驗結果</button>
                     </form>
                 </div>
             </div>
         </section>
     </section>
     @@include('layout/footer.html')
+
+    <script>
+        var next_q = document.getElementsByClassName("next_q");
+        let data = JSON.parse(sessionStorage.getItem("store_data"));
+        console.log(data);
+        next_q[0].addEventListener("click", function (e) {
+            // e.preventDefault();
+
+            var option_yes = document.getElementById("yes");
+            // option_yes.addEventListener("click", function(){
+
+            // }
+            if (option_yes.checked) {
+                console.log(option_yes);
+                data.q5 = 'yes';
+                sessionStorage.setItem("store_data", JSON.stringify(data));
+
+            } else {
+                data.q5 = 'no';
+                sessionStorage.setItem("store_data", JSON.stringify(data));
+            }
+
+            let data_a = JSON.parse(sessionStorage.getItem("store_data"));
+            console.log(data_a);
+            if (data_a.q1 == 'yes') {
+                if (data_a.q2 == 'yes') {
+                    // window.location = './psychol_test_result_A.html';
+                    if (data_a.q3 == 'no') {
+                        if (data_a.q4 == 'yes') {
+                            if (data_a.q5 == 'no') {
+                                window.location = './psychol_test_result_B.html';
+
+                            } else {
+                                window.location = './psychol_test_result_C.html';
+                            }
+
+                        } else {
+                            window.location = './psychol_test_result_C.html';
+
+
+
+                        }
+
+                    } else {
+                        if (data_a.q4 == 'no') {
+                            if (data_a.q5 == 'no') {
+                                window.location = './psychol_test_result_A.html';
+                            } else {
+                                window.location = './psychol_test_result_D.html';
+
+                            }
+
+                        } else {
+
+                        }
+
+                        // window.location = './psychol_test_result_C.html';
+
+
+                    }
+                } else {
+                    if (data_a.q3 == 'yes') {
+                        if (data_a.q4 == 'no') {
+                            if (data_a.q5 == 'yes') {
+                                window.location = './psychol_test_result_C.html';
+
+                            } else {
+                                window.location = './psychol_test_result_D.html';
+
+                            }
+
+                        } else {
+                            window.location = './psychol_test_result_C.html';
+
+
+                        }
+                    } else {
+                        if (data_a.q3 == 'yes') {
+                            if (data_a.q4 == 'no') {
+                                if (data_a.q5 == 'yes') {
+                                    window.location = './psychol_test_result_D.html';
+
+
+                                } else {
+                                    window.location = './psychol_test_result_B.html';
+
+
+                                }
+
+                            } else {
+
+                            }
+
+                        } else {
+
+                        }
+
+                    }
+
+                    // window.location = './psychol_test_result_B.html';
+                }
+
+            } else {
+                if (data_a.q2 == 'no') {
+                    if (data_a.q3 == 'no') {
+                        if (data_a.q4 == 'no') {
+                            if (data_a.q5 == 'no') {
+                                window.location = './psychol_test_result_D.html';
+                            } else {
+                                window.location = './psychol_test_result_C.html'
+                            }
+
+                        } else {
+
+                        }
+
+                    } else {
+
+                    }
+
+                } else {
+                    if (data_a.q2 == 'yes') {
+                        if (data_a.q3 == 'no') {
+                            if (data_a.q4 == 'yes') {
+                                if (data_a.q5 == 'no') {
+                                    window.location = './psychol_test_result_B.html';
+                                } else {
+                                    window.location = './psychol_test_result_A.html';
+
+
+                                }
+                            } else {
+
+                            }
+
+                        } else {
+
+                        }
+
+                    } else {
+
+                    }
+
+                }
+                // window.location = './psychol_test_result_C.html';
+            };
+
+            // switch (data_a.q1, data_a.q2, data_a.q3, data_a.q4, data_a.q5) {
+            //     case 'yes', 'yes', 'yes', 'yes', 'yes':
+            //         console.log(1);
+            //         window.location = './psychol_test_result_A.html';
+            //         break;
+            //     case 'no', 'no', 'no', 'no', 'no':
+            //         console.log(4);
+            //         window.location = './psychol_test_result_D.html';
+            //         break;
+            // };
+
+
+        });
+
+
+    </script>
 
 </body>
 

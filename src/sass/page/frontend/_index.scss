@@ -797,6 +797,41 @@ $media_p: $p + 0.8;
                             @include hover_p;
                         }
                     }
+
+                    .rwd_d6 {
+                        position: relative;
+
+                        p {
+
+                            display: none;
+                        }
+
+                        .mask {
+                            @include mask;
+                            width: 250px;
+                        }
+
+
+                    }
+
+                    .rwd_d6:hover {
+                        .mask {
+                            opacity: 1;
+                        }
+
+                        p {
+                            @include hover_p;
+
+
+
+                        }
+
+                    }
+
+
+
+
+
                 }
             }
         }
@@ -2136,6 +2171,8 @@ $media_p: $p + 0.8;
             .the_new {
                 margin: 0 !important;
                 text-align: center;
+
+
 
                 h3 {
                     @include media_h6;
