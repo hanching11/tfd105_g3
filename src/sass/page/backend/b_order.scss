@@ -1,0 +1,63 @@
+
+.wrapper_melon .pa_d {
+    background-color:$darkbrown1;
+    border: 0;
+    padding: 7px;
+
+}
+.wrapper_melon .pa_d:hover{
+    background-color:$coffeebrown;
+
+}
+.modal-header{
+    background-color:$beidge1;
+    border: 0;
+    border-bottom: 1px solid $darkbrown2;
+    font-weight: $boldWeight;
+    color: $darkbrown1;
+    
+
+}
+.modal-body{
+    padding: 0;
+    .order_table{
+    
+        table{
+            // margin-left: 20px;
+            width: 100%;
+        }
+    
+        
+        th,td{
+            margin: 20px;
+            padding: 20px;
+        }
+        tr{
+            border-bottom: .5px solid $darkbrown2;
+        }
+        th{
+            background-color:$beidge1;
+            text-align: center;
+            border-right: .5px solid $darkbrown2;
+        }
+        td{
+            background-color:$beidge1;
+        }
+    }
+}
+.modal-footer{
+    background-color:$beidge1;
+    border: 0;
+    border-top: 1px solid $darkbrown2;
+
+
+
+    button{
+        background-color: $darkbrown1;
+        border: 0;
+        
+    }
+    .btn-secondary{
+        background-color: $lightgray;
+    }
+}
