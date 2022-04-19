@@ -10,18 +10,60 @@
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-
-    
 </head>
 <body>
     <div class="wrapper_shop">
         <!-- header -->
         @@include('./layout/header.html')
         
-        
         <main class="page-content">
             <section class="banner" data-aos="fade-down" data-aos-duration="3000">
-                <ul id="menu">
+                        <div class="flex-container">
+                        
+                            <div class="flex-slide home">
+                                <!-- <div class="flex-title flex-title-home">Home</div> -->
+                                <div class="flex-about flex-about-home">
+                                    <p>
+                                        "Good artists copy, great artists steal."
+                                        <br>
+                                        ❚ 好的藝術家懂複製，偉大的藝術家則擅於剽竊 ❚
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex-slide about">
+                                <!-- <div class="flex-title">About</div> -->
+                                <div class="flex-about">
+                                    <p>
+                                        "I thought, keep the light, you can stay."
+                                        <br>
+                                        ❚ 我曾以為，留住光，就可以留住你 ❚
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex-slide work">
+                                <!-- <div class="flex-title">Work</div> -->
+                                <div class="flex-about">
+                                    <p>
+                                        "The sunflower is mine, in a way."
+                                        <br>
+                                        ❚ 某種程度來說，向日葵是屬於我的 ❚
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex-slide contact">
+                                <!-- <div class="flex-title">Contact</div> -->
+                                <div class="flex-about">
+                                    <p>
+                                        "PINXIT-MEA"
+                                        <br>
+                                        ❚ 我所繪的 ❚
+                                    </p>
+                        
+                                </div>
+                            </div>
+                        </div>
+                
+                <!-- <ul id="menu">
                     <li class="panel">
                         <h1 class="name"></h1>
                         <h2 class="type"></h2>
@@ -38,7 +80,7 @@
                         <h1 class="name"></h1>
                         <h2 class="type"></h2>
                     </li>
-                </ul>
+                </ul> -->
 
             </section>
             
@@ -477,6 +519,45 @@
     <script>
         AOS.init();
     </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/jquery.waitforimages.min.js"></script>
+        <script>
+                (function(){
+                // $('.flex-container').waitForImages(function() {
+                // $('.spinner').fadeOut();
+                // }, $.noop, true);
+                
+                $(".flex-slide").each(function(){
+                $(this).hover(function(){
+                        // $(this).find('.flex-title').css({
+                        // transform: 'rotate(0deg)',
+                        // top: '10%'
+                        // });
+                        $(this).find('.flex-about').css({
+                        opacity: '1'
+                        });
+                }, 
+                function(){
+                        // $(this).find('.flex-title').css({
+                        // transform: 'rotate(90deg)',
+                        // top: '15%'
+                        // });
+                        $(this).find('.flex-about').css({
+                        opacity: '0'
+                        });
+                })
+                });
+        })();
+
+
+        //選項active
+        $('.flex-slide').click(function(){
+            $('.flex-slide').removeClass("active");
+            $(this).addClass("active");
+        });
+
+        </script>
 
    
    

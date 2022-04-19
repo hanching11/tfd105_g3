@@ -54,8 +54,9 @@
                         <li><a href="./psychol_test_q2.html"><button id="b1"></button> &nbsp;&nbsp;&nbsp;&nbsp;否</a></li>
                     </ul> -->
                     <form action="./psychol_test_q2.html">
-                        <label for="yes_option"><input type="radio" name="option" id="yes" value="1"
-                                >&nbsp;&nbsp;&nbsp;&nbsp;是</label>
+                        <!-- <form> -->
+                        <label for="yes_option"><input type="radio" name="option" id="yes"
+                                value="1">&nbsp;&nbsp;&nbsp;&nbsp;是</label>
                         <label for="no_option"><input type="radio" name="option" id="no"
                                 value="2">&nbsp;&nbsp;&nbsp;&nbsp;否</label>
                         <br>
@@ -68,6 +69,83 @@
 
     </section>
     @@include('layout/footer.html')
+    <script>
+
+        // sessionStorage.setItem("key", value);
+
+        // var option = JSON.parse(sessionStorage.getItem("yes"));
+        // console.log(option);
+        // document.addEventListener("DOMContentLoaded", function(){
+
+        //     var the_button_el = document.getElementsByClassName("yes");
+        // the_button_el.addEventListener("click", function(){
+
+        //         var data_obj = {
+        //             yes : document.getElementById("yes").value,
+        //             no : document.getElementById("no").value
+        //             };
+        //             var original_data = JSON.parse(localStorage.getItem("store_data"));
+        //             console.log(original_data);
+        //                             var data_arr = [];
+        //             if(original_data == yes){ // 表示 localStorage 裡沒有資料
+        //             data_arr.push(data_obj); // [{}]
+        //             }else{
+        //             original_data.push(data_obj); // [{}, {}]
+        //             // data_arr = original_data;
+        //             }
+
+        //             sectionStorage.setItem("store_data", JSON.stringify(data_arr));
+
+
+
+        //     }
+
+
+        // function clickCounter() {
+        //     if(typeof(Storage) !== "undefined") {
+        //         if (sessionStorage.clickcount) {
+        //              document.getElementById("yes");
+        //             document.getElementById("no");
+        //         } else {
+        //             sessionStorage.clickcount = 1;
+        //         }
+        //     } else {
+        //     }
+        // }
+
+        var next_q = document.getElementsByClassName("next_q");
+        next_q[0].addEventListener("click", function (e) {
+            // e.preventDefault();
+
+            var option_yes = document.getElementById("yes");
+            // option_yes.addEventListener("click", function(){
+
+            // }
+            if (option_yes.checked) {
+                console.log(option_yes);
+                var option = {
+                    q1: 'yes',
+                    q2: '',
+                    q3: '',
+                    q4: '',
+                    q5: '',
+                };
+                sessionStorage.setItem("store_data", JSON.stringify(option));
+
+            } else {
+                var option = {
+                    q1: 'no',
+                    q2: '',
+                    q3: '',
+                    q4: '',
+                    q5: '',
+                };
+                sessionStorage.setItem("store_data", JSON.stringify(option));
+            }
+        });
+
+
+    </script>
 </body>
 
 </html>

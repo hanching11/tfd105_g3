@@ -16,91 +16,312 @@
             padding: 20px 20px;
         }
         
+        // .banner{
+        //     margin-bottom: 20px;
+        // }
+
         .banner{
-            margin-bottom: 20px;
+
+            $defaultSeconds: 3s;
+            margin-top: 10px;
+          
+            .flex-container {
+                height: 360px;
+                width: 55%;
+                border-radius: 10px;
+                margin: 0 auto;
+                display: -webkit-flex; /* Safari */
+                display: flex;
+                overflow: hidden;
+                box-shadow:
+                        4vh 7vh 14vh -6vh rgba(0,0,0,0.35),
+                        -4vh 7vh 14vh -6vh rgba(0,0,0,0.35);
+            
+            }
+            
+            .flex-about {
+                font-family: $fontSerif;
+                opacity: 0;
+                color: #f1f1f1;
+                position: relative;
+                width: 100%;
+                font-size: 1.2vw;
+                // font-size: 12px;
+                text-align: center;
+                padding: 0;
+                line-height: 24px;
+                top: 70%;
+                // border-top: 2px solid #f1f1f1;
+                // border-bottom: 2px solid #f1f1f1;
+                line-height: 1.3;
+                margin: auto;
+                text-align: left;
+                transform: rotate(0deg);
+                -webkit-transition: all 500ms ease;
+                -moz-transition: all 500ms ease;
+                -ms-transition: all 500ms ease;
+                -o-transition: all 500ms ease;
+                transition: all 500ms ease;
+               
+            }
+        
+            .flex-about p{
+                text-align: center;
+                line-height: 300%;
+            }
+
+            .flex-about .active{
+                text-align: center;
+                line-height: 300%;
+            }
+        
+        
+            .flex-slide {
+                -webkit-flex: 1;  /* Safari 6.1+ */
+                -ms-flex: 1;  /* IE 10 */    
+                flex: 1;
+                cursor: pointer;
+                -webkit-transition: all 500ms ease;
+                -moz-transition: all 500ms ease;
+                -ms-transition: all 500ms ease;
+                -o-transition: all 500ms ease;
+                transition: all 500ms ease;
+               
+            }
+           
+         
+            .flex-slide:hover {
+                -webkit-flex-grow: 3;
+                flex-grow: 3;
+            }
+
+            .flex-slide.active {
+                -webkit-flex-grow: 3;
+                flex-grow: 3;
+            }
+            .home {
+                background: url(../img/Shop/authors/Picasso.png);
+                background-size: cover;
+                background-position: center center;
+            }
+        
+            @keyframes aboutFlexSlide {
+                0% {
+                    -webkit-flex-grow: 1;
+                    flex-grow: 1;
+                }
+                50% {
+                    -webkit-flex-grow: 3;
+                    flex-grow: 3;
+                }
+                100% {
+                    -webkit-flex-grow: 1;
+                    flex-grow: 1;
+                }
+            }
+        
+        
+            @keyframes homeFlextitle {
+                0% {
+                    transform: rotate(90deg);
+                    top: 15%;
+                }
+                50% {
+                    transform: rotate(0deg);
+                    top: 15%;
+                }
+                100% {
+                    transform: rotate(90deg);
+                    top: 15%;
+                }
+            }
+        
+            .flex-about-home {
+                opacity: 0;
+                @media screen and (min-width: 768px) {
+                    animation: aboutFlexSlide $defaultSeconds 1;
+                    animation-delay: 0s;
+                }
+            }
+        
+            @keyframes flexAboutHome {
+                0% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+        
+        
+        
+            .about {
+                background: url(../img/Shop/authors/Monet.jpg);
+                background-size: cover;
+                background-position: center center;
+            }
+            
+            .work {
+                background: url(../img/Shop/authors/vanGogh.jpg);
+                background-size: cover;
+                background-position: center center;
+            }
+            .contact {
+                background: url(../img/Shop/authors/DaVinci.jpg);
+                background-size: cover;
+                background-position: center center;
+            }
+           
+        
+        
+        
+            // Preloader
+            // .spinner {
+            //     position: fixed;
+            //     top: 0;
+            //     left: 0;
+            //     background: #222;
+            //     height: 100%;
+            //     width: 100%;
+            //     z-index: 11;
+            //     margin-top: 0;
+            //     color: #fff;
+            //     font-size: 1em;
+            // }
+        
+            // .cube1, .cube2 {
+            // background-color: #fff;
+            // width: 15px;
+            // height: 15px;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            
+            // -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+            // animation: sk-cubemove 1.8s infinite ease-in-out;
+            // }
+        
+            // .cube2 {
+            // -webkit-animation-delay: -0.9s;
+            // animation-delay: -0.9s;
+            // }
+        
+            // @-webkit-keyframes sk-cubemove {
+            // 25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+            // 50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+            // 75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+            // 100% { -webkit-transform: rotate(-360deg) }
+            // }
+        
+            // @keyframes sk-cubemove {
+            // 25% { 
+            //     transform: translateX(42px) rotate(-90deg) scale(0.5);
+            //     -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+            // } 50% { 
+            //     transform: translateX(42px) translateY(42px) rotate(-179deg);
+            //     -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+            // } 50.1% { 
+            //     transform: translateX(42px) translateY(42px) rotate(-180deg);
+            //     -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+            // } 75% { 
+            //     transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+            //     -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+            // } 100% { 
+            //     transform: rotate(-360deg);
+            //     -webkit-transform: rotate(-360deg);
+            // }
+            // }
         }
         
         //作者banner
-        $animation-time: 0.4s;
+        // $animation-time: 0.4s;
         /* the app - a beer menu / ordering app */
-        #menu {
-            margin: 0 auto;
-            display: flex;
-            height: 360px;
-            width: 600px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow:
-                4vh 7vh 14vh -6vh rgba(0,0,0,0.35),
-                -4vh 7vh 14vh -6vh rgba(0,0,0,0.35);
+        // #menu {
+        //     margin: 0 auto;
+        //     display: flex;
+        //     height: 360px;
+        //     width: 600px;
+        //     border-radius: 10px;
+        //     overflow: hidden;
+        //     box-shadow:
+        //         4vh 7vh 14vh -6vh rgba(0,0,0,0.35),
+        //         -4vh 7vh 14vh -6vh rgba(0,0,0,0.35);
             
-            padding-left: 0rem;
-        }
+        //     padding-left: 0rem;
+        // }
         
-        .panel:nth-child(1){
-            background-image: url(../img/Shop/authors/Picasso.png);
+        // .panel:nth-child(1){
+        //     background-image: url(../img/Shop/authors/Picasso.png);
             
-        }
-        .panel:nth-child(2){
-            background-image: url(../img/Shop/authors/Monet.jpg);
+        // }
+        // .panel:nth-child(2){
+        //     background-image: url(../img/Shop/authors/Monet.jpg);
             
-        }
-        .panel:nth-child(3){
-            background-image: url(../img/Shop/authors/vanGogh.jpg);
+        // }
+        // .panel:nth-child(3){
+        //     background-image: url(../img/Shop/authors/vanGogh.jpg);
             
-        }
-        .panel:nth-child(4){
-            background-image: url(../img/Shop/authors/DaVinci.jpg);
+        // }
+        // .panel:nth-child(4){
+        //     background-image: url(../img/Shop/authors/DaVinci.jpg);
             
-        }
+        // }
         
-        /* info panels for each beer */
-        .panel {
-        position: relative;
-        flex-grow: 1;
-        transition: all $animation-time ease;
-        transition-delay: 0s;
+        // /* info panels for each beer */
+        // .panel {
+        // position: relative;
+        // flex-grow: 1;
+        // transition: all $animation-time ease;
+        // transition-delay: 0s;
         
-        background-size: cover;
-        background-position: center center;
-            //留著 未來顏色字體可以用到
-        /* each panel has its own color scheme */
-        //   @for $i from 1 through 4 {
-        //     &:nth-of-type(#{$i}) {
-        //       z-index: 10 - $i;
-        //     //   background:
-        //     //     radial-gradient(circle at top left,
-        //     //     nth($colors, $i+1), nth($colors, $i+1),
-        //     //     darken(nth($colors, $i+1), 8%));
-        //       filter: drop-shadow(0 0 1vh darken(nth($colors, $i+2), 20%));
-        //       h1, h2, h3 {
-        //         color: nth($colors, $i+2);
-        //       }
+        // background-size: cover;
+        // background-position: center center;
+        //     //留著 未來顏色字體可以用到
+        // /* each panel has its own color scheme */
+        // //   @for $i from 1 through 4 {
+        // //     &:nth-of-type(#{$i}) {
+        // //       z-index: 10 - $i;
+        // //     //   background:
+        // //     //     radial-gradient(circle at top left,
+        // //     //     nth($colors, $i+1), nth($colors, $i+1),
+        // //     //     darken(nth($colors, $i+1), 8%));
+        // //       filter: drop-shadow(0 0 1vh darken(nth($colors, $i+2), 20%));
+        // //       h1, h2, h3 {
+        // //         color: nth($colors, $i+2);
+        // //       }
             
-        //     }
-        //   }
-        }
+        // //     }
+        // //   }
+        // }
         
-        /* panels get larger and show more info when you hover over them */
-        .panel:hover {
-        flex-grow: 2;
-        .name {
-            left: 15vh;
-            margin-top: -3.75vh;
-        }
-        .type {
-            left: 15vh;
-            margin-top: 1.75vh;
-            font-size: 2.5vh;
-        }
-        .abv {
-            margin-top: 1.25vh;
-        }
-        svg {
-            opacity: 1;
-            transition-delay: $animation-time;
-        }
-        }
+        // /* panels get larger and show more info when you hover over them */
+        // .panel:hover {
+        // flex-grow: 2;
+
+        
+        // .name {
+        //     left: 15vh;
+        //     margin-top: -3.75vh;
+        // }
+        // // .type {
+        // //     left: 15vh;
+        // //     margin-top: 1.75vh;
+        // //     font-size: 2.5vh;
+        // // }
+        // .abv {
+        //     margin-top: 1.25vh;
+        // }
+        // svg {
+        //     opacity: 1;
+        //     transition-delay: $animation-time;
+        // }
+        // }
+
+
+        
 
         //開啟手機版作者banner
         .banner_for_mobile{
@@ -786,91 +1007,296 @@
             padding: 20px 20px;
         }
         
+        // .banner{
+        //     margin-bottom: 20px;
+        // }
         .banner{
-            margin-bottom: 20px;
+
+            $defaultSeconds: 3s;
+            margin-top: 10px;
+          
+            .flex-container {
+                height: 360px;
+                width: 55%;
+                border-radius: 10px;
+                margin: 0 auto;
+                display: -webkit-flex; /* Safari */
+                display: flex;
+                overflow: hidden;
+                box-shadow:
+                        4vh 7vh 14vh -6vh rgba(0,0,0,0.35),
+                        -4vh 7vh 14vh -6vh rgba(0,0,0,0.35);
+            
+            }
+            
+            .flex-about {
+                font-family: $fontSerif;
+                opacity: 0;
+                color: #f1f1f1;
+                position: relative;
+                width: 100%;
+                font-size: 1.2vw;
+                // font-size: 12px;
+                text-align: center;
+                padding: 0;
+                line-height: 24px;
+                top: 70%;
+                // border-top: 2px solid #f1f1f1;
+                // border-bottom: 2px solid #f1f1f1;
+                line-height: 1.3;
+                margin: auto;
+                text-align: left;
+                transform: rotate(0deg);
+                -webkit-transition: all 500ms ease;
+                -moz-transition: all 500ms ease;
+                -ms-transition: all 500ms ease;
+                -o-transition: all 500ms ease;
+                transition: all 500ms ease;
+               
+            }
+        
+            .flex-about p{
+                text-align: center;
+                line-height: 300%;
+            }
+        
+        
+            .flex-slide {
+                -webkit-flex: 1;  /* Safari 6.1+ */
+                -ms-flex: 1;  /* IE 10 */    
+                flex: 1;
+                cursor: pointer;
+                -webkit-transition: all 500ms ease;
+                -moz-transition: all 500ms ease;
+                -ms-transition: all 500ms ease;
+                -o-transition: all 500ms ease;
+                transition: all 500ms ease;
+               
+            }
+           
+         
+            .flex-slide:hover {
+                -webkit-flex-grow: 3;
+                flex-grow: 3;
+            }
+            .home {
+                background: url(../img/Shop/authors/Picasso.png);
+                background-size: cover;
+                background-position: center center;
+            }
+        
+            @keyframes aboutFlexSlide {
+                0% {
+                    -webkit-flex-grow: 1;
+                    flex-grow: 1;
+                }
+                50% {
+                    -webkit-flex-grow: 3;
+                    flex-grow: 3;
+                }
+                100% {
+                    -webkit-flex-grow: 1;
+                    flex-grow: 1;
+                }
+            }
+        
+        
+            @keyframes homeFlextitle {
+                0% {
+                    transform: rotate(90deg);
+                    top: 15%;
+                }
+                50% {
+                    transform: rotate(0deg);
+                    top: 15%;
+                }
+                100% {
+                    transform: rotate(90deg);
+                    top: 15%;
+                }
+            }
+        
+            .flex-about-home {
+                opacity: 0;
+                @media screen and (min-width: 768px) {
+                    animation: aboutFlexSlide $defaultSeconds 1;
+                    animation-delay: 0s;
+                }
+            }
+        
+            @keyframes flexAboutHome {
+                0% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+        
+        
+        
+            .about {
+                background: url(../img/Shop/authors/Monet.jpg);
+                background-size: cover;
+                background-position: center center;
+            }
+            
+            .work {
+                background: url(../img/Shop/authors/vanGogh.jpg);
+                background-size: cover;
+                background-position: center center;
+            }
+            .contact {
+                background: url(../img/Shop/authors/DaVinci.jpg);
+                background-size: cover;
+                background-position: center center;
+            }
+           
+        
+        
+        
+            // Preloader
+            // .spinner {
+            //     position: fixed;
+            //     top: 0;
+            //     left: 0;
+            //     background: #222;
+            //     height: 100%;
+            //     width: 100%;
+            //     z-index: 11;
+            //     margin-top: 0;
+            //     color: #fff;
+            //     font-size: 1em;
+            // }
+        
+            // .cube1, .cube2 {
+            // background-color: #fff;
+            // width: 15px;
+            // height: 15px;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            
+            // -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+            // animation: sk-cubemove 1.8s infinite ease-in-out;
+            // }
+        
+            // .cube2 {
+            // -webkit-animation-delay: -0.9s;
+            // animation-delay: -0.9s;
+            // }
+        
+            // @-webkit-keyframes sk-cubemove {
+            // 25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+            // 50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+            // 75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+            // 100% { -webkit-transform: rotate(-360deg) }
+            // }
+        
+            // @keyframes sk-cubemove {
+            // 25% { 
+            //     transform: translateX(42px) rotate(-90deg) scale(0.5);
+            //     -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+            // } 50% { 
+            //     transform: translateX(42px) translateY(42px) rotate(-179deg);
+            //     -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+            // } 50.1% { 
+            //     transform: translateX(42px) translateY(42px) rotate(-180deg);
+            //     -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+            // } 75% { 
+            //     transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+            //     -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+            // } 100% { 
+            //     transform: rotate(-360deg);
+            //     -webkit-transform: rotate(-360deg);
+            // }
+            // }
         }
         
-        //作者banner
-        $animation-time: 0.4s;
-        /* the app - a beer menu / ordering app */
-        #menu {
-            margin: 0 auto;
-            display: flex;
-            width: 80%;
-            height: 360px;            
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow:
-                4vh 7vh 14vh -6vh rgba(0,0,0,0.35),
-                -4vh 7vh 14vh -6vh rgba(0,0,0,0.35);
+        // //作者banner
+        // $animation-time: 0.4s;
+        // /* the app - a beer menu / ordering app */
+        // #menu {
+        //     margin: 0 auto;
+        //     display: flex;
+        //     width: 80%;
+        //     height: 360px;            
+        //     border-radius: 10px;
+        //     overflow: hidden;
+        //     box-shadow:
+        //         4vh 7vh 14vh -6vh rgba(0,0,0,0.35),
+        //         -4vh 7vh 14vh -6vh rgba(0,0,0,0.35);
             
-            padding-left: 0rem;
-        }
+        //     padding-left: 0rem;
+        // }
         
-        .panel:nth-child(1){
-            background-image: url(../img/Shop/authors/Picasso.png);
+        // .panel:nth-child(1){
+        //     background-image: url(../img/Shop/authors/Picasso.png);
             
-        }
-        .panel:nth-child(2){
-            background-image: url(../img/Shop/authors/Monet.jpg);
+        // }
+        // .panel:nth-child(2){
+        //     background-image: url(../img/Shop/authors/Monet.jpg);
             
-        }
-        .panel:nth-child(3){
-            background-image: url(../img/Shop/authors/vanGogh.jpg);
+        // }
+        // .panel:nth-child(3){
+        //     background-image: url(../img/Shop/authors/vanGogh.jpg);
             
-        }
-        .panel:nth-child(4){
-            background-image: url(../img/Shop/authors/DaVinci.jpg);
+        // }
+        // .panel:nth-child(4){
+        //     background-image: url(../img/Shop/authors/DaVinci.jpg);
             
-        }
+        // }
         
-        /* info panels for each beer */
-        .panel {
-        position: relative;
-        flex-grow: 1;
-        transition: all $animation-time ease;
-        transition-delay: 0s;
+        // /* info panels for each beer */
+        // .panel {
+        // position: relative;
+        // flex-grow: 1;
+        // transition: all $animation-time ease;
+        // transition-delay: 0s;
         
-        background-size: cover;
-        background-position: center center;
-            //留著 未來顏色字體可以用到
-        /* each panel has its own color scheme */
-        //   @for $i from 1 through 4 {
-        //     &:nth-of-type(#{$i}) {
-        //       z-index: 10 - $i;
-        //     //   background:
-        //     //     radial-gradient(circle at top left,
-        //     //     nth($colors, $i+1), nth($colors, $i+1),
-        //     //     darken(nth($colors, $i+1), 8%));
-        //       filter: drop-shadow(0 0 1vh darken(nth($colors, $i+2), 20%));
-        //       h1, h2, h3 {
-        //         color: nth($colors, $i+2);
-        //       }
+        // background-size: cover;
+        // background-position: center center;
+        //     //留著 未來顏色字體可以用到
+        // /* each panel has its own color scheme */
+        // //   @for $i from 1 through 4 {
+        // //     &:nth-of-type(#{$i}) {
+        // //       z-index: 10 - $i;
+        // //     //   background:
+        // //     //     radial-gradient(circle at top left,
+        // //     //     nth($colors, $i+1), nth($colors, $i+1),
+        // //     //     darken(nth($colors, $i+1), 8%));
+        // //       filter: drop-shadow(0 0 1vh darken(nth($colors, $i+2), 20%));
+        // //       h1, h2, h3 {
+        // //         color: nth($colors, $i+2);
+        // //       }
             
-        //     }
-        //   }
-        }
+        // //     }
+        // //   }
+        // }
         
-        /* panels get larger and show more info when you hover over them */
-        .panel:hover {
-        flex-grow: 2;
-        .name {
-            left: 15vh;
-            margin-top: -3.75vh;
-        }
-        .type {
-            left: 15vh;
-            margin-top: 1.75vh;
-            font-size: 2.5vh;
-        }
-        .abv {
-            margin-top: 1.25vh;
-        }
-        svg {
-            opacity: 1;
-            transition-delay: $animation-time;
-        }
-        }
+        // /* panels get larger and show more info when you hover over them */
+        // .panel:hover {
+        // flex-grow: 2;
+        // .name {
+        //     left: 15vh;
+        //     margin-top: -3.75vh;
+        // }
+        // .type {
+        //     left: 15vh;
+        //     margin-top: 1.75vh;
+        //     font-size: 2.5vh;
+        // }
+        // .abv {
+        //     margin-top: 1.25vh;
+        // }
+        // svg {
+        //     opacity: 1;
+        //     transition-delay: $animation-time;
+        // }
+        // }
         
         //開啟手機版作者banner
         .banner_for_mobile{
@@ -1453,7 +1879,7 @@
         $animation-time: 0.4s;
         
         //關掉網頁版作者banner
-        #menu {
+        .banner {
             display: none;
         }
 
