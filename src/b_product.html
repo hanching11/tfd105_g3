@@ -124,7 +124,7 @@
                             <h6 class="modal-title" id="exampleModalLabel">新增商品</h6>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <form method="POST" action="./php/backend/b_product_insert.php" enctype="multipart/form-data" style="overflow: scroll;"> 
+                        <form method="POST" action="../dist/php/backend/b_product_insert.php" enctype="multipart/form-data" style="overflow: scroll;"> 
                             <div class="modal-body">
                                 <!-- 新增商品名稱 -->
                                 <div class="form-group">
@@ -160,19 +160,9 @@
                                 <!-- 新增商品檔案上傳 -->
                                 <div class="form-check form-check-borad">
                                     <div class="form-group file-borad">
-                                        <input type="file" id="item_upLoad1" name="file[]" accept="image/*" class="form-control" multiple="multiple">
+                                        <input type="file" name="file[]" accept="image/*" class="form-control" multiple="multiple">
                                         <div>  
                                             <img class="preview">
-                                        <div class="preview_size"></div>
-                                    </div>
-                                        <input type="file" id="item_upLoad2" name="file[]" accept="image/*" class="form-control" multiple="multiple">
-                                    <div>  
-                                        <img class="preview">
-                                        <div class="preview_size"></div>
-                                    </div>
-                                        <input type="file" id="item_upLoad3" name="file[]" accept="image/*" class="form-control" multiple="multiple">
-                                    <div>  
-                                        <img class="preview">
                                         <div class="preview_size"></div>
                                     </div>
                                 </div>
@@ -213,8 +203,8 @@
                                 </div>
                                      <!-- 編輯商品名稱 -->
                                     <div class="form-group">
-                                        <label for="product_editName"></label>
-                                        <input type="text" id="product_editName" name="item[edit_name]" class="form-control" placeholder="商品名稱">
+                                        <label for="product_edittitle"></label>
+                                        <input type="text" id="product_edittitle" name="title" class="form-control" placeholder="商品名稱">
                                     </div>
                                     <!-- 編輯商品作家 -->
                                     <div class="form-group option_spacing">
@@ -230,34 +220,24 @@
                                     <div class="form-group level">
                                         <div class="input-borad">
                                             <label for="product_editPrice"></label>
-                                            <input type="text" id="product_editPrice" name="item[edit_price]" class="form-control" placeholder="價格">
+                                            <input type="text" id="product_editPrice" name="price" class="form-control" placeholder="價格">
                                         </div>
                                         <div class="input-borad">
                                             <label for="product_editCount"></label>
-                                            <input type="text" id="product_editCount" name="item[edit_quantity]" class="form-control" placeholder="數量">
+                                            <input type="text" id="product_editCount" name="quantity" class="form-control" placeholder="數量">
                                         </div>
                                     </div>
                                     <!-- 編輯商品描述 -->
                                     <div class="form-group input-borad">
                                         <label for="product_editDescribe"></label>
-                                        <textarea id="product_editDescribe" rows="3" cols="40" name="item[edit_describe]" placeholder="展品描述"></textarea>
+                                        <textarea id="product_editDescribe" rows="3" cols="40" name="describe" placeholder="展品描述"></textarea>
                                     </div>
                                     <!-- 編輯商品檔案 -->
                                     <div class="form-check form-check-borad">
                                         <div class="form-group file-borad">
-                                            <input type="file" id="item_upLoad1" name="item[edit_photo1]" accept="image/*" class="form-control" multiple="multiple">
+                                            <input type="file" name="file[]"  class="form-control" multiple="multiple">
                                             <div>  
                                                 <img class="preview1">
-                                                <div class="preview_size"></div>
-                                            </div>
-                                            <input type="file" id="item_upLoad2" name="item[edit_photo2]" accept="image/*" class="form-control" multiple="multiple">
-                                            <div>  
-                                                <img class="preview2">
-                                                <div class="preview_size"></div>
-                                            </div>
-                                            <input type="file" id="item_upLoad3" name="item[edit_photo3]" accept="image/*" class="form-control" multiple="multiple">
-                                            <div>  
-                                                <img class="preview3">
                                                 <div class="preview_size"></div>
                                             </div>
                                         </div>
