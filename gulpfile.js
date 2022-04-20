@@ -158,7 +158,7 @@ function min_images(){
     return src(['src/img/*.*', 'src/img/**/*.*'])
     .pipe(imagemin(
 
-        [imagemin.mozjpeg({quality: 50, progressive: true})]
+        [imagemin.mozjpeg({quality: 70, progressive: true})]
         ))
     .pipe(dest('dist/img'))
 }
