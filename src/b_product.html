@@ -124,7 +124,7 @@
                             <h6 class="modal-title" id="exampleModalLabel">新增商品</h6>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <form method="POST" action="../dist/php/backend/b_product_insert.php" enctype="multipart/form-data" style="overflow: scroll;"> 
+                        <form method="POST" action="./php/backend/b_product_insert.php" enctype="multipart/form-data" style="overflow: scroll;"> 
                             <div class="modal-body">
                                 <!-- 新增商品名稱 -->
                                 <div class="form-group">
@@ -160,7 +160,7 @@
                                 <!-- 新增商品檔案上傳 -->
                                 <div class="form-check form-check-borad">
                                     <div class="form-group file-borad">
-                                        <input type="file" name="file[]" accept="image/*" class="form-control" multiple="multiple">
+                                        <input type="file"  name="file[]"  class="form-control" multiple="multiple">
                                         <div>  
                                             <img class="preview">
                                         <div class="preview_size"></div>
@@ -199,54 +199,54 @@
                                 <!-- 商品編號 -->
                                 <div class="form-group">
                                     <label for="product_editNumber"></label>
-                                    <input type="hidden" id="product_editNumber" name="edit_number[]" class="form-control" placeholder="商品編號">
+                                    <input type="hidden" id="product_editNumber" name="edit_number" class="form-control" placeholder="商品編號">
                                 </div>
-                                     <!-- 編輯商品名稱 -->
-                                    <div class="form-group">
-                                        <label for="product_edittitle"></label>
-                                        <input type="text" id="product_edittitle" name="title" class="form-control" placeholder="商品名稱">
+                                <!-- 編輯商品名稱 -->
+                                <div class="form-group">
+                                    <label for="product_editName"></label>
+                                    <input type="text" id="product_editName" name="edit_name" class="form-control" placeholder="商品名稱">
+                                </div>
+                                <!-- 編輯商品作家 -->
+                                <div class="form-group option_spacing">
+                                    <select name="edit_artist">
+                                        <option>請選擇作者</option>
+                                        <option value="a1">Vincent van Gogh</option>
+                                        <option value="a2">Pablo Ruiz Picasso</option>
+                                        <option value="a3">Oscar-Claude Monet</option>
+                                        <option value="a4">Leonardo da Vinci</option>
+                                    </select>
+                                </div>
+                                <!-- 編輯商品數量；價格 -->
+                                <div class="form-group level">
+                                    <div class="input-borad">
+                                        <label for="product_editPrice"></label>
+                                        <input type="text" id="product_editPrice" name="edit_price" class="form-control" placeholder="價格">
                                     </div>
-                                    <!-- 編輯商品作家 -->
-                                    <div class="form-group option_spacing">
-                                        <select name="edit_artist">
-                                            <option>請選擇作者</option>
-                                            <option value="a1">Vincent van Gogh</option>
-                                            <option value="a2">Pablo Ruiz Picasso</option>
-                                            <option value="a3">Oscar-Claude Monet</option>
-                                            <option value="a4">Leonardo da Vinci</option>
-                                        </select>
+                                    <div class="input-borad">
+                                        <label for="product_editCount"></label>
+                                        <input type="text" id="product_editCount" name="edit_quantity" class="form-control" placeholder="數量">
                                     </div>
-                                    <!-- 編輯商品數量；價格 -->
-                                    <div class="form-group level">
-                                        <div class="input-borad">
-                                            <label for="product_editPrice"></label>
-                                            <input type="text" id="product_editPrice" name="price" class="form-control" placeholder="價格">
-                                        </div>
-                                        <div class="input-borad">
-                                            <label for="product_editCount"></label>
-                                            <input type="text" id="product_editCount" name="quantity" class="form-control" placeholder="數量">
-                                        </div>
-                                    </div>
-                                    <!-- 編輯商品描述 -->
-                                    <div class="form-group input-borad">
-                                        <label for="product_editDescribe"></label>
-                                        <textarea id="product_editDescribe" rows="3" cols="40" name="describe" placeholder="展品描述"></textarea>
-                                    </div>
-                                    <!-- 編輯商品檔案 -->
-                                    <div class="form-check form-check-borad">
-                                        <div class="form-group file-borad">
-                                            <input type="file" name="file[]"  class="form-control" multiple="multiple">
-                                            <div>  
-                                                <img class="preview1">
-                                                <div class="preview_size"></div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group"> 
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="status">
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                            <h6>此產品是否直接上架</h6>
+                                </div>
+                                <!-- 編輯商品描述 -->
+                                <div class="form-group input-borad">
+                                    <label for="product_editDescribe"></label>
+                                    <textarea id="product_editDescribe" rows="3" cols="40" name="edit_describe" placeholder="展品描述"></textarea>
+                                </div>
+                                <!-- 編輯商品檔案 -->
+                                <div class="form-check form-check-borad">
+                                    <div class="form-group file-borad">
+                                        <input type="file"  name="edit_file[]"  class="form-control" multiple="multiple">
+                                        <div>  
+                                            <img class="preview1">
+                                            <div class="preview_size"></div>
                                         </div>
                                     </div>
+                                    <div class="form-group"> 
+                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="status">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        <h6>此產品是否直接上架</h6>
+                                    </div>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
