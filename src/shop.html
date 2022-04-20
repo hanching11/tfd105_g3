@@ -12,9 +12,9 @@
     
 </head>
 <body>
-    <div class="wrapper_shop">
+    <div id="forCart" class="wrapper_shop">
         <!-- header -->
-        @@include('./layout/header.html')
+        <!-- @@include('./layout/header.html') -->
         
         <main class="page-content">
             <section class="banner" data-aos="fade-down" data-aos-duration="3000">
@@ -103,18 +103,20 @@
                 </div>
 
                 <ul class="author-content">
-                    <li>
-                        <a href="#"><span data-hover="文森·威廉·梵谷">Vincent van Gogh</span></a>
+                    <li @click="selected = article.index" v-for ="article in all_data">
+                        <!-- <span v-for ="article in all_data[selected].list" data-hover="文森·威廉·梵谷">{{article.title}}</span> -->
+                        <!-- <span @click="selected = article.index" v-for ="article in all_data" :data-hover="article.hover" :data-index="article.index">{{article.title}}</span> -->
+                        <span :data-hover="article.hover">{{article.title}}</span>
                     </li>
-                    <li>
-                        <a href="#"><span data-hover="巴勃羅·魯伊·畢卡索">Pablo Ruiz Picasso</span></a>
+                    <!-- <li v-for ="article in all_data">
+                        <span @click="selected == 1"  :data-hover="article.hover">{{article.tittle}}</span>
                     </li>
-                    <li>
-                        <a href="#"><span data-hover="奧斯卡·克洛德·莫內">Oscar-Claude Monet</span></a>                       
+                    <li v-for ="article in all_data">
+                        <span @click="selected == 2"  :data-hover="article.hover">{{article.tittle}}</span>
                     </li>
-                    <li>
-                        <a href="#"><span data-hover="李奧納多·達文西">Leonardo da Vinci</span></a>                     
-                    </li>
+                    <li v-for ="article in all_data">
+                        <span @click="selected == 3"  :data-hover="article.hover">{{article.tittle}}</span>
+                    </li> -->
                 </ul>
 
             </div>
@@ -130,210 +132,17 @@
             </div> -->
 
             <section class="product-info-list">
-                <div class="container">
-                        
-                        <div class="row">
-                                <!-- Single Product 1 -->
-                                <div class="col-md-6 col-lg-4 col-xl-4" data-aos="fade-up" data-aos-duration="1000">
-                                        <div id="product-1" class="single-product">
-                                                <div class="part-1">
-                                                        <img src="./img/Shop/products/D/p1.png" alt="">
-                                                </div>
-                                                <div class="part-2">
-                                                        <h3 class="product-title">吉內薇拉·班琪 ｜ 複製畫</h3>
-                                                        <h4 class="product-price">$49.99</h4>
-                                                        <button class="buy-now">
-                                                                <a href="./product_info.html"><i class="fa-solid fa-bag-shopping"></i> Buy now</a>
-                                                        </button>
-                                                        
-                                                </div>
-                                        </div>
-                                </div>
-                                <!-- Single Product 2 -->
-                                <div class="col-md-6 col-lg-4 col-xl-4" data-aos="fade-up" data-aos-duration="2000">
-                                        <div id="product-2" class="single-product">
-                                                <div class="part-1">
-                                                        <span class="discount">15% off</span>
-                                                        <img src="./img/Shop/products/D/p2.png" alt="">
-                                                        
-                                                        
-                                                </div>
-                                                <div class="part-2">
-                                                        <h3 class="product-title">救世主 ｜ 複製畫</h3>
-                                                        <h4 class="product-price">$49.99</h4>
-                                                        <button class="buy-now">
-                                                                <p><i class="fa-solid fa-bag-shopping"></i> Buy now</p>    
-                                                        </button>
-                                                </div>
-                                        </div>
-                                </div>
-                                <!-- Single Product 3-->
-                                <div class="col-md-6 col-lg-4 col-xl-4" data-aos="fade-up" data-aos-duration="3000">
-                                        <div id="product-3" class="single-product">
-                                                <div class="part-1">
-                                                        <img src="./img/Shop/products/D/p3.png" alt="">
-                                                        
-                                                </div>
-                                                <div class="part-2">
-                                                        <h3 class="product-title">美麗的費隆妮葉夫人 ｜ 複製畫</h3>
-                                                        <h4 class="product-price">$49.99</h4>
-                                                        <button class="buy-now">
-                                                                <p><i class="fa-solid fa-bag-shopping"></i> Buy now</p>    
-                                                        </button>
-                                                </div>
-                                        </div>
-                                </div>
-                                <!-- Single Product 4-->
-                                <div class="col-md-6 col-lg-4 col-xl-4" data-aos="fade-up" data-aos-duration="1000">
-                                        <div id="product-4" class="single-product">
-                                                <div class="part-1">
-                                                        <span class="new">new</span>
-                                                        <img src="./img/Shop/products/D/p4.png" alt="">
-                                                        
-                                                </div>
-                                                <div class="part-2">
-                                                        <h3 class="product-title">基督受洗 ｜ 複製畫</h3>
-                                                        <h4 class="product-price">$49.99</h4>
-                                                        <button class="buy-now">
-                                                                <p><i class="fa-solid fa-bag-shopping"></i> Buy now</p>    
-                                                        </button>
-                                                </div>
-                                        </div>
-                                </div>
-                                <!-- Single Product 5-->
-                                <div class="col-md-6 col-lg-4 col-xl-4" data-aos="fade-up" data-aos-duration="2000">
-                                        <div id="product-5" class="single-product">
-                                                <div class="part-1">
-                                                        <img src="./img/Shop/products/D/p5.png" alt="">
-                                                        
-                                                </div>
-                                                <div class="part-2">
-                                                        <h3 class="product-title">聖母子與聖安妮 ｜複製畫</h3>
-                                                        <h4 class="product-price">$49.99</h4>
-                                                        <button class="buy-now">
-                                                                <p><i class="fa-solid fa-bag-shopping"></i> Buy now</p>    
-                                                        </button>
-                                                </div>
-                                        </div>
-                                </div>
-                                <!-- Single Product 6-->
-                                <div class="col-md-6 col-lg-4 col-xl-4" data-aos="fade-up" data-aos-duration="3000">
-                                        <div id="product-6" class="single-product">
-                                                <div class="part-1">
-                                                        <span class="discount">15% off</span>
-                                                        <img src="./img/Shop/products/D/p6.png" alt="">
-                                                        
-                                                </div>
-                                                <div class="part-2">
-                                                        <h3 class="product-title"> 天使報喜 ｜ 複製畫</h3>
-                                                        <h4 class="product-price">$49.99</h4>
-                                                        <button class="buy-now">
-                                                                <p><i class="fa-solid fa-bag-shopping"></i> Buy now</p>    
-                                                        </button>
-                                                </div>
-                                        </div>
-                                </div>
-                                <!-- Single Product 7-->
-                                <div class="col-md-6 col-lg-4 col-xl-4" data-aos="fade-up" data-aos-duration="1500">
-                                        <div id="product-7" class="single-product">
-                                                <div class="part-1">
-                                                        <img src="./img/Shop/products/D/p7.png" alt="">
-                                                        
-                                                </div>
-                                                <div class="part-2">
-                                                        <h3 class="product-title">抱銀貂的女子 ｜ 複製畫</h3>
-                                                        <h4 class="product-price">$49.99</h4>
-                                                        <button class="buy-now">
-                                                                <p><i class="fa-solid fa-bag-shopping"></i> Buy now</p>    
-                                                        </button>
-                                                </div>
-                                        </div>
-                                </div>
-                                <!-- Single Product 8-->
-                                <div class="col-md-6 col-lg-4 col-xl-4" data-aos="fade-up" data-aos-duration="1500">
-                                        <div id="product-8" class="single-product">
-                                                <div class="part-1">
-                                                        <span class="new">new</span>
-                                                        <img src="./img/Shop/products/D/p8.png" alt="">
-                                                        
-                                                </div>
-                                                <div class="part-2">
-                                                        <h3 class="product-title">最後的晚餐 ｜ 複製畫</h3>
-                                                        <h4 class="product-price">$49.99</h4>
-                                                        <button class="buy-now">
-                                                                <p><i class="fa-solid fa-bag-shopping"></i> Buy now</p>    
-                                                        </button>
-                                                </div>
-                                        </div>
-                                </div>
-                                <!-- Single Product 9-->
-                                <div class="col-md-6 col-lg-4 col-xl-4" data-aos="fade-up" data-aos-duration="1500">
-                                    <div id="product-9" class="single-product">
-                                            <div class="part-1">
-                                                    <span class="discount">15% off</span>
-                                                    <img src="./img/Shop/products/D/p9.png" alt="">
-                                                    
-                                            </div>
-                                            <div class="part-2">
-                                                    <h3 class="product-title">美麗公主 ｜ 複製畫</h3>
-                                                    <h4 class="product-price">$49.99</h4>
-                                                    <button class="buy-now">
-                                                        <p><i class="fa-solid fa-bag-shopping"></i> Buy now</p>    
-                                                </button>
-                                            </div>
-                                    </div>
-                                </div>
-                                <!-- Single Product 10-->
-                                <div class="col-md-6 col-lg-4 col-xl-4" data-aos="fade-up" data-aos-duration="1500">
-                                    <div id="product-10" class="single-product">
-                                            <div class="part-1">
-                                                <img src="./img/Shop/products/D/p4.png" alt="">
-                                                    
-                                            </div>
-                                            <div class="part-2">
-                                                    <h3 class="product-title"> ｜ 延伸品</h3>
-                                                    <h4 class="product-price">$49.99</h4>
-                                                    <button class="buy-now">
-                                                        <p><i class="fa-solid fa-bag-shopping"></i> Buy now</p>    
-                                                    </button>
-                                            </div>
-                                    </div>
-                            </div>
-                            <!-- Single Product 11-->
-                            <div class="col-md-6 col-lg-4 col-xl-4" data-aos="fade-up" data-aos-duration="1500">
-                                    <div id="product-11" class="single-product">
-                                            <div class="part-1">
-                                                    <span class="new">new</span>
-                                                    <img src="./img/Shop/products/D/p4.png" alt="">
-                                                    
-                                            </div>
-                                            <div class="part-2">
-                                                    <h3 class="product-title"> ｜ 延伸品</h3>
-                                                    <h4 class="product-price">$49.99</h4>
-                                                    <button class="buy-now">
-                                                        <p><i class="fa-solid fa-bag-shopping"></i> Buy now</p>    
-                                                    </button>
-                                            </div>
-                                    </div>
-                            </div>
-                            <!-- Single Product 12-->
-                            <div class="col-md-6 col-lg-4 col-xl-4" data-aos="fade-up" data-aos-duration="1500">
-                                <div id="product-12" class="single-product">
-                                        <div class="part-1">
-                                                <span class="discount">15% off</span>
-                                                <img src="./img/Shop/products/D/p4.png" alt="">
-                                                
-                                        </div>
-                                        <div class="part-2">
-                                                <h3 class="product-title"> ｜ 延伸品</h3>
-                                                <h4 class="product-price">$49.99</h4>
-                                                <button class="buy-now">
-                                                        <p><i class="fa-solid fa-bag-shopping"></i> Buy now</p>    
-                                                </button>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
+                <div v-if="selected == 0" class="container">
+                        @@include('./for_sale.html')
+                </div>
+                <div v-if="selected == 1" class="container">
+                        @@include('./for_sale.html')
+                </div>
+                <div v-if="selected == 2" class="container">
+                        @@include('./for_sale.html')
+                </div>
+                <div v-if="selected == 3" class="container">
+                        @@include('./for_sale.html')
                 </div>
             </section>
             
@@ -465,7 +274,7 @@
                                 <h4>聯絡我們</h4>
                         </div>
                         <div class="contect-content">
-                                <h7 class="cc-title">實體藝廊</h7>
+                                <span class="cc-title">實體藝廊</span>
                                 <br>
                                 <div class="cca">
                                         南京東路三段219號5樓<br>
@@ -503,7 +312,7 @@
         
 
         <!-- footer-->
-        @@include('./layout/footer.html')
+        <!-- @@include('./layout/footer.html') -->
     </div>
     
     
@@ -515,7 +324,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
   
+    <!-- vue JS -->
+    <script src="./js/vendors/vue.min.js"></script>
+    <script src="./js/shop_vue.min.js"></script>
+
     <script src="./js/shop.min.js"></script>
+
     <script>
         AOS.init();
     </script>
@@ -524,25 +338,15 @@
         <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/jquery.waitforimages.min.js"></script>
         <script>
                 (function(){
-                // $('.flex-container').waitForImages(function() {
-                // $('.spinner').fadeOut();
-                // }, $.noop, true);
-                
                 $(".flex-slide").each(function(){
                 $(this).hover(function(){
-                        // $(this).find('.flex-title').css({
-                        // transform: 'rotate(0deg)',
-                        // top: '10%'
-                        // });
+                       
                         $(this).find('.flex-about').css({
                         opacity: '1'
                         });
                 }, 
                 function(){
-                        // $(this).find('.flex-title').css({
-                        // transform: 'rotate(90deg)',
-                        // top: '15%'
-                        // });
+                       
                         $(this).find('.flex-about').css({
                         opacity: '0'
                         });

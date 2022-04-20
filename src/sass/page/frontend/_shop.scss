@@ -379,27 +379,39 @@
             text-align: center !important; 
             letter-spacing: 5px;
             overflow: hidden;
+
         }
         
-        .author-content a {
-            overflow: hidden;
+        // .author-content a {
+        //     overflow: hidden;
+        //     outline: none;
+        //     color: $darkbrown1;
+        //     text-decoration: none;
+        //     letter-spacing: 1px;
+        //     text-shadow: 0 0 1px rgba(255,255,255,0.3);
+        
+        // }
+        
+        .author-content span:hover,
+        .author-content span:focus {
             outline: none;
+            // cursor: pointer;
+
+        }
+        
+        
+        
+        
+        .author-content span {
+            // overflow: hidden;
+            outline: none;
+            // display: block;
+            cursor: pointer;
             color: $darkbrown1;
             text-decoration: none;
             letter-spacing: 1px;
             text-shadow: 0 0 1px rgba(255,255,255,0.3);
-        
-        }
-        
-        .author-content a:hover,
-        .author-content a:focus {
-            outline: none;
-        }
-        
-        
-        
-        
-        .author-content a span {
+
             position: relative;
             display: inline-block;
             -webkit-transition: -webkit-transform 0.3s;
@@ -407,7 +419,7 @@
             transition: transform 0.3s;
         }
         
-        .author-content a span::before {
+        .author-content span::before {
             position: absolute;
             top: 110%;
             left: 9%;
@@ -416,15 +428,17 @@
             -webkit-transform: translate3d(0,0,0);
             -moz-transform: translate3d(0,0,0);
             transform: translate3d(0,0,0);
+
         
             
         }
         
-        .author-content a:hover span,
-        .author-content a:focus span {
+        .author-content span:hover,
+        .author-content span:focus {
             -webkit-transform: translateY(-117%);
             -moz-transform: translateY(-117%);
             transform: translateY(-117%);
+
         }
         
         //商品列表
