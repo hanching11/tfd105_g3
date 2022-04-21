@@ -2,6 +2,7 @@
     
     padding-bottom: 70px;
 
+    
     a {
         text-decoration: none;
         color: #353231;
@@ -421,6 +422,7 @@
     // }
 
     .shopping-cart {
+        color: #353231;  
         position: fixed;
         height: 100vh;
 
@@ -679,9 +681,10 @@
 
         .-pdcPrice{
         color: $darkbrown1;
+        font-size: 0.875rem;
         font-weight: $mediumWeight;
         font-family: $fontNoserif;
-        text-align: left;
+        text-align: right;
         // border: 1px solid red;
         }
 

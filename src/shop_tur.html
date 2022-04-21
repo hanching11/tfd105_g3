@@ -5,7 +5,8 @@
     <title>shop_tur</title>
 
 </head>
-<div class="shopTur_container">
+<div class="shopTur_container" id="">
+
         <div class="phone" id="app">
                 <!-- 導航列 -->
                 <nav>
@@ -32,9 +33,9 @@
                         </div>
                         <div class="action-box">
                                 <div>
-                                <button class="round" @click="minusOne(product)">-</button>
-                                <span>{{ product.amountShow }}</span>
-                                <button class="round" @click="addOne(product)">+</button>
+                                        <button class="round" @click="minusOne(product)">-</button>
+                                        <span>{{ product.amountShow }}</span>
+                                        <button class="round" @click="addOne(product)">+</button>
                                 </div>
                                 <button @click="addToCart(product)">add to cart</button>
                         </div>
@@ -150,6 +151,8 @@
         // 切換 產品列表 / 購物車 的 tab
         toggleTab (shouldShowCart) {
             this.isShowingCart = shouldShowCart
+            console.log(this);
+
         },
 
         // 點擊 - / + 後的動作
@@ -189,6 +192,7 @@
                     p.sum = p.amount * p.price
                     return p
                 })
+          
                 
         },
 

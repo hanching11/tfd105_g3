@@ -132,9 +132,9 @@
                                                 </div>
                                                 <div class="part-2">
                                                         <h3 class="product-title">最後的晚餐 ｜ 複製畫</h3>
-                                                        <h4 class="product-price">$49.99</h4>
+                                                        <h4 class="product-price" >$49.99</h4>
                                                         <button class="buy-now">
-                                                                <p><i class="fa-solid fa-bag-shopping"></i> Buy now</p>    
+                                                                <p><i class="fa-solid fa-bag-shopping"  data-name="dinner" data-price="200" ></i> Buy now</p>    
                                                         </button>
                                                 </div>
                                         </div>
@@ -414,7 +414,6 @@
 
         
         methods: {
-
                 //======商品加到購物車======
                 addToCart(e) {
                         // console.log('add');
@@ -424,18 +423,19 @@
                         alert('成功加入購物車');
                         console.log(e.target);
                         let product = $(e.target).closest('.single-product');
-                        console.log(product);
+                     
+                        let id = $(product).find('#product-1')
                         let title = $(product).find('.product-title').html();
-                        console.log(title);
+                     
                         let img = $(product).find('.part-1').find('img').attr("src");
-                        console.log(img);
+                     
                         let price = $(product).find('.product-price').html();
                         console.log( price);
   
                         // 只要一按加到購物車就存到localStorage
 
                         let cart = {
-                                // item_id: product.PRODUCT_ID,
+                                'item_id': id,
                                 'item_img': img,
                                 'item_name': title,
                                 // item_count: product.count,
@@ -459,7 +459,6 @@
                                                 <div class="col -borderTop">
                                                 <div class="row text-muted">
                                                         <li>
-                                                        
                                                         ` + value.title + `
                                                         </li>
                                                         <li>
@@ -476,7 +475,7 @@
                                                                 <div class='ctrl__counter'>
                                                                 <input class='ctrl__counter-input' maxlength='100' type='text' value='0'>
                                                         
-                                                                <span class='ctrl__counter-num'>{{ product.amountShow }}</span>
+                                                                <span class='ctrl__counter-num'>` + value.count + `</span>
 
                                                                 </div>
                                                                 <button class='ctrl__button ctrl__button--increment' ">+</button>
@@ -486,177 +485,14 @@
                                                 </div>
                                         </div>`;
                                 cart.insertAdjacentHTML("afterbegin", p_str);
-                        }else{
-                                cart.value = "";
+                                // input_task_name.value = "";
+                       
                         }
                 },
-         
-
-                // 點擊 - / + 後的動作
-                minusOne (product) {
-                        product.amountShow--
-                        product.amountShow = (product.amountShow < 1) ? 1 : product.amountShow
+                computed: {
+            
                 },
-                addOne (product) {
-                        product.amountShow++
-                        product.amountShow = (product.amountShow > 9) ? 9 : product.amountShow
-                },
-
-                // computed: {
-                //         // 購物車裡的品項
-                //         productsInCart () {
-                //         return this.products
-                //                 // 只顯示購買數量 > 0 的項目
-                //                 .filter(p => p.amount)
-                //                 // 算出每個產品的小計
-                //                 .map(p => {
-                //                 p.sum = p.amount * p.price
-                //                 return p
-                //                 })
-                                
-                //         },
-
-                //         // 木前購買的金額
-                //         total () {
-                //         return this.productsInCart
-                //                 .reduce((sum, p) => (sum + p.sum), 0)
-                //         }
-                // },
-                // 點擊 add to cart 後的動作
-                // addToCart (product) {
-                //         product.amount += product.amountShow
-                        
-                //         product.showingIcon = true
-                //         setTimeout(() => {
-                //         product.showingIcon = false
-                //         }, 800)
-                // },
-
-                
-
-                // //======購物車商品數量增加======
-                // increase(pointer) {
-                // let counts = JSON.parse(localStorage.getItem('items'));
-                // for (let i in counts) {
-                //         if (counts[pointer].item_id == this.chooseItem[i].item_id) {
-                //         counts[pointer].item_count = parseInt(counts[pointer].item_count) + 1;
-
-                //         //價錢更新，總價為初始價錢*數量，並賦值給item_total_price
-                //         counts[pointer].item_total_price =
-                //         parseInt(counts[pointer].item_price) *
-                //         parseInt(counts[pointer].item_count);
-                //         }
-                // }
-
-                // //因為只針對localStorage改動，而畫面是抓chooseItem的資料渲染的，所以要再讓chooseItem等於改動後的counts陣列，畫面抓chooseItem才是改動後的資料
-                // this.chooseItem = counts;
-                // this.showTotal();
-                // storage.setItem('items', JSON.stringify(counts));
-                // },
-
-                // //======購物車商品數量減少======
-                // decrease(pointer) {
-                // let counts = JSON.parse(localStorage.getItem('items'));
-                // for (let i in counts) {
-                //         if (
-                //         counts[pointer].item_id == this.chooseItem[i].item_id &&
-                //         counts[pointer].item_count > 1
-                //         //商品數量大於1才能減，直到最小為1
-                //         ) {
-                //         counts[pointer].item_count = parseInt(counts[pointer].item_count) - 1;
-
-                //         //價錢更新，總價為初始價錢*數量，並賦值給item_total_price
-                //         counts[pointer].item_total_price =
-                //         parseInt(counts[pointer].item_price) *
-                //         parseInt(counts[pointer].item_count);
-                //         }
-                // }
-
-                // //因為只針對localStorage改動，而畫面是抓chooseItem的資料渲染的，所以要再讓chooseItem等於改動後的counts陣列，畫面抓chooseItem才是改動後的資料
-                // this.chooseItem = counts;
-                // this.showTotal();
-                // storage.setItem('items', JSON.stringify(counts));
-                // },
-
-                // //======商品從購物車移除======
-                // removeToCart(pointer) {
-                // let check_delete = confirm('是否移除?');
-                // if (check_delete) {
-                //         let counts = JSON.parse(localStorage.getItem('items'));
-                //         for (let i in counts) {
-                //         if (counts[i].item_id == this.chooseItem[pointer].item_id) {
-                //         //相互比對ID
-                //         counts.splice(i, 1); //localStorage刪除
-                //         this.chooseItem.splice(pointer, 1); //畫面刪除
-                //         this.showTotal();
-                //         }
-                //         }
-                //         storage.setItem('items', JSON.stringify(counts));
-                // }
-                // },
-
-                // //======字型渲染======
-                // reRender() {
-                // window._jf.flush(); //手動更新justfont
-                // },
-
-                // //======開啟購物車=====
-
-                
-
-                // into(pointer) {
-                // this.currentPage.push(this.info[pointer]);
-                // console.log(this.info[this.page]);
-                // },
-
-                // // ======所有商品總價計算======
-                // showTotal() {
-                // this.total = 0;
-                // for (let i in this.chooseItem) {
-                //         this.total += parseInt(this.chooseItem[i].item_total_price);
-                // }
-                // // 對目前chooseItem裡的項目跑回圈，去加總每一項商品總價
-                // localStorage.setItem('total', JSON.stringify(this.total));
-                // // 計算完轉成字串加到localStorage
-                // },
-                // },
-                
-
-                // });
-
-                // //======卡號輸入自動跳下一格======
-                // document.addEventListener('DOMContentLoaded', function () {
-                // var cards = document.getElementsByClassName('card');
-                // for (let i = 0; i < cards.length; i++) {
-                // cards[i].addEventListener('keydown', function (e) {
-                // if (
-                //         (e.which >= 48 && e.which <= 57) ||
-                //         (e.which <= 105 && e.which >= 96) ||
-                //         e.which == 8
-                // ) {
-                //         if (e.target.value.length == 0 && e.which == 8) {
-                //         let previous_el = this.previousElementSibling;
-                //         if (previous_el != null) {
-                //         previous_el.focus();
-                //         }
-                //         }
-                // } else {
-                //         e.preventDefault();
-                // }
-                // });
-
-                // // keyup
-                // cards[i].addEventListener('keyup', function (e) {
-                // let str = e.target.value.replace(/\D/g, '');
-                // e.target.value = str;
-                // if (str.length == 4) {
-                //         let next_el = this.nextElementSibling;
-                //         if (next_el != null) {
-                //         next_el.focus();
-                //         }
-                // }
-                // });
-                }
+        }
         });
 
     </script>
