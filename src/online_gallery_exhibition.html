@@ -2,29 +2,20 @@
 <html lang="en">
 
 <head>
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Owl Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
     @@include('./layout/head.html')
     <title>Online Gallery Exhibition| 光緣畫廊 | KUANG YUAN</title>
-    <style>
-        /* .wrapper_header .header_bac{
-            position: fixed;
-            z-index: 9999999;
-        } */
-    </style>
+
 </head>
 
 <body>
 
-    <div class="wrapper_onlinegallery_exhibition">
+    <div class="wrapper_onlinegallery_exhibition" id="onlinegallery">
         @@include('./layout/header.html')
         <!-- background-image -->
         <div class="bg-img">
@@ -48,85 +39,68 @@
                 <!-- owl-carousel -->
                 <div class="nonloop owl-carousel">
 
-                    <!-- pic_frame_test-->
-                    <!-- <div class="item">
-                        <div class="c-gallery__photo">
-                            <div class="c-photo c-photo--gallery is-black">
-                                <div class="c-photo__wrapper">
-                                    <div class="c-photo__frame">
-                                        <div class="c-photo__inner">
-                                            <img src="../src/img/online_gallery/pic02.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="c-photo__shadow-01"></div>
-                                <div class="c-photo__shadow-02"></div>
-                            </div>
-                        </div>
-                    </div> -->
-
                     <!-- pic01 -->
                     <div class="item">
-                        <a href="./online_gallery_exhibition_painting.html">
-                            <div class="frame">
-                                <img src="./img/online_gallery/pic02.jpg" alt="">
-                            </div>
+                        <!-- <a href="./online_gallery_exhibition_painting.html"> -->
+                        <div class="frame"  @click="pop">
+                            <img src="./img/online_gallery/pic02.jpg" alt="">
+                        </div>
                         </a>
                     </div>
 
                     <!-- pic02 -->
                     <div class="item">
-                        <a href="">
-                            <div class="frame">
-                                <img src="./img/online_gallery/pic02.jpg" alt="">
-                            </div>
+                        <!-- <a href=""> -->
+                        <div class="frame">
+                            <img src="./img/online_gallery/pic02.jpg" alt="">
+                        </div>
                         </a>
                     </div>
 
                     <!-- pic03 -->
                     <div class="item">
-                        <a href="">
-                            <div class="frame">
-                                <img src="./img/online_gallery/pic02.jpg" alt="">
-                            </div>
+                        <!-- <a href=""> -->
+                        <div class="frame">
+                            <img src="./img/online_gallery/pic02.jpg" alt="">
+                        </div>
                         </a>
                     </div>
 
-                    <!-- <div class="item">
-                        <h4>5</h4>
-                    </div>
-                    <div class="item">
-                        <h4>6</h4>
-                    </div>
-                    <div class="item">
-                        <h4>7</h4>
-                    </div>
-                    <div class="item">
-                        <h4>8</h4>
-                    </div>
-                    <div class="item">
-                        <h4>9</h4>
-                    </div>
-                    <div class="item">
-                        <h4>10</h4>
-                    </div>
-                    <div class="item">
-                        <h4>11</h4>
-                    </div>
-                    <div class="item">
-                        <h4>12</h4>
-                    </div> -->
 
                 </div><!-- owl-carousel end -->
             </div><!-- panting end -->
         </div> <!-- background-image end-->
+
+        <!-- 遮罩 -->
+        <div class="mask" v-show="isShow" @click="close_X"></div>
+
+
+        <!-- 彈窗 -->
+        <div class="paint_info" v-show="isShow">
+            <button @click="close_X">X</button>
+
+
+            <div class="box">
+                <div class="paint">
+                    <img src="./img/online_gallery/pic02.jpg" alt="">
+                    <!-- <img :src="'data:image/*;base64, ' + info.img"> -->
+                </div>
+
+                <div class="info">
+                    <h2 class="name">info.name</h2>
+                    <h3 class="author"> info.author</h3>
+                    <p> info.info</p>
+                </div>
+            </div>
+        </div>
+
     </div> <!-- </div> wrapper_end -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        // owl-carousel
+    <!-- <script>
+        owl-carousel
         $(document).ready(function () {
             $('.nonloop').owlCarousel({
                 center: true,
@@ -154,6 +128,33 @@
 
                 }
             });
+        });
+    </script> -->
+
+    <script>
+        new Vue({
+            el: '#onlinegallery',
+
+            data() {
+                return {
+                    isShow: false,
+                }
+
+            },
+
+
+            methods: {
+                close_X() {
+                    this.isShow = false;
+                    // $(".paint_info").css("dispaly", "none");
+                    // this.
+                },
+                pop() {
+                    // alert("AAA");
+                    this.isShow = true;
+                },
+            }
+
         });
     </script>
 </body>
