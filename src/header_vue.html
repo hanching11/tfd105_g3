@@ -130,8 +130,8 @@
 
 <script>
     
-    new Vue({
-            el: '#wrapper',
+    const publicMixin = {
+            // el: '#wrapper',
             data: {
                     // isShowingCart: false,
                     products: [
@@ -235,7 +235,7 @@
                                     .reduce((sum, p) => (sum + p.sum), 0)
                     }
             },
-    });
+    };
 
 // const publicMixin = {
 //             // el: '#shopTest',
