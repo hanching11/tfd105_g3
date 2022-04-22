@@ -5,8 +5,8 @@
     </head>
 
 <body>
-  @@include('./layout/header.html')
-  <div class="wrapper_checkout2">
+  <div id="forCart" class="wrapper_checkout2">
+    @@include('./header_vue.html')
 
     <!-- sm 以上範圍，三欄均分 -->
     <!-- 設定某欄佔幾欄 -->
@@ -182,6 +182,8 @@
     </div>    
   </div>
   @@include('./layout/footer.html')
+  <script src="./js/header_vue.min.js"></script>
+
 </body>
 </html>
 

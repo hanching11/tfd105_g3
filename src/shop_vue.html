@@ -8,11 +8,11 @@
 </head>
 
 <body>
-        @@include('./header_vue.html')
         
-<div id="wrapper" class="s_wrapper">
+<div id="forCart">
+        @@include('./header_vue.html')
 
-        <div class="wrapper_shop">
+<div class="wrapper_shop">
 
         <main class="page-content">
                 <section class="banner" data-aos="fade-down" data-aos-duration="3000">
@@ -92,15 +92,13 @@
                                                                         :src="product.thumb">
                                                         </div>
                                                         <div class="part-2">
-                                                                <h3 class="product-title">
-                                                                        {{product.title}}</h3>
-                                                                <h4 class="product-price">
-                                                                        ${{product.price}}</h4>
-                                                                <button class="buy-now"
-                                                                        @click="addToCart(product)">
-                                                                        <p><i class="fa-solid fa-bag-shopping"></i>
-                                                                                Buy now</p>
-                                                                </button>
+                                                        <h3 class="product-title">{{product.title}}</h3>
+                                                        <h4 class="product-price">${{product.price}}</h4>
+                                                        <button class="buy-now"
+                                                                @click="addToCart(product)">
+                                                                <p><i class="fa-solid fa-bag-shopping"></i>
+                                                                        Buy now</p>
+                                                        </button>
                                                         </div>
                                                 </div>
 
@@ -431,7 +429,7 @@
 
 
         </main>
-        </div>
+</div>
 
 </div>
 
@@ -448,14 +446,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
 
         <script src="./js/shop.min.js"></script>
+        <script src="./js/header_vue.min.js"></script>
         <script>
                 AOS.init();
         </script>
-
-
-    
-
-
 
 </body>
 

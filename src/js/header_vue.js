@@ -1,14 +1,15 @@
 
     new Vue({
-            el: '#wrapper',
+            el: '#forCart',
             data: {
                     // isShowingCart: false,
                     products: [
                             {
                                     id: '1',
-                                    title: 'Ginevra Benci ｜ 複製畫',
+                                    title: '亞嘉杜花園內的莫內夫人及孩子',
                                     price: 1000,
-                                    thumb: './img/Shop/products/D/p1.png',
+                                    thumb: './img/Shop/products/D/p6.png',
+                                    info: '日期: 1885 | 風格: 現實主義 | 藝術類型: 風俗畫 | 媒材: 油彩, 畫布 | 地點: 梵高博物館 | 尺寸: 82 x 114 公分',
                                     amount: 0,
                                     amountShow: 1,
                                     showingIcon: false
@@ -18,15 +19,19 @@
                                     title: '救世主 ｜ 複製畫',
                                     price: 2000,
                                     thumb: './img/Shop/products/D/p2.png',
+                                    info: '日期: 1885 | 風格: 現實主義 | 藝術類型: 風俗畫 | 媒材: 油彩, 畫布 | 地點: 梵高博物館 | 尺寸: 82 x 114 公分',
                                     amount: 0,
                                     amountShow: 1,
                                     showingIcon: false
                             },
+                            {
+                                    coupon: 100
+                            }
                     ]
             },
             created() {
                
-                    const old_data = localStorage.getItem('items') // 看購物車有沒有東西
+                    const old_data = sessionStorage.getItem('items') // 看購物車有沒有東西
                     if (old_data) {
                             let value = JSON.parse(old_data);
                             this.products = value
@@ -39,6 +44,7 @@
 
 
             methods: {
+                    
                     openCart() {
                             // 顯示購物車
                             var shoppingcartbk = document.getElementById('i_shoppingCart_bk');
@@ -74,7 +80,7 @@
                             setTimeout(() => {
                                     product.showingIcon = false
                             }, 800)
-                            localStorage.setItem('items', JSON.stringify(this.products));
+                            sessionStorage.setItem('items', JSON.stringify(this.products));
                             console.log('a');
                             // this.push(product).JSON.parse(localStorage.getItem('items'));
                             // console.log(item);
@@ -104,6 +110,68 @@
                     total() {
                             return this.productsInCart
                                     .reduce((sum, p) => (sum + p.sum), 0)
-                    }
+                    },
+
+                // 加上運費
+                    orderTotal() {
+                        return this.productsInCart
+                                .reduce((sum, p) => (sum + p.sum), 0)+1000
+                },
+                    
+                // // 折扣碼
+                // couponTotal() {
+                // return this.productsInCart
+                //         .reduce((sum, p) => (sum + p.sum), 0)+1000
+                // },
+
+                    
             },
     });
+
+    document.addEventListener("DOMContentLoaded", function () {    
+});
+$("button.hamburger").on("click", function () {
+    $(this).toggleClass("is-active");
+    $(".nav-list").toggleClass("on");
+});
+
+$(".sub-nav").on("click", function () {
+    $(".sub-nav > li").toggle();
+});
+
+$(".sub-nav2").on("click", function () {
+    $(".sub-nav2 > li").toggle();
+});
+
+$('.sub-nav').on("click", function () {
+    $('#tg1').toggleClass("fas fa-plus-square")
+    $('#tg1').toggleClass("fa-regular fa-square-minus")
+
+});
+
+$('.sub-nav2').on("click", function () {
+    $('#tg2').toggleClass("fas fa-plus-square")
+    $('#tg2').toggleClass("fa-regular fa-square-minus")
+
+});
+
+// 滾動後選單消失 X 變回漢堡
+
+var previousScroll = 0;
+
+window.addEventListener('scroll', function () {
+    var currentScroll = $(this).scrollTop();
+    if (currentScroll > 100 && currentScroll < $(document).height() - $(window).height()) {
+        if (currentScroll > previousScroll) {
+            hideNav();
+        }
+        previousScroll = currentScroll;
+    }
+
+});
+
+function hideNav() {
+    $("button.hamburger").removeClass("is-active")
+    $(".nav-list").removeClass("on")
+}
+
