@@ -5,7 +5,7 @@
         .logo {
             width: 100px;
             margin: 0 100px;
-            position: relative;
+            // position: relative;
                 img {
                     display: block;
                     margin: 30px 0;
@@ -17,8 +17,8 @@
                
     }   
         h6 {
-            color: black;
-            font-size: 1.5rem;
+            color: $darkbrown1;
+            font-size: 1rem;
         }
     
         
