@@ -1,4 +1,4 @@
-#forCart {
+#wrapper {
     
     padding-bottom: 70px;
 
@@ -51,12 +51,13 @@
 
     .yu_wrapper ul {
         display: flex;
+        li {
+            list-style: none;
+            margin-right: 20px;
+        }
     }
 
-    li {
-        list-style: none;
-        margin-right: 20px;
-    }
+   
 
     p {
         font-size: 12px;
