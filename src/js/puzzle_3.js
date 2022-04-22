@@ -954,7 +954,11 @@ Puzzle.prototype.removeAllListeners = function () {
   } // while
 } // Puzzle.prototype.removeAllListeners()
 // -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -
-
+Puzzle.prototype.popupThecoupon = function () {
+  $('.cd-popup').addClass('is-visible');
+  $(".cd-popup-trigger")[0].style.display="block";
+}
+// -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -
 Puzzle.prototype.launchAnimation = function () {
 
   this.anim = { cpt: autoStart ? 200 : 100 };
@@ -1197,6 +1201,8 @@ Puzzle.prototype.mouseUpGame = function (event) {
 
   // YES ! tell the player
   this.removeAllListeners();
+  this.popupThecoupon();
+
   // normal image is re-drawn
   let ctx = this.canvMobile.getContext("2d");
   ctx.drawImage(this.image,
