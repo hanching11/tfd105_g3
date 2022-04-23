@@ -1,5 +1,5 @@
 <?php
-    include("../connect.php");
+    include("connect.php");
 
     $SQL = "
     select
@@ -7,11 +7,12 @@
         od.product_id,
         ol.account,
         od.order_detail_price,
+        od.quantity,
         ol.pay_type,
         ol.address,
         ol.order_status,
         ol.pay_status
-    from order_list ol
+    from order_List ol
         join order_detail od
             on ol.order_id = od.order_id
     ";

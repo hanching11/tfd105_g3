@@ -2,15 +2,36 @@
 <html lang="en">
 
 <head>
-  @@include('./layout/head.html')
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-  <title>光緣畫廊 | KUANG YUAN</title>
+    @@include('./layout/head.html')
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <title>光緣畫廊 | KUANG YUAN</title>
 </head>
 
 <body>
     <div class="wrapper_member" id="app">
         @@include('./layout/header.html')
-        <main>
+        <section>
+            <div class="top_content">
+                <h3>訂單查詢</h3>
+            </div>
+            <div class="table_order table-responsive-sm">
+                <table class="table table-striped">
+                    <thead class="title_border">
+                        <tr>
+                            <th scope="col">訂單編號</th>
+                            <th scope="col">付款狀態</th>
+                            <th scope="col">付款方式</th>
+                            <th scope="col">訂單狀態</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- <main>
             <div class="top_content">
                 <h3>訂單查詢</h3>
             </div>
@@ -45,10 +66,10 @@
             :crtdate='itm.CREATE_DATE'
             :done='itm.ORDER_STATUS'
             ></shopping>
-          </main>
+          </main> -->
 
 
-    @@include('layout/footer.html')
+        @@include('layout/footer.html')
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -58,318 +79,352 @@
     <!-- vue -->
     <script src="./js/vendors/vue.min.js"></script>
     <script>
-      Vue.component('shopping',{
-            template: `
-                <div>       
-                    <section>
-                        <ul class="m_item_details">
-                            <li class="m_item_title"><p>種類 <span>{{ltype}}</span></p>
-                                <p>訂單編號 <span>{{'S00'+ shoppingorderid}}</span>號</p>
-                                <p>下單日期{{crtdate}}</p>
-                            </li>
-                            <li><h6>狀&emsp;&emsp;態</h6><p>已完成</p></li>
-                            <li><h6>收件人名</h6><p>{{addressee}}</p></li>
-                            <li><h6>收件地址</h6><p>{{address}}</p></li>
-                            <li><h6>連絡電話</h6><p>{{phone}}</p></li>
-                        </ul>
+        //   Vue.component('shopping',{
+        //         template: `
+        //             <div>       
+        //                 <section>
+        //                     <ul class="m_item_details">
+        //                         <li class="m_item_title"><p>種類 <span>{{ltype}}</span></p>
+        //                             <p>訂單編號 <span>{{'S00'+ shoppingorderid}}</span>號</p>
+        //                             <p>下單日期{{crtdate}}</p>
+        //                         </li>
+        //                         <li><h6>狀&emsp;&emsp;態</h6><p>已完成</p></li>
+        //                         <li><h6>收件人名</h6><p>{{addressee}}</p></li>
+        //                         <li><h6>收件地址</h6><p>{{address}}</p></li>
+        //                         <li><h6>連絡電話</h6><p>{{phone}}</p></li>
+        //                     </ul>
 
-                    </section>
-                </div>
-            `,
-            props:['shoppingorderid','crtdate','done','addressee','address','phone'],
-            methods:{
-                dtoggle(){
-                    this.isappear = !this.isappear;
-                    let info = this.shoppingorderid;
+        //                 </section>
+        //             </div>
+        //         `,
+        //         props:['shoppingorderid','crtdate','done','addressee','address','phone'],
+        //         methods:{
+        //             dtoggle(){
+        //                 this.isappear = !this.isappear;
+        //                 let info = this.shoppingorderid;
 
-                    let self = this;
-                        $.ajax({
-                            type : "POST",	
-                            url : "./php/front_end_API/M_apr_membershopping.php",  
-                            data : {  
-                                MID : info,            //---透過 MID 去抓該筆會員資料
-                            }, 
-                            dataType : 'html' 
-                            }).done(function(data){    //---載入成功
-                            
-                            self.mymembershopping =  JSON.parse(data);
-                            console.log(self.mymembershopping);
+        //                 let self = this;
+        //                     $.ajax({
+        //                         type : "POST",	
+        //                         url : "./php/front_end_API/M_apr_membershopping.php",  
+        //                         data : {  
+        //                             MID : info,            //---透過 MID 去抓該筆會員資料
+        //                         }, 
+        //                         dataType : 'html' 
+        //                         }).done(function(data){    //---載入成功
 
-                            }).fail(function(jqXHR){   //---載入失敗
-                            alert("res為ID數據載入失敗: " + jqXHR.status);
-                            });
+        //                         self.mymembershopping =  JSON.parse(data);
+        //                         console.log(self.mymembershopping);
 
-                            $.ajax({
-                            type : "POST",	
-                            url : "./php/front_end_API/M_apr_membershopspecial.php",  
-                            data : {  
-                                MID : info,            //---透過 MID 去抓該筆會員資料
-                            }, 
-                            dataType : 'html' 
-                            }).done(function(data){    //---載入成功
-                            
-                            self.mymembershopspecial =  JSON.parse(data);
-                            console.log(self.mymembershopspecial);
+        //                         }).fail(function(jqXHR){   //---載入失敗
+        //                         alert("res為ID數據載入失敗: " + jqXHR.status);
+        //                         });
 
-                            }).fail(function(jqXHR){   //---載入失敗
-                                alert("res為ID數據載入失敗: " + jqXHR.status);
-                            });
-                        
-                            $.ajax({
-                            type : "POST",	
-                            url : "./php/front_end_API/M_apr_membershopmsg.php",  
-                            data : {  
-                                MID : info,            //---透過 MID 去抓該筆會員資料
-                            }, 
-                            dataType : 'html' 
-                            }).done(function(data){    //---載入成功
-                            
-                            self.mymembershopmsg =  JSON.parse(data);
-                            console.log(self.mymembershopmsg[0]);
+        //                         $.ajax({
+        //                         type : "POST",	
+        //                         url : "./php/front_end_API/M_apr_membershopspecial.php",  
+        //                         data : {  
+        //                             MID : info,            //---透過 MID 去抓該筆會員資料
+        //                         }, 
+        //                         dataType : 'html' 
+        //                         }).done(function(data){    //---載入成功
 
-                        }).fail(function(jqXHR){   //---載入失敗
-                        alert("res為ID數據載入失敗: " + jqXHR.status);
-                        });
+        //                         self.mymembershopspecial =  JSON.parse(data);
+        //                         console.log(self.mymembershopspecial);
 
-                    
-                },
-           
-                submitmessage(){
-                    let info = this.shoppingorderid;
-                    let self = this;
+        //                         }).fail(function(jqXHR){   //---載入失敗
+        //                             alert("res為ID數據載入失敗: " + jqXHR.status);
+        //                         });
 
-                    $.ajax({
-                        type : "POST",	
-                        url : "./php/back_end_API/M_shop_msg_input.php",  
-                        data : {  
-                            MID : info,
-                            MSG : self.message,            //---透過 MID 去抓該筆會員資料
-                        }, 
-                        dataType : 'html' 
-                        }).done(function(data){    //---載入成功
-                        
-                        if( data == 1 ){
-                            alert('留言已成功傳出去，我們會盡速回覆，謝謝!');
-                            self.isappear = !self.isappear;
+        //                         $.ajax({
+        //                         type : "POST",	
+        //                         url : "./php/front_end_API/M_apr_membershopmsg.php",  
+        //                         data : {  
+        //                             MID : info,            //---透過 MID 去抓該筆會員資料
+        //                         }, 
+        //                         dataType : 'html' 
+        //                         }).done(function(data){    //---載入成功
 
-                        }else{
-                            alert('留言未成功傳出去，我們會與您聯繫，謝謝!');
-                            self.isappear = !self.isappear;
-                        }
-                    
-                        }).fail(function(jqXHR){   //---載入失敗
-                        alert("res為ID數據載入失敗: " + jqXHR.status);
-                        });
+        //                         self.mymembershopmsg =  JSON.parse(data);
+        //                         console.log(self.mymembershopmsg[0]);
 
-                },
-            },
-            data(){
-                return{
-                    ltype : '購物商城',
-                    isappear : true,
-                    message:'',
-                    mymembershopping:[],
-                    mymembershopspecial:[],
-                    mymembershopmsg:[],
-                };
-            },
-            components:{
+        //                     }).fail(function(jqXHR){   //---載入失敗
+        //                     alert("res為ID數據載入失敗: " + jqXHR.status);
+        //                     });
 
-                'slist': { //kebab-case
-                    template: `<tr>
-                                    <td  class="m_item_pic"><img :src="listimg" alt=""></td>
-                                    <td  class="m_item_id">{{sname}}/{{ptype}}</td>
-                                    <td  class="m_item_type">{{pprice}}/組</td>
-                                    <td  class="m_item_amount">{{pnum}}</td>
-                                    <td  class="m_item_price">{{psum}}元</td>
-                        </tr>`,
-                    props:['sname', 'ptype','listimg', 'pprice', 'pnum'],
-                    computed:{
-                        psum(){
-                            return this.pprice * this.pnum ;
-                        },
-                    },
-                },
 
-                'clist': { //kebab-case
-                    template: `<tr>
-                                    <td  class="m_item_pic">{{pcolor ? pcolor +'色' : '無' }}</td>
-                                    <td  class="m_item_id">{{sname ? sname : 無}}</td>
-                                    <td  class="m_item_type">{{pprice? pprice +'/組' : '無'}}</td>
-                                    <td  class="m_item_amount">{{pnum? pnum : '無'}}</td>
-                                    <td  class="m_item_price">{{pnum? psum + '元' : '無'}}</td>
+        //             },
 
-                        </tr>`,
-                    props:['pcolor','sname', 'ptype','listimg', 'pprice', 'pnum'],
-                    computed:{
-                        psum(){
-                            return this.pprice * this.pnum ;
-                        },
-                    },
-                },
+        //             submitmessage(){
+        //                 let info = this.shoppingorderid;
+        //                 let self = this;
 
-                'membermsg': { //kebab-case
-                    template: `<div>
-                                <ul>
-                                    <li class="m_client_ask"><img :src='mpic' alt="">
-                                        <article><p>{{msgcontent}}</p><p>時間: {{gettime}}</p></article>
-                                    </li>
-                                    <li class="m_lovepet_re" v-if="recontent" >
-                                        <img src="./img/common/i_logo.png" alt="">
-                                        <article><p>{{recontent}}</p><p>時間: {{gettime}}</p></article>
-                                    </li>
-                                </ul>
-                           </div>`,
-                    props:['mpic','msgcontent','recontent','gettime'],
-                    computed:{
-                        msgtime(){
-                            let yer = new Date().getFullYear();
-                            let mon = new Date().getMonth() +1;
-                            let dat = new Date().getDate();
+        //                 $.ajax({
+        //                     type : "POST",	
+        //                     url : "./php/back_end_API/M_shop_msg_input.php",  
+        //                     data : {  
+        //                         MID : info,
+        //                         MSG : self.message,            //---透過 MID 去抓該筆會員資料
+        //                     }, 
+        //                     dataType : 'html' 
+        //                     }).done(function(data){    //---載入成功
 
-                            return yer + "-" + mon + "-" + dat ;
-                        },
-                    },
-                },
-            },
-        });
+        //                     if( data == 1 ){
+        //                         alert('留言已成功傳出去，我們會盡速回覆，謝謝!');
+        //                         self.isappear = !self.isappear;
 
-        new Vue({
-            el: '#app',
-            data: {
-                order: 'complete',
-                opacity: 1,
-                opacity2: 0,
+        //                     }else{
+        //                         alert('留言未成功傳出去，我們會與您聯繫，謝謝!');
+        //                         self.isappear = !self.isappear;
+        //                     }
 
-                mymember:[],
+        //                     }).fail(function(jqXHR){   //---載入失敗
+        //                     alert("res為ID數據載入失敗: " + jqXHR.status);
+        //                     });
 
-                mymembershoporder:[],
-                mymemberresorder:[],
-                
-            },
-            methods:{
-                // chgfocus(){
-                //     if(this.opacity == 0){this.opacity = 1}else{this.opacity = 0}
-                //     if(this.opacity2 == 0){this.opacity2 = 1}else{this.opacity2 = 0}
-                // },
-                getmymemberdata(info){
-                    let self = this;
+        //             },
+        //         },
+        //         data(){
+        //             return{
+        //                 ltype : '購物商城',
+        //                 isappear : true,
+        //                 message:'',
+        //                 mymembershopping:[],
+        //                 mymembershopspecial:[],
+        //                 mymembershopmsg:[],
+        //             };
+        //         },
+        //         components:{
 
-                        $.ajax({
-                            type : "POST",	
-                            url : "./php/front_end_API/M_apr_memberpeople.php",  
-                            data : {  
-                                MID : info,            //---透過 MID 去抓該筆會員資料
-                            }, 
-                            dataType : 'html' 
-                            }).done(function(data){    //---載入成功
-                                //console.log(data);
-                            self.mymember =  JSON.parse(data);
-                            
-                            }).fail(function(jqXHR){   //---載入失敗
-                            alert("res為ID數據載入失敗: " + jqXHR.status);
-                            });
+        //             'slist': { //kebab-case
+        //                 template: `<tr>
+        //                                 <td  class="m_item_pic"><img :src="listimg" alt=""></td>
+        //                                 <td  class="m_item_id">{{sname}}/{{ptype}}</td>
+        //                                 <td  class="m_item_type">{{pprice}}/組</td>
+        //                                 <td  class="m_item_amount">{{pnum}}</td>
+        //                                 <td  class="m_item_price">{{psum}}元</td>
+        //                     </tr>`,
+        //                 props:['sname', 'ptype','listimg', 'pprice', 'pnum'],
+        //                 computed:{
+        //                     psum(){
+        //                         return this.pprice * this.pnum ;
+        //                     },
+        //                 },
+        //             },
 
-                    },
-                getmemberpetdata(info){
-                let self = this;
+        //             'clist': { //kebab-case
+        //                 template: `<tr>
+        //                                 <td  class="m_item_pic">{{pcolor ? pcolor +'色' : '無' }}</td>
+        //                                 <td  class="m_item_id">{{sname ? sname : 無}}</td>
+        //                                 <td  class="m_item_type">{{pprice? pprice +'/組' : '無'}}</td>
+        //                                 <td  class="m_item_amount">{{pnum? pnum : '無'}}</td>
+        //                                 <td  class="m_item_price">{{pnum? psum + '元' : '無'}}</td>
 
-                    $.ajax({
-                        type : "POST",	
-                        url : "./php/front_end_API/M_apr_memberpet.php",  
-                        data : {  
-                            MID : info,            //---透過 MID 去抓該筆會員資料
-                        }, 
-                        dataType : 'html' 
-                        }).done(function(data){    //---載入成功
-                            
-                        self.mymemberpet =  JSON.parse(data);
-                        //console.log(self.mymemberpet);
-                        
-                        }).fail(function(jqXHR){   //---載入失敗
-                        alert("res為ID數據載入失敗: " + jqXHR.status);
-                    });
+        //                     </tr>`,
+        //                 props:['pcolor','sname', 'ptype','listimg', 'pprice', 'pnum'],
+        //                 computed:{
+        //                     psum(){
+        //                         return this.pprice * this.pnum ;
+        //                     },
+        //                 },
+        //             },
 
-                },
-                getmemberhoteldata(info){
-                let self = this;
+        //             'membermsg': { //kebab-case
+        //                 template: `<div>
+        //                             <ul>
+        //                                 <li class="m_client_ask"><img :src='mpic' alt="">
+        //                                     <article><p>{{msgcontent}}</p><p>時間: {{gettime}}</p></article>
+        //                                 </li>
+        //                                 <li class="m_lovepet_re" v-if="recontent" >
+        //                                     <img src="./img/common/i_logo.png" alt="">
+        //                                     <article><p>{{recontent}}</p><p>時間: {{gettime}}</p></article>
+        //                                 </li>
+        //                             </ul>
+        //                        </div>`,
+        //                 props:['mpic','msgcontent','recontent','gettime'],
+        //                 computed:{
+        //                     msgtime(){
+        //                         let yer = new Date().getFullYear();
+        //                         let mon = new Date().getMonth() +1;
+        //                         let dat = new Date().getDate();
 
-                    $.ajax({
-                        type : "POST",	
-                        url : "./php/front_end_API/M_apr_memberhotel.php",  
-                        data : {  
-                            MID : info,            //---透過 MID 去抓該筆會員資料
-                        }, 
-                        dataType : 'html' 
-                        }).done(function(data){    //---載入成功
-                           
-                        self.mymemberhotel =  JSON.parse(data);
-                        //console.log(self.mymemberhotel);
+        //                         return yer + "-" + mon + "-" + dat ;
+        //                     },
+        //                 },
+        //             },
+        //         },
+        //     });
 
-                        }).fail(function(jqXHR){   //---載入失敗
-                        alert("res為ID數據載入失敗: " + jqXHR.status);
-                        });
+        //     new Vue({
+        //         el: '#app',
+        //         data: {
+        //             order: 'complete',
+        //             opacity: 1,
+        //             opacity2: 0,
 
-                },
-                getmembershoppingorder(info){
-                let self = this;
+        //             mymember:[],
 
-                    $.ajax({
-                        type : "POST",	
-                        url : "./php/front_end_API/M_apr_membershoporder.php",  
-                        data : {  
-                            MID : info,            //---透過 MID 去抓該筆會員資料
-                        }, 
-                        dataType : 'html' 
-                        }).done(function(data){    //---載入成功
-                           
-                        self.mymembershoporder =  JSON.parse(data);
-                        //console.log(self.mymembershoporder);
-                        //console.log(self.mymembershoporder.length);
-                      
-                        }).fail(function(jqXHR){   //---載入失敗
-                        alert("res為ID數據載入失敗: " + jqXHR.status);
-                        });
+        //             mymembershoporder:[],
+        //             mymemberresorder:[],
 
-                },
-                getmemberresorder(info){
-                let self = this;
+        //         },
+        //         methods:{
+        //             // chgfocus(){
+        //             //     if(this.opacity == 0){this.opacity = 1}else{this.opacity = 0}
+        //             //     if(this.opacity2 == 0){this.opacity2 = 1}else{this.opacity2 = 0}
+        //             // },
+        //             getmymemberdata(info){
+        //                 let self = this;
 
-                    $.ajax({
-                        type : "POST",	
-                        url : "./php/front_end_API/M_apr_memberresorder.php",  
-                        data : {  
-                            MID : info,            //---透過 MID 去抓該筆會員資料
-                        }, 
-                        dataType : 'html' 
-                        }).done(function(data){    //---載入成功
-                           
-                        self.mymemberresorder =  JSON.parse(data);
-                        console.log(self.mymemberresorder);
-                        console.log(self.mymemberresorder.length);
-                      
-                        }).fail(function(jqXHR){   //---載入失敗
-                        alert("res為ID數據載入失敗: " + jqXHR.status);
-                        });
+        //                     $.ajax({
+        //                         type : "POST",	
+        //                         url : "./php/front_end_API/M_apr_memberpeople.php",  
+        //                         data : {  
+        //                             MID : info,            //---透過 MID 去抓該筆會員資料
+        //                         }, 
+        //                         dataType : 'html' 
+        //                         }).done(function(data){    //---載入成功
+        //                             //console.log(data);
+        //                         self.mymember =  JSON.parse(data);
 
-                },
-               
-                
-            },
-            created() {
+        //                         }).fail(function(jqXHR){   //---載入失敗
+        //                         alert("res為ID數據載入失敗: " + jqXHR.status);
+        //                         });
 
-                axios.post("php/front_end_API/M_getsession_MID.php").then((res)=>{
-                this.getmymemberdata(res.data);
-                this.getmembershoppingorder(res.data);
-                this.getmemberresorder(res.data);
-                
+        //                 },
+        //             getmemberpetdata(info){
+        //             let self = this;
+
+        //                 $.ajax({
+        //                     type : "POST",	
+        //                     url : "./php/front_end_API/M_apr_memberpet.php",  
+        //                     data : {  
+        //                         MID : info,            //---透過 MID 去抓該筆會員資料
+        //                     }, 
+        //                     dataType : 'html' 
+        //                     }).done(function(data){    //---載入成功
+
+        //                     self.mymemberpet =  JSON.parse(data);
+        //                     //console.log(self.mymemberpet);
+
+        //                     }).fail(function(jqXHR){   //---載入失敗
+        //                     alert("res為ID數據載入失敗: " + jqXHR.status);
+        //                 });
+
+        //             },
+        //             getmemberhoteldata(info){
+        //             let self = this;
+
+        //                 $.ajax({
+        //                     type : "POST",	
+        //                     url : "./php/front_end_API/M_apr_memberhotel.php",  
+        //                     data : {  
+        //                         MID : info,            //---透過 MID 去抓該筆會員資料
+        //                     }, 
+        //                     dataType : 'html' 
+        //                     }).done(function(data){    //---載入成功
+
+        //                     self.mymemberhotel =  JSON.parse(data);
+        //                     //console.log(self.mymemberhotel);
+
+        //                     }).fail(function(jqXHR){   //---載入失敗
+        //                     alert("res為ID數據載入失敗: " + jqXHR.status);
+        //                     });
+
+        //             },
+        //             getmembershoppingorder(info){
+        //             let self = this;
+
+        //                 $.ajax({
+        //                     type : "POST",	
+        //                     url : "./php/front_end_API/M_apr_membershoporder.php",  
+        //                     data : {  
+        //                         MID : info,            //---透過 MID 去抓該筆會員資料
+        //                     }, 
+        //                     dataType : 'html' 
+        //                     }).done(function(data){    //---載入成功
+
+        //                     self.mymembershoporder =  JSON.parse(data);
+        //                     //console.log(self.mymembershoporder);
+        //                     //console.log(self.mymembershoporder.length);
+
+        //                     }).fail(function(jqXHR){   //---載入失敗
+        //                     alert("res為ID數據載入失敗: " + jqXHR.status);
+        //                     });
+
+        //             },
+        //             getmemberresorder(info){
+        //             let self = this;
+
+        //                 $.ajax({
+        //                     type : "POST",	
+        //                     url : "./php/front_end_API/M_apr_memberresorder.php",  
+        //                     data : {  
+        //                         MID : info,            //---透過 MID 去抓該筆會員資料
+        //                     }, 
+        //                     dataType : 'html' 
+        //                     }).done(function(data){    //---載入成功
+
+        //                     self.mymemberresorder =  JSON.parse(data);
+        //                     console.log(self.mymemberresorder);
+        //                     console.log(self.mymemberresorder.length);
+
+        //                     }).fail(function(jqXHR){   //---載入失敗
+        //                     alert("res為ID數據載入失敗: " + jqXHR.status);
+        //                     });
+
+        //             },
+
+
+        //         },
+        //         created() {
+
+        //             axios.post("php/front_end_API/M_getsession_MID.php").then((res)=>{
+        //             this.getmymemberdata(res.data);
+        //             this.getmembershoppingorder(res.data);
+        //             this.getmemberresorder(res.data);
+
+        //             });
+
+
+        //         },
+        //     });
+
+        // 前台訂單查詢
+        (() => {
+            const tbody = document.querySelector('tbody');
+            fetch('php/member.php')
+                .then(resp =>
+                    resp.json()
+                )
+                .then(orderList => {
+                    for (let order of orderList) {
+                        const { order_id, pay_type, pay_status, order_status } = order;
+                        tbody.insertAdjacentHTML('beforebegin', `
+                            <tr>
+                                <td>${order_id}</td>
+                                <td>${payStatusTextObject[pay_status]}</td>
+                                <td>${pay_type}</td>
+                                <td>${orderStatusTextObject[order_status]}</td>
+                            </tr>`);
+                    }
                 });
+        })();
 
+        const payStatusTextObject = {
+            '0': '未付款',
+            '1': '已付款'
+        };
 
-            },
-        });
+        const orderStatusTextObject = {
+            '0': '準備中',
+            '1': '待出貨',
+            '2': '已出貨',
+            '3': '取消'
+        };
 
     </script>
-    
+
 </body>
+
 </html>
