@@ -258,6 +258,16 @@
         font-size: 20px;
         transition: 0.5s;
     }
+
+    .bg-img>img{
+        opacity: .9;
+        display: block;
+    }
+    .item {
+        cursor: pointer;
+        /* cursor: grabbing; */
+        /* cursor: grab; */
+    }
     
 }
 
