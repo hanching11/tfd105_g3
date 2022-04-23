@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    @@include('./layout/head.html')
-    <title>關於光緣</title>
+  @@include('./layout/head.html')
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>關於光緣</title>
+  <style>
+        .wrapper_header .nav-list ul ol:nth-child(2) a{
+          color: #eeeae2;
+        }
+        @media (max-width: 768.98px){
+          .wrapper_header .nav-list ul ol:nth-child(2) a{
+          color: #353231;
+        }
+
+  </style>
 </head>
 
 <body>
@@ -10,28 +22,29 @@
 
   <div class="wrapper_about">
     <div class="container-fluid">
-      <div class="row align-items-center -aboutBanner"> 
+      <div class="row align-items-center -aboutBanner">
         <div class="col-12 col-sm-8">
-          <h4>
+          <h4 data-aos="flip-right" data-aos-duration="2000">
             畫廊宗旨
           </h4>
-          <span>光的折射可以傳播世間萬物的景象，畫品的流傳使人類的精神與歷史得以留下，
+          <span data-aos="fade-up" data-aos-duration="2000">光的折射可以傳播世間萬物的景象，畫品的流傳使人類的精神與歷史得以留下，
             光緣的靈感來自畫廊中的靈魂器材「聚光燈」，其設計將光線精準巧妙地打在畫品上，
             光源不偏不倚地傳達畫的神韻與神采。
-             <br>
+            <br>
             這份藝術的折射傳達了歷史的情感，難能可貴的緣分，
             動人的作品使充滿愛的觀畫人匯集於此，這便是光緣的初衷。</span>
         </div>
       </div>
 
       <div class="row justify-content-around">
-        <div class="col-12 col-sm-6 -aboutK">
+        <div class="col-12 col-sm-6 -aboutK" data-aos="zoom-in" data-aos-duration="2000">
           <h4>光緣畫廊</h4>
           <span>
-            光緣畫廊(Kuang Yuan Gallery) 2022年成立於台北中山。光緣畫廊透過線上畫廊展示哥德式、文藝復興、浮世繪、後印象派、立體主義的藝術收藏和各個畫派的介紹；當今展覽傾聽畫家的故事；藝術體驗散落的拼圖、簡單的測驗貼近藝術家的模樣；各式各樣的商品留存藝術給予的感動。
+            光緣畫廊(Kuang Yuan Gallery)
+            2022年成立於台北中山。光緣畫廊透過線上畫廊展示哥德式、文藝復興、浮世繪、後印象派、立體主義的藝術收藏和各個畫派的介紹；當今展覽傾聽畫家的故事；藝術體驗散落的拼圖、簡單的測驗貼近藝術家的模樣；各式各樣的商品留存藝術給予的感動。
           </span>
         </div>
-        <div class="col-12 col-sm-6 -aboutlLogo">
+        <div class="col-12 col-sm-6 -aboutlLogo" data-aos="zoom-in" data-aos-duration="2000">
           <img src="./img/about/about_logo.png" alt="">
         </div>
       </div>
@@ -39,8 +52,8 @@
       <div class="row justify-content-around">
         <div class="col-12 -placePic">
           <div class="col -placeInfo">
-            <h4>實體畫廊</h4>
-            <span>
+            <h4  data-aos="zoom-in" data-aos-duration="1500">實體畫廊</h4>
+            <span data-aos="zoom-in" data-aos-duration="2000">
               光緣畫廊結合實體展覽形式，導入沉浸式線上展覽體驗，藝術觀賞者也能在這裡找到有品味的畫品及有趣的周邊商品。
             </span>
           </div>
@@ -48,51 +61,51 @@
       </div>
       <div class="row -aboutMapinfo">
         <div class="col-12 col-sm-6 -mapInfo">
-          <h4>地理位置</h4>
-          <span>
+          <h4  data-aos="zoom-in" data-aos-duration="1500">地理位置</h4>
+          <span data-aos="zoom-in" data-aos-duration="2000">
             地址｜台北市中山區南京東路 <br>
             交通｜捷運南京復興站8號出口
           </span>
         </div>
         <div class="col-12 col-sm-6 -aboutMap">
-          <img class="img-fluid -map" src="./img/about/KY_map.png" alt="">
+          <img class="img-fluid -map" src="./img/about/KY_map.png" alt="" data-aos="zoom-in" data-aos-duration="1500">
         </div>
       </div>
 
       <div class="row -aboutPpl">
-          <div class="col-sm-8 -PplInfo">
-            <h4>畫廊創辦人</h4>
-            <span>
-              <!-- 文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字字文字文字文字文字文字文字文字文字文字文字文字文 -->
-            </span>
-          </div>
-        
-          <div class="col-6 -PplPic -a">
-            <img class="img-fluid -ppl" src="./img/about/A1.jpg" alt="">
-            <h2>創辦人</h2>
-          </div>
-          <div class="col-6 -PplPic -b">
-            <img class="img-fluid -ppl" src="./img/about/A2.jpg" alt="">
-            <h2>創辦人</h2>
-          </div>
-          <div class="col-6 -PplPic -c">
-            <img class="img-fluid -ppl" src="./img/about/A3.jpeg" alt="">
-            <h2>創辦人</h2>
-          </div>
-          <div class="col-6 -PplPic -d">
-            <img class="img-fluid -ppl" src="./img/about/A4.jpg" alt="">
-            <h2>創辦人</h2>
-          </div>
+        <div class="col-sm-8 -PplInfo">
+          <h4>畫廊創辦人</h4>
+          <span>
+            <!-- 文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字字文字文字文字文字文字文字文字文字文字文字文字文 -->
+          </span>
+        </div>
 
-        
+        <div class="col-6 -PplPic -a">
+          <img class="img-fluid -ppl" src="./img/about/A1.jpg" alt="" data-aos="flip-left" data-aos-duration="2000">
+          <h2>創辦人</h2>
+        </div>
+        <div class="col-6 -PplPic -b">
+          <img class="img-fluid -ppl" src="./img/about/A2.jpg" alt=""  data-aos="flip-left" data-aos-duration="2000">
+          <h2>創辦人</h2>
+        </div>
+        <div class="col-6 -PplPic -c">
+          <img class="img-fluid -ppl" src="./img/about/A3.jpeg" alt=""  data-aos="flip-right" data-aos-duration="2000">
+          <h2>創辦人</h2>
+        </div>
+        <div class="col-6 -PplPic -d">
+          <img class="img-fluid -ppl" src="./img/about/A4.jpg" alt=""  data-aos="flip-right" data-aos-duration="2000">
+          <h2>創辦人</h2>
+        </div>
+
+
       </div>
 
 
-      <div class="row -aboutNum align-items-center">
+      <div class="row -aboutNum align-items-center" data-aos="zoom-in" data-aos-duration="2000">
         <div class="col-12 col-sm-3 -aboutpaint">
           <ul>
             <li>
-               <h4>105</h4>
+              <h4>105</h4>
             </li>
           </ul>
           <p>畫作</p>
@@ -100,7 +113,7 @@
         <div class="col-12 col-sm-3 -aboutartist">
           <ul>
             <li>
-               <h4>11</h4>
+              <h4>11</h4>
             </li>
             <li>
               <span>位</span>
@@ -111,7 +124,7 @@
         <div class="col-12 col-sm-3 -aboutexp">
           <ul>
             <li>
-               <h4>10</h4>
+              <h4>10</h4>
             </li>
             <li>
               <span>年</span>
@@ -122,7 +135,7 @@
         <div class="col-12 col-sm-3 -aboutppl">
           <ul>
             <li>
-               <h4>7</h4>
+              <h4>7</h4>
             </li>
             <li>
               <span>位</span>
@@ -131,8 +144,8 @@
           <p>藝術家</p>
         </div>
       </div>
-  
-    
+
+
       <div class="row -thanksPic">
         <div class="col-4 col-sm-2 -Ppl2Pic">
           <img class="img-fluid -ppl2" src="./img/about/A1.jpg" alt="">
@@ -148,61 +161,66 @@
         </div>
         <div class="col-4 col-sm-2 -Ppl2Pic">
           <img class="img-fluid -ppl2" src="./img/about/A4.jpg" alt="">
-          <h2>卓建甫</h2>
+          <h2>李偉銘</h2>
         </div>
         <div class="col-4 col-sm-2 -Ppl2Pic">
           <img class="img-fluid -ppl2" src="./img/about/A5.jpeg" alt="">
-          <h2>黃瀚霆</h2>
+          <h2>丸子</h2>
         </div>
         <div class="col-4 col-sm-2 -Ppl2Pic">
           <img class="img-fluid -ppl2" src="./img/about/A6.jpg" alt="">
-          <h2>張互賓</h2>
+          <h2>卓建甫</h2>
         </div>
-    
+
       </div>
-  
-  
-  
+
+
+
       <section class="contect-blk">
         <!-- display: flex;
         flex-wrap: wrap;
         align-content: space-between; -->
-        
+
         <div class="left-side">
-            <div class="contect-title">
-                    <h4>聯絡我們</h4>
-            </div>
-            <div class="contect-content">
-                <h7 class="cc-title">實體藝廊</h7>
-                <br>
-                <div class="cca">Adress Adress Adress</div>
-                <br>
-                <div class="cca">00-123456789</div>
-                <br>
-                <div class="cca">garelly@gmail.com</div>
-                <br>
-            </div>  
+          <div class="contect-title">
+            <h4>聯絡我們</h4>
+          </div>
+          <div class="contect-content">
+            <h7 class="cc-title">實體藝廊</h7>
+            <br>
+            <div class="cca">Adress Adress Adress</div>
+            <br>
+            <div class="cca">00-123456789</div>
+            <br>
+            <div class="cca">garelly@gmail.com</div>
+            <br>
+          </div>
         </div>
         <div class="row -aboutNum">
         </div>
         <div class="right-side">
-                <div class="text-box" >
-                        <input type="text" class="text-content" placeholder="您想對我們說什麼?" >
-                </div>
-                <div class="info-box">
-                        <input type="text" class="text-name" placeholder="您的大名">
-                        <input type="text" class="text-email" placeholder="您的電子郵件">
-                </div>
-                <button class="content-blt" value="送出訊息">送出訊息</button>
-        </div> 
+          <div class="text-box">
+            <input type="text" class="text-content" placeholder="您想對我們說什麼?">
+          </div>
+          <div class="info-box">
+            <input type="text" class="text-name" placeholder="您的大名">
+            <input type="text" class="text-email" placeholder="您的電子郵件">
+          </div>
+          <button class="content-blt" value="送出訊息">送出訊息</button>
+        </div>
       </section>
     </div>
 
-    
+
   </div>
-    @@include('./layout/footer.html')
+  @@include('./layout/footer.html')
 
-<!-- @@include('./js/member.js') -->
-
+  <!-- @@include('./js/member.js') -->
+  <!-- AOS animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
+
 </html>
