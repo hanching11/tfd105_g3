@@ -2,6 +2,7 @@ new Vue({
         el: '#forCart',
         data: {
                 // isShowingCart: false,
+                orderTime:'',
                 recipient:
                 {
                         sendName: '',
@@ -50,9 +51,9 @@ new Vue({
                 if (old_data) {
                         let value = JSON.parse(old_data);
                         this.products = value
-                        console.log(
-                                '6456'
-                        );
+                        // console.log(
+                        //         '6456'
+                        // );
 
                 }
 
@@ -61,9 +62,9 @@ new Vue({
                 if (old_infodata) {
                         let infoValue = JSON.parse(old_infodata);
                         this.recipient = infoValue
-                        console.log(
-                                '1234'
-                        );
+                        // console.log(
+                        //         '1234'
+                        // );
 
                 }
         },
@@ -119,7 +120,12 @@ new Vue({
 
                 orderSend() {
                         sessionStorage.setItem('info', JSON.stringify(this.recipient));
-                        console.log('abc');
+                        // console.log('abc');
+                        orderTime = new SimpleDateFormat("yyMMdd");
+                        now = new Date();
+                        currentDate = formatShort.format(now);
+
+                       console.log(currentDate);
                 },
 
         },

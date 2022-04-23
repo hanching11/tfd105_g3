@@ -3,16 +3,12 @@
 
 <head>
         @@include('./layout/head.html')
-
         <title>shop</title>
 </head>
 
 <body>
         <div id="forCart" class="wrapper_shop">
-
-                @@include('./header_vue.html')
-
-
+                @@include('./layout/header_vue.html')
                 <main class="page-content">
                         <section class="banner" data-aos="fade-down" data-aos-duration="3000">
                                 <ul id="menu">
@@ -417,7 +413,7 @@
 
 
         <!-- footer-->
-        @@include('./layout/footer_copy.html')
+        @@include('./layout/footer.html')
 
         <!-- 上滑 -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -428,7 +424,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
 
         <script src="./js/shop.min.js"></script>
-        <!-- <script src="./js/header_vue.min.js"></script> -->
         <script>
                 AOS.init();
         </script>
