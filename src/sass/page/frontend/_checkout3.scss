@@ -26,8 +26,11 @@
   
   .col-12 .col-lg-6 .col-md-8 .col-sm-12{
   margin: 0 auto;
+  }
 
-}
+  .-left{
+    padding-right: 50px;
+  }
 
     .-num{
       font-family: $englishFont;
@@ -207,7 +210,6 @@
       width: 100%;
       border: none;
       margin-bottom: 10px;
-
     }
 
     .btnBackshop{
