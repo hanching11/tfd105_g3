@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        @@include('./layout/head.html')
-    </head>
+
+<head>
+  @@include('./layout/head.html')
+</head>
 
 <body>
   <div id="forCart" class="wrapper_checkout2">
@@ -39,151 +40,166 @@
       </div>
 
 
-      <div class="row-12 -title1"> 
+      <div class="row-12 -title1">
         填寫收件資訊
       </div>
-  
+
 
       <div class="row -title">
         <span>
           訂購人資訊
         </span>
       </div>
-          <div class="row">
-            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
-              <li>
-                <span>訂購人姓名</span>
-              </li>
-              <li>
-                <input class="orderName" type="text" name="orderName" id="orderName" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入訂購人姓名" onfocus="this.placeholder='輸入訂購人姓名'" onblur="this.placeholder='輸入訂購人姓名'" size="25"/>
-              </li>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
-              <li>
-                <span>電子郵件</span>
-              </li>
-              <li>
-                <input class="ordermail" type="text" name="ordermail" id="ordermail" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入電子郵件" onfocus="this.placeholder='輸入電子郵件'" onblur="this.placeholder='輸入電子郵件'" size="25"/>
-              </li>
-            </div>
-          </div>
+      <div class="row">
+        <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+          <li>
+            <span>訂購人姓名</span>
+          </li>
+          <li>
+            <input v-model="recipient.sendName" type="text" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*"
+              placeholder="輸入訂購人姓名" onfocus="this.placeholder='輸入訂購人姓名'" onblur="this.placeholder='輸入訂購人姓名'"
+              size="25" />
+          </li>
 
-          <div class="row">
-            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
-              <li>
-                <span>連絡電話</span>
-              </li>
-              <li>
-                <input class="orderTel" type="text" name="orderTel" id="orderTel" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入連絡電話" onfocus="this.placeholder='輸入連絡電話'" onblur="this.placeholder='輸入連絡電話'" size="25"/>
-              </li>
-            </div>
-          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+          <li>
+            <span>電子郵件</span>
+          </li>
+          <li>
+            <input v-model="recipient.mail" type="text" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*"
+              placeholder="輸入電子郵件" onfocus="this.placeholder='輸入電子郵件'" onblur="this.placeholder='輸入電子郵件'" size="25" />
+          </li>
+        </div>
+      </div>
 
-          
-        
-          <div class="row -title">
-            <span>
-              收件人資訊
-            </span>
-          </div>
-
-          <div class="row">
-            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
-              <li>
-                <span>收件人姓名</span>
-              </li>
-              <li>
-                <input class="recipName" type="text" name="recipName" id="recipName" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入收件人姓名" onfocus="this.placeholder='輸入收件人姓名'" onblur="this.placeholder='輸入收件人姓名'" size="25"/>
-              </li>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
-              <li>
-                <span>連絡電話</span>
-              </li>
-              <li>
-                <input class="recipTel" type="text" name="recipTel" id="recipTel" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入收件人連絡電話" onfocus="this.placeholder='輸入收件人連絡電話'" onblur="this.placeholder='輸入收件人連絡電話'" size="25"/>
-              </li>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
-              <li>
-                <span>收件地址</span>
-              </li>
-              <li>
-                <input class="recipAdr" type="text" name="recipAdr" id="recipAdr" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入收件人地址" onfocus="this.placeholder='輸入收件人地址'" onblur="this.placeholder='輸入收件人地址'" size="25"/>
-              </li>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
-
-             <li>
-              發票格式
-             </li>
-
-             <li>
-               <ol>
-                <button type="submit" class="tax3">三聯式</button>
-               </ol>
-               <ol>
-                <button type="submit" class="tax2">二聯式</button>
-               </ol>
-             </li>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
-              <li>
-                <span>公司抬頭</span>
-              </li>
-              <li>
-                <input class="tax3Tel" type="text" name="tax3Tel" id="tax3Tel" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入公司抬頭" onfocus="this.placeholder='輸入公司抬頭'" onblur="this.placeholder='輸入公司抬頭'" size="25"/>
-              </li>
-            </div>
-          </div>
+      <div class="row">
+        <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+          <li>
+            <span>連絡電話</span>
+          </li>
+          <li>
+            <input v-model="recipient.sendPhone" type="text" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*"
+              placeholder="輸入連絡電話" onfocus="this.placeholder='輸入連絡電話'" onblur="this.placeholder='輸入連絡電話'" size="25" />
+          </li>
+        </div>
+      </div>
 
 
-          <div class="row">
-            <div class="col-12 col-lg-6 col-md-8 col-sm-12">
-              <li>
-                <span>統一編號</span>
-              </li>
-              <li >
-                <input class="tax3Num" type="text" name="tax3Num" id="tax3Num" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入統一編號" onfocus="this.placeholder='輸入統一編號'" onblur="this.placeholder='輸入統一編號'" size="25"/>
-              </li>
-            </div>
-          </div>
-         
-          <div class="row -checkStep">
-            <div class="a col-12 col-lg-3 col-md-4 col-sm-12">
-                <button type="submit" class="btnBackCheckS1">
-                  <a href="./checkout1.html">返回購物清單</a>
-                  
-                </button>
-            </div>
-            <div class="b col-12 col-lg-3 col-md-4 col-sm-12">
-              <button type="submit" class="btnCheckS2">
-                <a href="./checkout3.html">
-                確認資訊
-                </a>
-              </button>
-            </div>
-          </div>
-           
-    </div>    
+
+      <div class="row -title">
+        <span>
+          收件人資訊
+        </span>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+          <li>
+            <span>收件人姓名</span>
+          </li>
+          <li>
+            <input v-model="recipient.name" type="text" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*"
+              placeholder="輸入收件人姓名" onfocus="this.placeholder='輸入收件人姓名'" onblur="this.placeholder='輸入收件人姓名'"
+              size="25" />
+          </li>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+          <li>
+            <span>連絡電話</span>
+          </li>
+          <li>
+            <input v-model="recipient.recipientPhone" type="text" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*"
+              placeholder="輸入收件人連絡電話" onfocus="this.placeholder='輸入收件人連絡電話'" onblur="this.placeholder='輸入收件人連絡電話'"
+              size="25" />
+          </li>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+          <li>
+            <span>收件地址</span>
+          </li>
+          <li>
+            <input v-model="recipient.address" type="text" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*"
+              placeholder="輸入收件人地址" onfocus="this.placeholder='輸入收件人地址'" onblur="this.placeholder='輸入收件人地址'"
+              size="25" />
+          </li>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+
+          <li>
+            發票格式
+          </li>
+
+          <li>
+            <ol>
+              <button type="submit" class="tax3">三聯式</button>
+            </ol>
+            <ol>
+              <button type="submit" class="tax2">二聯式</button>
+            </ol>
+          </li>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+          <li>
+            <span>公司抬頭</span>
+          </li>
+          <li>
+            <input v-model="recipient.company" class="tax3Tel" type="text" name="tax3Tel" id="tax3Tel" minlength="6"
+              maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入公司抬頭" onfocus="this.placeholder='輸入公司抬頭'"
+              onblur="this.placeholder='輸入公司抬頭'" size="25" />
+          </li>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-12 col-lg-6 col-md-8 col-sm-12">
+          <li>
+            <span>統一編號</span>
+          </li>
+          <li>
+            <input type="text" v-model="recipient.taxId" minlength="6" maxlength="12"
+              pattern="[A-Za-z0-9]*" placeholder="輸入統一編號" onfocus="this.placeholder='輸入統一編號'"
+              onblur="this.placeholder='輸入統一編號'" size="25" />
+          </li>
+        </div>
+      </div>
+
+      <div class="row -checkStep">
+        <div class="a col-12 col-lg-3 col-md-4 col-sm-12">
+          <button type="submit" class="btnBackCheckS1">
+            <a href="./checkout1.html">返回購物清單</a>
+
+          </button>
+        </div>
+        <div class="b col-12 col-lg-3 col-md-4 col-sm-12">
+          <button type="submit" class="btnCheckS2" @click="orderSend()">
+            <a href="./checkout3.html">
+              確認資訊
+            </a>
+          </button>
+        </div>
+      </div>
+
+    </div>
   </div>
   @@include('./layout/footer.html')
   <script src="./js/header_vue.min.js"></script>
 
 </body>
-</html>
 
+</html>

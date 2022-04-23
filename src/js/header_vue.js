@@ -1,157 +1,189 @@
+new Vue({
+        el: '#forCart',
+        data: {
+                // isShowingCart: false,
+                recipient:
+                {
+                        sendName: '',
+                        mail: '',
+                        sendPhone: '',
+                        name: '',
+                        recipientPhone: '',
+                        address: '',
+                        company: '',
+                        taxId: '',
+                },
 
-    new Vue({
-            el: '#forCart',
-            data: {
-                    // isShowingCart: false,
-                    products: [
-                            {
-                                    id: '1',
-                                    title: '亞嘉杜花園內的莫內夫人及孩子',
-                                    price: 1000,
-                                    thumb: './img/Shop/products/D/p6.png',
-                                    info: '日期: 1885 | 風格: 現實主義 | 藝術類型: 風俗畫 | 媒材: 油彩, 畫布 | 地點: 梵高博物館 | 尺寸: 82 x 114 公分',
-                                    amount: 0,
-                                    amountShow: 1,
-                                    showingIcon: false
-                            },
-                            {
-                                    id: '2',
-                                    title: '救世主 ｜ 複製畫',
-                                    price: 2000,
-                                    thumb: './img/Shop/products/D/p2.png',
-                                    info: '日期: 1885 | 風格: 現實主義 | 藝術類型: 風俗畫 | 媒材: 油彩, 畫布 | 地點: 梵高博物館 | 尺寸: 82 x 114 公分',
-                                    amount: 0,
-                                    amountShow: 1,
-                                    showingIcon: false
-                            },
-                            {
-                                    coupon: 100
-                            }
-                    ]
-            },
-            created() {
-               
-                    const old_data = sessionStorage.getItem('items') // 看購物車有沒有東西
-                    if (old_data) {
-                            let value = JSON.parse(old_data);
-                            this.products = value
-                            console.log(
-                                    '6456'
-                            );
+                products: [
+                        {
+                                id: '1',
+                                title: '亞嘉杜花園內的莫內夫人及孩子',
+                                price: 1000,
+                                thumb: './img/Shop/products/D/p6.png',
+                                info: '日期: 1885 | 風格: 現實主義 | 藝術類型: 風俗畫 | 媒材: 油彩, 畫布 | 地點: 梵高博物館 | 尺寸: 82 x 114 公分',
+                                amount: 0,
+                                amountShow: 1,
+                                showingIcon: false
+                        },
+                        {
+                                id: '2',
+                                title: '救世主 ｜ 複製畫',
+                                price: 2000,
+                                thumb: './img/Shop/products/D/p2.png',
+                                info: '日期: 1885 | 風格: 現實主義 | 藝術類型: 風俗畫 | 媒材: 油彩, 畫布 | 地點: 梵高博物館 | 尺寸: 82 x 114 公分',
+                                amount: 0,
+                                amountShow: 1,
+                                showingIcon: false
+                        },
+                ],
+                // orderDetail:[
+                //         {
 
-                    }
-            },
+                //         },
+
+                // ],
+        },
+        created() {
+
+                const old_data = sessionStorage.getItem('items') // 看購物車有沒有東西
+                //     console.log(items);
+                if (old_data) {
+                        let value = JSON.parse(old_data);
+                        this.products = value
+                        console.log(
+                                '6456'
+                        );
+
+                }
+
+                const old_infodata = sessionStorage.getItem('info') // 看訂單有沒有東西
+                //     console.log(items);
+                if (old_infodata) {
+                        let infoValue = JSON.parse(old_infodata);
+                        this.recipient = infoValue
+                        console.log(
+                                '1234'
+                        );
+
+                }
+        },
 
 
-            methods: {
-                    
-                    openCart() {
-                            // 顯示購物車
-                            var shoppingcartbk = document.getElementById('i_shoppingCart_bk');
-                            if (shoppingcartbk.style.display === 'none') {
-                                    shoppingcartbk.style.display = 'block';
-                            };
+        methods: {
+                openCart() {
+                        // 顯示購物車
+                        var shoppingcartbk = document.getElementById('i_shoppingCart_bk');
+                        if (shoppingcartbk.style.display === 'none') {
+                                shoppingcartbk.style.display = 'block';
+                        };
 
-                            //可以試著用toggle
-                            var close = document.getElementsByClassName('btn-close');
-                            for (let i = 0; i < close.length; i++) {
-                                    close[i].addEventListener('click', function () {
-                                            if (this.closest('.i_background').style.display === 'block') {
-                                                    this.closest('.i_background').style.display = 'none';
-                                            }
-                                    });
-                            };
-                    },
+                        //可以試著用toggle
+                        var close = document.getElementsByClassName('btn-close');
+                        for (let i = 0; i < close.length; i++) {
+                                close[i].addEventListener('click', function () {
+                                        if (this.closest('.i_background').style.display === 'block') {
+                                                this.closest('.i_background').style.display = 'none';
+                                        }
+                                });
+                        };
+                },
 
-                    // 點擊 - / + 後的動作
-                    minusOne(product) {
-                            product.amount--
-                            product.amount = (product.amount < 1) ? 1 : product.amount
-                    },
-                    addOne(product) {
-                            product.amount++
-                            product.amount = (product.amount > 50) ? 50 : product.amount
-                    },
+                // 點擊 - / + 後的動作
+                minusOne(product) {
+                        product.amount--
+                        product.amount = (product.amount < 1) ? 1 : product.amount
+                },
+                addOne(product) {
+                        product.amount++
+                        product.amount = (product.amount > 50) ? 50 : product.amount
+                },
 
-                    // 點擊 add to cart 後的動作
-                    addToCart(product) {
-                            product.amount += product.amountShow
-                            product.showingIcon = true
-                            setTimeout(() => {
-                                    product.showingIcon = false
-                            }, 800)
-                            sessionStorage.setItem('items', JSON.stringify(this.products));
-                            console.log('a');
-                            // this.push(product).JSON.parse(localStorage.getItem('items'));
-                            // console.log(item);
-                    },
-                    // 在購物車裡移除單一品項 ( 把數量設置成 0 )
-                    remove(product) {
-                            product.amount = 0
-                    },
+                // 點擊 add to cart 後的動作
+                addToCart(product) {
+                        product.amount += product.amountShow
+                        product.showingIcon = true
+                        setTimeout(() => {
+                                product.showingIcon = false
+                        }, 800)
+                        sessionStorage.setItem('items', JSON.stringify(this.products));
+                        // sessionStorage.setItem('info', JSON.stringify(this.ordername));
 
-            },
 
-            computed: {
-                    // 購物車裡的品項
-                    productsInCart() {
-                            return this.products
+                        // this.push(product).JSON.parse(localStorage.getItem('items'));
+                        // console.log(item);
+                },
+                // 在購物車裡移除單一品項 ( 把數量設置成 0 )
+                remove(product) {
+                        product.amount = 0
+                },
 
-                                    // 只顯示購買數量 > 0 的項目
-                                    .filter(p => p.amount)
-                                    // 算出每個產品的小計
-                                    .map(p => {
-                                            p.sum = p.amount * p.price
-                                            return p
-                                    })
-                    },
+                orderSend() {
+                        sessionStorage.setItem('info', JSON.stringify(this.recipient));
+                        console.log('abc');
+                },
 
-                    // 木前購買的金額
-                    total() {
-                            return this.productsInCart
-                                    .reduce((sum, p) => (sum + p.sum), 0)
-                    },
+        },
+
+        computed: {
+                // 購物車裡的品項
+                productsInCart() {
+                        return this.products
+
+                                // 只顯示購買數量 > 0 的項目
+                                .filter(p => p.amount)
+                                // 算出每個產品的小計
+                                .map(p => {
+                                        p.sum = p.amount * p.price
+                                        return p
+                                })
+                },
+
+                // 木前購買的金額
+                total() {
+                        return this.productsInCart
+                                .reduce((sum, p) => (sum + p.sum), 0)
+                },
 
                 // 加上運費
-                    orderTotal() {
+                orderTotal() {
                         return this.productsInCart
-                                .reduce((sum, p) => (sum + p.sum), 0)+1000
+                                .reduce((sum, p) => (sum + p.sum), 0) + 1000
                 },
-                    
+
                 // // 折扣碼
                 // couponTotal() {
                 // return this.productsInCart
                 //         .reduce((sum, p) => (sum + p.sum), 0)+1000
                 // },
 
-                    
-            },
-    });
 
-    document.addEventListener("DOMContentLoaded", function () {    
+        },
+});
+
+document.addEventListener("DOMContentLoaded", function () {
 });
 $("button.hamburger").on("click", function () {
-    $(this).toggleClass("is-active");
-    $(".nav-list").toggleClass("on");
+        $(this).toggleClass("is-active");
+        $(".nav-list").toggleClass("on");
 });
 
 $(".sub-nav").on("click", function () {
-    $(".sub-nav > li").toggle();
+        $(".sub-nav > li").toggle();
 });
 
 $(".sub-nav2").on("click", function () {
-    $(".sub-nav2 > li").toggle();
+        $(".sub-nav2 > li").toggle();
 });
 
 $('.sub-nav').on("click", function () {
-    $('#tg1').toggleClass("fas fa-plus-square")
-    $('#tg1').toggleClass("fa-regular fa-square-minus")
+        $('#tg1').toggleClass("fas fa-plus-square")
+        $('#tg1').toggleClass("fa-regular fa-square-minus")
 
 });
 
 $('.sub-nav2').on("click", function () {
-    $('#tg2').toggleClass("fas fa-plus-square")
-    $('#tg2').toggleClass("fa-regular fa-square-minus")
+        $('#tg2').toggleClass("fas fa-plus-square")
+        $('#tg2').toggleClass("fa-regular fa-square-minus")
 
 });
 
@@ -160,18 +192,18 @@ $('.sub-nav2').on("click", function () {
 var previousScroll = 0;
 
 window.addEventListener('scroll', function () {
-    var currentScroll = $(this).scrollTop();
-    if (currentScroll > 100 && currentScroll < $(document).height() - $(window).height()) {
-        if (currentScroll > previousScroll) {
-            hideNav();
+        var currentScroll = $(this).scrollTop();
+        if (currentScroll > 100 && currentScroll < $(document).height() - $(window).height()) {
+                if (currentScroll > previousScroll) {
+                        hideNav();
+                }
+                previousScroll = currentScroll;
         }
-        previousScroll = currentScroll;
-    }
 
 });
 
 function hideNav() {
-    $("button.hamburger").removeClass("is-active")
-    $(".nav-list").removeClass("on")
+        $("button.hamburger").removeClass("is-active")
+        $(".nav-list").removeClass("on")
 }
 
