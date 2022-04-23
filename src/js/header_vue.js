@@ -101,6 +101,7 @@ new Vue({
 
                 // 點擊 add to cart 後的動作
                 addToCart(product) {
+                        alert('成功加入購物車!');
                         product.amount += product.amountShow
                         product.showingIcon = true
                         setTimeout(() => {
