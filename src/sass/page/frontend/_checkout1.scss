@@ -18,6 +18,18 @@
  
   .-checkStep{
     margin: 40px 0 70px 0;
+    .col{
+      color: $lightgray;
+      font-weight: $boldWeight;
+      line-height: $lineheight1;
+      position: relative;
+      font-size: 1rem;
+      text-align: center;
+    }
+    .-first{
+      color: $darkbrown1;
+      // border:10px solid blue;
+    }
   }
   
 
@@ -41,23 +53,13 @@
         width: 100%;
       }
       
-      .col{
-        color: $lightgray;
-        font-weight: $boldWeight;
-        line-height: $lineheight1;
-        position: relative;
-        font-size: 1rem;
-        text-align: center;
-      }
+     
 
       .col-lg-4{
         margin: 0 auto;
       }
 
-      .-first{
-        color: $darkbrown1;
-        // border:10px solid blue;
-      }
+     
  
       .-num.-fourth:before{
       // border: 2px solid blue;
@@ -80,7 +82,14 @@
         //  border: 2px solid blue;
         margin-right: 80px;
         margin-left: 20px;
+       }
 
+       .product-info{
+         font-size: 12px;
+         line-height: 20px;
+         font-family: $fontNoserif;
+         font-weight: $regularWeight;
+         text-align: right;
        }
 
        button.delPdc{
@@ -183,9 +192,11 @@
     
     
       .ctrl__button {
+        border: none;
         font-family: Noto Sans TC;
         font-weight:50;
         font-size: 30px;  
+      
     
         width: 50px;
         line-height: 50px;
@@ -193,15 +204,20 @@
         color: $coffeebrown;
         cursor: pointer;
     
-
            /* border: 3px solid rgb(5, 166, 241);   */
       }
+
+      .ctrl__button--decrement{
+      border-radius:   5px 0px  0 5px;
+      }
+      .ctrl__button--increment{
+        border-radius:  0 5px 5px  0;
+        }
     
       .ctrl__button--decrement:hover {
         color: #fff;
         background-color: $coffeebrown;
       border-radius:   5px 0px  0 5px;
-
       }
       .ctrl__button--increment:hover {
         border-radius:  0 5px 5px  0;

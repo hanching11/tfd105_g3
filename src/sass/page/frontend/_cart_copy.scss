@@ -6,11 +6,14 @@ I wanted to go with a mobile first approach, but it actually lead to more verbos
 Side note: I know that this style of nesting in SASS doesn't result in the most performance efficient CSS code... but on the OCD/organizational side, I like it. So for CodePen purposes, CSS selector performance be damned.
 */
 
+
 /* Global settings */
 $color-border: #eee;
 $color-label: #aaa;
 $font-default: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-bold: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
+
+.wrapper_cart{
 
 
 /* Global "table" column settings */
@@ -255,4 +258,5 @@ label {
       }
     }
   }
+}
 }

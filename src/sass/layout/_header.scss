@@ -373,12 +373,57 @@
     #cart {
         position: relative;
     }
-   
+  
+
+    .cart_container {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(53, 50, 49, 0.9);
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+        -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+        transition: opacity 0.3s 0s, visibility 0s 0.3s;
+        z-index: 1000 !important;
+    }
+
+    .cart_container.is-visible {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+        -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+        transition: opacity 0.3s 0s, visibility 0s 0s;
+    }
+
+    .btn-close {
+    //    margin: 10px;
+        float: right;
+        width: 15px;
+        height: 15px;
+        // position: absolute;
+        // top: 15px;
+        // right: 15px;
+        // display: block;
+        background-image: url(../img/button/X-b.svg);
+        background-size: cover;
+    }
+ 
+    .is-visible .shopping-cart {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+
     .shopping-cart {
         position: fixed;
         height: 100vh;
 
-        display: none;
+        // display: none;
         background-color: #eeeae2;
         width: 400px;
         position: absolute;
@@ -672,6 +717,8 @@
             color: $darkbrown1;
             text-align: left;
             margin-bottom: 30px;
+            margin-top: 20px;
+
             font-weight: $boldWeight;
             font-size: 1.25rem;
         }
@@ -697,178 +744,26 @@
         }
     }
 
-
-
-    .cd-popup-trigger {
-        display: block;
-        width: 180px;
-        height: 40px;
-        line-height: 36px;
-        // margin: 3em auto;
+    .goCart{
+        padding: 35px;
+    }
+    a.btncheckS1{
+        line-height: 35px;
         text-align: center;
-        color: $beidge2;
-        font-size: 24px;
-        // font-size: 0.875rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        border-radius: 50em;
-        background: $coffeebrown;
-        box-shadow: 0 3px 0 rgba(0, 0, 0, 0.07);
-        position: absolute;
-        top: -60px;
-        right: 0;
-        border: 2px solid $beidge2;
-        transition: all 0.5s;
-
-    }
-
-    .cd-popup-trigger:hover {
         display: block;
-        // color: $coffeebrown;
-        background: red;
-
-        
-    }
-    // @media only screen and (min-width: 1170px) {
-    //     .cd-popup-trigger {
-    //     margin: 6em auto;
-    //     }
-    // }
-    
-    /* -------------------------------- 
-    
-    xpopup 
-    
-    -------------------------------- */
-    .cd-popup {
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 100%;
+        text-decoration: none;
+        border-radius: 5px;
+        letter-spacing: $letterSpacing1;
+        font-family: $fontNoserif;
+        color: $white;
+        background: $darkbrown2;
+        height: 35px;
         width: 100%;
-        background-color: rgba(94, 110, 141, 0.9);
-        opacity: 0;
-        visibility: hidden;
-        -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
-        -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
-        transition: opacity 0.3s 0s, visibility 0s 0.3s;
-        z-index: 1000 !important;
-    }
-    .is-visible {
-        opacity: 1;
-        visibility: visible;
-        -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
-        -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
-        transition: opacity 0.3s 0s, visibility 0s 0s;
-    }
-    
-    .cd-popup-container {
-        position: relative;
-        width: 90%;
-        max-width: 400px;
-        height: 300px;
-        padding: 30px 10px;
-        margin: 4em auto;
-        background: #EEEAE2;
-        border-radius: .25em .25em .4em .4em;
-        text-align: center;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        -webkit-transform: translateY(-40px);
-        -moz-transform: translateY(-40px);
-        -ms-transform: translateY(-40px);
-        -o-transform: translateY(-40px);
-        transform: translateY(-40px);
-        /* Force Hardware Acceleration in WebKit */
-        -webkit-backface-visibility: hidden;
-        -webkit-transition-property: -webkit-transform;
-        -moz-transition-property: -moz-transform;
-        transition-property: transform;
-        -webkit-transition-duration: 0.3s;
-        -moz-transition-duration: 0.3s;
-        transition-duration: 0.3s;
-        z-index: 1000 !important;
-    }
-  
-    .cd-popup-container .cd-buttons:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    // .cd-popup-container .cd-buttons li {
-    //     float: left;
-    //     width: 50%;
-    //     list-style: none;
-    // }
-    .cd-popup-container .cd-buttons a {
-        display: block;
-        height: 60px;
-        line-height: 60px;
-        text-transform: uppercase;
-        color: #FFF;
-        -webkit-transition: background-color 0.2s;
-        -moz-transition: background-color 0.2s;
-        transition: background-color 0.2s;
-    }
-    
-
-    .cd-popup-container .cd-popup-close {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        width: 25px;
-        height: 25px;
-        // display: block;
-        background-image: url(../img/button/X-b.svg);
-        background-size: cover;
-        // display: inline-block;
-        // overflow: hidden;
-        // text-indent: 100%;
-        // color: transparent;
-        // white-space: nowrap;
-    }
-    // .cd-popup-container .cd-popup-close::before, .cd-popup-container .cd-popup-close::after {
-    //     content: '';
-    //     position: absolute;
-    //     top: 12px;
-    //     width: 14px;
-    //     height: 3px;
-    //     background-color: #8f9cb5;
-    // }
-    // .cd-popup-container .cd-popup-close::before {
-    //     -webkit-transform: rotate(45deg);
-    //     -moz-transform: rotate(45deg);
-    //     -ms-transform: rotate(45deg);
-    //     -o-transform: rotate(45deg);
-    //     transform: rotate(45deg);
-    //     left: 8px;
-    // }
-    // .cd-popup-container .cd-popup-close::after {
-    //     -webkit-transform: rotate(-45deg);
-    //     -moz-transform: rotate(-45deg);
-    //     -ms-transform: rotate(-45deg);
-    //     -o-transform: rotate(-45deg);
-    //     transform: rotate(-45deg);
-    //     right: 8px;
-    // }
-    .is-visible .-cart-popup-container {
-        -webkit-transform: translateY(0);
-        -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-        -o-transform: translateY(0);
-        transform: translateY(0);
-    }
+        border: none;
+        margin-bottom: 15px;
+      }
 
 
-         //關掉優惠券紐
-
-         .cd-popup-trigger{
-            display: none;
-        }
-
-        .cd-popup{
-            display: none;
-        }
-
-        //
+   
 }
 

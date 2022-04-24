@@ -45,38 +45,37 @@ function hideNav() {
     $(".nav-list").removeClass("on")
 }
 
-//  購物車
-$("#cart").on("click", function () {
-    event.preventDefault();
-    $(".shopping-cart").fadeToggle("fast").addClass('is-visible');
-});
-
-// 關掉購物車
-
-$("#btn-cart-close").on("click", function () {
-    $(".shopping-cart").hide();
-});
 
 
- //彈窗
-//  jQuery(document).ready(function($){
-//     //open popup
-//     $('.cd-popup-trigger').on('click', function(event){
-//         event.preventDefault();
-//         $('.cd-popup').addClass('is-visible');
-//     });
+
+ jQuery(document).ready(function($){
+    //  開購物車
+    $("#cart").on("click", function () {
+        event.preventDefault();
+        $(".cart_container").addClass('is-visible');
+    });
     
-//     //close popup
-//     $('.cd-popup').on('click', function(event){
-//         if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup') ) {
-//             event.preventDefault();
-//             $(this).removeClass('is-visible');
-//         }
-//     });
-//     //close popup when clicking the esc keyboard button
-//     $(document).keyup(function(event){
-//         if(event.which=='27'){
-//             $('.cd-popup').removeClass('is-visible');
-//         }
-//     });
+    //close popup
+    $('.cart_container').on('click', function(event){
+        if( $(event.target).is('#btn-cart-close') || $(event.target).is('.cart_container') ) {
+            event.preventDefault();
+            $(this).removeClass('is-visible');
+        }
+    });
+    //close popup when clicking the esc keyboard button
+    $(document).keyup(function(event){
+        if(event.which=='27'){
+            $('.cart_container').removeClass('is-visible');
+        }
+    });
+});
+
+
+
+
+// 關掉購物車(舊款)
+
+// $("#btn-cart-close").on("click", function () {
+//     $(".shopping-cart").hide();
 // });
+
