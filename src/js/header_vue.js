@@ -1,6 +1,7 @@
 new Vue({
         el: '#forCart',
         data: {
+                hascoupon: false,
                 // isShowingCart: false,
                 orderTime:'',
                 recipient:
@@ -62,9 +63,13 @@ new Vue({
                 if (old_infodata) {
                         let infoValue = JSON.parse(old_infodata);
                         this.recipient = infoValue
-                        // console.log(
-                        //         '1234'
-                        // );
+                }
+
+                const old_coupondata = sessionStorage.getItem('coupon') // 看訂單有沒有東西
+                //     console.log(items);
+                if (old_coupondata) {
+                        this.hascoupon = old_coupondata;
+      
 
                 }
         },
@@ -158,6 +163,12 @@ new Vue({
                        console.log(currentDate);
                 },
 
+                useCoupon(){
+                       this.hascoupon = true;
+                       sessionStorage.setItem('coupon', this.hascoupon);
+
+                },
+
         },
 
         computed: {
@@ -182,8 +193,9 @@ new Vue({
 
                 // 加上運費
                 orderTotal() {
-                        return this.productsInCart
+                       let total = this.productsInCart
                                 .reduce((sum, p) => (sum + p.sum), 0) + 1000
+                        return this.hascoupon ? total -= 100: total 
                 },
 
                 // // 折扣碼
