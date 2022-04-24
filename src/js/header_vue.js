@@ -169,6 +169,10 @@ new Vue({
 
                 },
 
+                submitOrder(){
+                        alert('成功加入購物車!');
+                }
+
         },
 
         computed: {
