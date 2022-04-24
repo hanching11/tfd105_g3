@@ -58,404 +58,6 @@
     }
 
 
-    //frame
-    // .c-gallery__photo {
-    //     transition: .8s cubic-bezier(.77, 0, .175, 1)
-    // }
-
-    // .c-gallery__photo img {
-    //     transition: .8s cubic-bezier(.445, .05, .55, .95)
-    // }
-
-    // .c-gallery.is-hover .c-gallery__photo {
-    //     -webkit-transform: translateY(-10px);
-    //     transform: translateY(-10px)
-    // }
-
-    // .c-gallery.is-hover .c-gallery__photo img {
-    //     -webkit-transform: scale(1.15);
-    //     transform: scale(1.15)
-    // }
-
-    // .c-gallery.is-hover .c-gallery__content {
-    //     opacity: 1
-    // }
-
-    // .c-line-button {
-    //     display: flex;
-    //     justify-content: space-between;
-    //     width: 100%;
-    //     padding: 17px 21.5px 18px 22px;
-    //     border-radius: 55px;
-    //     border: solid 1px #fff;
-    //     transition: .4s linear
-    // }
-
-    // .c-photo {
-    //     position: relative;
-    //     display: inline-block;
-    //     pointer-events: none
-    // }
-
-    // .c-photo.is-white .c-photo__wrapper:before {
-    //     background-image: linear-gradient(to right, #fff, #f0f0f0)
-    // }
-
-    // .c-photo.is-white .c-photo__frame {
-    //     border: 1px solid #e1e1e1
-    // }
-
-    // @media(max-width:767px) {
-    //     .c-photo.is-white .c-photo__frame {
-    //         border: 1px solid #e1e1e1
-    //     }
-    // }
-
-    // .c-photo.is-white .c-photo__frame:before {
-    //     background-image: linear-gradient(to right, #f2f2f2, #e2e2e2)
-    // }
-
-    // .c-photo.is-white .c-photo__inner {
-    //     border-bottom: 0 solid #c5c5c5;
-    //     border-left: 0 solid #c5c5c5;
-    //     border-top: 0 solid #f6f6f6;
-    //     border-right: 0 solid #f6f6f6
-    // }
-
-    // .c-photo.js-effect img {
-    //     visibility: hidden
-    // }
-
-    // .c-photo.js-effect canvas {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%
-    // }
-
-    // .c-photo__wrapper {
-    //     position: relative;
-    //     z-index: 2;
-    //     padding: .3rem;
-    //     -webkit-backface-visibility: hidden;
-    //     backface-visibility: hidden
-    // }
-
-    // .c-photo__wrapper:before {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     content: ' ';
-    //     display: block;
-    //     width: 100%;
-    //     height: 100%;
-    //     background-image: linear-gradient(to right, #3e3e43, #141414)
-    // }
-
-    // @media(max-width:767px) {
-    //     .c-photo__wrapper {
-    //         padding: .2rem
-    //     }
-    // }
-
-    // .c-photo__frame {
-    //     position: relative;
-    //     padding: 3.3rem;
-    //     border: 2px solid #000;
-    //     -webkit-backface-visibility: hidden;
-    //     backface-visibility: hidden
-    // }
-
-    // .c-photo__frame:before {
-    //     position: absolute;
-    //     z-index: 0;
-    //     top: 0;
-    //     left: 0;
-    //     content: ' ';
-    //     display: block;
-    //     width: 100%;
-    //     height: 100%;
-    //     background-image: linear-gradient(to right, #fff, #ededed)
-    // }
-
-    // @media(max-width:767px) {
-    //     .c-photo__frame {
-    //         border: 1px solid #000;
-    //         padding: 1.6rem
-    //     }
-    // }
-
-    // .c-photo__inner {
-    //     position: relative;
-    //     z-index: 2;
-    //     border-radius: 1px;
-    //     border-left: 1px solid rgba(254, 254, 254, .4);
-    //     overflow: hidden;
-    //     -webkit-backface-visibility: hidden;
-    //     backface-visibility: hidden
-    // }
-
-    // .c-photo__inner img {
-    //     display: block;
-    //     -webkit-backface-visibility: hidden;
-    //     backface-visibility: hidden
-    // }
-
-    // .c-photo__inner:before {
-    //     content: ' ';
-    //     display: block;
-    //     width: 100%;
-    //     height: 100%;
-    //     box-shadow: 0 0 5px rgba(0, 0, 0, .2) inset;
-    //     position: absolute;
-    //     z-index: 2;
-    //     top: 0;
-    //     left: 0
-    // }
-
-    // .c-photo__shadow-01 {
-    //     position: absolute;
-    //     width: 90%;
-    //     height: 90%;
-    //     left: 2%;
-    //     bottom: -3%;
-    //     background-color: rgba(20, 20, 20, .2);
-    //     -webkit-filter: blur(2px);
-    //     filter: blur(2px);
-    //     opacity: 0
-    // }
-
-    // .c-photo__shadow-02 {
-    //     position: absolute;
-    //     width: 90%;
-    //     height: 90%;
-    //     right: 2%;
-    //     bottom: -6%;
-    //     background-color: rgba(20, 20, 20, .4);
-    //     -webkit-filter: blur(2px);
-    //     filter: blur(2px);
-    //     opacity: 0
-    // }
-
-    // .is-load .c-photo__shadow-01 {
-    //     transition: 2s 1s;
-    //     opacity: 1
-    // }
-
-    // .is-load .c-photo__shadow-02 {
-    //     transition: 2s 1s;
-    //     opacity: 1
-    // }
-
-    // .is-current .c-photo--gallery {
-    //     pointer-events: auto
-    // }
-
-    // .c-photo--gallery {
-    //     -webkit-backface-visibility: hidden;
-    //     backface-visibility: hidden;
-    //     transition: .4s cubic-bezier(.77, 0, .175, 1);
-    //     transition-property: -webkit-transform;
-    //     transition-property: transform;
-    //     transition-property: transform, -webkit-transform
-    // }
-
-    // .c-photo--gallery.js-gallery-photo {
-    //     cursor: pointer;
-    //     -webkit-backface-visibility: hidden;
-    //     backface-visibility: hidden
-    // }
-
-    // .c-photo--gallery.js-gallery-photo img {
-    //     -webkit-backface-visibility: hidden;
-    //     backface-visibility: hidden
-    // }
-
-    // .c-photo--gallery .c-photo__wrapper {
-    //     padding: .7rem
-    // }
-
-    // @media(max-width:767px) {
-    //     .c-photo--gallery .c-photo__wrapper {
-    //         padding: .4rem
-    //     }
-    // }
-
-    // .c-photo--gallery .c-photo__frame {
-    //     padding: 4.5rem 6rem
-    // }
-
-    // @media(max-width:767px) {
-    //     .c-photo--gallery .c-photo__frame {
-    //         padding: 2.2rem 2.9rem
-    //     }
-    // }
-
-    // .c-photo--gallery.is-vertical .c-photo__wrapper {
-    //     padding: .7rem
-    // }
-
-    // @media(max-width:767px) {
-    //     .c-photo--gallery.is-vertical .c-photo__wrapper {
-    //         padding: .4rem
-    //     }
-    // }
-
-    // .c-photo--gallery.is-vertical .c-photo__frame {
-    //     padding: 5.5rem 4.7rem
-    // }
-
-    // @media(max-width:767px) {
-    //     .c-photo--gallery.is-vertical .c-photo__frame {
-    //         padding: 2.7rem 2.4rem
-    //     }
-    // }
-
-    // .c-photo--gallery .c-photo__wrapper {
-    //     transition: .4s cubic-bezier(.77, 0, .175, 1);
-    //     transition-property: border-width, padding
-    // }
-
-    // .c-photo--gallery .c-photo__wrapper:before {
-    //     transition: opacity .4s linear;
-    //     opacity: 1
-    // }
-
-    // .c-photo--gallery .c-photo__frame {
-    //     transition: .4s cubic-bezier(.77, 0, .175, 1);
-    //     transition-property: padding, border-width
-    // }
-
-    // .c-photo--gallery .c-photo__frame:before {
-    //     transition: opacity .4s linear;
-    //     opacity: 1
-    // }
-
-    // .c-photo--gallery .c-photo__inner {
-    //     transition: .4s cubic-bezier(.77, 0, .175, 1);
-    //     transition-property: border-width, border-radius
-    // }
-
-    // .c-photo--gallery .c-photo__inner:before {
-    //     transition: opacity .4s linear;
-    //     opacity: 1
-    // }
-
-    // .c-photo--gallery.is-zoom {
-    //     -webkit-transform: scale(1.2);
-    //     transform: scale(1.2)
-    // }
-
-    // .c-photo--gallery.is-zoom .c-photo__wrapper {
-    //     padding: 0
-    // }
-
-    // @media(max-width:767px) {
-    //     .c-photo--gallery.is-zoom .c-photo__wrapper {
-    //         padding: 0
-    //     }
-    // }
-
-    // .c-photo--gallery.is-zoom .c-photo__wrapper:before {
-    //     opacity: 0
-    // }
-
-    // .c-photo--gallery.is-zoom .c-photo__frame {
-    //     padding: 0;
-    //     border-width: 0
-    // }
-
-    // @media(max-width:767px) {
-    //     .c-photo--gallery.is-zoom .c-photo__frame {
-    //         padding: 0
-    //     }
-    // }
-
-    // .c-photo--gallery.is-zoom .c-photo__frame:before {
-    //     opacity: 0
-    // }
-
-    // .c-photo--gallery.is-zoom .c-photo__inner {
-    //     border-radius: 0;
-    //     border-bottom: 0 solid rgba(0, 0, 0, .3);
-    //     border-left: 0 solid rgba(254, 254, 254, .4);
-    //     border-top: 0 solid rgba(0, 0, 0, .2);
-    //     border-right: 0 solid rgba(160, 160, 160, .4)
-    // }
-
-    // .c-photo--gallery.is-zoom .c-photo__inner:before {
-    //     opacity: 0
-    // }
-
-    // .c-photo--gallery-list .c-photo__wrapper {
-    //     padding: .5rem
-    // }
-
-    // @media(max-width:767px) {
-    //     .c-photo--gallery-list .c-photo__wrapper {
-    //         padding: .3rem
-    //     }
-    // }
-
-    // .c-photo--gallery-list .c-photo__frame {
-    //     padding: 2.6rem 3rem
-    // }
-
-    // @media(max-width:767px) {
-    //     .c-photo--gallery-list .c-photo__frame {
-    //         padding: 1.6rem 2.2rem
-    //     }
-    // }
-
-    // .c-photo--gallery-list.is-vertical .c-photo__frame {
-    //     padding: 3rem 2.6rem
-    // }
-
-    // @media(max-width:767px) {
-    //     .c-photo--gallery-list.is-vertical .c-photo__frame {
-    //         padding: 1.8rem 1.6rem
-    //     }
-    // }
-
-    // .c-photo--about .c-photo__wrapper {
-    //     padding: .6rem
-    // }
-
-    // @media(max-width:767px) {
-    //     .c-photo--about .c-photo__wrapper {
-    //         padding: .3rem
-    //     }
-    // }
-
-    // .c-photo--about .c-photo__frame {
-    //     padding: 3.5rem 4.2rem
-    // }
-
-    // @media(max-width:767px) {
-    //     .c-photo--about .c-photo__frame {
-    //         padding: 1.9rem 2.4rem
-    //     }
-    // }
-
-    // .c-photo--about.is-vertical .c-photo__frame {
-    //     padding: 4.2rem 3.6rem
-    // }
-
-    // @media(max-width:767px) {
-    //     .c-photo--about.is-vertical .c-photo__frame {
-    //         padding: 2.4rem 1.9rem
-    //     }
-    // }
-
-    // .c-profile-section {
-    //     margin-top: 60px
-    // }
-
-    // .c-photo__inner img {
-    //     width: 100px;
-    // }
-
     //測試畫框
     .painting .item , .owl-item{
         width: 300px;
@@ -475,7 +77,7 @@
 
         transition: 0.5s;
         &:hover{
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 40%), 0 6px 20px 0 rgba(0, 0, 0, 40%)
         }
     }
 
@@ -492,7 +94,184 @@
     .wrapper_onlinegallery_exhibition .painting .item a{
         display: block;
     }
+
+    //彈窗
+    
+    .mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: black;
+        opacity: .5;
+        z-index: 9999998;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    .paint_info {
+        padding: 20px;
+    }
+
+
+    .wrapper_onlinegallery_exhibition .painting .frame img {
+        width: 150px;
+    }
+
+    .wrapper_onlinegallery_exhibition .painting .frame:hover {
+        box-shadow: 0 6px 10px 0 rgb(0 0 0 / 40%), 0 6px 20px 0 rgb(0 0 0 / 40%);
+    }
+
+
+    .paint_info {
+        /* width: 50%; */
+        
+        display: block;
+        /* display: none; */
+        position: relative;
+    }
+
+    .paint_info button {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        background-color: Transparent;
+        border: none;
+        transition: 0.5s;
+    }
+    .paint_info button:hover{
+        font-size: 20px;
+    }
+
+
+    .paint_info h2 {
+        margin-left: 20px;
+
+        font-size: 1.75rem;
+        color: #AB8A49;
+        font-family: "Cinzel";
+        font-weight: bold;
+        width: 100%;
+        /* margin-left: 50px; */
+        margin-bottom: 10px;
+        margin-top: 30px;
+    }
+
+    .paint_info h3 {
+        margin-left: 20px;
+        width: 100%;
+        font-size: 1.75rem;
+        color: #AB8A49;
+        font-family: "Cinzel";
+        position: relative;
+        /* margin-left: 50px; */
+    }
+
+    .paint_info h3::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        width: 80%;
+        height: 0.5px;
+        background-color: #AB8A49;
+    }
+
+
+
+    .info p {
+        margin-left: 15px;
+        margin-top: 30px;
+    }
+
+
+    .box {
+        margin: auto;
+        /* margin-top: 20px; */
+        display: flex;
+        /* height: 100%; */
+        /* box-sizing: border-box; */
+        /* justify-content: center; */
+        flex-wrap: wrap;
+        /* overflow-y: scroll; */
+        overflow: auto;
+        height: 510px;
+
+    }
+
+
+
+
+
+    .box .paint {
+        width: 50%;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin: auto;
+        /* box-sizing: border-box; */
+    }
+
+    .box .paint img {
+        /* width: 300px; */
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .box .info {
+        padding: 10px;
+        width: 50%;
+        /* box-sizing: border-box; */
+        overflow: hidden;
+        letter-spacing: 0.2rem;
+        line-height: 1.2;
+        margin: auto;
+    }
+
+    .paint_info {
+        background-color: #EEEAE2;
+        width: 70%;
+        height: 550px;
+        /* box-sizing: border-box; */
+        z-index: 9999999;
+        position: absolute;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: auto;
+    }
+
+    .media_icon {
+        font-size: 18px;
+        color: #AB8A49;
+        text-decoration: none;
+        display: flex;
+        flex-wrap: wrap;
+        font-family: "Cinzel";
+        float: right;
+        margin-right: 120px;
+    }
+
+    .media_icon i {
+        color: #AB8A49;
+        font-size: 20px;
+        transition: 0.5s;
+    }
+
+    .bg-img>img{
+        opacity: .9;
+        display: block;
+    }
+    .item {
+        cursor: pointer;
+        /* cursor: grabbing; */
+        /* cursor: grab; */
+    }
+    
 }
+
+
 
 // RWD
 @media screen and (max-width: 575.98px) {
@@ -507,6 +286,7 @@
     .wrapper_onlinegallery_exhibition .painting .item{
         margin-left: 10%;
     }
+
 
 
 }

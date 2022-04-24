@@ -2,44 +2,40 @@
 <html lang="en">
 
 <head>
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Owl Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
     @@include('./layout/head.html')
     <title>Online Gallery Exhibition| 光緣畫廊 | KUANG YUAN</title>
-    <style>
-        /* .wrapper_header .header_bac{
-            position: fixed;
-            z-index: 9999999;
-        } */
-    </style>
+
 </head>
 
 <body>
-
-    <div class="wrapper_onlinegallery_exhibition">
-        @@include('./layout/header_vue.html')
+  @@include('./layout/header_vue.html')
+    <div class="wrapper_onlinegallery_exhibition" id="onlinegallery">
+      
         <!-- background-image -->
         <div class="bg-img">
             <!-- bg -->
-            <img src="./img/online_gallery/exhibition/renaissance/renaissance_bg.jpg" clsaa="bg">
+            <!-- <img src="./img/online_gallery/exhibition/renaissance/renaissance_bg.jpg" clsaa="bg"> -->
+            <img :src="ex_data[galleryId].bg" clsaa="bg">
+
+
 
             <!-- shadow -->
-            <img src="./img/online_gallery/exhibition/light.png">
+            <!-- <img src="./img/online_gallery/exhibition/light.png"> -->
+            <img :src="ex_data[galleryId].shadow">
+
 
             <!-- title -->
             <div class="onlinegallery_exhibition_title">
                 <a href="./online_gallery.html">
                     <p><i class="fa-solid fa-book-open"></i> 返回藝術流派</p>
                 </a>
-                <h6>文藝復興 ｜ 1300年～1700年</h6>
+                <h6>{{ex_data[galleryId].title}}</h6>
             </div>
 
             <!-- painting swiper-->
@@ -48,114 +44,219 @@
                 <!-- owl-carousel -->
                 <div class="nonloop owl-carousel">
 
-                    <!-- pic_frame_test-->
-                    <!-- <div class="item">
-                        <div class="c-gallery__photo">
-                            <div class="c-photo c-photo--gallery is-black">
-                                <div class="c-photo__wrapper">
-                                    <div class="c-photo__frame">
-                                        <div class="c-photo__inner">
-                                            <img src="../src/img/online_gallery/pic02.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="c-photo__shadow-01"></div>
-                                <div class="c-photo__shadow-02"></div>
-                            </div>
-                        </div>
-                    </div> -->
-
                     <!-- pic01 -->
-                    <div class="item">
-                        <a href="./online_gallery_exhibition_painting.html">
-                            <div class="frame">
-                                <img src="./img/online_gallery/pic02.jpg" alt="">
-                            </div>
+                    <div class="item" v-for="paint in paints" @click="paint_info(paint.exhibits_id)">
+                        <!-- <a href=""> -->
+                        <div class="frame" @click="pop">
+                            <img :src="'data:image/*;base64, ' + paint.exhibits_img2">
+                        </div>
                         </a>
                     </div>
 
-                    <!-- pic02 -->
-                    <div class="item">
-                        <a href="">
-                            <div class="frame">
-                                <img src="./img/online_gallery/pic02.jpg" alt="">
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- pic03 -->
-                    <div class="item">
-                        <a href="">
-                            <div class="frame">
-                                <img src="./img/online_gallery/pic02.jpg" alt="">
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- <div class="item">
-                        <h4>5</h4>
-                    </div>
-                    <div class="item">
-                        <h4>6</h4>
-                    </div>
-                    <div class="item">
-                        <h4>7</h4>
-                    </div>
-                    <div class="item">
-                        <h4>8</h4>
-                    </div>
-                    <div class="item">
-                        <h4>9</h4>
-                    </div>
-                    <div class="item">
-                        <h4>10</h4>
-                    </div>
-                    <div class="item">
-                        <h4>11</h4>
-                    </div>
-                    <div class="item">
-                        <h4>12</h4>
-                    </div> -->
 
                 </div><!-- owl-carousel end -->
             </div><!-- panting end -->
         </div> <!-- background-image end-->
+
+        <!-- 遮罩 -->
+        <div class="mask" v-show="isShow" @click="close_X"></div>
+
+
+        <!-- 彈窗 -->
+        <div class="paint_info" v-show="isShow">
+            <button @click="close_X">X</button>
+
+
+            <div class="box">
+                <div class="paint">
+                    <img src="./img/online_gallery/pic02.jpg" alt="">
+                    <!-- <img :src="'data:image/*;base64, ' + info.img"> -->
+                </div>
+
+                <div class="info">
+                    <h2 class="name">{{info.name}}</h2>
+                    <h3 class="author"> {{info.author}}</h3>
+                    <p> {{info.info}}</p>
+                </div>
+            </div>
+        </div>
+
     </div> <!-- </div> wrapper_end -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
     <script>
-        // owl-carousel
-        $(document).ready(function () {
-            $('.nonloop').owlCarousel({
-                center: true,
-                mouseDrag: true,
-                items: 3,
-                // startPosition:star,
-                loop: false,
-                margin: 200,
-                responsive: {
-                    0: {
-                        items: 1
+        new Vue({
+            el: '#onlinegallery',
+            data() {
+                return {
+                    galleryId: sessionStorage.getItem('galleryId'),
+                    ex_data: {
+                        '01': {
+                            'id': '01哥德式',
+                            'title': '哥德式｜1100年 - 1300年',
+                            'bg': './img/online_gallery/exhibition/',
+                            'shadow': './img/online_gallery/exhibition/light.png',
+                        },
+
+                        '02': {
+                            'id': '02文藝復興',
+                            'title': '文藝復興｜1300年 - 1700年',
+                            'bg': './img/online_gallery/exhibition/02renaissance_bg.jpg',
+                            'shadow': './img/online_gallery/exhibition/light.png',
+
+                        },
+
+                        '03': {
+                            'id': '03浮世繪',
+                            'title': '浮世繪｜1630年 - 1912年',
+                            'bg': '',
+                            'shadow': './img/online_gallery/exhibition/light.png',
+
+                        },
+
+                        '04': {
+                            'id': '04後印象派',
+                            'title': '後印象派｜1886年 - 1905年',
+                            'bg': './img/online_gallery/exhibition/04bg.png',
+                            'shadow': './img/online_gallery/exhibition/maskgroup.png',
+
+                        },
+
+                        '05': {
+                            'id': '05立體主義',
+                            'title': '立體主義｜1907年 - 1921年',
+                            'bg': './img/online_gallery/exhibition/05.jpg',
+                            'shadow': './img/online_gallery/exhibition/light.png',
+
+                        },
+
                     },
 
-                    480: {
-                        items: 1
+                    isShow: false,
+
+                    paints: [],
+                    // paint: {},
+
+                    info: {
+                        id: '',
+                        name: '',
+                        author: '',
+                        info: '',
+                        img: '',
+                        status: '',
+                        room: '',
                     },
 
-                    600: {
-                        items: 3
-                    },
-
-                    768: {
-                        items: 3
-                    }
 
                 }
-            });
+
+            },
+
+            methods: {
+                close_X() {
+                    this.isShow = false;
+                    // $(".paint_info").css("dispaly", "none");
+                    // this.
+                },
+                pop() {
+                    // alert("AAA");
+                    this.isShow = true;
+                },
+
+                owlcarousel() {
+                    $('.nonloop').owlCarousel({
+                        center: true,
+                        mouseDrag: true,
+                        items: 3,
+                        // startPosition:star,
+                        loop: false,
+                        margin: 200,
+                        responsive: {
+                            0: {
+                                items: 1
+                            },
+
+                            480: {
+                                items: 1
+                            },
+
+                            600: {
+                                items: 3
+                            },
+
+                            768: {
+                                items: 3
+                            }
+
+                        }
+                    });
+
+                },
+
+                paint_info(id) {
+                    // alert(id)
+                    fetch("./php/exhibits_info.php", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        mode: "cors",
+                        body: JSON.stringify({
+                            id: id,
+                        }),
+                    })
+                        .then(resp => resp.json())
+                        .then(resp => {
+                            // console.log(resp);
+                            // console.log(resp);
+                            // const edits = this.resp;
+                            // this.edits = resp;
+                            // this.edits = resp.data;
+
+                            //把資料庫的內容丟回edit的物件裡面，要在data輸入edit物件放資料
+                            this.info.id = resp[0]['exhibits_id'];
+                            this.info.room = resp[0]['exhibits_room'];
+                            this.info.name = resp[0]['exhibits_name'];
+                            this.info.author = resp[0]['exhibits_author'];
+                            this.info.info = resp[0]['exhibits_info'];
+                            this.info.img = resp[0]['exhibits_img2'];
+                            this.info.status = resp[0]['exhibits_status'];
+                        })
+                },
+            },
+
+            //展品與資料庫內容同步渲染在畫面(有重整問題)
+            created() {
+                // let urlParams = new URLSearchParams(window.location.search);
+                // console.log(urlParams.get('id')); // "abc"
+
+
+                fetch("./php/exhibits_show.php", {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application' },
+                    body: JSON.stringify({
+                        exhibits_room: this.ex_data[this.galleryId].id,
+                    })
+                })
+                    .then(res => res.json())
+                    .then(res => {
+                        this.paints = res;
+                        this.$nextTick(function () {
+                            this.owlcarousel();
+                        })
+
+                    })
+            },
+
         });
     </script>
+
+<script src="./js/header_vue.min.js"></script>
+
 </body>
 
 </html>

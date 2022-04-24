@@ -11,7 +11,16 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
 
+    <!-- <style>
+        .page-content{
+        background-image: url(./img/Puzzle/choice/background/mona.png);
+        background-size: cover;
+        width: 100%;
+        height: 1200px;
 
+        /* position: relative;   */
+    }
+    </style> -->
 
 </head>
 
@@ -22,7 +31,9 @@
         <!-- @@include('./layout/header.html') -->
 
 
-        <main class="page-content">
+        <main class="page-content" style="background-image: url('./img/Puzzle/choice/background/scream.jpg'); background-size: cover;
+        width: 100%;
+        height: 1200px;">
             <div class="puzzle_name">
                 <div class="puzzle_title">
                     <h1>Puzzle of the art</h1>
@@ -36,9 +47,9 @@
             <div class="swiper-container swiper-no-swiping" data-aos="fade-up" data-aos-duration="3000">
                 <!-- 網頁版 -->
                 <div class="swiper-wrapper" arial-label="Basic example" id="app" >
-                    <button type="button" @click="i18n.locale = 'sm'" :class="{active:i18n.locale === 'sm' }"
-                        class="swiper-slide" id="pc1">
+                    <button type="button" class="swiper-slide active" id="pc1" onclick="changeBackgroundImage('./img/Puzzle/choice/background/scream.jpg');">
                         <div class="part-1">
+                            <!-- <img src="./img/Puzzle/game/scream.png" alt=""> -->
 
 
                         </div>
@@ -47,10 +58,9 @@
                         </div>
                     </button>
 
-                    <button type="button" @click="i18n.locale = 'mn'" :class="{active:i18n.locale === 'mn' }"
-                        class="swiper-slide" id="pc2">
+                    <button type="button" class="swiper-slide " id="pc2" onclick="changeBackgroundImage('./img/Puzzle/choice/background/mona.png');">
                         <div class="part-1">
-
+                            <!-- <img src="./img/Puzzle/choice/background/scream.png" alt=""> -->
 
                         </div>
                         <div class="part-2">
@@ -58,11 +68,9 @@
                         </div>
                     </button>
 
-                    <button type="button" @click="i18n.locale = 'fw'" :class="{active:i18n.locale === 'fw' }"
-                        class="swiper-slide" id="pc3">
+                    <button type="button" class="swiper-slide" id="pc3" onclick="changeBackgroundImage('./img/Puzzle/choice/background/still-life.png');">
                         <div class="part-1">
-
-
+                            <!-- <img src="./img/Puzzle/choice/background/mona.png" alt=""> -->
                         </div>
                         <div class="part-2">
                             <h4 class="product-price">向日葵</h4>
@@ -82,8 +90,8 @@
             </div>
 
             <div class="submit-blt">
-                <button type="button" class="bltt">
-                    <a href="./puzzle.html">確認送出</a>
+                <button type="button" class="bltt" >
+                    <a id="sent_it" href="#">確認送出</a>
                 </button>
             </div>
 
@@ -106,28 +114,29 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        //vue for 選擇固定
-        const messages = {}
-        const i18n = new VueI18n({
-            //定義默認畫作
-            locale: '',
-            messages
-        })
+        // //vue for 選擇固定
+        // const messages = {}
 
-        var vm = new Vue({
-            el: "#app",
-            i18n,
-            data: {
-                mag: "",
-                lan: ''
-            },
-            // mounted(){
-            //     this.i18n.locale = 'jp'
-            //     // this.lan = this.$i18n.messages
-            //     console.log(this.i18n.locale)
-            // }
+        // const i18n = new VueI18n({
+        //     //定義默認語言
+        //     locale: 'mn', 
+        //     messages
+        //     })
 
-        })
+        // var vm = new Vue({
+        //     el: "#app",
+        //     i18n,
+        //     data: {
+        //         mag: "改寫上傳選單 custom-file 語言",
+        //         lan: ''
+        //     },
+        //     // mounted(){
+        //     //     this.i18n.locale = 'mn'
+        //     //     // this.lan = this.$i18n.messages
+        //     //     console.log(this.i18n.locale)
+        //     // }
+
+        // })
 
         //手機版的輪播
         $(document).ready(function () {
@@ -186,6 +195,68 @@
        
         AOS.init();
         
+
+        //選項active
+        $('button.swiper-slide').click(function(){
+            $('button.swiper-slide').removeClass("active");
+            $(this).addClass("active");
+        });
+
+
+        //更換背景圖片
+        function changeBackgroundImage(bgImage) {
+            let main_el = document.querySelector("main")
+
+                main_el.style.backgroundImage = "url(" + bgImage + ")";
+                main_el.style.backgroundRepeat = "no-repeat";
+                main_el.style.backgroundSize = "cover";
+                main_el.style.transition = "all 0.3s";
+               
+        }
+
+        //選項連結變更
+        // document.getElementById('sent_it').onclick = (event) =>{
+
+        //     event.preventDefault()
+        //     let btn_el = document.querySelector("button.swiper-slide")
+            
+        //     if($("#pc1").hasClass("active")){
+        //         console.log(1);
+
+        //         location.href="./puzzle_1.html";
+        //         console.log("sent_it");
+        //      }
+        //     else if($("#pc3").hasClass("active")){
+        //         location.href="./puzzle_3.html"
+        //         console.log(3);
+        //     }
+        //     else if ($("#pc2").hasClass("active")){
+        //         location.href="./puzzle_2.html"
+        //         console.log(2);
+        //     }   
+        // }
+
+        
+        $("#pc1").click(function(){
+                $("#sent_it").attr("href","./puzzle_1.html");
+                console.log(123);
+
+        });
+        $("#pc2").click(function(){
+                $("#sent_it").attr("href","./puzzle_2.html");
+                console.log(123);
+
+        });
+        $("#pc3").click(function(){
+                $("#sent_it").attr("href","./puzzle_3.html");
+                console.log(123);
+
+        });
+        
+
+       
+    
+
     </script>
 </body>
 

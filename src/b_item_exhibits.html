@@ -1,19 +1,138 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        @@include('./layout/head.html')
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-        <title>光緣畫廊 | KUANG YUAN</title>
-    </head>
+
+<head>
+    @@include('./layout/head.html')
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <title>光緣畫廊 | KUANG YUAN</title>
+
+    <style>
+        .wrapper_melon h6 {
+            margin-right: 100px;
+        }
+
+        .wrapper_melon .list_co {
+            margin: revert;
+        }
+
+
+        textarea {
+            width: 400px;
+            height: 100px;
+        }
+
+        .wrapper_melon img {
+            object-fit: contain;
+        }
+
+        .form-control img {
+            width: 100px;
+        }
+
+        .titleBar_mb .form-check-input,
+        .titleBar_mb p {
+            margin: auto;
+        }
+
+        .titleBar_mb button {
+            width: 100px;
+            height: 30px;
+            margin: auto;
+        }
+
+        .titleBar_mb img {
+            width: 100px;
+            margin: auto;
+        }
+
+        .form-switch {
+            margin: auto;
+        }
+
+        .table_product {
+            width: 620px;
+        }
+
+        .sideRight {
+            text-align: center;
+            padding-right: 250px;
+            /* border: 1px solid black; */
+
+        }
+
+        .mb_table {
+            display: block;
+        }
+
+        .btn_2 {
+            display: flex;
+            /* border: 1px solid black; */
+            margin-left: 50px;
+            position: absolute;
+            top: 38%;
+            right: 13%;
+
+        }
+
+        .page_title2 {
+            /* border: 1px solid black; */
+            font-size: 26px;
+        }
+
+        .btn-danger {
+            width: 80px;
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: #C93939;
+            color: black;
+        }
+
+        .btn-success {
+            width: 80px;
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: #9DC09E;
+            color: black;
+
+
+        }
+
+        .titleBar {
+            width: 150%;
+            display: grid;
+            grid-template-columns: 5% 10% 20% 15% 15% 15% 10%;
+            margin: 0 auto;
+            background-color: #c8bcb2;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+
+        }
+
+        .titleBar_mb {
+            background-color: #FBF8F6;
+            color: black;
+            width: 150%;
+            display: grid;
+            grid-template-columns: 5% 10% 20% 15% 15% 15% 10%;
+            margin: 0 auto;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+
 <body>
-    <div class="wrapper_melon">
+    <div class="wrapper_melon" id="add">
         <div class="header_potter">
             <div class="logo">
-                <img src="./img/logo_icon.png" alt="logo" >
+                <img src="./img/logo_icon.png" alt="logo">
             </div>
             <div class="con_h6">
-                <h6>登出</h6>
+                <h6>帳號登出</h6>
             </div>
         </div>
         <section class="sideLeft">
@@ -43,121 +162,186 @@
                 <div class="channel-around">
                     <div class="page_title2">
                         <h6>展品管理</h6>
-                    </div>   
+                    </div>
                     <ul class="list_co btn-group" role="group">
+
                         <li>
-                            <button type="button" class="btn btn-primary">上架</button>
+                            <input type="text" placeholder="以展間流派搜尋" v-model="search" id="check">
+                            <button type="button" class="btn btn-primary" @click="room" id="search">查詢</button>
                         </li>
                         <li>
-                            <button type="button" class="btn btn-primary">下架</button>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#item_newBackdrop">新增</button>
                         </li>
                         <li>
-                            <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#item_newBackdrop">新增</button>
-                        </li>
-                        <li>
-                            <button type="button" class="btn btn-primary">刪除</button>
+                            <!-- <button type="button" class="btn btn-primary">刪除</button> -->
                         </li>
                     </ul>
                 </div>
+
+                <!-- <div class="search_box">
+                    <input type="text" placeholder="以展間流派搜尋" v-model="search" id="check">
+                    <button type="button" class="btn btn-primary" @click="room" id="search">查詢</button>
+                </div> -->
+
                 <div class="table_product">
                     <table class="table align-middle table-striped table-hover">
-                        <thead>
-                            <tr class="table_color">
-                                <th scope="col">#</th>
-                                <th scope="col">封面</th>
-                                <th scope="col">展品編號</th>
-                                <th scope="col">展品名稱</th>
-                                <th scope="col">展品作家</th>
-                                <th scope="col">上架狀態</th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                        </label>
-                                    </div>
-                                    <td class="align-middle">
-                                        <div class="table_img_block">
-                                            <img src="./img/exhibition/f1-1-1.png" alt="paint">
-                                        </div>
-                                    </td>
-                                    <td>1</td>
-                                    <td>Van</td>
-                                    <td>aaaa</td>
-                                    <td>一般</td>
-                                    <td>
-                                        <button type="button" class="btn btn-primary pa_d" data-bs-toggle="modal" data-bs-target="#item_editBackdrop">
-                                            編輯與查看
+                        <div class="table_product">
+                            <ul class="mb_table" id="mb_table">
+                                <li class="titleBar">
+                                    <p>編號</p>
+                                    <p>展間編號</p>
+                                    <p>封面</p>
+                                    <p>展品名稱</p>
+                                    <p>展品作家</p>
+                                    <p>上下架狀態</p>
+                                    <p>編輯與查看</p>
+                                </li>
+                                <div>
+                                    <li v-for="paint in paints" class="titleBar_mb">
+                                        <p>{{paint.exhibits_id}}</p>
+                                        <!-- <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> -->
+                                        <p>{{paint.exhibits_room}}</p>
+                                        <img :src="'data:image/*;base64, ' + paint.exhibits_img2">
+                                        <p>{{paint.exhibits_name}}</p>
+                                        <p>{{paint.exhibits_author}}</p>
+                                        <p class="status">{{paint.exhibits_status}}</p>
+                                        <!-- <span class="form-check form-switch">
+                                            <input class="form-check-input status_toggle" type="checkbox" role="switch"
+                                                id="flexSwitchCheckChecked" checked="">
+                                            <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                        </span> -->
+                                        <button type="button" class="btn btn-primary pa_d" data-bs-toggle="modal"
+                                            data-bs-target="#item_editBackdrop" @click="find_edit(paint.exhibits_id)">
+                                            編輯
                                         </button>
-                                    </td>
-                                </th>
-                            </tr>
-                        </tbody>
+                                    </li>
+
+
+
+                                </div>
+
+
+
+                            </ul>
+                        </div>
                     </table>
                 </div>
-            </div>                 
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
         </section>
-        </div>      
-    </section>
         <!-- 新增展品視窗 -->
         <section>
             <!-- Modal -->
-            <div class="modal fade" id="item_newBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-scrollable">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">新增展品</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                        <!-- 新增展品編號 -->
-                        <div class="form-group">
-                            <label for="item_newNumber"></label>
-                            <input type="text" id="item_newNumber" name="item[new_item_number]" class="form-control" placeholder="展品編號">
+            <div class="modal fade" id="item_newBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+
+
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">新增展品</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <!-- 新增展品名稱 -->
-                        <div class="form-group">
-                            <label for="item_newName"></label>
-                            <input type="text" id="item_newName" name="item[new_item_name]" class="form-control" placeholder="展品名稱">
-                        </div>
-                        <!-- 新增展品作家 -->
-                        <div class="form-group">
-                            <label for="item_newAatist"></label>
-                            <input type="text" id="item_newArtist" name="item[new_item_artist]" class="form-control" placeholder="展品作家">
-                        </div>
-                        <!-- 新增展品描述 -->
-                        <div class="form-group input-borad">
-                            <label for="item_newDescribe"></label>
-                            <textarea id="item_newDescribe" rows="3" cols="40" name="item[new_item_describe]" placeholder="展品描述"></textarea>
-                        </div>
-                        <!-- 新增展品檔案上傳 -->
-                        <div class="form-check form-check-borad">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                <h6>此產品是否直接上架</h6>
-                            </label>
-                            <div class="form-group file-borad">
-                                <input type="file" id="item_upLoad" name="item[new_item_photo]" accept="image/*" class="form-control" multiple="multiple">
-                                <div>  
-                                    <img class="preview">
-                                    <div class="preview_size"></div>
+                        <div class="modal-body">
+
+                            <form class="reset">
+                                <!-- 新增展品編號 -->
+                                <div class="form-group">
+                                    <p>展間編號</p>
+                                    <select name="push" id="status" v-model="E_room">
+                                        <option value="01哥德式">01哥德式</option>
+                                        <option value="02文藝復興">02文藝復興</option>
+                                        <option value="03浮世繪">03浮世繪</option>
+                                        <option value="04後印象派">04後印象派</option>
+                                        <option value="05立體主義">05立體主義</option>
+                                    </select>
                                 </div>
-                                <input type="submit"  class="file-borad2" value="上傳">
-                            </div>
+
+                                <!-- <p>展間編號</p>
+                                    <select name="push" id="status"  v-model="E_room">
+                                        <option value="01哥德式">01哥德式</option>
+                                        <option value="02文藝復興">02文藝復興</option>
+                                        <option value="03浮世繪">03浮世繪</option>
+                                        <option value="04後印象派">04後印象派</option>
+                                        <option value="05立體主義">05立體主義</option>
+                                    </select>
+                                -->
+
+                                <!-- 新增展品名稱 -->
+                                <div class="form-group">
+                                    <label for="item_newName"></label>
+                                    <input type="text" id="item_newName" name="item[new_item_name]" class="form-control"
+                                        placeholder="展品名稱" v-model="E_name">
+                                </div>
+                                <!-- 新增展品作家 -->
+                                <div class="form-group">
+                                    <label for="item_newAatist"></label>
+                                    <input type="text" id="item_newArtist" name="item[new_item_artist]"
+                                        class="form-control" placeholder="展品作家" v-model="E_author">
+                                </div>
+                                <!-- 新增展品描述 -->
+                                <div class="form-group input-borad">
+                                    <label for="item_newDescribe"></label>
+                                    <textarea id="item_newDescribe" rows="3" cols="40" name="item[new_item_describe]"
+                                        placeholder="展品描述" v-model="E_info"></textarea>
+                                </div>
+
+                                <!-- 新增展品圖片路徑 -->
+                                <!-- <div class="form-group input-borad">
+                                    <label for="img_src"></label>
+                                    <textarea id="item_newDescribe" rows="3" cols="40" name="item[new_item_describe]"
+                                        placeholder="./img/online_gallery/" v-model="E_imgs"></textarea>
+                                </div> -->
+
+
+
+                                <!-- 新增展品檔案上傳 -->
+                                <div class="form-check form-check-borad">
+                                    <div class="form-group file-borad">
+                                        <input type="file" id="item_upLoad" name="item[new_item_photo]" accept="image/*"
+                                            @change="onImgChange" class="form-control">
+                                        <div>
+                                            <img class="preview">
+                                            <div class="preview_size"></div>
+                                        </div>
+                                        <!-- <input type="submit" class="file-borad2" value="上傳"> -->
+                                    </div>
+
+                                    <p>上下架狀態</p>
+                                    <select name="push" id="status" v-model="E_status">
+                                        <option value="上架">上架</option>
+                                        <option value="下架">下架</option>
+                                    </select>
+                                </div>
+                            </form>
                         </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                    <button type="button" class="btn btn-primary">儲存</button>
-                  </div>
+
+                        <div class="modal-footer">
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button> -->
+                            <button type="button" class="btn btn-primary" @click="add_paint" id="save_p">儲存</button>
+                        </div>
+
+                    </div>
                 </div>
-              </div>
             </div>
         </section>
         <!-- -----------------------------------------------
@@ -165,88 +349,363 @@
         ----------------------------------------------- -->
         <section>
             <!-- Modal -->
-            <div class="modal fade" id="item_editBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">展品編輯</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                        <!-- 編輯展品編號 -->
-                        <div class="form-group">
-                            <label for="item_editNumber"></label>
-                            <input type="text" id="item_editNumber" name="item[edit_item_number]" class="form-control" placeholder="展品編號">
+            <div class="modal fade" id="item_editBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">展品編輯</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <!-- 編輯展品名稱 -->
-                        <div class="form-group">
-                            <label for="item_editName"></label>
-                            <input type="text" id="item_editName" name="item[edit_item_name]" class="form-control" placeholder="展品名稱">
-                        </div>
-                        <!-- 編輯展品作者 -->
-                        <div class="form-group">
-                            <label for="item_editArtist"></label>
-                            <input type="text" id="item_editArtist" name="item[edit_item_artist]" class="form-control" placeholder="展品作家">
-                        </div>
-                        <!-- 編輯展品描述 -->
-                        <div class="form-group">
-                            <label for="item_editDescribe"></label>
-                            <textarea id="item_editDescribe" rows="3" cols="40" name="item[edit_item_describe]" placeholder="展品描述"></textarea>
-                        </div>
-                        <!-- 編輯展品檔案 -->
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                <h6>此產品是否直接上架</h6>
-                            </label>
-                            <div class="form-group">
-                                <input type="file" id="item_upLoad" name="item[edit_item_photo]" accept="image/*" class="form-control" multiple="multiple">
-                                <div>  
-                                    <img class="preview">
-                                    <div class="preview_size"></div>
+                        <div class="modal-body">
+                            <form>
+                                <!-- 編輯展品編號 -->
+                                <div class="form-group">
+                                    <label for="item_editNumber"></label>
+                                    <p> 展品編號： {{edit.id}} </p> <br><br>
+                                    <!-- <p></p> -->
+                                    <!-- <input type="text" id="item_editNumber" name="item[edit_item_number]"
+                                        class="form-control" placeholder="展品編號" :value="edit.exhibits_id" > -->
                                 </div>
-                                <input type="submit" value="上傳">
-                            </div>
+
+                                <!-- 編輯展品編號 -->
+                                <p>展間編號：</p>
+                                <select name="push" id="status" v-model="edit.room">
+                                    <option value="01哥德式">01哥德式</option>
+                                    <option value="02文藝復興">02文藝復興</option>
+                                    <option value="03浮世繪">03浮世繪</option>
+                                    <option value="04後印象派">04後印象派</option>
+                                    <option value="05立體主義">05立體主義</option>
+                                </select>
+
+
+                                <!-- 編輯展品名稱 -->
+                                <div class="form-group">
+                                    <label for="item_editName"></label>
+                                    <input type="text" id="item_editName" name="item[edit_item_name]"
+                                        class="form-control" placeholder="展品名稱" v-model="edit.name">
+                                </div>
+                                <!-- 編輯展品作者 -->
+                                <div class="form-group">
+                                    <label for="item_editArtist"></label>
+                                    <input type="text" id="item_editArtist" name="item[edit_item_artist]"
+                                        class="form-control" placeholder="展品作家" v-model="edit.author">
+                                </div>
+                                <!-- 編輯展品描述 -->
+                                <div class="form-group  input-borad">
+                                    <label for="item_editDescribe"></label>
+                                    <textarea id="item_editDescribe" rows="3" cols="40" name="item[edit_item_describe]"
+                                        placeholder="展品描述" v-model="edit.info"></textarea>
+                                </div>
+                                <!-- 編輯展品檔案 -->
+                                <div class="form-check form-check-borad">
+                                    <div class="form-group file-borad">
+                                        <!-- <input type="file" id="item_upLoad" name="item[edit_item_photo]"
+                                            accept="image/*" class="form-control" multiple="multiple">
+                                        <div> -->
+                                        <img class="preview" :src="'data:image/*;base64, ' + edit.img">
+                                        <div class="preview_size"></div>
+                                    </div>
+
+
+                                </div>
+                                <p>上下架狀態</p>
+                                <select name="push" id="push" v-model="edit.status">
+                                    <option value="上架">上架</option>
+                                    <option value="下架">下架</option>
+                                </select>
+                                <!-- <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        <h6>此產品是否直接上架</h6>
+                                    </label> -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary"
+                                        @click="upd_paint(edit.id)">儲存</button>
+                                </div>
                         </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                    <button type="button" class="btn btn-primary">儲存</button>
-                  </div>
+
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
+
+    </section>
+    </div>
+
+
     <script>
 
         // 檔案預覽
-        function format_float(num, pos)
-        {
+        function format_float(num, pos) {
             var size = Math.pow(10, pos);
             return Math.round(num * size) / size;
         }
-    
+
         function preview(input) {
-    
+
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
-                
+
                 reader.onload = function (e) {
                     $('.preview').attr('src', e.target.result);
                     var KB = format_float(e.total / 1024, 2);
                     $('.preview_size').text("檔案大小：" + KB + " KB");
                 }
-    
+
                 reader.readAsDataURL(input.files[0]);
             }
         }
-    
-        $("body").on("change", "#item_upLoad", function (){
+
+        $("body").on("change", "#item_upLoad", function () {
             preview(this);
         })
-        
+
+
+
+        //套件
+        function add_paint(msg, icon, html) {
+            Swal.fire({
+                title: msg,
+                icon: icon,
+                html: html,
+
+                showConfirmButton: false, // 確認按鈕（預設會顯示不用設定）
+                confirmButtonText: '參加活動', //　按鈕顯示文字
+                confirmButtonAriaLabel: '參加活動', // 網頁無障礙用
+                confirmButtonColor: '#75706b', // 修改按鈕色碼
+
+                // 使用同確認按鈕
+                // showDenyButton: true, // 否定按鈕
+                showCancelButton: false, // 取消按鈕
+                buttonsStyling: false, // 是否使用sweetalert按鈕樣式（預設為true）
+            })
+        }
+
+
+
+    </script>
+
+
+    <script>
+        new Vue({
+            el: '#add',
+
+
+            data() {
+                return {
+                    E_name: '',
+                    E_author: '',
+                    E_info: '',
+                    E_img: '',
+                    E_status: '',
+                    E_room: '',
+
+                    paints: [],
+                    paint: {},
+                    search: '',
+
+
+                    edit: {
+                        id: '',
+                        name: '',
+                        author: '',
+                        info: '',
+                        img: '',
+                        status: '',
+                        room: '',
+
+                    },
+
+
+
+
+                }
+
+            },
+
+            methods: {
+
+                // ???
+                //綁定@click事件，將圖片轉換成base64
+                onImgChange(e) {
+                    const file = e.target.files[0];
+                    const fileReader = new FileReader();
+                    fileReader.onload = event => {
+                        this.E_img = btoa(event.target.result);
+                    };
+                    fileReader.readAsBinaryString(file);
+                },
+
+                //SQL欄位用varchar無法寫入base64，因為字串太長，可以改用「text」，text (inytext、text、mediumtext和longtext詳解)，他可接受的字串長度較長
+                //base64字串長度與檔案成正比，檔案越大，字串越長，欄位就要用更大的「text」
+                //:src=  data:image/*;base64,      可以暴力解開base64的內容  data:image/檔案格式(jpg等等，或用*代表全部)
+
+                // 新增展品
+                add_paint() {
+
+                    if (this.E_name != '' && this.E_room != '' && this.E_author != '' && this.E_info != '' && this.E_status != '' && this.E_img != '') {
+
+                        //另一種方式是用formData
+                        // const formData = new FormData();
+                        // const fileField = document.querySelector('input[type="file"]');
+
+                        // formData.append('E_author',  this.E_author);
+                        // formData.append('E_info',  this.E_info);
+                        // formData.append('E_name',  this.E_name);
+                        // formData.append('avatar', fileField.files[0]);
+
+                        fetch("./php/backend/b_item_exhibits_add.php", {
+                            method: 'POST',
+                            // body: formData,
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                            mode: "cors",
+                            body: JSON.stringify({
+                                E_name: this.E_name,
+                                E_room: this.E_room,
+                                E_author: this.E_author,
+                                E_info: this.E_info,
+                                E_img: this.E_img,
+                                E_status: this.E_status,
+                            }),
+                        })
+                            .then(resp => resp.json())
+                            .then(resp => {
+                                console.log(resp);
+                            })
+
+                        add_paint("<strong>新增成功</strong>", 'success')
+                        let reset = document.querySelector(".reset")
+                        reset.reset()
+                    } else {
+                        // alert('請填寫完所有欄位再送出')
+                        add_paint('<strong>請填寫完所有欄位再送出</strong>', 'error')
+                    }
+                },
+
+                //按下編輯後，可以抓取對應的資料項目
+                find_edit(id) {
+                    // alert(id)
+                    fetch("./php/backend/b_item_exhibits_edit.php", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        mode: "cors",
+                        body: JSON.stringify({
+                            id: id,
+                        }),
+                    })
+                        .then(resp => resp.json())
+                        .then(resp => {
+                            // console.log(resp);
+                            // const edits = this.resp;
+                            // this.edits = resp;
+                            // this.edits = resp.data;
+
+                            //把資料庫的內容丟回edit的物件裡面，要在data輸入edit物件放資料
+                            this.edit.id = resp[0]['exhibits_id'];
+                            this.edit.room = resp[0]['exhibits_room'];
+                            this.edit.name = resp[0]['exhibits_name'];
+                            this.edit.author = resp[0]['exhibits_author'];
+                            this.edit.info = resp[0]['exhibits_info'];
+                            this.edit.img = resp[0]['exhibits_img2'];
+                            this.edit.status = resp[0]['exhibits_status'];
+                        })
+                },
+
+
+                //更新展品資訊
+                upd_paint(id) {
+                    // alert("是否要更新該筆資料？");
+                    // console.log(id);
+
+                    if (this.edit.id != '' && this.edit.room != '' && this.edit.name != '' && this.edit.author != '' && this.edit.info != '' && this.edit.status != '') {
+
+                        fetch("./php/backend/b_item_exhibits_upd.php", {
+                            method: 'POST',
+                            // body: formData,
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                            mode: "cors",
+                            body: JSON.stringify({
+                                upd_id: this.edit.id,
+                                upd_room: this.edit.room,
+                                upd_name: this.edit.name,
+                                upd_author: this.edit.author,
+                                upd_info: this.edit.info,
+                                upd_status: this.edit.status,
+                            }),
+                        })
+
+                            .then(resp => resp.json())
+                            .then(resp => {
+                                // console.log(resp);
+                            })
+                        add_paint("<strong>新增成功</strong>", 'success')
+                        // let reset = document.querySelector(".reset")
+                        // reset.reset()
+                    } else {
+                        // alert('請填寫完所有欄位再送出')
+                        add_paint('<strong>請填寫完所有欄位再送出</strong>', 'error')
+                    }
+
+                },
+
+                //展間搜尋
+                room() {
+                    if (this.search != "") {
+                        fetch("./php/exhibits_search.php", {
+                            method: 'POST',
+                            // body: formData,
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                            // mode: "cors",
+                            body: JSON.stringify({
+                                KEY: this.search
+                            }),
+                        })
+                            .then(res =>
+                                res.json()
+                            )
+                            .then(res => {
+                                this.paints = res;
+                            })
+
+                            .catch(reason => alert("查無該筆資料"));  //報錯時的反應if/else
+                        let input_search_name = document.getElementById("check");
+                    }
+                }
+            },
+
+
+
+            //展品與資料庫內容同步渲染在畫面(有重整問題)
+            created() {
+                fetch("./php/backend/b_item_exhibits_show.php")
+                    .then(res => res.json())
+                    .then(res => {
+                        this.paints = res
+                    })
+
+            },
+
+            // updated() {  //created渲染出畫面後，執行updated，解決重整問題
+            //     fetch("./php/backend/b_item_exhibits_show.php")
+            //         .then(res => res.json())
+            //         .then(res => {
+            //             this.paints = res
+            //             // console.log(res);
+            //         })
+            // },
+
+
+        })
     </script>
 </body>
-</html> 
+
+</html>

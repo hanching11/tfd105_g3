@@ -14,33 +14,36 @@
     @@include('./layout/head.html')
     <title>Online Gallery| 光緣畫廊 | KUANG YUAN</title>
     <style>
-        .wrapper_header{
+        .wrapper_header {
             padding-bottom: 0;
         }
+
         .wrapper_header .header_bac {
             position: fixed;
             z-index: 9999999;
         }
-        .wrapper_footer{
+
+        .wrapper_footer {
             display: none;
         }
 
-        .wrapper_header .nav-list ul ol:nth-child(3) a{
-          color: #eeeae2;
+        .wrapper_header .nav-list ul ol:nth-child(3) a {
+            color: #eeeae2;
         }
 
-        @media (max-width: 768px){
-            .wrapper_header .nav-list ul ol:nth-child(3) a{  
-          color: #353231;
+        @media (max-width: 768px) {
+            .wrapper_header .nav-list ul ol:nth-child(3) a {
+                color: #353231;
+            }
         }
-        }
-        
+
         @media screen and (max-width: 575.98px) {
             .wrapper_header .header_bac {
                 position: relative;
                 z-index: 9999999;
             }
-            .wrapper_footer{
+
+            .wrapper_footer {
                 display: block;
             }
 
@@ -77,7 +80,7 @@
                         <h1>哥德式</h1>
                         <p>哥德式藝術為一種源自法國的藝術風格早期的哥德式雕塑和繪畫都是巨大建築的一部分，晚期的哥德式雕刻則追求平面裝飾性的效果，不再追求結實和簡潔的處理。這種藝術形式被文藝復興時代的藝文人士認為像哥德人一樣野蠻，
                             故得此名。</p>
-                        <a href="" class="enter">進入展間</a>
+                        <a data-galleryid="01" href="./online_gallery_exhibition.html" class="enter">進入展間</a>
                     </div>
                 </div>
             </div>
@@ -98,7 +101,7 @@
                         <h1>文藝復興</h1>
                         <p>文藝復興是一場大致發生在14世紀至17世紀歐洲的文化運動，在中世紀晚期發源於義大利中部的佛羅倫斯、威尼斯等城市，即義大利文藝復興，後擴展至歐洲各國。其辭源為義大利語「Rinascimento」。
                         </p>
-                        <a href="./online_gallery_exhibition.html" class="enter">進入展間</a>
+                        <a href="./online_gallery_exhibition.html" data-galleryId="02" class="enter">進入展間</a>
                     </div>
                 </div>
             </div>
@@ -119,7 +122,7 @@
                         <h1>浮世繪</h1>
                         <p>浮世繪日本的一種繪畫藝術形式，因巧妙地與木板活版印刷結合而在江戶時代廣為流行，起源於17世紀，並以18、19世紀的江戶為中心迎來創作與商業上的全盛時期，主要描繪人們日常生活、風景、和戲劇。
                         </p>
-                        <a href="" class="enter">進入展間</a>
+                        <a data-galleryId="03" href="./online_gallery_exhibition.html" class="enter">進入展間</a>
                     </div>
                 </div>
             </div>
@@ -139,7 +142,7 @@
                     <div class="gallery_text">
                         <h1>後印象派</h1>
                         <p>後印象派是印象派發展而來的一種油畫流派。這些藝術家們不滿足於刻板片面的追求光色，強調作品要抒發藝術家的自我感受和主觀感情，於是開始嘗試對色彩及形體表現性因素的自覺運用。</p>
-                        <a href="abc.html?room=2&other=tttt" class="enter">進入展間</a>
+                        <a data-galleryId="04" href="./online_gallery_exhibition.html" class="enter">進入展間</a>
                     </div>
                 </div>
             </div>
@@ -160,49 +163,11 @@
                         <h1>立體主義</h1>
                         <p>立體主義的藝術家追求碎裂、解析、重新組合的形式，形成分離的畫面，以許多組合的碎片型態為藝術家們所要展現的目標。藝術家以許多的角度來描寫對象物，將其置於同一個畫面之中，以此來表達對象物最為完整的形象。。
                         </p>
-                        <a href="" class="enter">進入展間</a>
+                        <a data-galleryId="05" href="./online_gallery_exhibition.html" class="enter">進入展間</a>
                     </div>
                 </div>
             </div>
 
-        </div> <!-- fullpage-end -->
-
-        <!-- fullpage_dot-->
-        <div id="fp-nav" class="fp-right" style="display: block;">
-            <ul>
-                <li><a href="#gothic" class="">
-                        <span class="fp-sr-only">gothic</span>
-                        <span></span></a>
-                </li>
-
-                <li>
-                    <a href="#renaissance" class="">
-                        <span class="fp-sr-only">Renaissance</span>
-                        <span></span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#ukiyo-e" class="">
-                        <span class="fp-sr-only">ukiyo-e</span>
-                        <span></span></a>
-                </li>
-
-                <li>
-                    <a href="#post-impressionism" class="">
-                        <span class="fp-sr-only">post-impressionism</span>
-                        <span></span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#cubism" class="">
-                        <span class="fp-sr-only">cubism</span>
-                        <span></span>
-                    </a>
-                </li>
-
-            </ul>
         </div> <!-- fullpage_dot end-->
 
         <!-- 引入header -->
@@ -212,6 +177,13 @@
 
 
     <script>
+        document.querySelectorAll('.enter').forEach(a => {
+            a.addEventListener('click', e => {
+                const galleryId = e.target.dataset.galleryid;
+                sessionStorage.setItem('galleryId', galleryId);
+            });
+        });
+
         // fullpage
         new fullpage('#fullpage', {
             navigation: true,

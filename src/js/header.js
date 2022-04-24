@@ -31,7 +31,7 @@ var previousScroll = 0;
 
 window.addEventListener('scroll', function () {
     var currentScroll = $(this).scrollTop();
-    if (currentScroll > 100 && currentScroll < $(document).height() - $(window).height()) {
+    if (currentScroll > 200 && currentScroll < $(document).height() - $(window).height()) {
         if (currentScroll > previousScroll) {
             hideNav();
         }
