@@ -72,6 +72,7 @@ new Vue({
 
         methods: {
                 openCart() {
+                       
                         // 顯示購物車
                         var shoppingcartbk = document.getElementById('i_shoppingCart_bk');
                         if (shoppingcartbk.style.display === 'none') {
@@ -86,6 +87,35 @@ new Vue({
                                                 this.closest('.i_background').style.display = 'none';
                                         }
                                 });
+                        };
+                },
+
+                goCart(){
+                        function loginMember(msg, icon, html) {
+                                Swal.fire({
+                                    title: msg,
+                                    icon: icon,
+                                    html: html,
+                
+                                    showConfirmButton: false, // 確認按鈕（預設會顯示不用設定）
+                                    confirmButtonText: '參加活動', //　按鈕顯示文字
+                                    confirmButtonAriaLabel: '參加活動', // 網頁無障礙用
+                                    confirmButtonColor: '#75706b', // 修改按鈕色碼
+                
+                                    // 使用同確認按鈕
+                                    // showDenyButton: true, // 否定按鈕
+                                    showCancelButton: false, // 取消按鈕
+                
+                                    buttonsStyling: false, // 是否使用sweetalert按鈕樣式（預設為true）
+                                })
+                            }
+                        var customerId = sessionStorage.login;
+                        console.log(sessionStorage.login);
+                        if (customerId != 'true') {
+                        loginMember('<strong>尚未登入會員</strong>', 'error','<button class="btn btn-warning m-3"><a href="./login.html" style="color: #fff">前往登入</a></button> ')
+                        // alert('尚未登入會員')
+                        }else{
+                                window.location.href = './checkout1.html';     
                         };
                 },
 
@@ -125,7 +155,6 @@ new Vue({
                         orderTime = new SimpleDateFormat("yyMMdd");
                         now = new Date();
                         currentDate = formatShort.format(now);
-
                        console.log(currentDate);
                 },
 

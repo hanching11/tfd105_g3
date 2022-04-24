@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./layout/head.html')
+    <title>psychol_test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    <style>
+        .wrapper_header .nav-list ul ol:nth-child(5),
+        .wrapper_header .nav-list ul ol:nth-child(5) i,
+        .wrapper_header .nav-list ul ol:nth-child(5) #sub-nav_color2 {
+            color: #eeeae2;
+        }
+
+        @media (max-width: 768px) {
+
+            .wrapper_header .nav-list ul ol:nth-child(5),
+            .wrapper_header .nav-list ul ol:nth-child(5) #tg1,
+            .wrapper_header .nav-list ul ol:nth-child(5) #sub-nav_color2 {
+                color: #353231;
+            }
+        }
+
+        #loading {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: url('./img/loading-bac.jpg') no-repeat center center;
+            background-size: cover;
+            z-index: 99999;
+        }
+
+        #loading_type {
+            font-family: 'Cinzel', 'Noto Serif TC';
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            top: 50%;
+            bottom: 0;
+            color: #eeeae2;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 5px;
+            line-height: 2;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            50% {
+                text-shadow: 0 0 15px #eeeae2;
+            }
+
+            100% {
+                text-shadow: 0 0 10px #AB8A49;
+                letter-spacing: 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loading -->
+    <div id="loading">
+        <h6 id="loading_type">光緣畫廊<br>KUANG YUAN GALLERY</h6>
+    </div>
+    <!-- 心理測驗內容 -->
+    @@include('./layout/header.html')
+    <section class="psychol_test_wrapper_start">
+
+        <div class="psychol_test_bac">
+            <div class="psychol_title ">
+                <h1>心理測驗</h1>
+            </div>
+
+            <div class="psychol_test_content">
+                <div class="test_title">
+                    <h1>心靈藝術家 - 從畫作中顯示出現階段你靈魂的藝術家</h1>
+                    <div class="test_content">
+                        <p>每個人都是獨一無二的，每幅畫作帶給觀者的感受都是如此獨特，<br>
+                            透過測驗從不同的畫作中，找尋你靈魂的藝術家!<br>
+                            依題目選擇出最適合你當下感受的選項，一共5題。<br>
+                            測驗結果將推薦可能適合你的周邊商品!
+                        </p>
+                    </div>
+                    <div class="game_start_btn">
+                        <h1>現階段你靈魂的藝術家是?</h1>
+                        <a href="./psychol_test_q1.html"><button>測驗開始!</button></a>
+                    </div>
+                    <div class="space">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RWD version -->
+        <section class="psychol_test_mobile">
+            <div class="psychol_title ">
+                <h1>心理測驗</h1>
+            </div>
+
+            <div class="psychol_test_content">
+                <div class="test_title">
+                    <h1>心靈藝術家<br>從畫作中顯示出現階段你靈魂的藝術家</h1>
+                    <div class="test_content">
+                        <p>每個人都是獨一無二的，<br>每幅畫作帶給觀者的感受都是如此獨特，<br>
+                            透過測驗從不同的畫作中，<br>找尋你靈魂的藝術家!<br>
+                            依題目選擇出最適合你當下感受的選項，<br>一共5題。<br>
+                            測驗結果將推薦可能適合你的周邊商品!
+                        </p>
+                    </div>
+                    <div class="game_start_btn">
+                        <h1>現階段你靈魂的藝術家是?</h1>
+                        <a href="./psychol_test_q1.html"><button>測驗開始!</button></a>
+                    </div>
+                    <div class="space">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    @@include('./layout/footer.html')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        jQuery(document).ready(function () {
+            jQuery('#loading').fadeOut(5000);
+        });
+    </script>
+
+</body>
+
+</html>
