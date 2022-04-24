@@ -959,6 +959,7 @@ Puzzle.prototype.popupThecoupon = function () {
   $(".cd-popup-trigger")[0].style.display="block";
 }
 // -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -
+
 Puzzle.prototype.launchAnimation = function () {
 
   this.anim = { cpt: autoStart ? 200 : 100 };
@@ -1201,8 +1202,8 @@ Puzzle.prototype.mouseUpGame = function (event) {
 
   // YES ! tell the player
   this.removeAllListeners();
-  this.popupThecoupon();
-
+  // this.popupThecoupon();
+  
   // normal image is re-drawn
   let ctx = this.canvMobile.getContext("2d");
   ctx.drawImage(this.image,
@@ -1237,7 +1238,12 @@ Puzzle.prototype.mouseUpGame = function (event) {
   if (this.anim.cpt < 12) this.anim.cpt = 12;
   if (this.anim.cpt > 100) this.anim.cpt = 100;
   this.anim.cpt = Math.floor(this.anim.cpt);
-  this.anim.tmr = window.setInterval((function (puzz) { return function () { puzz.animateEnd() } })(this), 20);
+  this.anim.tmr = window.setInterval((function (puzz) {
+    return function () {
+      puzz.animateEnd()
+      setTimeout(puzz.popupThecoupon,2300)
+    }
+  })(this), 20);
 
 } // Puzzle.prototype.mouseUpGame
 // -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -
@@ -1528,7 +1534,8 @@ function lookForLoops(tbCases) {
 
 window.addEventListener("load", function () {
 
-let img = './img/Puzzle/game/still-life.png';
+  let img = './img/Puzzle/game/still-life.png';
+
 
   autoStart = isMiniature(); // used for nice miniature in CodePen
 
