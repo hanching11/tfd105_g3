@@ -19,6 +19,36 @@
             color: #eeeae2;
         }
 
+        #btn_join {
+            width: 150px;
+            height: 40px;
+            box-sizing: border-box;
+            color: white;
+            margin: 0 auto;
+            border-radius: 15px;
+            border: none;
+            margin-left: 150px;
+            margin-top: 20px;
+            text-align: center;
+
+
+        }
+
+        #btn_join2 {
+            width: 150px;
+            height: 40px;
+            box-sizing: border-box;
+            color: white;
+            margin: 0 auto;
+            border-radius: 15px;
+            border: none;
+            margin-left: 150px;
+            margin-top: 20px;
+            text-align: center;
+
+
+        }
+
         @media (max-width: 768px) {
 
             .wrapper_header .nav-list .sub-nav2 {
@@ -66,11 +96,11 @@
 
                 <div class="form-group">
                     <label for="text">&nbsp; &nbsp;帳號&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
-                    <input type="text" id="username_j" placeholder="請輸入Email">
+                    <input type="text" id="username_j" placeholder="請輸入Email" v-model="account">
                 </div>
                 <div class="form-group">
                     <label for="password">&nbsp; &nbsp;密碼&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
-                    <input type="password" id="password_j" placeholder="請輸入密碼">
+                    <input type="password" id="password_j" placeholder="請輸入密碼" v-model="password">
                 </div>
                 <div class="form-group">
                     <label for="confirm_pas">確認密碼&nbsp; &nbsp; &nbsp; </label>
@@ -78,22 +108,20 @@
                 </div>
                 <div class="form-group">
                     <label for="name">&nbsp; &nbsp;姓名&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
-                    <input type="text" id="name" placeholder="">
+                    <input type="text" id="name" placeholder="" v-model="name">
                 </div>
                 <div class="form-group">
                     <label for="bitrhday">&nbsp; &nbsp;生日&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
-                    <input type="date" id="bitrhday">
+                    <input type="date" id="bitrhday" v-model="birthday">
                 </div>
                 <div class="form-group">
                     <label for="phone">&nbsp; &nbsp;電話&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
-                    <input type="number" class=" hide-arrows" id="phone">
+                    <input type="number" class=" hide-arrows" id="phone" v-model="phone">
                 </div>
 
                 <div id="msg"></div>
 
-                <button id="join_btn">
-                    <p>註冊會員</p>
-                </button>
+                <input class="btn btn-warning " type="button" value="註冊會員" id="btn_join" @click="new_member" style="width:150px;height:40px;border:none #9999FF dashed;background-color:#786B54;">
             </form>
 
             <!-- form 會員登入 -->
@@ -101,18 +129,17 @@
                 <form class="form_content" id="tab_login_content">
                     <div class="form-group">
                         <label for="email">&nbsp; &nbsp;帳號&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
-                        <input type="email" id="email_l" placeholder="請輸入帳號或Email">
+                        <input type="email" id="email_l" placeholder="請輸入帳號或Email" v-model="login_account">
                     </div>
                     <div class="form-group">
                         <label for="password">&nbsp; &nbsp;密碼&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
-                        <input type="password" id="password_l" placeholder="請輸入密碼">
+                        <input type="password" id="password_l" placeholder="請輸入密碼" v-model="login_password">
                     </div>
 
                     <div id="msg2"></div>
 
-                    <button id="login_btn">
-                        <p>登入會員</p>
-                    </button>
+                    <input class="btn btn-warning " type="button" value="登入會員" @click="login_member" id="#btn_join2"  style="width:150px;height:40px;color:white;border-radius: 15px; margin-left: 150px;
+                    margin-top: 20px; border:none #9999FF dashed;background-color:#786B54;">
                 </form>
 
                 <!-- 彈窗 -->
@@ -128,234 +155,284 @@
 
 
                 <!-- footer-->
-                @@include('./layout/footer.html')
+                <footer class="wrapper_footer">
+                    <div class="f_bac">
+                        <div class="f_bottom">
+                            <div class="left">
+                                <div class="footer_logo">
+                                    <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
+                                </div>
+                                <div>
+                                    <ul class="footer_icon--hori">
+                                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="gallery_opening">
+                                    <h6>實體開放時間</h6><br>
+                                    <p>
+                                        開放星期一-星期六
+                                        10:00 - 17:00<br>
+                                        星期日 14:00 - 17:00<br>
+                                        依官網公告時程休息
+                                    </p>
+                                </div>
+                                <div class="gallery_address">
+                                    <h6>實體地址</h6><br>
+                                    <p>
+                                        南京東路三段219號5樓<br>
+                                        104 台北市中山區<br>
+                                        garelly@gmail.com.tw<br>
+                                        00-123456789
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mobile footer -->
+                        <div class="mob_footer">
+                            <div class="mob_footer_main">
+                                <div>
+                                    <ul class="footer_icon--level">
+                                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                                    </ul>
+                                    <div class="right">
+                                        <div class="gallery_opening">
+                                            <ol class="sub-nav">實體開放時間<i class="fa-solid fa-angle-down" id="tg_m1"></i>
+                                            </ol>
+                                            <li class="sub_nav-oping">
+                                                <p>
+                                                    開放星期一-星期六
+                                                    10:00 - 17:00<br>
+                                                    星期日 14:00 - 17:00<br>
+                                                    依官網公告時程休息
+                                                </p>
+                                            </li>
+                                        </div>
+                                        <div class="gallery_address">
+                                            <ol class="sub-nav2">實體地址<i class="fa-solid fa-angle-down" id="tg_m2"></i>
+                                            </ol>
+                                            <li class="sub_nav2-address">
+                                                <p>
+                                                    南京東路三段219號5樓<br>
+                                                    104 台北市中山區<br>
+                                                    garelly@gmail.com.tw<br>
+                                                    00-123456789
+                                                </p>
+                                            </li>
+                                        </div>
+                                    </div>
+                                    <div class="footer_logo">
+                                        <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
+                                    </div>
+                                    <div class="copyright_mobile">
+                                        <p>
+                                            2022 garelly. All right reserved.
+                                        </p>
+                                        <p id="c1">Privacy Policy</p>
+                                        <p id="c2">Terms of Service</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright">
+                            <p>
+                                2022 garelly. All right reserved.
+                            </p>
+                            <ul>
+                                <li>
+                                    <p id="c1">Privacy Policy</p>
+                                </li>
+                                <li>
+                                    <p id="c2">Terms of Service</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="copyright_reference">
+                            <p>本網站為緯育TibaMe前端設計工程師班第74期第三組學員專題成果作品，本平台僅供學習、展示之用。</p>
+                            <p>
+                                參考資源：https://www.behance.net/gallery/118386915/Museum-App-Uffizi-Redesign-Concept-UXUI?tracking_source=search_projects%7Cmuseum
+                            </p>
+                        </div>
+                    </div>
+                    <button id="goBackBtn">
+                        <i class="fas fa-chevron-up"></i>
+                    </button>
+                    <!-- <script>
+        // 子選單按鈕切換
+        $('.sub-nav').on("click", function(){
+            $(".sub_nav-oping > p").toggle();
+        })
+
+        $('.sub-nav2').on("click", function(){
+            $(".sub_nav2-address > p").toggle();
+        })
+
+        //回到最上方
+        $("#goBackBtn").click(function () {
+        // console.log("滑到最上方");
+            const duration = 600;
+            $("html, body").stop().animate({
+                scrollTop: 0
+            }, duration);
+        });
+    </script> -->
+
+                </footer>
             </div>
         </div>
+        <!-- <script src="../dist/js/vue.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
         <script>
-            const member_tab = document.getElementById("member_tab").querySelectorAll("a");
-            const tab_inner = document.getElementById("tab_inner").querySelectorAll('.form_content');
-            const form_content = document.querySelectorAll('.form_content')
-            const tab_join_btn = document.getElementById("tab_join_btn");
-            const tab_login_btn = document.getElementById("tab_login_btn");
-            const tab_join_content = document.getElementById("tab_join_content");
-            const tab_login_content = document.getElementById("tab_login_content");
-            const msg = document.getElementById('msg');
-            const join_btn = document.getElementById('join_btn');
-            const username_j = document.getElementById('username_j');
-            const password_j = document.getElementById('password_j');
-            const name = document.getElementById('name');
-            const bitrhday = document.getElementById('bitrhday');
-            const phone = document.getElementById('phone');
-            const confirmPassword = document.getElementById('confirmPassword');
+            function loginMember(msg, icon, html) {
+                Swal.fire({
+                    title: msg,
+                    icon: icon,
+                    html: html,
 
-            const login_btn = document.getElementById('login_btn');
-            const msg2 = document.getElementById('msg2');
-            const email_l = document.getElementById('email_l');
-            const password_l = document.getElementById('password_l');
+                    showConfirmButton: false, // 確認按鈕（預設會顯示不用設定）
+                    confirmButtonText: '參加活動', //　按鈕顯示文字
+                    confirmButtonAriaLabel: '參加活動', // 網頁無障礙用
+                    confirmButtonColor: '#75706b', // 修改按鈕色碼
+
+                    // 使用同確認按鈕
+                    // showDenyButton: true, // 否定按鈕
+                    showCancelButton: false, // 取消按鈕
+
+                    buttonsStyling: false, // 是否使用sweetalert按鈕樣式（預設為true）
+                })
+            }
+        </script>
+        <script>
+            new Vue({
+                el: '#tab_inner',
+                data() {
+                    return {
+                        eyeToggle: 'close',
+                        eyeToggle2: 'close',
+                        login_account: '',
+                        login_password: '',
+                        account: '',
+                        password: '',
+                        name: '',
+                        phone: '',
+                        birthday: '',
 
 
 
-            const popupcontent = document.getElementsByClassName('popupcontent')[0];
-            const mask = document.getElementsByClassName('mask')[0];
-
-
-            document.addEventListener("DOMContentLoaded", function () {
-
-                //input type= number e bug
-                $('input[type=number]').keypress(function (e) {
-                    if (!String.fromCharCode(e.keyCode).match(/[0-9\.]/)) {
-                        return false;
                     }
-                });
+                },
+                methods: {
+                    login_member() {
+                        // alert(this.login_account)
+                        if (this.login_account != '' && this.login_password != '') {
+                            if (this.login_account.length < 10 || this.login_account.length > 40) {
+                                // alert("請輸入正確信箱格式")
+                                loginMember('<strong>帳號錯誤</strong>', 'error')
+                            } else if (this.login_password.length < 7) {
+                                // alert("密碼長度不足")
+                                loginMember('<strong>密碼錯誤</strong>', 'error')
+                            } else {
+                                // alert(this.login_account)
+                                fetch("./php/M_login.php", {
+                                    method: "POST",
+                                    headers: {
+                                        "Content-Type": "application/json",
+                                        // "Accept": "application/json",
+                                    },
+                                    mode: "cors",
+                                    body: JSON.stringify({
+                                        login_account: this.login_account,
+                                        login_password: this.login_password,
+                                    }),
+                                })
+                                    .then(resp => resp.json())
+                                    .then((body) => {
+                                        const { successful } = body;
+                                        console.log(body);
+                                        if (successful) {
+                                            loginMember('<strong>登入成功</strong>', 'success', '<button class="btn btn-warning m-3"><a href="#" style="color: #fff">開始購物</a></button> ')
+                                            let login_reset = document.querySelector(".login_reset")
+                                            // login_reset.reset()
+                                            sessionStorage.setItem('login', successful);
+                                           
+                                            
+                                        } else {
+                                            loginMember('<strong>帳號或密碼錯誤</strong>', 'error')
+                                        }
+                                    });
+                            }
+                        } else {
+                            // alert('請填寫完所有欄位再送出')
+                            loginMember('<strong>請填寫完所有欄位再送出</strong>', 'error')
+                        }
+                    },
 
-                //tab切換 舊的
-                // 啟動第一個panel
-                // panelDisplay(member_tab[0]);
+                    new_member() {
+                        if (this.account != '' && this.phone != '' && this.password != '' && this.name != '') {
+                            if (this.account.length < 10 || this.account.length > 40) {
+                                // alert("請輸入正確信箱格式")
+                                loginMember('<strong>請輸入正確信箱格式</strong>', 'error')
+                            } else if (this.phone.length != 10) {
+                                // alert("請輸入正確手機格式")
+                                loginMember('<strong>請輸入正確手機格式</strong>', 'error')
+                            } else if (this.password.length < 7) {
+                                // alert("密碼長度不足")
+                                loginMember('<strong>密碼長度不足</strong>', 'error')
+                            } else {
+                                fetch("./php/M_add_member.php", {
+                                    method: "POST",
+                                    headers: {
+                                        "Content-Type": "application/json",
+                                    },
+                                    mode: "cors",
+                                    body: JSON.stringify({
+                                        account: this.account,
+                                        phone: this.phone,
+                                        password: this.password,
+                                        name: this.name,
+                                        birthday:this.birthday,
 
-                // //點擊 tab a連結
-                // for (let i = 0; i < member_tab.length; i++) {
-                //     member_tab[i].addEventListener('click', function (e) {
-                //         e.preventDefault();
-                //         panelDisplay(this);
-                //         // return false;
-                //     });
+                                    }),
+                                })
+                                    .then(resp => resp.json())
+                                loginMember("<strong>註冊成功</strong>", 'success', '<button class="btn btn-warning m-3"><a href="#" style="color: #fff">開始購物</a></button> ')
+                                //     let reset = document.querySelector(".reset")
+                                //     reset.reset()
+                            }
+                        } else {
+                            // alert('請填寫完所有欄位再送出')
+                            loginMember('<strong>請填寫完所有欄位再送出</strong>', 'error')
+                        }
+                    },
+                },
 
-                // };
+            })
+        </script>
+        <script>
 
-                // function panelDisplay(activePanel) {
-                //     for (let i = 0; i < member_tab.length; i++) {
-
-                //         //設定條件tabLink ==activePanel 
-                //         //將tablink代入for循環中並利用 if ...else 進行條件 classList.add增加class="active" ，就是每執行一次function的時候就進行全部tablinks增加class
-
-                //         if (member_tab[i] == activePanel) {
-                //             member_tab[i].classList.add("active");
-                //             tab_inner[i].style.display = "block";
-
-                //         } else {
-                //             member_tab[i].classList.remove("active");
-                //             tab_inner[i].style.display = "none";
-                //         }
-                //     }
-                // }
-                //tab切換end
-
-                // switch btn 切換
-                $(".member_btn").click(function(){
-                    $(".form_content").toggle()
-                    $(".switch").toggleClass("transformX")
-                    // $(".member_btn").toggleClass("white")
-                    // $(".switch").css("transform", "translateX(-80%)");
-                    if( $(".switch").hasClass("transformX") ){
-                        $("#tab_join_btn").addClass("white_fnot")
-                        $("#tab_login_btn").removeClass("white_fnot")
-                    }else{
-                        $("#tab_join_btn").removeClass("white_fnot")
-                        $("#tab_login_btn").addClass("white_fnot")
-                    }
-                });
-
-                //會員註冊驗證
-                join_btn.addEventListener('click', (e) => {
-                    e.preventDefault();
-
-                    //註冊條件
-                    // console.log("AA");
-                    const accLength = username_j.value.length;
-                    if (accLength < 5 || accLength > 50) {
-                        // msg.innerHTML ='aaa';
-                        msg.textContent = '帳號長度須介於5~50字元';
-                        // username_j.style.border = "red 1px solid";
-                        return;
-
-                    } //else {
-                    //     username_j.style.border = "";
-
-                    // }
-
-                    const pwdLength = password_j.value.length;
-                    if (pwdLength < 6 || pwdLength > 12) {
-                        msg.textContent = '密碼長度須介於6~12字元';
-                        // password_j.style.border = "red 1px solid";
-                        return;
-
-                    } //else {
-                    //     password_j.style.border = "";
-                    //     // return;
-                    // }
-
-                    if (confirmPassword.value !== password_j.value) {
-                        msg.textContent = '密碼與確認密碼不相符';
-                        // password_j.style.border = "red 1px solid";
-                        // confirmPassword.style.border = "red 1px solid";
-                        return;
-
-                    } //else {
-                    //     password_j.style.border = "";
-                    //     confirmPassword.style.border = "";
-                    //     // return;
-                    // }
-
-                    const nameV = name.value;
-                    const bitrhdayV = bitrhday.value;
-                    const phoneV = phone.value;
-
-                    if (nameV == null || nameV == undefined || nameV == '') {
-                        // console.log("AA");
-                        msg.textContent = '請輸入姓名';
-                        // name.style.border = "red 1px solid";
-                        return;
-
-                    } //else {
-                    //     name.style.border = "";
-                    //     // return;
-                    // }
-
-                    if (bitrhdayV == null || bitrhdayV == undefined || bitrhdayV == '') {
-                        msg.textContent = '請輸入生日';
-                        // bitrhday.style.border = "red 1px solid"
-                        return;
-
-                    } //else {
-                    //     bitrhday.style.border = "";
-                    //     // return;
-                    // }
-
-                    if (phoneV == null || phoneV == undefined || phoneV == '') {
-                        msg.textContent = '請輸入電話';
-                        // phone.style.border = "red 1px solid"
-                        return;
-                    } //else {
-                    //     phone.style.border = "";
-                    //     return;
-                    // }
-
-                    //若成功
-                    msg.textContent = ' ';
-                    alert("註冊成功");
-
-                    // msg.textContent = "會員註冊成功";
-                    // popupcontent.style.display = "flex";
-                    // mask.style.display = "bloxk";
-
-                    // fetch('#', {
-                    //     method: 'POST',
-                    //     headers: {
-                    //         'Content-Type': 'application/json',
-                    //     },
-                    //     body: JSON.stringify({
-                    //         username: username.value,
-                    //         password: password.value,
-                    //         name: name.value,
-                    //         bitrhday: bitrhday.value,
-                    //         p/ hone: phone.value,
-
-                    //         // 其他會員資料
-                    //     }),
-                    // // })
-                    //     .then((resp) => resp.json())
-                    //         .then((body) => {
-
-                    //         });
-
-
-
-
-                });
-
-
-                //會員登入驗證
-                login_btn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    // console.log("AAA");
-                    const email_l_V = email_l.value;
-                    const password_l_V = password_l.value;
-
-                    if (email_l_V == null || email_l_V == undefined || email_l_V == '') {
-                        // console.log("AA");
-                        msg2.textContent = '請輸入帳號';
-                        return;
-                    }
-
-                    if (password_l_V == null || password_l_V == undefined || password_l_V == '') {
-                        // console.log("AA");
-                        msg2.textContent = '請輸入密碼';
-                        return;
-                    }
-
-                    //若成功
-                    msg.textContent = ' ';
-                    alert("帳號密碼輸入錯誤");
-
-
-                });
-
-
-
-
+            // switch btn 切換
+            $(".member_btn").click(function () {
+                $(".form_content").toggle()
+                $(".switch").toggleClass("transformX")
+                // $(".member_btn").toggleClass("white")
+                // $(".switch").css("transform", "translateX(-80%)");
+                if ($(".switch").hasClass("transformX")) {
+                    $("#tab_join_btn").addClass("white_fnot")
+                    $("#tab_login_btn").removeClass("white_fnot")
+                } else {
+                    $("#tab_join_btn").removeClass("white_fnot")
+                    $("#tab_login_btn").addClass("white_fnot")
+                }
             });
 
+
         </script>
+
 
 
 
