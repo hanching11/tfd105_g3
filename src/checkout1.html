@@ -90,13 +90,17 @@
                 <ol>運費</ol>
                 <ol>1000</ol>
               </li>
+              <li>
+                <ol>折扣碼優惠</ol>
+                <ol>{{hascoupon ? 100: 0}}</ol>
+              </li>
               <li class="checkTotal">
                 <ol >訂單總計</ol>
                 <ol >{{orderTotal}}</ol>
               </li>
               
-                <input class="saleCode" type="text" name="saleCode" id="saleCode" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入折扣碼" onfocus="this.placeholder='輸入折扣碼'" onblur="this.placeholder='輸入折扣碼'" size="25"/>
-                <button type="submit" class="useCode">兌換</button>
+                <input  type="text" name="saleCode" id="saleCode" minlength="6" maxlength="12" pattern="[A-Za-z0-9]*" placeholder="輸入折扣碼" onfocus="this.placeholder='輸入折扣碼'" onblur="this.placeholder='輸入折扣碼'" size="25"/>
+                <button  @click="useCoupon" type="submit" class="useCode">兌換</button>
             </ul>
             
           </div>
