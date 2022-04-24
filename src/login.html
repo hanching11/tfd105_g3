@@ -4,6 +4,7 @@
 <head>
     @@include('./layout/head.html')
 
+
     <title>Login</title>
 
     <style>
@@ -69,7 +70,8 @@
 </head>
 
 <body>
-    <div id="forCart" class="wrapper_login">
+
+    <div  class="wrapper_login">
         <!-- header -->
         @@include('./layout/header_vue.html')
 
@@ -287,6 +289,9 @@
         </div>
         <!-- <script src="../dist/js/vue.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script src="./js/header_vue.min.js"></script>
+        
+
         <script>
             function loginMember(msg, icon, html) {
                 Swal.fire({
