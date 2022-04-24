@@ -7,6 +7,80 @@
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
     <title>光緣畫廊 | KUANG YUAN</title>
+    <style>
+        .sideRight {
+            text-align: center;
+            padding-right: 340px;
+            /* border: 1px solid black; */
+    
+        }
+    
+        .mb_table {
+            display: block;
+        }
+    
+        .btn_2 {
+            display: flex;
+            /* border: 1px solid black; */
+            margin-left: 50px;
+            position: absolute;
+            top: 38%;
+            right: 13%;
+    
+        }
+    
+        .page_title2 {
+            /* border: 1px solid black; */
+            font-size: 26px;
+        }
+    
+        .btn-danger {
+            width: 80px;
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: #C93939;
+            color: black;
+        }
+    
+        .btn-success {
+            width: 80px;
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: #9DC09E;
+            color: black;
+    
+    
+        }
+    
+        .titleBar {
+            width: 180%;
+            display: grid;
+            grid-template-columns: 10% 20% 15% 15% 20% 15% 5%;
+            margin: 0 auto;
+            background-color: #c8bcb2;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+    
+        }
+    
+        .titleBar_mb {
+            background-color: #FBF8F6;
+            color: black;
+            width: 180%;
+            display: grid;
+            grid-template-columns: 10% 20% 15% 15% 20% 15% 5%;
+            margin: 0 auto;
+            padding: 10px;
+    
+        }
+    
+        .testSelect {
+            text-align: center;
+    
+        }
+    </style>
 </head>
 
 <body>
@@ -47,80 +121,113 @@
                     <div class="page_title2">
                         <h5>會員管理</h5>
                     </div>
-                    <ul class="list_co btn-group" role="group">
-                        <li>
-                            <button type="button" class="btn btn-danger">停權</button>
-                        </li>
-                        <li>
-                            <button type="button" class="btn btn-success">復權</button>
-                        </li>
-                    </ul>
+                    
                 </div>
-                <div class="table_product">
-                    <table class="table  align-middle table-striped">
-                        <thead>
-                            <tr class="table_color">
-                                <th scope="col">#</th>
-                                <th scope="col">會員編號</th>
-                                <th scope="col">帳號/E-mail</th>
-                                <th scope="col">姓名</th>
-                                <th scope="col">生日</th>
-                                <th scope="col">電話號碼</th>
-                                <th scope="col">狀態</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                        </label>
-                                    </div>
-                                <td>1</td>
-                                <td>abd345</td>
-                                <td>羅伊軍</td>
-                                <td>1666/1/1</td>
-                                <td>0911009988</td>
-                                <td>一般</td>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                        </label>
-                                    </div>
-                                <td>2</td>
-                                <td>fgfjc33</td>
-                                <td>陳時鐘</td>
-                                <td>1656/1/1</td>
-                                <td>0911445566</td>
-                                <td>停權</td>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                        </label>
-                                    </div>
-                                <td>3</td>
-                                <td>awpej5</td>
-                                <td>王曉明</td>
-                                <td>1666/1/1</td>
-                                <td>0911224499</td>
-                                <td>一般</td>
-                                </th>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="table_product" id="app">
+                    <ul class="mb_table" id="mb_table">
+                        <li class="titleBar">
+                            <!-- <p>#</p> -->
+                            <p>會員編號</p>
+                            <p>帳號/E-mail</p>
+                            <p>姓名</p>
+                            <p>生日</p>
+                            <p>聯絡電話</p>
+                            <p>狀態</p>
+                        </li>
+                        <div>
+                            <li class="titleBar_mb" v-for="(member, index) in members">
+                                <!-- <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    v-model="checkedNames"> -->
+                                <p>{{member.member_id}}</p>
+                                <p>{{member.account}}</p>
+                                <p>{{member.name}}</p>
+                                <p>{{member.birthday}}</p>
+                                <p>{{member.phone}}</p>
+                                <!-- {{member.status}} -->
+                                <!-- <p>{{member.member_status}}</p> -->
+
+                                <!-- <select v-model="list.select">
+                                        <option value="value" v-for="(text, value) in list.items">{{text.status}}</option>
+                                    </select> -->
+                                <select class="testSelect" v-model="member.member_status" @change="change(member.member_id,member.member_status)">
+
+                                    <option value="一般">一般</option>
+                                    <option value="停權">停權</option>
+                                </select> 
+    
+
+                            </li>
+
+                        </div>
+
+                    </ul>
                 </div>
             </div>
         </section>
     </div>
+    </section>
+
+
+
+
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {  // 變數放這裡!
+                members: [],
+
+
+
+            },
+
+            created() {
+                fetch("./php/M_getinfoall.php")
+                    .then(res => res.json())
+                    .then(res => {
+                        this.members = res
+                        // console.log(this.members);
+                    })
+            },
+            methods: {
+                change(id,status){
+                    fetch("./php/M_edit.php", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        mode: "cors",
+                        body: JSON.stringify({
+                            id: id,
+                            status: status, 
+                        }),
+                    })
+                        .then(resp => resp.json())
+                        .then(resp => {
+                            // console.log(resp);
+                            // const edits = this.resp;
+                            // this.edits = resp;
+                            // this.edits = resp.data;
+
+                            //把資料庫的內容丟回edit的物件裡面，要在data輸入edit物件放資料
+                            member.member_id = resp[0]['member_id'];
+                            member.member_status = resp[0]['member_status'];
+                       
+                        })
+                    
+                    
+
+                }
+            },
+
+        });
+
+
+
+
+
+    </script>
+
 </body>
 
 </html>
