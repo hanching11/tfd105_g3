@@ -124,15 +124,31 @@ new Vue({
                         };
                 },
 
-                // 點擊 - / + 後的動作
-                minusOne(product) {
-                        product.amount--
-                        product.amount = (product.amount < 1) ? 1 : product.amount
-                },
-                addOne(product) {
-                        product.amount++
-                        product.amount = (product.amount > 50) ? 50 : product.amount
-                },
+               // 點擊 - / + 後的動作
+               minusOne(product) {
+                product.amount--;
+                product.amount = (product.amount < 1) ? 1 : product.amount;
+
+                const items = JSON.parse(sessionStorage.getItem('items'));
+                for (let item of items.filter(item => item.id === product.id)) {
+                        item.amount--;
+                        item.sum = item.price * item.amount;
+                }
+
+                sessionStorage.setItem('items', JSON.stringify(items));
+        },
+        addOne(product) {
+                product.amount++;
+                product.amount = (product.amount > 50) ? 50 : product.amount;
+
+                const items = JSON.parse(sessionStorage.getItem('items'));
+                for (let item of items.filter(item => item.id === product.id)) {
+                        item.amount++;
+                        item.sum = item.price * item.amount;
+                }
+
+                sessionStorage.setItem('items', JSON.stringify(items));
+        },
 
                 // 點擊 add to cart 後的動作
                 addToCart(product) {
@@ -168,6 +184,27 @@ new Vue({
                        sessionStorage.setItem('coupon', this.hascoupon);
 
                 },
+
+                submitOrder() {
+                        alert('成功加入購物車!');
+                        fetch("./php/M_checkout.php", {
+                                method: 'POST',
+                                // body: formData,
+                                headers: {
+                                        "Content-Type": "application/json",
+                                },
+                                mode: "cors",
+                                body: JSON.stringify({
+                                        address: this.recipient.address,
+                                        items: JSON.parse(sessionStorage.getItem('items')),
+                                        orderTotal: this.orderTotal
+                                }),
+                        })
+                                .then(resp => resp.json())
+                                .then(resp => {
+                                        alert(resp.status);
+                                })
+                }
 
         },
 
