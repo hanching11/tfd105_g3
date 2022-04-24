@@ -1202,7 +1202,7 @@ Puzzle.prototype.mouseUpGame = function (event) {
 
   // YES ! tell the player
   this.removeAllListeners();
-  this.popupThecoupon();
+  // this.popupThecoupon();
   
   // normal image is re-drawn
   let ctx = this.canvMobile.getContext("2d");
@@ -1238,7 +1238,12 @@ Puzzle.prototype.mouseUpGame = function (event) {
   if (this.anim.cpt < 12) this.anim.cpt = 12;
   if (this.anim.cpt > 100) this.anim.cpt = 100;
   this.anim.cpt = Math.floor(this.anim.cpt);
-  this.anim.tmr = window.setInterval((function (puzz) { return function () { puzz.animateEnd() } })(this), 20);
+  this.anim.tmr = window.setInterval((function (puzz) {
+    return function () {
+      puzz.animateEnd()
+      setTimeout(puzz.popupThecoupon,2300)
+    }
+  })(this), 20);
 
 } // Puzzle.prototype.mouseUpGame
 // -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -   -

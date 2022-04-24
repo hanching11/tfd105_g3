@@ -12,9 +12,8 @@
 </head>
 
 <body>
-    <div class="wrapper_product_info">
+    <div id="pdt_detail" class="wrapper_product_info">
         <!-- header -->
-        @@include('./layout/header_vue.html')
 
         <main class="popup-container">
             <div class="header-prdt_info">
@@ -22,65 +21,59 @@
                     <a href="#"><img src="./img/logo.png" alt=""></a>
                 </div>
 
-                <button class="closing">
-                    <img src="./img/Shop/button/X-w.svg" alt="">
+                <button class="closing" >
+                    <a href="javascript:window.close();">
+                        <img src="./img/Shop/button/X-w.svg" alt="">
+                    </a>
                 </button>
             </div>
 
 
-            <div class="artwork_detail">
+            <div class="artwork_detail" v-if="pdt[0]">
                 <div class="artwork_detail_main">
                     <div class="draginner">
                         <div class="content-upper">
                             <div class="image_container">
                                 <div class="image_wrap">
                                     <div class="image_inner">
-                                        <img src="./img/Shop/prodts-detail/p1.png" alt="">
+                                        <img :src="pdt[0].product_img_f" alt="#">
                                     </div>
                                 </div>
                             </div>
                             <div class="content_container">
                                 <div class="content">
-                                    <h4>吉內薇拉·班琪</h4>
+                                    <h4>{{pdt[0].product_name}}</h4>
                                     <div class="ecommerce_panel">
-                                                <div class="store_item_add_container">
-                                                    <h4 class="product-price">$49.99</h4>
-                                                    <button class="store_item_add_to_cart">
-                                                        <a href="./checkout1.html">
-                                                            <p><i class="fa-solid fa-bag-shopping"></i> Buy now</p>
-                                                        </a>
-                                                        
-                                                    </button>
-                                                    
-                                                </div>
-                                                <div class="links-panel">
-                                                    <a href="#" class="artists">Back to Artist</a>
-                                                </div>
-                                    </div>
-                                    <div class="additional_information">
-                                        <p>
-                                            達文西
-                                            <br>
-                                            <br>
-                                            日期: c.1474; Milan, Italy  
-                                            <br>
-                                            風格: 文藝復興早期
-                                            <br>
-                                            藝術類型: 肖像畫
-                                            <br>
-                                            媒材: 油彩, 木材
-                                            <br>
-                                            地點: 國家藝廊
-                                            <br>
-                                            尺寸: 42 x 37 公分
-                                            <br>
-                                            <br>
+                                        <div class="store_item_add_container">
+                                            <h4 class="product-price">${{pdt[0].product_price | currency}}</h4>
+                                            <button class="store_item_add_to_cart">
+                                                <a href="./checkout1.html">
+                                                    <p><i class="fa-solid fa-bag-shopping"></i> Buy now</p>
+                                                </a>
+                                                
+                                            </button>
                                             
+                                        </div>
+                                        <div class="links-panel">
+                                            <a href="./shop.html" class="artists">Back to Artist</a>
+                                        </div>
+                                    </div>
+                                    <div class="additional_information" data-aos="fade-up" data-aos-duration="3000">
+                                        <p>
+                                            <!-- 待編輯的作家名字 -->
+                                            {{pdt[0].product_artist}}
+                                            <br>
+                                            <!-- 商品簡要資訊 -->
+                                            <br>
+                                            {{pdt[0].product_info}}
+                                            <br>                                           
+                                            <br>                                        
                                             介紹:
                                             <br>
                                             <br>
+                                            <!-- 商品介紹 -->
                                             <span>
-                                                吉內薇拉‧班琪是15世紀佛羅倫斯的一位貴族。她因睿智而廣受同時代人的敬仰。達‧芬奇為她創作了一幅肖像畫。1967年，這幅畫被艾爾莎‧梅隆‧布魯斯基金會以當時創紀錄的5百萬美金的高價從列支敦斯登王室的手中獲取。這幅木板油畫現收藏在坐落於華盛頓的國家藝廊。這是唯一一幅能在美洲見到的達‧芬奇畫作。
+                                                {{pdt[0].product_intro}}
                                             </span>
                                         </p>
                                     </div>
@@ -91,10 +84,10 @@
                         <div class="content_below">
                             <div class="area_wrapper">
                                 <div class="left-item" data-aos="fade-up" data-aos-duration="3000">
-                                    <img src="./img/Shop/prodts-detail/p_d_1-1.png" alt="">
+                                    <img :src="pdt[0].product_img_1" alt="#" >
                                 </div>
                                 <div class="right-item" data-aos="fade-up" data-aos-duration="3000">
-                                    <img src="./img/Shop/prodts-detail/p_d_1-2.png" alt="">
+                                    <img :src="pdt[0].product_img_2" alt="#" >
                                 </div>
                             </div>
                         </div>
@@ -102,25 +95,26 @@
                 </div>
             </div>
                        
-                   
-                
-                     
-
 
         </main>
 
 
-
-
-
-
         <!-- footer-->
-        <!-- @@include('./layout/footer.html') -->
+        
     </div>
 
+
+    <!-- vue JS -->
+    <script src="./js/vendors/vue.min.js"></script>
+    <script src="./js/product_info_vue.min.js"></script>
+
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        // 用於有vue的情況 以function的方式去執行
+        $(function() {
+          AOS.init();
+        });
     </script>
 </body>
 
