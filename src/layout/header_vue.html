@@ -6,10 +6,15 @@
                     <div class="shopping-cart">
                             <div class="row">
                                     <div class="col-12 shopping-cart-items">
-                                            <div class="row-md-4 -title">
-                                                    <span>購物清單</span>
-                                                    <button type="button" class="btn-close"
-                                                            id="btn-cart-close"></button>
+                                            <div class="row -title" justify-content-between>
+                                                    <div class="col-9">
+                                                        <span>購物清單</span>
+
+                                                    </div>
+                                                    <div class="col-1">
+                                                    <button type="button" class="btn-close" id="btn-cart-close"></button>
+                                                
+                                                    </div>
                                             </div>
                                             <!-- 塞商品 -->
                                             <div class="cart" class="row" v-for="product in productsInCart">
@@ -62,8 +67,8 @@
                                             </div>
                                     </div>
                             </div>
-                            <div class="goCart">
-                                    <a class="btncheckS1" href="./checkout1.html">前往結帳</a>
+                            <div class="goCart"  >
+                                    <button  @click="goCart" class="btncheckS1" >前往結帳</button>
                             </div>
                     </div>
             </div>
