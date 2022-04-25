@@ -4,6 +4,7 @@
 <head>
     @@include('./layout/head.html')
     <title>psychological_quiz_5</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         .wrapper_header .nav-list ul ol:nth-child(5),
         .wrapper_header .nav-list ul ol:nth-child(5) i,
@@ -41,7 +42,7 @@
                     <!-- <div class="previous_arrow">
                         <a href="./psychol_test_q4.html"><img src="./img/arrow/right-arrow.svg" alt=""></a>
                     </div> -->
-                    <div class="question_img">
+                    <div class="question_img" data-aos="flip-right" data-aos-duration="3000">
                         <img src="./img/psychol_test/Q5.jpg" alt="">
                     </div>
                     <!-- <div class="next_arrow">
@@ -50,19 +51,19 @@
                 </div>
 
                 <div class="test_question">
-                    <h3>Q5. 你渴望光明和希望?</h3>
+                    <h3 data-aos="zoom-in" data-aos-duration="3000">Q5. 你渴望光明和希望?</h3>
                     <!-- <ul class="option">
                         <li><a href="./psychol_test_result_B.html"><button id="b1"></button> &nbsp;&nbsp;&nbsp;&nbsp;是</a></li>
                         <li><a href="./psychol_test_result_D.html"><button id="b1"></button> &nbsp;&nbsp;&nbsp;&nbsp;否</a></li>
                     </ul> -->
                     <!-- <form action="./psychol_test_result_B.html"> -->
                     <form>
-                        <label for="yes_option"><input type="radio" name="option" id="yes"
+                        <label for="yes_option" data-aos="fade-right" data-aos-duration="3000"><input type="radio" name="option" id="yes"
                                 value="1">&nbsp;&nbsp;&nbsp;&nbsp;是</label>
-                        <label for="no_option"><input type="radio" name="option" id="no"
+                        <label for="no_option" data-aos="fade-left" data-aos-duration="3000"><input type="radio" name="option" id="no"
                                 value="2">&nbsp;&nbsp;&nbsp;&nbsp;否</label>
                         <br>
-                        <button class="next_q" type="button">測驗結果</button>
+                        <button class="next_q" type="button" data-aos="zoom-in" data-aos-duration="4000">測驗結果</button>
                     </form>
                 </div>
             </div>
@@ -243,6 +244,11 @@
         });
 
 
+    </script>
+    <!-- AOS animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 
 </body>

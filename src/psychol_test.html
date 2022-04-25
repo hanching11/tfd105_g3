@@ -2,8 +2,10 @@
 <html lang="en">
 
 <head>
+    @@include('./layout/loading.html')
     @@include('./layout/head.html')
     <title>psychol_test</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         .wrapper_header .nav-list ul ol:nth-child(5),
         .wrapper_header .nav-list ul ol:nth-child(5) i,
@@ -12,6 +14,7 @@
         }
 
         @media (max-width: 768px) {
+
             .wrapper_header .nav-list ul ol:nth-child(5),
             .wrapper_header .nav-list ul ol:nth-child(5) #tg1,
             .wrapper_header .nav-list ul ol:nth-child(5) #sub-nav_color2 {
@@ -35,15 +38,15 @@
 
             <div class="psychol_test_content">
                 <div class="test_title">
-                    <h1>心靈藝術家 - 從畫作中顯示出現階段你靈魂的藝術家</h1>
-                    <div class="test_content">
+                    <h1 data-aos="zoom-in" data-aos-duration="2000">心靈藝術家 - 從畫作中顯示出現階段你靈魂的藝術家</h1>
+                    <div class="test_content" data-aos="zoom-in" data-aos-duration="3000">
                         <p>每個人都是獨一無二的，每幅畫作帶給觀者的感受都是如此獨特，<br>
                             透過測驗從不同的畫作中，找尋你靈魂的藝術家!<br>
                             依題目選擇出最適合你當下感受的選項，一共5題。<br>
                             測驗結果將推薦可能適合你的周邊商品!
                         </p>
                     </div>
-                    <div class="game_start_btn">
+                    <div class="game_start_btn" data-aos="flip-down" data-aos-duration="3000">
                         <h1>現階段你靈魂的藝術家是?</h1>
                         <a href="./psychol_test_q1.html"><button>測驗開始!</button></a>
                     </div>
@@ -61,15 +64,15 @@
 
             <div class="psychol_test_content">
                 <div class="test_title">
-                    <h1>心靈藝術家<br>從畫作中顯示出現階段你靈魂的藝術家</h1>
-                    <div class="test_content">
+                    <h1 data-aos="zoom-in" data-aos-duration="2000">心靈藝術家<br>從畫作中顯示出現階段你靈魂的藝術家</h1>
+                    <div class="test_content" data-aos="zoom-in" data-aos-duration="3000">
                         <p>每個人都是獨一無二的，<br>每幅畫作帶給觀者的感受都是如此獨特，<br>
                             透過測驗從不同的畫作中，<br>找尋你靈魂的藝術家!<br>
                             依題目選擇出最適合你當下感受的選項，<br>一共5題。<br>
                             測驗結果將推薦可能適合你的周邊商品!
                         </p>
                     </div>
-                    <div class="game_start_btn">
+                    <div class="game_start_btn" data-aos="flip-down" data-aos-duration="3000">
                         <h1>現階段你靈魂的藝術家是?</h1>
                         <a href="./psychol_test_q1.html"><button>測驗開始!</button></a>
                     </div>
@@ -80,6 +83,11 @@
         </section>
     </section>
     @@include('./layout/footer.html')
+    <!-- AOS animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
