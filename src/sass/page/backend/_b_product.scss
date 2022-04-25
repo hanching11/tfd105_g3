@@ -28,46 +28,23 @@
             padding: 10px;
         }
 
-    // 編輯查看視窗
     .edit_lay {
         display: flex;
     }
-    
-    .status_toggle:focus,
-    .status_toggle.focus,
-    .status_toggle:focus.active,
-    .status_toggle.focus.active {
-        outline: none;
-    }   
-    .status_toggle:before,
-    .status_toggle:after {
+    .product_photo{
+        display: block;
+        width: 110px;
+    }
+    .text_heigh {
+        line-height: 1.6;
+    }
+    .text_center {
         text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        position: absolute;
-        bottom: 0;
-        transition: opacity 0.25s;
     }
-    .status_toggle:before {
-        content: '上架';
-        left: -5rem;
-        color: #109fff;
+    .word-nowrap {
+        white-space: nowrap;
     }
-    .status_toggle:after {
-        content: '下架';
-        right: -5rem;
-        opacity: 0.5;
-        color: #F47280;
-    }
-    .status-toggle {
-        margin: 0 4rem;
-        padding: 0;
-        position: relative;
-        border: none;
-        height: 1.5rem;
-        width: 5rem;
-        border-radius: 1.5rem;
-        color: #6b7381;
-        background: #0885da;
-    }
+    
+    
+    
 }
