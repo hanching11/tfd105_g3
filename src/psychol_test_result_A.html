@@ -4,6 +4,7 @@
 <head>
     @@include('./layout/head.html')
     <title>psychological_result_A</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         .wrapper_header .nav-list ul ol:nth-child(5),
         .wrapper_header .nav-list ul ol:nth-child(5) i,
@@ -34,25 +35,25 @@
     
             <div class="test_result">
                 <div class="artwork">
-                    <div class="painting">
-                        <img src="./img/psychol_test/A1.jpg" alt="">
+                    <div class="painting" data-aos="flip-left" data-aos-duration="2000">
+                        <a href="./shop.html"><img src="./img/psychol_test/A1.jpg" alt=""></a>
                     </div>
-                    <div class="artist_name">
+                    <div class="artist_name" data-aos="fade-up" data-aos-duration="2000">
                         <h2>Pablo Picasso</h2>
                         <p>The Old Guitarist</p>
                     </div>
                 </div>
     
                 <div class="result_right">
-                    <div class="artist">
+                    <div class="artist" data-aos="flip-down" data-aos-duration="2000">
                         <h2>A. Pablo Picasso</h2>
                     </div>
-                    <div class="artist_introduce">
+                    <div class="artist_introduce" data-aos="fade-up" data-aos-duration="3000">
                         <p>
                             1881年10月25日生於西班牙馬拉加，畢卡索一生是個不斷變化藝術手法的探求者，印象派、後期印象派、野獸的藝術手法都被他汲取改造為自己的風格。他的才能在於他的各種變異風格中，都保持自己粗獷剛勁的個性，而且在各種手法的使用中，都能達到內部的統一與和諧。畢卡索也是立體派、拼貼畫等的代表性作家，最為人熟知的畫作還包括「亞維儂姑娘」和「格爾尼卡城」等。
                         </p>
                     </div>
-                    <div class="recommend">
+                    <div class="recommend" data-aos="fade-right" data-aos-duration="3000">
                         <a href="./shop.html">前往推薦商品! <img src="./img/arrow/w-right-arrow.svg" alt=""></a>
                     </div>
                 </div>
@@ -65,26 +66,26 @@
         </div>
 
         <div class="m_test_result">
-            <div class="m_artwork">
-                <div class="m_painting">
-                    <img src="./img/psychol_test/A1.jpg" alt="">
+            <div class="m_artwork"  data-aos="flip-left" data-aos-duration="2000">
+                <div class="m_painting" >
+                    <a href="./shop.html"><img src="./img/psychol_test/A1.jpg" alt=""></a>
                 </div>
-                <div class="m_artist_name">
+                <div class="m_artist_name" data-aos="fade-up" data-aos-duration="2000">
                     <h2>Pablo Picasso</h2>
                     <p>The Old Guitarist</p>
                 </div>
             </div>
 
             <div class="m_result_right">
-                <div class="m_artist">
+                <div class="m_artist" data-aos="zoom-in" data-aos-duration="2000">
                     <h2>A. Pablo Picasso</h2>
                 </div>
-                <div class="m_artist_introduce">
+                <div class="m_artist_introduce" data-aos="fade-up" data-aos-duration="3000">
                     <p>
                         1881年10月25日生於西班牙馬拉加，畢卡索一生是個不斷變化藝術手法的探求者，印象派、後期印象派、野獸的藝術手法都被他汲取改造為自己的風格。他的才能在於他的各種變異風格中，都保持自己粗獷剛勁的個性，而且在各種手法的使用中，都能達到內部的統一與和諧。畢卡索也是立體派、拼貼畫等的代表性作家，最為人熟知的畫作還包括「亞維儂姑娘」和「格爾尼卡城」等。
                     </p>
                 </div>
-                <div class="m_recommend">
+                <div class="m_recommend" data-aos="zoom-in" data-aos-duration="3000">
                     <a href="./shop.html">前往推薦商品! <img src="./img/arrow/w-right-arrow.svg" alt=""></a>
                 </div>
             </div>
@@ -117,6 +118,12 @@
         //     }
         // });
     </script>
+        <!-- AOS animation -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    
 
 </body>
 

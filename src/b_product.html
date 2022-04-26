@@ -2,7 +2,42 @@
 <html lang="en">
 
 <head>
-    @@include('./layout/head.html')
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<!-- <link rel="stylesheet" href="/src/sass/style.css"> -->
+<link rel="stylesheet" href="../dist/css/style.css">
+<link rel="shortcut icon" href="./img/logo_icon.png">
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+<!-- header -->
+<!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> -->
+<!-- <link rel="shortcut icon" href="/src/img/logo_icon.png"> -->
+<!-- <link rel="stylesheet" href="/dist/css/style.css"> -->
+<!-- <link rel="stylesheet" href="/src/sass/style.css"> -->
+<!-- <link rel="stylesheet" href="/src/sass/layout/_header.scss"> -->
+<!-- <link rel="stylesheet" href="https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Ashopping_cart%3A"> -->
+
+<!-- for shop -->
+<!-- 上滑 -->
+<!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+<!-- 熱門商品輪播 -->
+<!-- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /> -->
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- footer -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Ashopping_cart%3A">
+<!-- <link rel="shortcut icon" href="../img/logo_icon.png"> -->
+<!-- <link rel="stylesheet" href="./sass/layout/_footer.scss"> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
@@ -49,9 +84,11 @@
                     <ul class="list_co btn-group" role="group">
                         <li>
                             <button type="button" class="btn btn-primary" name="up">上架</button>
+                            <input type="hidden" name="action" value="up">
                         </li>
                         <li>
                             <button type="button" class="btn btn-primary" name="down">下架</button>
+                            <input type="hidden" name="action" value="down">
                         </li>
                         <li>
                             <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#product_newBackdrop" name="plus">新增</button>
@@ -62,52 +99,48 @@
                     </ul>
                 </div>
                 <div class="table_product">
-                    <table class="table  align-middle table-striped">
+                    <table class="table  align-middle table-striped" id="data-table">
                         <thead>
                             <tr class="table_color">
-                                <th scope="col">#</th>
-                                <th scope="col">封面</th>
-                                <th scope="col">商品編號</th>
-                                <th scope="col">名稱</th>
-                                <th scope="col">價格</th>
-                                <th scope="col">數量</th>
-                                <th scope="col">產品作家</th>
-                                <th scope="col">商品狀態</th> 
-                                <th scope="col"></th>  
+                                <th>#</th>
+                                <th>商品編號</th>
+                                <th>封面</th>
+                                <th>名稱</th>
+                                <th>價格</th>
+                                <th>數量</th>
+                                <th>產品作家</th>
+                                <th>商品狀態</th> 
+                                <th>編輯</th>  
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">
+                                <th class="align-middle">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">
                                         </label>
                                     </div>
-                                    <td>
-                                        <div class="size align-bottom">
-                                            <img src="./img/Shop/hot-prodts/h-p-1.png" alt="product_photo">
-                                        </div>
-                                    </td>
-                                    <td>1</td>
-                                    <td>馬克杯</td>
-                                    <td>499</td>
-                                    <td>399</td>
-                                    <td>Vincent van Gogh</td>
-                                    <td>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input status_toggle" name="product_status" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                                            <label class="form-check-label" for="flexSwitchCheckChecked"></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#product_editBackdrop">
-                                            編輯與查看
-                                        </button>
-                                    </td>
                                 </th>
+                                <td class="align-middle product-id"></td>
+                                <td class="align-middle" class="product_photo"></td>                                   
+                                <td class="align-middle word-nowrap text_center"></td>
+                                <td class="align-middle text_center text_heigh"></td>
+                                <td class="align-middle"></td>
+                                <td class="align-middle"></td>
+                                <td class="align-middle word-nowrap"></td>
+                                <td class="align-middle">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input status_toggle" name="product_status" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                                        <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                    </div>
+                                </td>
+                                <td class="align-middle">
+                                    <button type="button" class="btn btn-primary word-nowrap" data-bs-toggle="modal" data-bs-target="#product_editBackdrop" id="edit">檢視</button>
+                                </td>
                             </tr>
-                        </tbody>
+                
+                        </tbody>    
                     </table>
                 </div>
             </div>                 
@@ -115,7 +148,6 @@
         <!-- 新增商品視窗 ------------->
 
         <!-- ------------------------------ -->
-
         <section>
             <div class="modal fade" id="product_newBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -125,7 +157,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <form method="POST" action="./php/backend/b_product_insert.php" enctype="multipart/form-data" style="overflow: scroll;"> 
-                            <div class="modal-body">
+                            <div class="modal-body" id="editView">
                                 <!-- 新增商品名稱 -->
                                 <div class="form-group">
                                     <label for="product_newtitle"></label>
@@ -149,7 +181,7 @@
                                     </div>
                                     <div class="input-borad">
                                         <label for="product_newCount"></label>
-                                        <input type="text" id="product_newCount" name="quantity" class="form-control" placeholder="數量">
+                                        <input type="text" id="product_newCount" name="count" class="form-control" placeholder="數量">
                                     </div>
                                 </div>
                                 <!-- 新增商品描述 -->
@@ -194,21 +226,21 @@
                             <h6 class="modal-title" id="exampleModalLabel">編輯商品</h6>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <form method="POST" action="./php/backend/b_product_edit.php" enctype="multipart/form-data" style="overflow: scroll;">
+                        <form method="POST" action="./b_product_edit.php" id="upData" enctype="multipart/form-data" style="overflow: scroll;">
                             <div class="modal-body">
                                 <!-- 商品編號 -->
                                 <div class="form-group">
                                     <label for="product_editNumber"></label>
-                                    <input type="hidden" id="product_editNumber" name="edit_number" class="form-control" placeholder="商品編號">
+                                    <input type="hidden" id="product_editNumber" name="edit_number" class="form-control" value="">
                                 </div>
                                 <!-- 編輯商品名稱 -->
                                 <div class="form-group">
                                     <label for="product_editName"></label>
-                                    <input type="text" id="product_editName" name="edit_name" class="form-control" placeholder="商品名稱">
+                                    <input type="text" id="edit_name" name="edit_name" class="form-control" value=>
                                 </div>
                                 <!-- 編輯商品作家 -->
                                 <div class="form-group option_spacing">
-                                    <select name="edit_artist">
+                                    <select name="edit_artist" value="">
                                         <option>請選擇作者</option>
                                         <option value="a1">Vincent van Gogh</option>
                                         <option value="a2">Pablo Ruiz Picasso</option>
@@ -220,32 +252,31 @@
                                 <div class="form-group level">
                                     <div class="input-borad">
                                         <label for="product_editPrice"></label>
-                                        <input type="text" id="product_editPrice" name="edit_price" class="form-control" placeholder="價格">
+                                        <input type="text" id="product_editPrice" name="edit_price" class="form-control" value="">
                                     </div>
                                     <div class="input-borad">
                                         <label for="product_editCount"></label>
-                                        <input type="text" id="product_editCount" name="edit_quantity" class="form-control" placeholder="數量">
+                                        <input type="text" id="product_editCount" name="edit_count" class="form-control" value="">
                                     </div>
                                 </div>
                                 <!-- 編輯商品描述 -->
                                 <div class="form-group input-borad">
                                     <label for="product_editDescribe"></label>
-                                    <textarea id="product_editDescribe" rows="3" cols="40" name="edit_describe" placeholder="展品描述"></textarea>
+                                    <textarea id="product_editDescribe" rows="3" cols="40" name="edit_describe" value=""></textarea>
                                 </div>
                                 <!-- 編輯商品檔案 -->
                                 <div class="form-check form-check-borad">
                                     <div class="form-group file-borad">
-                                        <input type="file"  name="edit_file[]"  class="form-control" multiple="multiple">
+                                        <input type="file"  name="edit_file"  class="form-control" multiple="multiple" value="">
                                         <div>  
                                             <img class="preview1">
-                                            <div class="preview_size"></div>
-                                        </div>
+                                        <div class="preview_size"></div>
                                     </div>
-                                    <div class="form-group"> 
-                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="status">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                        <h6>此產品是否直接上架</h6>
-                                    </div>
+                                </div>
+                                <div class="form-group"> 
+                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="edit_status">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                    <h6>此產品是否直接上架</h6>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -254,7 +285,6 @@
                                 <input name="action" type="hidden" value="update">
                             </div>
                         </form>
-                        
                     </div>
                 </div>
             </div>
@@ -287,12 +317,43 @@
         $("body").on("change", "#item_upLoad1,", function (){
             preview1(this);
         })
-        $("body").on("change", "#item_upLoad2", function (){
-            preview2(this);
+
+        $(function(){
+            loadListTable();
         })
-        $("body").on("change", "#item_upLoad3", function (){
-            preview3(this);
-        })
+
+        function loadListTable() {
+            $.getJSON("./php/backend/b_product_select.php",{
+                act:"read"
+            }, function(rs){
+                $tempStr = "";
+                if(rs.data.length == 0) {
+                    $tempStr = "<li>暫無資料</li>";
+                }
+                else {
+
+                    for(i in rs.data) {
+                        $tempStr += "<li><a href='read.html?id="+rs.data[i]['id']+"'>" + rs.data[i]['title'] + "</a>"
+                    }
+                }
+            })
+        }
+
+        // $(document).ready(function(){
+        //     var dataTable = $("#data-table").DataTable({
+        //         "processing":true,
+        //         "severSide":true,
+        //         "order":[],
+        //         "ajax":{
+        //             url:
+        //             type: "POST",
+        //         },
+        //         "columnsDefs":[
+        //             "targets": [0, 3, 4],
+        //             "orderable":false,
+        //         ]
+        //     });
+        // });
     </script>
 </body>
 </html> 

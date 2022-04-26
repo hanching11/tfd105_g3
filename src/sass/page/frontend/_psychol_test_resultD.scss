@@ -74,12 +74,15 @@
         border: 1px solid #eeeae2;
         margin: 0 auto;
         transition: 1s;
+        animation: i_filter 3s linear infinite;
     }
 
-    .painting img:hover {
-        transform: rotatey(180deg);
-        filter: sepia(0.5);
-        border: 1px solid #ab8a49;
+    @keyframes i_filter {
+        50%{
+            transform: rotateY(-90deg);
+            filter: sepia(.5);
+            border: 1px solid #ab8a49;
+        } 
     }
 
     .recommend {

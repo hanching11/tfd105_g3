@@ -851,7 +851,9 @@ $media_p: $p + 0.8;
                 border-top: 1px solid white;
             }
         }
-
+    .img-fluid {
+        border-radius: 10px;
+    }
         .Kuang1 {
             @include h3;
             color: $white;
@@ -1478,6 +1480,7 @@ $media_p: $p + 0.8;
         background-image: url(../img/index/Rectangle\ 8.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center center;
         margin-top: $margin * 4;
         margin-bottom: $margin * 4;
 
@@ -1498,16 +1501,39 @@ $media_p: $p + 0.8;
                 @include h3;
                 font-size: $h2;
             }
+            .text-uppercase{
+                animation: font-grow 3s ease-in-out infinite;
+            }
+            @keyframes font-grow {
+                50% {
+                    text-shadow: 0 0 20px #eeeae2;
+                    letter-spacing: 8px;
+                }
+        
+                100% {
+                    text-shadow: 0 0 15px #AB8A49;
+                }
+            }
 
             img {
                 max-width: 313px;
                 max-height: 20px;
                 width: $img_width_height;
+                transition: .5s;
+                animation: arrow_a 3s ease-in-out infinite;
             }
-
+            @keyframes arrow_a {
+                50%{
+                    transform: translateX(15px);
+                }
+            }
+            img:hover{
+                filter: sepia(.5)
+            }
             p {
                 @include p;
                 margin-top: $margin;
+                animation: font-grow 3s ease-in-out infinite;
             }
         }
     }
