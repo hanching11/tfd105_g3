@@ -1,77 +1,76 @@
 <!-- 購物車共用vue -->
 <header id="forCart">
     <div class="yu_wrapper">
-            <!-- 購物車 -->
-            <div id="i_shoppingCart_bk" class="i_background" style="display:none">
-                    <div class="shopping-cart">
-                            <div class="row">
-                                    <div class="col-12 shopping-cart-items">
-                                            <div class="row -title" justify-content-between>
-                                                    <div class="col-9">
-                                                        <span>購物清單</span>
+             <!-- 購物車 -->
+             <div id="i_shoppingCart_bk" class="i_background" style="display:none">
+                <div class="shopping-cart">
+                        <div class="row">
+                                <div class="col-12 shopping-cart-items">
+                                        <div class="row -title" justify-content-between>
+                                                <div class="col-9">
+                                                    <span>購物清單</span>
 
-                                                    </div>
-                                                    <div class="col-1">
-                                                    <button type="button" class="btn-close" id="btn-cart-close"></button>
-                                                
-                                                    </div>
-                                            </div>
-                                            <!-- 塞商品 -->
-                                            <div class="cart" class="row" v-for="product in productsInCart">
-                                                    <div class="row -copyPdc">
-                                                            <div class="col-4">
-                                                                    <img class="img-fluid"
-                                                                            :src="product.thumb" />
-                                                            </div>
-                                                            <div class="col -borderTop">
-                                                                    <div class="row text-muted">
-                                                                            <li>{{product.title}}
-                                                                            </li>
-                                                                            <li>
-                                                                                <button type="button" @click="remove(product)"
-                                                                                            class="delPdc">移除</button>
-                                                                            </li>
-                                                                    </div>
+                                                </div>
+                                                <div class="col-1">
+                                                <button type="button" class="btn-close" id="btn-cart-close"></button>
+                                            
+                                                </div>
+                                        </div>
+                                        <!-- 塞商品 -->
+                                        <div class="cart" class="row" v-for="item in items" >
+                                                <div class="row -copyPdc">
+                                                        <div class="col-4">
+                                                            <img class="img-fluid" :src="item.product_img" alt="#">
+                                                        </div>
+                                                        <div class="col -borderTop">
+                                                                <div class="row text-muted">
+                                                                        <li> {{item.product_name}}
+                                                                        </li>
+                                                                        <li>
+                                                                            <button type="button" @click="remove(product)"
+                                                                                        class="delPdc">移除</button>
+                                                                        </li>
+                                                                </div>
 
-                                                                    <div
-                                                                            class="row -priceAmount align-items-center">
-                                                                            <div class="col count">
-                                                                                    <div class='ctrl'>
-                                                                                            <button class="ctrl__button ctrl__button--decrement"
-                                                                                                    @click="minusOne(product)">-</button>
-                                                                                            <div
-                                                                                                    class='ctrl__counter'>
-                                                                                                    <div
-                                                                                                            class='ctrl__counter-num'>
-                                                                                                            {{
-                                                                                                            product.amount
-                                                                                                            }}
-                                                                                                    </div>
-                                                                                            </div>
-                                                                                            <button class="ctrl__button ctrl__button--increment"
-                                                                                                    @click="addOne(product)">+</button>
-                                                                                    </div>
-                                                                            </div>
-                                                                            <div
-                                                                                    class="col -pdcPrice">
-                                                                                    小計$ &nbsp; {{
-                                                                                    product.sum }}
-                                                                            </div>
+                                                                <div
+                                                                        class="row -priceAmount align-items-center">
+                                                                        <div class="col count">
+                                                                                <div class='ctrl'>
+                                                                                        <button class="ctrl__button ctrl__button--decrement"
+                                                                                                @click="minusOne(item)">-</button>
+                                                                                        <div
+                                                                                                class='ctrl__counter'>
+                                                                                                <div
+                                                                                                        class='ctrl__counter-num'>
+                                                                                                        {{
+                                                                                                            item.product_count
+                                                                                                        }}
+                                                                                                </div>
+                                                                                        </div>
+                                                                                        <button class="ctrl__button ctrl__button--increment"
+                                                                                                @click="addOne(item)">+</button>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div
+                                                                                class="col -pdcPrice">
+                                                                                小計$ &nbsp; {{
+                                                                                    item.sum }}
+                                                                        </div>
 
-                                                                    </div>
-                                                            </div>
-                                                    </div>
-                                            </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
 
-                                            <div>總計<span class="total-price">$ {{ total }}</span>
-                                            </div>
-                                    </div>
-                            </div>
-                            <div class="goCart"  >
-                                    <button  @click="goCart" class="btncheckS1" >前往結帳</button>
-                            </div>
-                    </div>
-            </div>
+                                        <div>總計<span class="total-price">$ {{ total }}</span>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="goCart"  >
+                                <button  @click="goCart" class="btncheckS1" >前往結帳</button>
+                        </div>
+                </div>
+        </div>
             <div class="h_logo">
                     <a href="./index.html"><img src="./img/logo.png" alt=""></a>
             </div>
