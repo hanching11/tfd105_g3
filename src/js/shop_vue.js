@@ -162,7 +162,7 @@ new Vue({
     }
 
 
-    AOS.init({ });
+    // AOS.init({ });
 
   },
 
