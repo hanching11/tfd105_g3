@@ -20,7 +20,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <link rel="shortcut icon" href="./img/logo_icon.png">
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
@@ -38,7 +38,7 @@
     <div class="wrapper_melon">
         <div class="header_potter">
             <div class="logo">
-                <img src="../img/logo_icon.png" alt="logo" >
+                <img src="../../img/logo_icon.png" alt="logo" >
             </div>
             <div class="con_h6">
                 <h6>帳號登出</h6>
