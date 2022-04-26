@@ -1,8 +1,8 @@
 <?php
 
     $db_host = "127.0.0.1";
-    $db_user = "root";
-    $db_pass = "password";
+    $db_user = "tibamefe_since2021";
+    $db_pass = "vwRBSb.j&K#E";
     $db_select = "tibamefe_tfd105g3";
 
     try{
