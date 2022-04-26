@@ -7,7 +7,7 @@ $exhibits = json_decode(file_get_contents("php://input"), true);
 
 //建立SQL
 $sql = "SELECT * FROM exhibits 
-WHERE exhibits_room LIKE ?
+WHERE exhibits_room LIKE ?  LIMIT 15
 ";
 
 $statement = $dsn_link->prepare($sql);

@@ -6,7 +6,7 @@ $exhibits = json_decode(file_get_contents("php://input"), true);
 
 
 //建立SQL
-$sql = "SELECT * FROM exhibits";
+$sql = "SELECT * FROM exhibits  LIMIT 8";
 
 $statement = $dsn_link->prepare($sql);
 
