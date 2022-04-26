@@ -14,8 +14,7 @@
 <body>
     <div id="forCart" class="wrapper_shop">
         <!-- header -->
-        @@include('./layout/header_vue.html')
-
+        @@include('./layout/header.html')
         
         <main class="page-content">
 
@@ -234,11 +233,11 @@
         </main>
         
 
+        
     </div>
     
-    
-        <!-- footer-->
-        @@include('./layout/footer.html')
+    <!-- footer-->
+    @@include('./layout/footer.html')
     <!-- 上滑 -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
@@ -248,8 +247,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
   
     <!-- vue JS -->
-    <!-- <script src="./js/vendors/vue.min.js"></script> -->
-    <!-- <script src="./js/shop_vue.min.js"></script> -->
+    <script src="./js/vendors/vue.min.js"></script>
+    <script src="./js/shop_vue.min.js"></script>
 
     <script src="./js/shop.min.js"></script>
 
@@ -278,7 +277,7 @@
         // })();
 
 
-        //選項active(暫定)
+        //選項active
         $('.the_author').click(function(){
             $('.the_author').removeClass("active");
             $(this).addClass("active");
