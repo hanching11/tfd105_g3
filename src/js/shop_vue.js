@@ -35,7 +35,7 @@ new Vue({
           hover: '文森·威廉·梵谷',
           index: 0,
           list: [],
-          class: 'active',
+          // class: 'active',
           img: "./img/Shop/authors/vanGogh.jpg",
 
         },
@@ -68,25 +68,29 @@ new Vue({
 
       all_mobile: [
 
+        
         {
           artist_siquence: 1,
+          index:1,
           class: 'flex-slide home',
           img: "./img/Shop/authors/Picasso.png",
-          text_eng: '"Good artists copy, great artists steal."',
-          text_chi: "❚ 好的藝術家懂複製，偉大的藝術家則擅於剽竊 ❚",
-          showText: false,
+          text_eng:'"Good artists copy, great artists steal."',
+          text_chi:"❚ 好的藝術家懂複製，偉大的藝術家則擅於剽竊 ❚",
+          showText:false,
         },
         {
           artist_siquence: 2,
-          class: 'flex-slide home',
+          index:2,
+          class: 'flex-slide home ',
           img: "./img/Shop/authors/Monet.jpg",
-          text_eng: '"I thought, keep the light, you can stay."',
-          text_chi: "❚ 我曾以為，留住光，就可以留住你 ❚",
-          showText: false,
-
+          text_eng:'"I thought, keep the light, you can stay."',
+          text_chi:"❚ 我曾以為，留住光，就可以留住你 ❚",
+          showText:false,
+            
         },
         {
           artist_siquence: 0,
+          index:0,
           class: 'flex-slide home',
           img: "./img/Shop/authors/vanGogh.jpg",
           text_eng: '"The sunflower is mine, in a way."',
@@ -96,6 +100,7 @@ new Vue({
         },
         {
           artist_siquence: 3,
+          index:3,
           class: 'flex-slide home',
           img: "./img/Shop/authors/DaVinci.jpg",
           text_eng: '"PINXIT-MEA"',
@@ -155,6 +160,9 @@ new Vue({
 
 
     }
+
+
+    AOS.init({ });
 
   },
 
