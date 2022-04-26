@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <!-- <link rel="stylesheet" href="/src/sass/style.css"> -->
-<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="../dist/css/style.css">
 <link rel="shortcut icon" href="./img/logo_icon.png">
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -156,7 +156,7 @@
                             <h6 class="modal-title" id="exampleModalLabel">新增商品</h6>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <form method="POST" action="./b_product_insert.php" enctype="multipart/form-data" style="overflow: scroll;"> 
+                        <form method="POST" action="./php/backend/b_product_insert.php" enctype="multipart/form-data" style="overflow: scroll;"> 
                             <div class="modal-body" id="editView">
                                 <!-- 新增商品名稱 -->
                                 <div class="form-group">
@@ -339,21 +339,21 @@
             })
         }
 
-        $(document).ready(function(){
-            var dataTable = $("#data-table").DataTable({
-                "processing":true,
-                "severSide":true,
-                "order":[],
-                "ajax":{
-                    url:
-                    type: "POST",
-                },
-                "columnsDefs":[
-                    "targets": [0, 3, 4],
-                    "orderable":false,
-                ]
-            });
-        });
+        // $(document).ready(function(){
+        //     var dataTable = $("#data-table").DataTable({
+        //         "processing":true,
+        //         "severSide":true,
+        //         "order":[],
+        //         "ajax":{
+        //             url:
+        //             type: "POST",
+        //         },
+        //         "columnsDefs":[
+        //             "targets": [0, 3, 4],
+        //             "orderable":false,
+        //         ]
+        //     });
+        // });
     </script>
 </body>
 </html> 

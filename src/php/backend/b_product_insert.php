@@ -5,14 +5,14 @@
     $title = $_POST["title"] ?? '';
     $price = $_POST["price"] ?? 0;
     $artist = $_POST["artist"] ?? '';
-    $quantity = $_POST["quantity"] ?? 0;
+    $quantity = $_POST["count"] ?? 0;
     $describe = $_POST["describe"] ?? '';
     $status = $_POST["status"] ?? 0;
 
   
     if(isset($_POST["action"])&&($_POST["action"]=="add")) {
 
-        $sql =" INSERT INTO `produce`(`product_name`, `product_artist`, `product_info`, `product_price`, `product_quantity`, `product_status`)
+        $sql =" INSERT INTO `produce`(`product_name`, `product_artist`, `product_info`, `product_price`, `product_count`, `product_status`)
         VALUES (?,?,?,?,?,?)";
 
     }
@@ -65,7 +65,7 @@
     }
     
    
-    //  header("Location:;../dist/b_product.html")
+    header("Location: http://localhost/dist/b_product.html")
 
 
 
