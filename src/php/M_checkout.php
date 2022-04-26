@@ -58,4 +58,4 @@ foreach($items as $_ => $item) {
   $statement->execute();
 }
 
-echo json_encode(['status'=> 'SUCCESS']);
+echo json_encode(['order_id'=> $orderId]);

@@ -14,9 +14,10 @@
                                 </h3>
                             </a>
                             <h4 class="product-price">${{product.product_price | currency}}</h4>
-                            <button class="buy-now">
-                                    <!-- <i @click="addToCart(item)" class="fa-solid fa-bag-shopping"></i> Buy now</a> -->
-                                    <i class="fa-solid fa-bag-shopping"></i> Buy now</a>
+                            <button class="buy-now"
+                                    @click="addToCart(product.product_id)">
+                                    <p><i class="fa-solid fa-bag-shopping"></i>
+                                            Buy now</p>
                             </button>
                             
                     </div>

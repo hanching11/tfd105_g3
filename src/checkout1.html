@@ -43,20 +43,20 @@
           <div class="row-md-4 -title"> 購物清單</div>
       
            <!-- 塞商品 -->
-           <div class="cart" class="row" v-for="product in productsInCart">
+           <div class="cart" class="row" v-for="product in items">
               <div class="row -copyPdc">
                 <div class="col-4">
-                  <img class="img-fluid" :src="product.thumb" />
+                  <img class="img-fluid" :src="product.product_img" />
                 </div>
                   <div class="col -borderTop">
                     <div class="row text-muted">
-                      <li>{{product.title}}
+                      <li>{{product.product_name}}
                       </li>
                       <li>
                           <button type="button" @click="remove(product)" class="delPdc">移除</button>
                       </li>
                     </div>
-                      <div class="pdcInfo">{{product.info}}</div>
+                      <div class="pdcInfo">{{product.product_info}}</div>
 
                       <div class="row -priceAmount align-items-center">
                         <div class="col -pdcPrice">小計$ &nbsp; {{product.sum }}</div>
@@ -65,7 +65,7 @@
                               <button class="ctrl__button ctrl__button--decrement"
                                       @click="minusOne(product)">-</button>
                               <div class='ctrl__counter'>
-                                <div class='ctrl__counter-num'>{{product.amount}}</div>
+                                <div class='ctrl__counter-num'>{{product.product_count}}</div>
                               </div>
                               <button class="ctrl__button ctrl__button--increment"
                                       @click="addOne(product)">+</button>
@@ -133,7 +133,6 @@
   </div>
 </div>
   @@include('./layout/footer.html')
-
 
 </body>
 </html>
