@@ -44,7 +44,7 @@ new Vue({
           hover: '巴勃羅·魯伊·畢卡索',
           index: 1,
           list: [],
-          img: "./img/Shop/authors/Picasso.png",
+          img: "./img/Shop/authors/Picasso.jpg",
 
         },
         {
@@ -73,7 +73,7 @@ new Vue({
           artist_siquence: 1,
           index:1,
           class: 'flex-slide home',
-          img: "./img/Shop/authors/Picasso.png",
+          img: "./img/Shop/authors/Picasso.jpg",
           text_eng:'"Good artists copy, great artists steal."',
           text_chi:"❚ 好的藝術家懂複製，偉大的藝術家則擅於剽竊 ❚",
           showText:false,
