@@ -40,17 +40,17 @@
           <div class="row-md-4 -title"> 購物清單</div>
       
            <!-- 塞商品 -->
-           <div class="cart" class="row" v-for="product in productsInCart">
+           <div class="cart" class="row" v-for="product in items">
               <div class="row -copyPdc">
                 <div class="col-4">
-                  <img class="img-fluid" :src="product.thumb" />
+                  <img class="img-fluid" :src="product.product_img" />
                 </div>
                   <div class="col -borderTop">
                     <div class="row text-muted">
-                      <li>{{product.title}}
+                      <li>{{product.product_name}}
                       </li>
                     </div>
-                      <div class="pdcInfo">{{product.info}}</div>
+                      <div class="pdcInfo">{{product.product_info}}</div>
 
                       <div class="row -priceAmount align-items-center">
                         <div class="col -pdcPrice">小計$ &nbsp; {{product.sum }}</div>
@@ -138,8 +138,7 @@
 </div>
   @@include('./layout/footer.html')
 
-<!-- 購物車共用 -->
-<script src="./js/header_vue.min.js"></script>
+
 </body>
 </html>
 

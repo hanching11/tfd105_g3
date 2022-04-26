@@ -264,19 +264,20 @@ new Vue({
       this.items.splice(product_id, 1);
     },
 
+   
+
+    useCoupon() {
+      this.hascoupon = true;
+      sessionStorage.setItem('coupon', this.hascoupon);
+
+    },
     orderSend() {
       sessionStorage.setItem('info', JSON.stringify(this.recipient));
       // console.log('abc');
       orderTime = new SimpleDateFormat("yyMMdd");
       now = new Date();
       currentDate = formatShort.format(now);
-      console.log(currentDate);
-    },
-
-    useCoupon() {
-      this.hascoupon = true;
-      sessionStorage.setItem('coupon', this.hascoupon);
-
+     console.log(currentDate);
     },
 
     submitOrder() {

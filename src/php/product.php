@@ -2,7 +2,7 @@
 include("./connect.php");
 
 //建立SQL語法
-$sql = "SELECT * FROM PRODUCT WHERE product_status = 1";
+$sql = "SELECT * FROM product WHERE product_status = 1";
 // 星星:如果要設定作者切換:artist_id要更換成selected的狀況
 
 //執行並查詢，會回傳查詢結果的物件，必須使用fetch、fetchAll...等方式取得資料
