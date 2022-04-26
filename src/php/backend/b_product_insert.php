@@ -1,6 +1,6 @@
 <?php
 
-    include "connect.php";
+    include "./connect.php";
 
     $title = $_POST["title"] ?? '';
     $price = $_POST["price"] ?? 0;
