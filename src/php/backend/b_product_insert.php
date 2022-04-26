@@ -1,6 +1,6 @@
 <?php
 
-    include "connect.php";
+    include "(../connect.php)";
 
     $title = $_POST["title"] ?? '';
     $price = $_POST["price"] ?? 0;
@@ -12,7 +12,7 @@
   
     if(isset($_POST["action"])&&($_POST["action"]=="add")) {
 
-        $sql =" INSERT INTO `produce`(`product_name`, `product_artist`, `product_info`, `product_price`, `product_count`, `product_status`)
+        $sql =" INSERT INTO `product`(`product_name`, `product_artist`, `product_info`, `product_price`, `product_count`, `product_status`)
         VALUES (?,?,?,?,?,?)";
 
     }
@@ -53,7 +53,7 @@
                 if(move_uploaded_file($_FILES["file"]["tmp_name"][$i], $target_file)) {
                     $column = '`product_img' . ($i > 0 ? ('_' . $i) : '') . '`';
 
-                    $sql =" UPDATE `produce` SET $column = :img WHERE `product_id` = :product_id";
+                    $sql =" UPDATE `product` SET $column = :img WHERE `product_id` = :product_id";
                     
                     $stmt = $dsn_link->prepare($sql);
             

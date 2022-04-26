@@ -1,53 +1,44 @@
+<?php
+
+    include ("../connect.php");
+
+
+    $sql = "SELECT * from product";
+    
+
+    $stmt = $dsn_link->prepare($sql);
+    $stmt->execute(array());
+    $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+   
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<!-- <link rel="stylesheet" href="/src/sass/style.css"> -->
-<link rel="stylesheet" href="../dist/css/style.css">
-<link rel="shortcut icon" href="./img/logo_icon.png">
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.js"></script> -->
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="./img/logo_icon.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-
-
-<!-- header -->
-<!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> -->
-<!-- <link rel="shortcut icon" href="/src/img/logo_icon.png"> -->
-<!-- <link rel="stylesheet" href="/dist/css/style.css"> -->
-<!-- <link rel="stylesheet" href="/src/sass/style.css"> -->
-<!-- <link rel="stylesheet" href="/src/sass/layout/_header.scss"> -->
-<!-- <link rel="stylesheet" href="https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Ashopping_cart%3A"> -->
-
-<!-- for shop -->
-<!-- 上滑 -->
-<!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
-<!-- 熱門商品輪播 -->
-<!-- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /> -->
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<!-- footer -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-<link rel="stylesheet" href="https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Ashopping_cart%3A">
-<!-- <link rel="shortcut icon" href="../img/logo_icon.png"> -->
-<!-- <link rel="stylesheet" href="./sass/layout/_footer.scss"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Ashopping_cart%3A">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
-    <title>光緣畫廊 | KUANG YUAN</title>
+        crossorigin="anonymous">
+    </script>
+
+
 </head>
 <body>
     <div class="wrapper_melon">
         <div class="header_potter">
             <div class="logo">
-                <img src="./img/logo_icon.png" alt="logo" >
+                <img src="../img/logo_icon.png" alt="logo" >
             </div>
             <div class="con_h6">
                 <h6>帳號登出</h6>
@@ -59,19 +50,19 @@
                 <aside class="side_left">
                     <ul>
                         <ol>
-                            <a href="./b_member.html">會員管理</a>
+                            <a href="../b_member.html">會員管理</a>
                         </ol>
                         <ol>
-                            <a href="./b_order.html">訂單管理</a>
+                            <a href="../b_order.html">訂單管理</a>
                         </ol>
                         <ol>
                             <a href="#" id="b_color_label" id="b_color_label">商品管理</a>
                         </ol>
                         <ol>
-                            <a href="./b_item_exhibits.html">展品管理</a>
+                            <a href="../b_item_exhibits.html">展品管理</a>
                         </ol>
                         <ol>
-                            <a href="./b_discount.html">折扣碼管理</a>
+                            <a href="../b_discount.html">折扣碼管理</a>
                         </ol>
                     </ul>
                 </aside>
@@ -99,13 +90,14 @@
                     </ul>
                 </div>
                 <div class="table_product">
-                    <table class="table  align-middle table-striped" id="data-table">
+                    <table class="table  align-middle table-striped data-table">
                         <thead>
                             <tr class="table_color">
                                 <th>#</th>
                                 <th>商品編號</th>
                                 <th>封面</th>
                                 <th>名稱</th>
+                                <th>簡介</th>
                                 <th>價格</th>
                                 <th>數量</th>
                                 <th>產品作家</th>
@@ -114,6 +106,10 @@
                             </tr>
                         </thead>
                         <tbody>
+                           
+                            <?php 
+                                foreach ($data as $data) {
+                            ?>    
                             <tr>
                                 <th class="align-middle">
                                     <div class="form-check">
@@ -122,13 +118,13 @@
                                         </label>
                                     </div>
                                 </th>
-                                <td class="align-middle product-id"></td>
-                                <td class="align-middle" class="product_photo"></td>                                   
-                                <td class="align-middle word-nowrap text_center"></td>
-                                <td class="align-middle text_center text_heigh"></td>
-                                <td class="align-middle"></td>
-                                <td class="align-middle"></td>
-                                <td class="align-middle word-nowrap"></td>
+                                <td class="align-middle"><?php echo $data ['product_id']?></td>
+                                <td class="align-middle"><img src="<?php echo $data['product_img'];?>" class="product_photo"></td>                                   
+                                <td class="align-middle word-nowrap text_center"><?php echo $data ['product_name']?></td>
+                                <td class="align-middle text_center text_heigh"><?php echo $data ['product_intro']?></td>
+                                <td class="align-middle"><?php echo $data ['product_price']?></td>
+                                <td class="align-middle"><?php echo $data ['product_count']?></td>
+                                <td class="align-middle word-nowrap"><?php echo $data ['product_artist']?></td>
                                 <td class="align-middle">
                                     <div class="form-check form-switch">
                                         <input class="form-check-input status_toggle" name="product_status" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
@@ -136,16 +132,18 @@
                                     </div>
                                 </td>
                                 <td class="align-middle">
-                                    <button type="button" class="btn btn-primary word-nowrap" data-bs-toggle="modal" data-bs-target="#product_editBackdrop" id="edit">檢視</button>
+                                    <button type="button" class="btn btn-primary word-nowrap edit_data" data-bs-toggle="modal" data-bs-target="#product_editBackdrop" id="edit" value="<?php echo $row['product_id'] ?>">檢視</button>
                                 </td>
                             </tr>
-                
-                        </tbody>    
+                            <?php 
+                            }
+                            ?>
+                        </tbody>
                     </table>
                 </div>
             </div>                 
         </section>
-        <!-- 新增商品視窗 ------------->
+               <!-- 新增商品視窗 ------------->
 
         <!-- ------------------------------ -->
         <section>
@@ -156,7 +154,7 @@
                             <h6 class="modal-title" id="exampleModalLabel">新增商品</h6>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <form method="POST" action="./php/backend/b_product_insert.php" enctype="multipart/form-data" style="overflow: scroll;"> 
+                        <form method="POST" action="./b_product_insert.php" enctype="multipart/form-data" style="overflow: scroll;"> 
                             <div class="modal-body" id="editView">
                                 <!-- 新增商品名稱 -->
                                 <div class="form-group">
@@ -181,7 +179,7 @@
                                     </div>
                                     <div class="input-borad">
                                         <label for="product_newCount"></label>
-                                        <input type="text" id="product_newCount" name="count" class="form-control" placeholder="數量">
+                                        <input type="text" id="product_newCount" name="quantity" class="form-control" placeholder="數量">
                                     </div>
                                 </div>
                                 <!-- 新增商品描述 -->
@@ -226,8 +224,8 @@
                             <h6 class="modal-title" id="exampleModalLabel">編輯商品</h6>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <form method="POST" action="./b_product_edit.php" id="upData" enctype="multipart/form-data" style="overflow: scroll;">
-                            <div class="modal-body">
+                        <form method="POST" action="#" id="upData" enctype="multipart/form-data" style="overflow: scroll;" onSubmit="return checkForm();">
+                            <div class="modal-body" id="info_update">
                                 <!-- 商品編號 -->
                                 <div class="form-group">
                                     <label for="product_editNumber"></label>
@@ -236,7 +234,7 @@
                                 <!-- 編輯商品名稱 -->
                                 <div class="form-group">
                                     <label for="product_editName"></label>
-                                    <input type="text" id="edit_name" name="edit_name" class="form-control" value=>
+                                    <input type="text" id="edit_name" name="edit_name" class="form-control" value="<?php echo $edit_name ?>">
                                 </div>
                                 <!-- 編輯商品作家 -->
                                 <div class="form-group option_spacing">
@@ -256,7 +254,7 @@
                                     </div>
                                     <div class="input-borad">
                                         <label for="product_editCount"></label>
-                                        <input type="text" id="product_editCount" name="edit_count" class="form-control" value="">
+                                        <input type="text" id="product_editCount" name="edit_quantity" class="form-control" value="">
                                     </div>
                                 </div>
                                 <!-- 編輯商品描述 -->
@@ -290,70 +288,32 @@
             </div>
         </section>
     </div>
-    <script> 
 
-     // 檔案預覽
-        function format_float(num, pos)
-        {
-            var size = Math.pow(10, pos);
-            return Math.round(num * size) / size;
-        }
-    
-        function preview(input) {
-    
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $(document).on("click", "#edit", function(e){
+
+                e.preventDefault();
                 
-                reader.onload = function (e) {
-                    $('.preview1,.preview2,.preview3').attr('src', e.target.result);
-                    var KB = format_float(e.total / 1024, 2);
-                    $('preview1,.preview2,.preview3').text("檔案大小：" + KB + " KB");
-                }
-    
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-    
-        $("body").on("change", "#item_upLoad1,", function (){
-            preview1(this);
-        })
+                var edit_id = $(this).attr('value');
 
-        $(function(){
-            loadListTable();
-        })
-
-        function loadListTable() {
-            $.getJSON("./php/backend/b_product_select.php",{
-                act:"read"
-            }, function(rs){
-                $tempStr = "";
-                if(rs.data.length == 0) {
-                    $tempStr = "<li>暫無資料</li>";
-                }
-                else {
-
-                    for(i in rs.data) {
-                        $tempStr += "<li><a href='read.html?id="+rs.data[i]['id']+"'>" + rs.data[i]['title'] + "</a>"
+                $.ajax({
+                    url:"fetch.php",
+                    type:"post",
+                    data:{edit_id:edit_id},
+                    success:function(data){
+                        $("#info_update").html(data);
+                        $("#editView").modal('show');
                     }
-                }
-            })
-        }
+                });
+            });
+            
+        })
 
-        // $(document).ready(function(){
-        //     var dataTable = $("#data-table").DataTable({
-        //         "processing":true,
-        //         "severSide":true,
-        //         "order":[],
-        //         "ajax":{
-        //             url:
-        //             type: "POST",
-        //         },
-        //         "columnsDefs":[
-        //             "targets": [0, 3, 4],
-        //             "orderable":false,
-        //         ]
-        //     });
-        // });
+     
+  
     </script>
+    
 </body>
-</html> 
+</html>
