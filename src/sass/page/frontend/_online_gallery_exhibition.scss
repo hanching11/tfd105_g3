@@ -22,6 +22,15 @@
         pointer-events: none;
     }
 
+    //底下光
+    .light img{
+        position: fixed;
+        left: 50%;
+        top:90%;
+        transform: translate(-50%,-90%);
+        z-index: 999;
+    }
+
     // 主標
     .onlinegallery_exhibition_title {
         padding: 10px 120px 0 120px;
