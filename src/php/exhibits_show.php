@@ -10,7 +10,7 @@ $sql = "
 SELECT * FROM exhibits
 WHERE exhibits_status = '上架'
 and exhibits_room = :exhibits_room
-LIMIT 15
+LIMIT 10
 ";
 
 $statement = $dsn_link->prepare($sql);
