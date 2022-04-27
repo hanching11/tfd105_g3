@@ -7,7 +7,7 @@ $id = $_POST["product_id"];
 
 //建立SQL語法
 // $sql = "SELECT * FROM PRODUCT WHERE product_id = :product_id and product_status = 1";
-$sql = "SELECT * FROM PRODUCT WHERE product_id = ${id}";
+$sql = "SELECT * FROM product WHERE product_id = ${id}";
 
 
 //執行並查詢，會回傳查詢結果的物件，必須使用fetch、fetchAll...等方式取得資料
