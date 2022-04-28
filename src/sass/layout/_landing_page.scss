@@ -1,0 +1,79 @@
+.w_landing_page{
+    background-color: #786B54;
+    background-blend-mode: multiply;
+    background-image: url("../img/loading-bac.jpg");
+    background-size: cover;
+    background-position: center center;
+    animation: l_animate 5s ease-in-out infinite;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    @keyframes l_animate {
+        50%{
+            background:linear-gradient(160deg, #eeeae2, transparent),
+            linear-gradient(280deg, #786B54, transparent),
+            linear-gradient(400deg, #353231, transparent);
+            background-image: url("../img/loading-bac.jpg");
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: $beidge1;
+    }
+    p{
+        width: 100px;
+        height: 100px;
+        letter-spacing: 5px;
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 2;
+        padding-top: 25px;
+        background-color: $darkbrown1;
+        border-radius: 50%;
+        text-align: center;
+        transition: .5s;
+        animation: f_a 5s ease-in-out infinite;
+    }
+    @keyframes f_a {
+        50%{
+            box-shadow: 0 0 20px #eeeae2;
+        }
+    }
+    p:hover{
+        box-shadow: 0 0 20px #eeeae2;
+        background-color:$coffeebrown;
+    }
+    .landing{
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        top: 20%;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .landing_logo{
+        text-align: center;
+        img{
+            max-width: 280px;
+            animation: i_a 5s ease-in-out infinite;
+        }
+        @keyframes i_a {
+            50%{
+                filter: sepia(1);
+            }
+        }
+    }
+    .landing_button{
+        display: flex;
+        margin: 0 auto;
+        margin-top: 20px;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 300px;
+    }
+
+}
