@@ -6,7 +6,7 @@ $exhibits = json_decode(file_get_contents("php://input"), true);
 
 
 //建立SQL
-$sql = "SELECT * FROM exhibits  LIMIT 5";
+$sql = " SELECT * FROM exhibits  order by exhibits_id desc  LIMIT 5 ";
 
 $statement = $dsn_link->prepare($sql);
 
@@ -35,5 +35,3 @@ $statement->execute();
 $data = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 echo json_encode($data);
-
-?>
